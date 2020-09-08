@@ -62,10 +62,11 @@
   <aside class="sidebar-drawer">
     <div class="navigation">
       
-      <div class="sidebar-scroll"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-scroll"><a class="sidebar-brand centered" href="index.html">
   <div class="sidebar-logo-container">
-    <img class="sidebar-logo centered" src="_static/logo.png" alt="Logo"/>
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
   </div>
+  
   <span class="sidebar-brand-text">furo</span>
 </a><form class="sidebar-search-container" method="get" action="search.html">
   <input class="sidebar-search" placeholder="Search" name="q">
@@ -113,22 +114,92 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
         <div class="section" id="customisation">
 <h1>Customisation<a class="headerlink" href="#customisation" title="Permalink to this headline">¶</a></h1>
-<p>TODO: provide information about:</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>This entire page is still a work-in-progress.</p>
+</div>
+<p>furo can be customized in many ways.</p>
 <ul class="simple">
-<li><p>how the entire theme is designed with CSS variables and how to override them</p>
+<li><p>provides a lot of points for customising the generated documentation</p></li>
+<li><p>is possible to tweak:</p>
 <ul>
-<li><p>via <code class="docutils literal notranslate"><span class="pre">css_variables</span></code> in conf.py (recommended, if you’re not adding more CSS)</p></li>
-<li><p>custom CSS files</p></li>
+<li><p>the overall theme’s look</p></li>
+<li><p>the sidebar’s contents</p></li>
+<li><p>selectively hide UI elements/TOC on a certain pages</p></li>
 </ul>
 </li>
-<li><p>how <code class="docutils literal notranslate"><span class="pre">basic</span></code> theme’s variables can be set but won’t do s***</p></li>
-<li><p>and finally, go read references for specific elements!</p></li>
 </ul>
+<div class="section" id="theme-options">
+<h2>Theme options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
+<p>furo utilizes <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> key in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> for customization of the overall theme.</p>
+<div class="section" id="css-variables">
+<h3><code class="docutils literal notranslate"><span class="pre">css_variables</span></code><a class="headerlink" href="#css-variables" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>This needs rewriting, and more… “prominence”.</p>
+</div>
+<p>furo’s stylesheet makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. It is possible to change look and feel of the documentation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">css_variables</span></code> provides an easy way to override furo’s default values for these variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"css_variables"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span>
+    <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#CC3333"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typos in the <code class="docutils literal notranslate"><span class="pre">css_variables</span></code> dictionary are silently ignored, and do not raise any errors or warnings. Double check that your spellings and values are correct and valid.</p>
+</div>
+<p>The <a class="reference internal" href="reference/index.html"><span class="doc std std-doc">Reference</span></a> section describes the various elements that can be used in your documentation and which CSS variables they utilize.</p>
+</div>
+<div class="section" id="sidebar-hide-name">
+<h3><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code><a class="headerlink" href="#sidebar-hide-name" title="Permalink to this headline">¶</a></h3>
+<p>Controls whether you see the project’s name in the sidebar of the documentation. This is useful when you only want to show your documentation’s logo in the sidebar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"sidebar_hide_name"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The configuration options that are inherited from the built-in <code class="docutils literal notranslate"><span class="pre">basic</span></code> Sphinx theme are <em>not</em> supported in furo.</p>
+</div>
+</div>
+</div>
+<div class="section" id="custom-css-files">
+<h2>Custom CSS files<a class="headerlink" href="#custom-css-files" title="Permalink to this headline">¶</a></h2>
+<p>If you want more control than what is provided by the above theme options, you can add custom stylesheets to your documentation.</p>
+<p>ReadTheDocs has an excellent explanation on <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/adding-custom-css.html">how to add custom CSS files</a> to Sphinx-based documentation.</p>
+</div>
+<div class="section" id="page-specific-tweaks">
+<h2>Page specific tweaks<a class="headerlink" href="#page-specific-tweaks" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to tell furo to hide certain elements in a single page, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a>.</p>
+<div class="section" id="hide-toc">
+<h3><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code><a class="headerlink" href="#hide-toc" title="Permalink to this headline">¶</a></h3>
+<p>When set, furo will not include the “contents” sidebar on that page.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Add support for some kind of tabbed UI, to make it nicer to show markdown/reST examples.</p>
+</div>
+<p>Markdown:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">hide-toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nn">---</span>
+</pre></div>
+</div>
+<p>reST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:hide-toc:</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
       </article>
@@ -164,8 +235,34 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Customisation</a><ul>
+<li><a class="reference internal" href="#theme-options">Theme options</a><ul>
+<li><a class="reference internal" href="#css-variables"><code class="docutils literal notranslate"><span class="pre">css_variables</span></code></a></li>
+<li><a class="reference internal" href="#sidebar-hide-name"><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#custom-css-files">Custom CSS files</a></li>
+<li><a class="reference internal" href="#page-specific-tweaks">Page specific tweaks</a><ul>
+<li><a class="reference internal" href="#hide-toc"><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
       
       
     </aside>
