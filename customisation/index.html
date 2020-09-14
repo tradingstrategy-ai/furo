@@ -1,0 +1,301 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Colors" href="colors/" /><link rel="prev" title="Custom Landing Page" href="../usage/landing-page/" />
+
+    <meta name="generator" content="sphinx-3.2.1, furo"/><title>Customisation</title><link rel="stylesheet" href="../_static/styles/default.css">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+    --color-code-foreground: #000000;
+  
+  }
+</style><script src="../_static/scripts/main.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script><script src="../_static/jquery.js" async></script>
+      <script src="../_static/underscore.js" async></script>
+      
+        <script src="../_static/doctools.js" defer></script>
+      
+        <script src="../_static/language_data.js" defer></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../None"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+    Furo is under active development, and this documentation is not written yet!
+  </aside>
+</div>
+<div class="page">
+  <header>
+    <label class="header-left nav-overlay-icon" for="__navigation">
+      <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+    </label>
+    <div class="header-center"><div class="brand">furo</div></div>
+    <div class="header-right"></div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-scroll"><a class="sidebar-brand centered" href="../">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
+  </div>
+  
+</a><form class="sidebar-search-container" method="get" action="../search/">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quickstart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage/announcement/">Announcement Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/landing-page/">Custom Landing Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="colors/">Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fonts/">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nav-sidebar/">Navigation Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toc-sidebar/">Contents Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admonitions/">Custom Admonitions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/internals/">Internals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/design-goals/">Design Goals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Kitchen Sink</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pradyunsg/furo">GitHub Repository</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../demo/">Sphinx RTD Theme’s Demo Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../demo/demo/">Paragraph Level Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/lists_tables/">Lists &amp; Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/api/">API documentation and generated content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/long/">Long Sticky Nav</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/structure/">Structural Elements</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="customisation">
+<h1>Customisation<a class="headerlink" href="#customisation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>This entire page is still a work-in-progress.</p>
+</div>
+<p>furo can be customized in many ways.</p>
+<ul class="simple">
+<li><p>provides a lot of points for customising the generated documentation</p></li>
+<li><p>is possible to tweak:</p>
+<ul>
+<li><p>the overall theme’s look</p></li>
+<li><p>the sidebar’s contents</p></li>
+<li><p>selectively hide UI elements/TOC on a certain pages</p></li>
+</ul>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Reference for various elements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="colors/">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fonts/">Fonts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nav-sidebar/">Navigation Sidebar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toc-sidebar/">Contents Sidebar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admonitions/">Custom Admonitions</a></li>
+</ul>
+</div>
+<div class="section" id="theme-options">
+<h2>Theme options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
+<p>furo utilizes <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> key in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> for customization of the overall theme.</p>
+<div class="section" id="css-variables">
+<h3><code class="docutils literal notranslate"><span class="pre">css_variables</span></code><a class="headerlink" href="#css-variables" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>This needs rewriting, and more… “prominence”.</p>
+</div>
+<p>furo’s stylesheet makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. It is possible to change look and feel of the documentation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">css_variables</span></code> provides an easy way to override furo’s default values for these variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"css_variables"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span>
+    <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#CC3333"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typos in the <code class="docutils literal notranslate"><span class="pre">css_variables</span></code> dictionary are silently ignored, and do not raise any errors or warnings. Double check that your spellings and values are correct and valid.</p>
+</div>
+</div>
+<div class="section" id="sidebar-hide-name">
+<h3><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code><a class="headerlink" href="#sidebar-hide-name" title="Permalink to this headline">¶</a></h3>
+<p>Controls whether you see the project’s name in the sidebar of the documentation. This is useful when you only want to show your documentation’s logo in the sidebar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"sidebar_hide_name"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The configuration options that are inherited from the built-in <code class="docutils literal notranslate"><span class="pre">basic</span></code> Sphinx theme are <em>not</em> supported in furo.</p>
+</div>
+</div>
+</div>
+<div class="section" id="custom-css-files">
+<h2>Custom CSS files<a class="headerlink" href="#custom-css-files" title="Permalink to this headline">¶</a></h2>
+<p>If you want more control than what is provided by the above theme options, you can add custom stylesheets to your documentation.</p>
+<p>ReadTheDocs has an excellent explanation on <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/adding-custom-css.html">how to add custom CSS files</a> to Sphinx-based documentation.</p>
+</div>
+<div class="section" id="page-specific-tweaks">
+<h2>Page specific tweaks<a class="headerlink" href="#page-specific-tweaks" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to tell furo to hide certain elements in a single page, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a>.</p>
+<div class="section" id="hide-toc">
+<h3><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code><a class="headerlink" href="#hide-toc" title="Permalink to this headline">¶</a></h3>
+<p>When set, furo will not include the “contents” sidebar on that page.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Add support for some kind of tabbed UI, to make it nicer to show markdown/reST examples.</p>
+</div>
+<p>Markdown:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">hide-toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nn">---</span>
+</pre></div>
+</div>
+<p>reST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:hide-toc:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="colors/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Colors</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../usage/landing-page/">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                <div class="title">Custom Landing Page</div>
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+          <span class="copyright">Copyright &copy; 2020, Pradyun Gedam</span> |
+          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
+          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Customisation</a><ul>
+<li><a class="reference internal" href="#theme-options">Theme options</a><ul>
+<li><a class="reference internal" href="#css-variables"><code class="docutils literal notranslate"><span class="pre">css_variables</span></code></a></li>
+<li><a class="reference internal" href="#sidebar-hide-name"><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#custom-css-files">Custom CSS files</a></li>
+<li><a class="reference internal" href="#page-specific-tweaks">Page specific tweaks</a><ul>
+<li><a class="reference internal" href="#hide-toc"><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>
