@@ -210,23 +210,10 @@
 </div>
 <div class="section" id="release-process">
 <h2>Release process<a class="headerlink" href="#release-process" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There are plans to automate this entire flow, with a <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">release</span></code> command.</p>
-</div>
 <ul class="simple">
-<li><p>Checkout the current master, and ensure the working directory is clean</p></li>
-<li><p>Remove build/ and dist/ – <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">build/</span> <span class="pre">dist/</span></code> on *nix</p></li>
-<li><p>Bump the version in <code class="docutils literal notranslate"><span class="pre">src/furo/__init__.py</span></code></p></li>
 <li><p>Update the changelog</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">flit</span> <span class="pre">build</span></code></p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">twine</span> <span class="pre">check</span> <span class="pre">dist/*</span></code></p></li>
-<li><p>Commit changes and create a tag.</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">twine</span> <span class="pre">upload</span> <span class="pre">dist/*</span></code></p></li>
-<li><p>Bump the version in <code class="docutils literal notranslate"><span class="pre">src/furo/__init__.py</span></code></p></li>
-<li><p>Update the changelog</p></li>
-<li><p>Commit changes</p></li>
-<li><p>Push it all</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">release</span> <span class="pre">-r</span> <span class="pre">--</span> <span class="pre">&lt;release</span> <span class="pre">version&gt;</span> <span class="pre">&lt;next</span> <span class="pre">version&gt;</span></code></p></li>
+<li><p>Once that command succeeds, you’re done!</p></li>
 </ul>
 </div>
 </div>
