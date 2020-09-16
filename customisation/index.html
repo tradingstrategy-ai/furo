@@ -3,7 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Colors" href="colors/" /><link rel="prev" title="Custom Landing Page" href="../usage/landing-page/" />
 
-    <meta name="generator" content="sphinx-3.2.1, furo 2020.09.15.dev8"/><title>Customisation</title><link rel="stylesheet" href="../_static/styles/default.css">
+    <meta name="generator" content="sphinx-3.2.1, furo 2020.09.15.dev8"/><title>Customisation</title><link rel="stylesheet" href="../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" href="../_static/spanels-bootstrap-index--5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" href="../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
+    <link rel="stylesheet" href="../_static/styles/default.css">
     <link rel="stylesheet" href="../_static/pygments.css">
     
 <style>
@@ -12,7 +15,7 @@
     --color-code-foreground: #000000;
   
   }
-</style><script src="../_static/scripts/main.js"></script>
+</style>
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script><script src="../_static/jquery.js" async></script>
       <script src="../_static/underscore.js" async></script>
       
@@ -21,7 +24,7 @@
         <script src="../_static/language_data.js" defer></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="../None"></script></head>
+        <script src="../None"></script><script src="../_static/scripts/main.js"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -143,7 +146,7 @@
 <p class="admonition-title">Todo</p>
 <p>This entire page is still a work-in-progress.</p>
 </div>
-<p>furo can be customized in many ways.</p>
+<p>Furo can be customised in many ways.</p>
 <ul class="simple">
 <li><p>provides a lot of points for customising the generated documentation</p></li>
 <li><p>is possible to tweak:</p>
@@ -166,15 +169,15 @@
 </div>
 <div class="section" id="theme-options">
 <h2>Theme options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
-<p>furo utilizes <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> key in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> for customization of the overall theme.</p>
+<p>Furo utilizes <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> key in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> for customisation of the overall theme.</p>
 <div class="section" id="css-variables">
 <h3><code class="docutils literal notranslate"><span class="pre">css_variables</span></code><a class="headerlink" href="#css-variables" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
 <p>This needs rewriting, and more… “prominence”.</p>
 </div>
-<p>furo’s stylesheet makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. It is possible to change look and feel of the documentation.</p>
-<p><code class="docutils literal notranslate"><span class="pre">css_variables</span></code> provides an easy way to override furo’s default values for these variables.</p>
+<p>Furo’s stylesheet makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. It is possible to change look and feel of the documentation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">css_variables</span></code> provides an easy way to override Furo’s default values for these variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"css_variables"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#CC3333"</span><span class="p">,}</span>
 <span class="p">}</span>
@@ -195,7 +198,7 @@
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The configuration options that are inherited from the built-in <code class="docutils literal notranslate"><span class="pre">basic</span></code> Sphinx theme are <em>not</em> supported in furo.</p>
+<p>The configuration options that are inherited from the built-in <code class="docutils literal notranslate"><span class="pre">basic</span></code> Sphinx theme are <em>not</em> supported in Furo.</p>
 </div>
 </div>
 </div>
@@ -206,23 +209,31 @@
 </div>
 <div class="section" id="page-specific-tweaks">
 <h2>Page specific tweaks<a class="headerlink" href="#page-specific-tweaks" title="Permalink to this headline">¶</a></h2>
-<p>It is possible to tell furo to hide certain elements in a single page, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a>.</p>
+<p>It is possible to tell Furo to hide certain elements in a single page, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a>.</p>
 <div class="section" id="hide-toc">
 <h3><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code><a class="headerlink" href="#hide-toc" title="Permalink to this headline">¶</a></h3>
-<p>When set, furo will not include the “contents” sidebar on that page.</p>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>Add support for some kind of tabbed UI, to make it nicer to show markdown/reST examples.</p>
-</div>
-<p>Markdown:</p>
+<p>When set, Furo will not include the “contents” sidebar on that page.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="15c3d4d8-346b-40ff-bf82-10228bb31f29" name="6989695c-6ebf-4357-b606-e5e33d625b94" type="radio"/>
+<label class="tabbed-label" for="15c3d4d8-346b-40ff-bf82-10228bb31f29">
+MyST (Markdown)</label><div class="tabbed-content docutils">
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">hide-toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nn">---</span>
+
+<span class="p p-Indicator">[</span><span class="nv">page contents</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>reST:</p>
+</div>
+<input id="5d87d9ff-51d7-4858-ac75-cb7b55c15299" name="6989695c-6ebf-4357-b606-e5e33d625b94" type="radio"/>
+<label class="tabbed-label" for="5d87d9ff-51d7-4858-ac75-cb7b55c15299">
+reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:hide-toc:</span>
+
+[page contents]
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
