@@ -22,9 +22,7 @@
         <script src="../../_static/doctools.js" defer></script>
       
         <script src="../../_static/language_data.js" defer></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="../../None"></script><script src="../../_static/scripts/main.js"></script></head>
+      <script src="../../_static/scripts/main.js"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -89,19 +87,21 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-tree">
-  <html><body><ul>
+  <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../usage/announcement/">Announcement Header</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../usage/landing-page/">Custom Landing Page</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Colors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/nav-sidebar/">Navigation Sidebar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/toc-sidebar/">Contents Sidebar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/admonitions/">Custom Admonitions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../reference/">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/basic/">Basic Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/code-blocks/">Code Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/tables/">Tables</a></li>
 </ul>
 </li>
 </ul>
@@ -115,20 +115,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license/">License</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Kitchen Sink</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pradyunsg/furo">GitHub Repository</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../demo/">Sphinx RTD Theme’s Demo Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../demo/demo/">Paragraph Level Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../demo/lists_tables/">Lists &amp; Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../demo/api/">API documentation and generated content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../demo/long/">Long Sticky Nav</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../demo/structure/">Structural Elements</a></li>
 </ul>
-</li>
-</ul>
-</body></html>
+
 </div>
       </div>
       
@@ -137,26 +126,70 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <html><body><div class="section" id="internals">
+        <div class="section" id="internals">
 <h1>Internals<a class="headerlink" href="#internals" title="Permalink to this headline">¶</a></h1>
-<p>TODO: This page will provide an overview of the “internals” of the development process.</p>
+<p>Furo’s internals contain an interesting mix of stupid-things-that-work and all kinds of bodges. Most of this project was built slowly over the span of a few weeks, as a part of an attempt to take a break from working on Python packaging stuff.</p>
+<div class="section" id="repository-layout">
+<h2>Repository Layout<a class="headerlink" href="#repository-layout" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Flesh this section out.</p>
+</div>
+</div>
+<div class="section" id="theme-build-process">
+<h2>Theme build process<a class="headerlink" href="#theme-build-process" title="Permalink to this headline">¶</a></h2>
+<p>Furo’s build process uses Gulp. Running <code class="docutils literal notranslate"><span class="pre">gulp</span> <span class="pre">build</span></code> in the repository root will compile the theme’s CSS and JS assets (<code class="docutils literal notranslate"><span class="pre">src/furo/assets/</span></code>) into the correct final files (inside <code class="docutils literal notranslate"><span class="pre">src/furo/theme/static</span></code>).</p>
+<p>When building the distributions for upload, <code class="docutils literal notranslate"><span class="pre">gulp</span> <span class="pre">build</span></code> is run once and the <code class="docutils literal notranslate"><span class="pre">src/furo/assets/</span></code> directory is excluded for the final distribution. Thus, <em>both</em> the source distribution and wheel distribution do not contain the original source code for Furo and only contain the compiled SCSS and JS files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is not ideal that the version-controlled source tree is not installable using pip directly. There is a need for a <code class="docutils literal notranslate"><span class="pre">gulp</span> <span class="pre">build</span></code> command to be run between the clone and installation.</p>
+<p>Things are set up this way due to the lack of a “build” step support in Flit. There is <a class="reference external" href="https://github.com/takluyver/flit/issues/119#issuecomment-687779285">an open issue for enhancement with a proposal awaiting feedback</a>.</p>
+</div>
+</div>
+<div class="section" id="how-stuff-works">
+<h2>How stuff works<a class="headerlink" href="#how-stuff-works" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sidebar-navigation-tree">
+<h3>Sidebar Navigation Tree<a class="headerlink" href="#sidebar-navigation-tree" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Flesh this section out, hopefully without burning brain cells like I did when designing this thing’s collapse stuff.</p>
+</div>
+</div>
+<div class="section" id="contents-sidebar">
+<h3>Contents sidebar<a class="headerlink" href="#contents-sidebar" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Flesh this section out.</p>
+</div>
+</div>
+<div class="section" id="css-variables-for-customisation">
+<h3>CSS variables for customisation<a class="headerlink" href="#css-variables-for-customisation" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>Flesh this section out.</p>
+</div>
+</div>
+<div class="section" id="furo-demo-directive">
+<h3><code class="docutils literal notranslate"><span class="pre">furo-demo</span></code> directive<a class="headerlink" href="#furo-demo-directive" title="Permalink to this headline">¶</a></h3>
+<p>This directive was written to make it easier to write the examples used in the <a class="reference internal" href="../../reference/"><span class="doc std std-doc">Reference</span></a> section. The way it works is pretty straightforward really:</p>
 <ul class="simple">
-<li><p>How the repository is layed out.</p></li>
-<li><p>How the theme is built, for development and for release.</p></li>
-<li><p>How all the code-supported components work.</p>
+<li><p>It only works in MyST documents, since it performs an in-place substitution.</p></li>
+<li><p>It takes the contents of the block, splits it at “+++” into Markdown and reStructuredText snippets.</p></li>
+<li><p>For both of these, it renders a tab that has a code block containing the snippet followed by the actual code itself.</p>
 <ul>
-<li><p>CSS variables</p></li>
-<li><p>Navigation</p></li>
-<li><p>Contents</p></li>
-<li><p>Tables + Code backgrounds</p></li>
+<li><p>This is carefully crafted to ensure that things are evaluated correctly.</p></li>
 </ul>
 </li>
 </ul>
+<p>This approach has significant limitations however, since the A/B comparision format means that it is not directly usable to showcase functionality that is different between the two.</p>
+<p>For that, we keep one of the snippets empty, which thanks to a conditional, results in the tab for that language (MyST or reST) not being rendered.</p>
 </div>
-</body></html>
+</div>
+</div>
+
       </article>
       <footer>
         
@@ -190,8 +223,33 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Internals</a><ul>
+<li><a class="reference internal" href="#repository-layout">Repository Layout</a></li>
+<li><a class="reference internal" href="#theme-build-process">Theme build process</a></li>
+<li><a class="reference internal" href="#how-stuff-works">How stuff works</a><ul>
+<li><a class="reference internal" href="#sidebar-navigation-tree">Sidebar Navigation Tree</a></li>
+<li><a class="reference internal" href="#contents-sidebar">Contents sidebar</a></li>
+<li><a class="reference internal" href="#css-variables-for-customisation">CSS variables for customisation</a></li>
+<li><a class="reference internal" href="#furo-demo-directive"><code class="docutils literal notranslate"><span class="pre">furo-demo</span></code> directive</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
       
       
     </aside>

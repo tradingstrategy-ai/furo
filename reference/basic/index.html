@@ -1,0 +1,415 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Admonitions" href="../admonitions/" /><link rel="prev" title="Reference" href="../" />
+
+    <meta name="generator" content="sphinx-3.2.1, furo 2020.09.15.dev8"/><title>Basic Markup</title><link rel="stylesheet" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" href="../../_static/spanels-bootstrap-index--5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+    --color-code-foreground: #000000;
+  
+  }
+</style>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js" async></script>
+      <script src="../../_static/underscore.js" async></script>
+      
+        <script src="../../_static/doctools.js" defer></script>
+      
+        <script src="../../_static/language_data.js" defer></script>
+      <script src="../../_static/scripts/main.js"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+    Furo is under active development, and this documentation is not written yet!
+  </aside>
+</div>
+<div class="page">
+  <header>
+    <label class="header-left nav-overlay-icon" for="__navigation">
+      <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+    </label>
+    <div class="header-center"><div class="brand">furo</div></div>
+    <div class="header-right"></div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
+  </div>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search/">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Basic Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code-blocks/">Code Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/internals/">Internals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/design-goals/">Design Goals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license/">License</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pradyunsg/furo">GitHub Repository</a></li>
+</ul>
+
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="basic-markup">
+<h1>Basic Markup<a class="headerlink" href="#basic-markup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="inline-formatting">
+<h2>Inline Formatting<a class="headerlink" href="#inline-formatting" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="b7f6c146-c7d3-4906-a6b0-054edc317904" name="1dae1fc3-eca7-4a2e-b69f-2482bbea152d" type="radio"/>
+<label class="tabbed-label" for="b7f6c146-c7d3-4906-a6b0-054edc317904">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
+<span class="sb">`inline literals`</span>, {sub}`subscript`, {sup}`superscript` and more!
+You can even reference {pep}`13`. Yes, this is Markdown.
+
+Hyperlinks can take various forms, so here's a list of them:
+
+<span class="k">-</span> standalone hyperlink: &lt;https://python.org/&gt;
+<span class="k">-</span> hyperlink using references: [<span class="nt">link</span>][<span class="nl">markdown-external-hyperlink</span>]
+<span class="k">-</span> hyperlink with inline URL: [<span class="nt">link</span>](<span class="na">https://python.org/</span>)
+<span class="k">-</span> hyperlink to a different page: [<span class="nt">link</span>](<span class="na">../quickstart</span>)
+<span class="k">-</span> hyperlink to a specific API element: {class}`pathlib.Path`
+
+You can even have abbreviations like {abbr}`HTML (Hyper Text Markup Language)`.
+
+[<span class="nl">markdown-external-hyperlink</span>]: <span class="na">https://python.org/</span>
+</pre></div>
+</div>
+<p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
+<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
+You can even reference <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is Markdown.</p>
+<p>Hyperlinks can take various forms, so here’s a list of them:</p>
+<ul class="simple">
+<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
+<li><p>hyperlink using references: <a class="reference external" href="https://python.org/">link</a></p></li>
+<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
+<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc std std-doc">link</span></a></p></li>
+<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
+</ul>
+<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+</div>
+<input id="0454077e-83c6-40a5-b702-4522833e5029" name="1dae1fc3-eca7-4a2e-b69f-2482bbea152d" type="radio"/>
+<label class="tabbed-label" for="0454077e-83c6-40a5-b702-4522833e5029">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
+<span class="s">``inline literals``</span>, <span class="na">:sub:</span><span class="nv">`subscript`</span>, <span class="na">:sup:</span><span class="nv">`superscript`</span> and more!
+You can even reference <span class="na">:pep:</span><span class="nv">`13`</span>. Yes, this is reStructuredText.
+
+Hyperlinks can take various forms, so here's a list of them:
+
+<span class="m">-</span> standalone hyperlink: https://python.org/
+<span class="m">-</span> hyperlink using references: link_
+<span class="m">-</span> hyperlink with inline URL: <span class="s">`link </span><span class="si">&lt;https://python.org/&gt;</span><span class="s">`_</span>
+<span class="m">-</span> hyperlink to a different page: <span class="na">:any:</span><span class="nv">`link &lt;../quickstart&gt;`</span>
+<span class="m">-</span> hyperlink to a specific API element: <span class="na">:class:</span><span class="nv">`pathlib.Path`</span>
+
+You can even have abbreviations like <span class="na">:abbr:</span><span class="nv">`HTML (Hyper Text Markup Language)`</span>.
+
+<span class="p">..</span> <span class="nt">_link:</span> https://python.org/
+</pre></div>
+</div>
+<p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
+<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
+You can even reference <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is reStructuredText.</p>
+<p>Hyperlinks can take various forms, so here’s a list of them:</p>
+<ul class="simple">
+<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
+<li><p>hyperlink using references: <a href="#id1"><span class="problematic" id="id2">link_</span></a></p></li>
+<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
+<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc">link</span></a></p></li>
+<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
+</ul>
+<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="f09c7c23-4bbd-46a3-b79e-a8ae94fc4a7b" name="baf68f6f-c1a6-475a-b80f-2c0fecb260df" type="radio"/>
+<label class="tabbed-label" for="f09c7c23-4bbd-46a3-b79e-a8ae94fc4a7b">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> Lists in Markdown are pretty straightforward.
+<span class="k">-</span> A bunch of bullet points.
+  <span class="k">-</span> Nested bullets should be indented by two or more spaces.
+  <span class="k">-</span> They can just "show up" inline with the rest of the list.
+
+
+<span class="k">1.</span> Numbered lists are not complicated.
+<span class="k">2.</span> They do exactly what you think they do.
+
+Definition Lists
+:  An extremely useful tool for describing stuff.
+
+Term
+:  Definition
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lists in Markdown are pretty straightforward.</p></li>
+<li><p>A bunch of bullet points.</p>
+<ul>
+<li><p>Nested bullets should be indented by two or more spaces.</p></li>
+<li><p>They can just “show up” inline with the rest of the list.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p>Numbered lists are not complicated.</p></li>
+<li><p>They do exactly what you think they do.</p></li>
+</ol>
+<dl class="simple myst">
+<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
+</dd>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+</dl>
+</div>
+<input id="5410bfb2-b985-4ad1-956c-545e1086d7c1" name="baf68f6f-c1a6-475a-b80f-2c0fecb260df" type="radio"/>
+<label class="tabbed-label" for="5410bfb2-b985-4ad1-956c-545e1086d7c1">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> Lists in reStructuredText are fairly straightforward.
+<span class="m">-</span> A bunch of bullet points.
+
+  <span class="m">-</span> Nested bullets should be indented by <span class="gs">**exactly**</span> two spaces.
+  <span class="m">-</span> They also need a blank line before them, otherwise it doesn't work right.
+
+<span class="m">1.</span> Numbered lists are not complicated.
+<span class="m">2.</span> They do exactly what you think they do.
+
+Definition Lists
+   An extremely useful tool for describing stuff.
+
+Term
+   Definition
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lists in reStructuredText are fairly straightforward.</p></li>
+<li><p>A bunch of bullet points.</p>
+<ul>
+<li><p>Nested bullets should be indented by <strong>exactly</strong> two spaces.</p></li>
+<li><p>They also need a blank line before them, otherwise it doesn’t work right.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>Numbered lists are not complicated.</p></li>
+<li><p>They do exactly what you think they do.</p></li>
+</ol>
+<dl class="simple">
+<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
+</dd>
+<dt>Term</dt><dd><p>Definition</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="35366f32-28e5-4cb7-aa1a-feba8f277cbe" name="de9b8299-4b09-4962-902b-02a03d590c37" type="radio"/>
+<label class="tabbed-label" for="35366f32-28e5-4cb7-aa1a-feba8f277cbe">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="sb">```python</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello from Markdown"</span><span class="p">)</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello from Markdown"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="2342afc7-2137-464f-8ecb-03c8b367136f" name="de9b8299-4b09-4962-902b-02a03d590c37" type="radio"/>
+<label class="tabbed-label" for="2342afc7-2137-464f-8ecb-03c8b367136f">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+
+    print("Hello from reStructuredText")
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello from reStructuredText"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="4f257caf-7754-4767-8932-f37ddfbc7588" name="0304b77b-20a1-4b21-b5bf-ca7aaf366396" type="radio"/>
+<label class="tabbed-label" for="4f257caf-7754-4767-8932-f37ddfbc7588">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>![](https://source.unsplash.com/200x200/daily?ferret)
+
+This is from Markdown.
+</pre></div>
+</div>
+<p><img alt="" src="https://source.unsplash.com/200x200/daily?ferret"/></p>
+<p>This is from Markdown.</p>
+</div>
+<input id="9323278e-82a1-4347-a51a-93b1a6559b82" name="0304b77b-20a1-4b21-b5bf-ca7aaf366396" type="radio"/>
+<label class="tabbed-label" for="9323278e-82a1-4347-a51a-93b1a6559b82">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
+
+This is from reStructuredText.
+</pre></div>
+</div>
+<img alt="https://source.unsplash.com/200x200/daily?ferret" src="https://source.unsplash.com/200x200/daily?ferret"/>
+<p>This is from reStructuredText.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../admonitions/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Admonitions</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                <div class="title">Reference</div>
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+          <span class="copyright">Copyright &copy; 2020, Pradyun Gedam</span> |
+          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
+          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Basic Markup</a><ul>
+<li><a class="reference internal" href="#inline-formatting">Inline Formatting</a></li>
+<li><a class="reference internal" href="#lists">Lists</a></li>
+<li><a class="reference internal" href="#code">Code</a></li>
+<li><a class="reference internal" href="#images">Images</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>
