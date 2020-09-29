@@ -136,8 +136,29 @@
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="506bedf2-9200-4513-bbac-19e6f7dbc698" name="7a05795c-8e04-416b-9334-ec6c5bbbeb72" type="radio"/>
-<label class="tabbed-label" for="506bedf2-9200-4513-bbac-19e6f7dbc698">
+<input checked="checked" id="cb64117c-3515-40cf-a7f0-ae94cb35dffd" name="005d1524-b675-44e8-92ab-2cd17a9af0ec" type="radio"/>
+<label class="tabbed-label" for="cb64117c-3515-40cf-a7f0-ae94cb35dffd">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is what the most basic admonitions look like in reStructuredText.
+
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+   It is <span class="ge">*possible*</span> to have multiple paragraphs in the same admonition.
+
+   If you really want, you can even have lists, or code, or tables.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is what the most basic admonitions look like in reStructuredText.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is <em>possible</em> to have multiple paragraphs in the same admonition.</p>
+<p>If you really want, you can even have lists, or code, or tables.</p>
+</div>
+</div>
+<input id="38fdeda0-4cb7-416a-8fd5-862c5297460a" name="005d1524-b675-44e8-92ab-2cd17a9af0ec" type="radio"/>
+<label class="tabbed-label" for="38fdeda0-4cb7-416a-8fd5-862c5297460a">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{note}
 This is what the most basic admonitions look like in Markdown.
@@ -160,27 +181,6 @@ If you really want, you can even have lists, or code, or tables.
 <p>If you really want, you can even have lists, or code, or tables.</p>
 </div>
 </div>
-<input id="acd3ee06-7b15-4d19-8a43-8ed052f1f550" name="7a05795c-8e04-416b-9334-ec6c5bbbeb72" type="radio"/>
-<label class="tabbed-label" for="acd3ee06-7b15-4d19-8a43-8ed052f1f550">
-reStructuredText</label><div class="tabbed-content docutils">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is what the most basic admonitions look like in reStructuredText.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
-   It is <span class="ge">*possible*</span> to have multiple paragraphs in the same admonition.
-
-   If you really want, you can even have lists, or code, or tables.
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is what the most basic admonitions look like in reStructuredText.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is <em>possible</em> to have multiple paragraphs in the same admonition.</p>
-<p>If you really want, you can even have lists, or code, or tables.</p>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -188,18 +188,17 @@ reStructuredText</label><div class="tabbed-content docutils">
 <h2>Custom Titles<a class="headerlink" href="#custom-titles" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="f9e10192-2b5e-4e95-8eae-9dd884ae6839" name="380afdbe-4d06-485a-acbc-b238ff106dba" type="radio"/>
-<label class="tabbed-label" for="f9e10192-2b5e-4e95-8eae-9dd884ae6839">
-Markdown (MyST)</label><div class="tabbed-content docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{admonition} Look ma! A custom title.
-It looks different though.
-```
+<input checked="checked" id="b42afa13-f75b-45f6-833f-53a5c5cf20ce" name="cadd00ba-4387-4261-bc76-3c7086a30f92" type="radio"/>
+<label class="tabbed-label" for="b42afa13-f75b-45f6-833f-53a5c5cf20ce">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Look ma! A custom title.
 
-```{admonition} Another Custom Title
-:class: note
+   It looks different though.
 
-Maaa! I made it look the same by setting the class.
-```
+<span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Another Custom Title
+   <span class="nc">:class:</span> note
+
+   Maaa! I made it look the same by setting the class.
 </pre></div>
 </div>
 <div class="admonition-look-ma-a-custom-title admonition">
@@ -211,17 +210,18 @@ Maaa! I made it look the same by setting the class.
 <p>Maaa! I made it look the same by setting the class.</p>
 </div>
 </div>
-<input id="19098ba8-662e-4d0e-aa0b-5c87d0a2ad4d" name="380afdbe-4d06-485a-acbc-b238ff106dba" type="radio"/>
-<label class="tabbed-label" for="19098ba8-662e-4d0e-aa0b-5c87d0a2ad4d">
-reStructuredText</label><div class="tabbed-content docutils">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Look ma! A custom title.
+<input id="d3c5a882-c9c7-4ae5-bc84-4d9a09b16e8f" name="cadd00ba-4387-4261-bc76-3c7086a30f92" type="radio"/>
+<label class="tabbed-label" for="d3c5a882-c9c7-4ae5-bc84-4d9a09b16e8f">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{admonition} Look ma! A custom title.
+It looks different though.
+```
 
-   It looks different though.
+```{admonition} Another Custom Title
+:class: note
 
-<span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Another Custom Title
-   <span class="nc">:class:</span> note
-
-   Maaa! I made it look the same by setting the class.
+Maaa! I made it look the same by setting the class.
+```
 </pre></div>
 </div>
 <div class="admonition-look-ma-a-custom-title admonition">
