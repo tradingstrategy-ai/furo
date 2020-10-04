@@ -1,0 +1,1038 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Code Blocks" href="../code-blocks/" /><link rel="prev" title="Admonitions" href="../admonitions/" />
+
+    <meta name="generator" content="sphinx-3.2.1, furo 2020.09.28.dev9"/>
+        <title>API documentation - Furo</title>
+      <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?f52fbc5c1ec721b492fbcafe">
+    <link rel="stylesheet" href="../../_static/pygments.css?f52fbc5c1ec721b492fbcafe">
+    
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+    --color-code-foreground: #000000;
+  
+  }
+</style>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
+      <script src="../../_static/underscore.js"></script>
+      
+        <script src="../../_static/doctools.js" defer></script>
+      
+        <script src="../../_static/language_data.js" defer></script>
+      <script src="../../_static/scripts/main.js?f52fbc5c1ec721b492fbcafe"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+    Furo is under active development, and this documentation is not written yet!
+  </aside>
+</div>
+<div class="page">
+  <header class="mobile-header">
+    <label class="header-left nav-overlay-icon" for="__navigation">
+      <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+    </label>
+    <div class="header-center"><div class="brand">Furo</div></div>
+    <div class="header-right"></div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../">
+  
+  <span class="sidebar-brand-text">Furo</span>
+</a><form class="sidebar-search-container" method="get" action="../../search/">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-tree sidebar-scroll">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basic/">Basic Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code-blocks/">Code Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text-formatting/">Text Formatting</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/internals/">Internals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/design-goals/">Design Goals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license/">License</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pradyunsg/furo">GitHub Repository</a></li>
+</ul>
+
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon no-toc" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="api-documentation">
+<h1>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="094fdf0f-7053-4bfa-90af-e212aa400761" name="b4139056-7cf6-4149-a3cb-ef3affba0a2e" type="radio"/>
+<label class="tabbed-label" for="094fdf0f-7053-4bfa-90af-e212aa400761">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> sphinx.ext.autodoc
+    <span class="nc">:members:</span>
+    <span class="nc">:noindex:</span>
+</pre></div>
+</div>
+<div class="section" id="sphinx-ext-autodoc">
+<h2>sphinx.ext.autodoc<a class="headerlink" href="#sphinx-ext-autodoc" title="Permalink to this headline">¶</a></h2>
+<p>Automatically insert docstrings for functions, classes or whole modules into
+the doctree, thus avoiding duplication between docstrings and documentation
+for those who like elaborate docstrings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">copyright</dt>
+<dd class="field-odd"><p>Copyright 2007-2020 by the Sphinx team, see AUTHORS.</p>
+</dd>
+<dt class="field-even">license</dt>
+<dd class="field-even"><p>BSD, see LICENSE for details.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">AttributeDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for attributes.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">no_docstring</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.add_content"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add content from docstrings, attribute documentation and user.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">document_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.document_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for member documentation.</p>
+<p>If <em>all_members</em> is True, do all members, else those given by
+<em>self.options.members</em>.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoding</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.get_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Decode and return lines of the docstring(s) for the object.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_real_modname</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.get_real_modname"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Get the real module name of an object to document.</p>
+<p>It can differ from the name of the module through which the object was
+imported.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Import the object given by <em>self.modname</em> and <em>self.objpath</em> and set
+it as <em>self.object</em>.</p>
+<p>Returns True if successful, False if an error occurred.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">isinstanceattribute</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#AttributeDocumenter.isinstanceattribute"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Check the subject is an instance attribute.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">ClassDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for classes.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">no_docstring</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.add_content"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add content from docstrings, attribute documentation and user.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">document_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.document_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for member documentation.</p>
+<p>If <em>all_members</em> is True, do all members, else those given by
+<em>self.options.members</em>.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_args</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.format_args"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the argument signature of <em>self.object</em>.</p>
+<p>Should return None if the object does not have a signature.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_signature</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.format_signature"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the signature (arguments and return annotation) of the object.</p>
+<p>Let the user process it via the <code class="docutils literal notranslate"><span class="pre">autodoc-process-signature</span></code> event.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">real_modname</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_module</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.generate"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for the object given by <em>self.name</em>, and possibly for
+its members.</p>
+<p>If <em>more_content</em> is given, include that content. If <em>real_modname</em> is
+given, use that module name to find attribute docs. If <em>check_module</em> is
+True, only generate if the object is defined in the module name it is
+imported from. If <em>all_members</em> is True, document all members.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoding</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.get_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Decode and return lines of the docstring(s) for the object.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassDocumenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Import the object given by <em>self.modname</em> and <em>self.objpath</em> and set
+it as <em>self.object</em>.</p>
+<p>Returns True if successful, False if an error occurred.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">ClassLevelDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassLevelDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for objects on class level (methods,
+attributes).</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">resolve_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modname</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">parents</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">base</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Tuple<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ClassLevelDocumenter.resolve_name"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Resolve the module and name of the object to document given by the
+arguments and the current module/class.</p>
+<p>Must return a pair of the module name and a chain of attributes; for
+example, it would return <code class="docutils literal notranslate"><span class="pre">('zipfile',</span> <span class="pre">['ZipFile',</span> <span class="pre">'open'])</span></code> for the
+<code class="docutils literal notranslate"><span class="pre">zipfile.ZipFile.open</span></code> method.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">DataDeclarationDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDeclarationDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for data that cannot be imported
+because they are declared without initial value (refs: PEP-526).</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">no_docstring</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDeclarationDocumenter.add_content"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Never try to get a docstring from the object.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDeclarationDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>This documents only INSTANCEATTR members.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDeclarationDocumenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Never import anything.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">DataDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for data items.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">document_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDocumenter.document_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for member documentation.</p>
+<p>If <em>all_members</em> is True, do all members, else those given by
+<em>self.options.members</em>.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_real_modname</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DataDocumenter.get_real_modname"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Get the real module name of an object to document.</p>
+<p>It can differ from the name of the module through which the object was
+imported.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">DecoratorDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DecoratorDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for decorator functions.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_args</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Any<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DecoratorDocumenter.format_args"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the argument signature of <em>self.object</em>.</p>
+<p>Should return None if the object does not have a signature.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">DocstringSignatureMixin</code><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DocstringSignatureMixin"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Mixin for FunctionDocumenter and MethodDocumenter to provide the
+feature of reading the signature from the docstring.</p>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">DocstringStripSignatureMixin</code><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#DocstringStripSignatureMixin"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Mixin for AttributeDocumenter to provide the
+feature of stripping any function signature from the docstring.</p>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">Documenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>A Documenter knows how to autodocument a single object type.  When
+registered with the AutoDirective, it will be used to document objects
+of that type when needed by autodoc.</p>
+<p>Its <em>objtype</em> attribute selects what auto directive it is assigned to
+(the directive name is ‘auto’ + objtype), and what directive it generates
+by default, though that can be overridden by an attribute called
+<em>directivetype</em>.</p>
+<p>A Documenter has an <em>option_spec</em> that works like a docutils directive’s;
+in fact, it will be used to parse an auto directive’s options that matches
+the documenter.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">no_docstring</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.add_content"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add content from docstrings, attribute documentation and user.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_line</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">line</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">source</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">lineno</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.add_line"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Append one line of generated reST to the output.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">check_module</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.check_module"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Check if <em>self.object</em> is really defined in the module given by
+<em>self.modname</em>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">content_indent</code><em class="property"> = '   '</em></dt>
+<dd><p>indentation by which to indent the directive content</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">document_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.document_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for member documentation.</p>
+<p>If <em>all_members</em> is True, do all members, else those given by
+<em>self.options.members</em>.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">documenters</code></dt>
+<dd><p>Returns registered Documenter classes</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">filter_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">members</span><span class="p">:</span> <span class="n">List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">want_all</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Any<span class="p">, </span>bool<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.filter_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Filter the given member list.</p>
+<p>Members are skipped if</p>
+<ul class="simple">
+<li><p>they are private (except if given explicitly or the private-members
+option is set)</p></li>
+<li><p>they are special methods (except if given explicitly or the
+special-members option is set)</p></li>
+<li><p>they are undocumented (except if the undoc-members option is set)</p></li>
+</ul>
+<p>The user can override the skipping decision by connecting to the
+<code class="docutils literal notranslate"><span class="pre">autodoc-skip-member</span></code> event.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_args</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.format_args"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the argument signature of <em>self.object</em>.</p>
+<p>Should return None if the object does not have a signature.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.format_name"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the name of <em>self.object</em>.</p>
+<p>This normally should be something that can be parsed by the generated
+directive, but doesn’t need to be (Sphinx will display it unparsed
+then).</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_signature</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.format_signature"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the signature (arguments and return annotation) of the object.</p>
+<p>Let the user process it via the <code class="docutils literal notranslate"><span class="pre">autodoc-process-signature</span></code> event.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">real_modname</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_module</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.generate"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for the object given by <em>self.name</em>, and possibly for
+its members.</p>
+<p>If <em>more_content</em> is given, include that content. If <em>real_modname</em> is
+given, use that module name to find attribute docs. If <em>check_module</em> is
+True, only generate if the object is defined in the module name it is
+imported from. If <em>all_members</em> is True, document all members.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_attr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">defargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Any<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.get_attr"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>getattr() override for types such as Zope interfaces.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoding</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.get_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Decode and return lines of the docstring(s) for the object.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_object_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">want_all</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> → Tuple<span class="p">[</span>bool<span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.get_object_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Return <cite>(members_check_module, members)</cite> where <cite>members</cite> is a
+list of <cite>(membername, member)</cite> pairs of the members of <em>self.object</em>.</p>
+<p>If <em>want_all</em> is True, return all members.  Else, only return those
+members given by <em>self.options.members</em> (which may also be none).</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_real_modname</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.get_real_modname"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Get the real module name of an object to document.</p>
+<p>It can differ from the name of the module through which the object was
+imported.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Import the object given by <em>self.modname</em> and <em>self.objpath</em> and set
+it as <em>self.object</em>.</p>
+<p>Returns True if successful, False if an error occurred.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">member_order</code><em class="property"> = 0</em></dt>
+<dd><p>order if autodoc_member_order is set to ‘groupwise’</p>
+</dd></dl>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">objtype</code><em class="property"> = 'object'</em></dt>
+<dd><p>name by which the directive is called (auto…) and the default
+generated directive name</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">parse_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.parse_name"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Determine what module to import and what attribute to document.</p>
+<p>Returns True and sets <em>self.modname</em>, <em>self.objpath</em>, <em>self.fullname</em>,
+<em>self.args</em> and <em>self.retann</em> if parsing and resolving was successful.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">priority</code><em class="property"> = 0</em></dt>
+<dd><p>priority if multiple documenters return True from can_document_member</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">process_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">docstrings</span><span class="p">:</span> <span class="n">List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> → Iterator<span class="p">[</span>str<span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.process_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Let the user process the docstrings before adding them.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">resolve_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modname</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">parents</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">base</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Tuple<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.resolve_name"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Resolve the module and name of the object to document given by the
+arguments and the current module/class.</p>
+<p>Must return a pair of the module name and a chain of attributes; for
+example, it would return <code class="docutils literal notranslate"><span class="pre">('zipfile',</span> <span class="pre">['ZipFile',</span> <span class="pre">'open'])</span></code> for the
+<code class="docutils literal notranslate"><span class="pre">zipfile.ZipFile.open</span></code> method.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">sort_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">documenters</span><span class="p">:</span> <span class="n">List<span class="p">[</span>Tuple<span class="p">[</span>Documenter<span class="p">, </span>bool<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">order</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>Tuple<span class="p">[</span>sphinx.ext.autodoc.Documenter<span class="p">, </span>bool<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Documenter.sort_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Sort the given member list.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">titles_allowed</code><em class="property"> = False</em></dt>
+<dd><p>true if the generated content may contain titles</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">ExceptionDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ExceptionDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized ClassDocumenter subclass for exceptions.</p>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ExceptionDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">FunctionDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#FunctionDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for functions.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#FunctionDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">annotate_to_first_argument</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span></em>, <em class="sig-param"><span class="n">typ</span><span class="p">:</span> <span class="n">Type</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#FunctionDocumenter.annotate_to_first_argument"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Annotate type hint to the first argument of function if needed.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#FunctionDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">document_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#FunctionDocumenter.document_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for member documentation.</p>
+<p>If <em>all_members</em> is True, do all members, else those given by
+<em>self.options.members</em>.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_args</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#FunctionDocumenter.format_args"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the argument signature of <em>self.object</em>.</p>
+<p>Should return None if the object does not have a signature.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_signature</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#FunctionDocumenter.format_signature"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the signature (arguments and return annotation) of the object.</p>
+<p>Let the user process it via the <code class="docutils literal notranslate"><span class="pre">autodoc-process-signature</span></code> event.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">GenericAliasDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#GenericAliasDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for GenericAliases.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">no_docstring</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#GenericAliasDocumenter.add_content"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add content from docstrings, attribute documentation and user.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#GenericAliasDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#GenericAliasDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">InstanceAttributeDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#InstanceAttributeDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for attributes that cannot be imported
+because they are instance attributes (e.g. assigned in __init__).</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">no_docstring</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#InstanceAttributeDocumenter.add_content"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Never try to get a docstring from the object.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#InstanceAttributeDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>This documents only INSTANCEATTR members.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#InstanceAttributeDocumenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Never import anything.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">MethodDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for methods (normal, static and class).</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">annotate_to_first_argument</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span></em>, <em class="sig-param"><span class="n">typ</span><span class="p">:</span> <span class="n">Type</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter.annotate_to_first_argument"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Annotate type hint to the first argument of function if needed.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">document_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter.document_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for member documentation.</p>
+<p>If <em>all_members</em> is True, do all members, else those given by
+<em>self.options.members</em>.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_args</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter.format_args"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the argument signature of <em>self.object</em>.</p>
+<p>Should return None if the object does not have a signature.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">format_signature</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter.format_signature"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Format the signature (arguments and return annotation) of the object.</p>
+<p>Let the user process it via the <code class="docutils literal notranslate"><span class="pre">autodoc-process-signature</span></code> event.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#MethodDocumenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Import the object given by <em>self.modname</em> and <em>self.objpath</em> and set
+it as <em>self.object</em>.</p>
+<p>Returns True if successful, False if an error occurred.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">ModuleDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for modules.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_object_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">want_all</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> → Tuple<span class="p">[</span>bool<span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter.get_object_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Return <cite>(members_check_module, members)</cite> where <cite>members</cite> is a
+list of <cite>(membername, member)</cite> pairs of the members of <em>self.object</em>.</p>
+<p>If <em>want_all</em> is True, return all members.  Else, only return those
+members given by <em>self.options.members</em> (which may also be none).</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Import the object given by <em>self.modname</em> and <em>self.objpath</em> and set
+it as <em>self.object</em>.</p>
+<p>Returns True if successful, False if an error occurred.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">parse_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter.parse_name"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Determine what module to import and what attribute to document.</p>
+<p>Returns True and sets <em>self.modname</em>, <em>self.objpath</em>, <em>self.fullname</em>,
+<em>self.args</em> and <em>self.retann</em> if parsing and resolving was successful.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">resolve_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modname</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">parents</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">base</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Tuple<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter.resolve_name"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Resolve the module and name of the object to document given by the
+arguments and the current module/class.</p>
+<p>Must return a pair of the module name and a chain of attributes; for
+example, it would return <code class="docutils literal notranslate"><span class="pre">('zipfile',</span> <span class="pre">['ZipFile',</span> <span class="pre">'open'])</span></code> for the
+<code class="docutils literal notranslate"><span class="pre">zipfile.ZipFile.open</span></code> method.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">sort_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">documenters</span><span class="p">:</span> <span class="n">List<span class="p">[</span>Tuple<span class="p">[</span>Documenter<span class="p">, </span>bool<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">order</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>Tuple<span class="p">[</span>sphinx.ext.autodoc.Documenter<span class="p">, </span>bool<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleDocumenter.sort_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Sort the given member list.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">ModuleLevelDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleLevelDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for objects on module level (functions,
+classes, data/constants).</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">resolve_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modname</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">parents</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">base</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Tuple<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#ModuleLevelDocumenter.resolve_name"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Resolve the module and name of the object to document given by the
+arguments and the current module/class.</p>
+<p>Must return a pair of the module name and a chain of attributes; for
+example, it would return <code class="docutils literal notranslate"><span class="pre">('zipfile',</span> <span class="pre">['ZipFile',</span> <span class="pre">'open'])</span></code> for the
+<code class="docutils literal notranslate"><span class="pre">zipfile.ZipFile.open</span></code> method.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">Options</code><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#Options"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>A dict/attribute hybrid that returns None on nonexisting keys.</p>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">PropertyDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#PropertyDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for properties.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#PropertyDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#PropertyDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">document_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">all_members</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#PropertyDocumenter.document_members"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Generate reST for member documentation.</p>
+<p>If <em>all_members</em> is True, do all members, else those given by
+<em>self.options.members</em>.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_real_modname</code><span class="sig-paren">(</span><span class="sig-paren">)</span> → str<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#PropertyDocumenter.get_real_modname"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Get the real module name of an object to document.</p>
+<p>It can differ from the name of the module through which the object was
+imported.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">SingledispatchFunctionDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#SingledispatchFunctionDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to be a specialized Documenter subclass for singledispatch’ed functions.</p>
+<p>Retained for backwards compatibility, now does the same as the FunctionDocumenter</p>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">SingledispatchMethodDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#SingledispatchMethodDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to be a specialized Documenter subclass for singledispatch’ed methods.</p>
+<p>Retained for backwards compatibility, now does the same as the MethodDocumenter</p>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">SlotsAttributeDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#SlotsAttributeDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for attributes that cannot be imported
+because they are attributes in __slots__.</p>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#SlotsAttributeDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>This documents only SLOTSATTR members.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoding</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#SlotsAttributeDocumenter.get_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Decode and return lines of the docstring(s) for the object.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">import_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raiseerror</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#SlotsAttributeDocumenter.import_object"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Never import anything.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">TypeVarDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span><span class="p">:</span> <span class="n">DocumenterBridge</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">indent</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#TypeVarDocumenter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Specialized Documenter subclass for TypeVars.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">more_content</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">no_docstring</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#TypeVarDocumenter.add_content"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add content from docstrings, attribute documentation and user.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#TypeVarDocumenter.add_directive_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Add the directive header and options to the generated content.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">can_document_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">membername</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">isattr</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#TypeVarDocumenter.can_document_member"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Called to see if a member can be documented by this documenter.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoding</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> → List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#TypeVarDocumenter.get_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Decode and return lines of the docstring(s) for the object.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">autodoc_attrgetter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span><span class="p">:</span> <span class="n">sphinx.application.Sphinx</span></em>, <em class="sig-param"><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">defargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Any<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#autodoc_attrgetter"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Alternative getattr() for types</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">between</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">marker</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">what</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepempty</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">exclude</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> → Callable<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#between"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Return a listener that either keeps, or if <em>exclude</em> is True excludes,
+lines between lines that match the <em>marker</em> regular expression.  If no line
+matches, the resulting docstring would be empty, so no change will be made
+unless <em>keepempty</em> is true.</p>
+<p>If <em>what</em> is a sequence of strings, only docstrings of a type in <em>what</em> will
+be processed.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">bool_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → bool<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#bool_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to convert flag options to auto directives.  (Instead of
+directives.flag(), which returns None).</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">cut_lines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pre</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">post</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">what</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> → Callable<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#cut_lines"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Return a listener that removes the first <em>pre</em> and last <em>post</em>
+lines of every docstring.  If <em>what</em> is a sequence of strings,
+only docstrings of a type in <em>what</em> will be processed.</p>
+<p>Use like this (e.g. in the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function of <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinx.ext.autodoc</span> <span class="kn">import</span> <span class="n">cut_lines</span>
+<span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'autodoc-process-docstring'</span><span class="p">,</span> <span class="n">cut_lines</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">what</span><span class="o">=</span><span class="p">[</span><span class="s1">'module'</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>This can (and should) be used in place of <a href="#id1"><span class="problematic" id="id2">:confval:`automodule_skip_lines`</span></a>.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">exclude_members_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Union<span class="p">[</span>object<span class="p">, </span>Set<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#exclude_members_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to convert the :exclude-members: option.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">get_documenters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span><span class="p">:</span> <span class="n">sphinx.application.Sphinx</span></em><span class="sig-paren">)</span> → Dict<span class="p">[</span>str<span class="p">, </span>Type<span class="p">[</span>sphinx.ext.autodoc.Documenter<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#get_documenters"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Returns registered Documenter classes</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">inherited_members_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Union<span class="p">[</span>object<span class="p">, </span>Set<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#inherited_members_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to convert the :members: option to auto directives.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">member_order_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Optional<span class="p">[</span>str<span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#member_order_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to convert the :members: option to auto directives.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">members_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Union<span class="p">[</span>object<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#members_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to convert the :members: option to auto directives.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">members_set_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> → Union<span class="p">[</span>object<span class="p">, </span>Set<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#members_set_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Used to convert the :members: option to auto directives.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">merge_members_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#merge_members_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Merge :<a href="#id3"><span class="problematic" id="id4">*</span></a>-members: option to the :members: option.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">merge_special_members_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/autodoc/#merge_special_members_option"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Merge :special-members: option to :members: option.</p>
+</dd></dl>
+<dl class="py data">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.autodoc.</code><code class="sig-name descname">py_ext_sig_re</code><em class="property"> = re.compile('^ ([\\w.]+::)?            # explicit module name\n          ([\\w.]+\\.)?            # module and/or class name(s)\n          (\\w+)  \\s*             # thing name\n          (?: \\((.*)\\)          , re.VERBOSE)</em></dt>
+<dd><p>extended signature RE: with explicit module name separated by</p>
+</dd></dl>
+</div>
+</div>
+<input id="8c7071d3-9d81-4cf5-b52a-2693e02872e4" name="b4139056-7cf6-4149-a3cb-ef3affba0a2e" type="radio"/>
+<label class="tabbed-label" for="8c7071d3-9d81-4cf5-b52a-2693e02872e4">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
+.. automodule:: sphinx.ext.todo
+    :members:
+    :noindex:
+```
+</pre></div>
+</div>
+<div class="section" id="sphinx-ext-todo">
+<h2>sphinx.ext.todo<a class="headerlink" href="#sphinx-ext-todo" title="Permalink to this headline">¶</a></h2>
+<p>Allow todos to be inserted into your documentation.  Inclusion of todos can
+be switched of by a configuration variable.  The todolist directive collects
+all todos of your project and lists them along with a backlink to the
+original location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">copyright</dt>
+<dd class="field-odd"><p>Copyright 2007-2020 by the Sphinx team, see AUTHORS.</p>
+</dd>
+<dt class="field-even">license</dt>
+<dd class="field-even"><p>BSD, see LICENSE for details.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.todo.</code><code class="sig-name descname">Todo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">arguments</span></em>, <em class="sig-param"><span class="n">options</span></em>, <em class="sig-param"><span class="n">content</span></em>, <em class="sig-param"><span class="n">lineno</span></em>, <em class="sig-param"><span class="n">content_offset</span></em>, <em class="sig-param"><span class="n">block_text</span></em>, <em class="sig-param"><span class="n">state</span></em>, <em class="sig-param"><span class="n">state_machine</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/todo/#Todo"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>A todo entry, displayed (if configured) in the form of an admonition.</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">node_class</code></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">todo_node</span></code></p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.todo.</code><code class="sig-name descname">TodoDomain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/todo/#TodoDomain"><span class="viewcode-link">[source]</span></a></dt>
+<dd><dl class="py method">
+<dt>
+<code class="sig-name descname">clear_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">docname</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/todo/#TodoDomain.clear_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Remove traces of a document in the domain-specific inventories.</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">merge_domaindata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">docnames</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">otherdata</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/todo/#TodoDomain.merge_domaindata"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Merge in data regarding <em>docnames</em> from a different domaindata
+inventory (coming from a subprocess in parallel builds).</p>
+</dd></dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">process_doc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">sphinx.environment.BuildEnvironment</span></em>, <em class="sig-param"><span class="n">docname</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">document</span><span class="p">:</span> <span class="n">docutils.nodes.document</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/todo/#TodoDomain.process_doc"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Process a document after it is read by the environment.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.todo.</code><code class="sig-name descname">TodoList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">arguments</span></em>, <em class="sig-param"><span class="n">options</span></em>, <em class="sig-param"><span class="n">content</span></em>, <em class="sig-param"><span class="n">lineno</span></em>, <em class="sig-param"><span class="n">content_offset</span></em>, <em class="sig-param"><span class="n">block_text</span></em>, <em class="sig-param"><span class="n">state</span></em>, <em class="sig-param"><span class="n">state_machine</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/todo/#TodoList"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>A list of all todo entries.</p>
+</dd></dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">sphinx.ext.todo.</code><code class="sig-name descname">process_todo_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span><span class="p">:</span> <span class="n">sphinx.application.Sphinx</span></em>, <em class="sig-param"><span class="n">doctree</span><span class="p">:</span> <span class="n">docutils.nodes.document</span></em>, <em class="sig-param"><span class="n">fromdocname</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> → None<a class="reference internal" href="../../_modules/sphinx/ext/todo/#process_todo_nodes"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Replace all todolist nodes with a list of the collected todos.
+Augment each todo with a backlink to the original location.</p>
+</dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.todo.</code><code class="sig-name descname">todo_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rawsource</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">children</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">attributes</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/todo/#todo_node"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">sphinx.ext.todo.</code><code class="sig-name descname">todolist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rawsource</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">children</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">attributes</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sphinx/ext/todo/#todolist"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../code-blocks/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Code Blocks</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../admonitions/">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Admonitions</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+          <span class="copyright">Copyright &copy; 2020, Pradyun Gedam</span> |
+          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
+          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>

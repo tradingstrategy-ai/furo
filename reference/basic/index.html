@@ -8,8 +8,8 @@
       <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?aa51a9a9972fc26a37630cab">
-    <link rel="stylesheet" href="../../_static/pygments.css?aa51a9a9972fc26a37630cab">
+    <link rel="stylesheet" href="../../_static/styles/default.css?49cfdab52890d381e1706938">
+    <link rel="stylesheet" href="../../_static/pygments.css?49cfdab52890d381e1706938">
     
 <style>
   :root {
@@ -24,7 +24,7 @@
         <script src="../../_static/doctools.js" defer></script>
       
         <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?aa51a9a9972fc26a37630cab"></script></head>
+      <script src="../../_static/scripts/main.js?49cfdab52890d381e1706938"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -100,8 +100,11 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Basic Markup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code-blocks/">Code Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text-formatting/">Text Formatting</a></li>
 </ul>
 </li>
 </ul>
@@ -131,170 +134,12 @@
         </label>
         <div class="section" id="basic-markup">
 <h1>Basic Markup<a class="headerlink" href="#basic-markup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="inline-formatting">
-<h2>Inline Formatting<a class="headerlink" href="#inline-formatting" title="Permalink to this headline">¶</a></h2>
-<div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="06bf9231-2794-4d6f-990d-d3e67ad1f999" name="7c98e62a-a327-4c41-8721-ea802a9daaff" type="radio"/>
-<label class="tabbed-label" for="06bf9231-2794-4d6f-990d-d3e67ad1f999">
-reStructuredText</label><div class="tabbed-content docutils">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
-<span class="s">``inline literals``</span>, <span class="na">:sub:</span><span class="nv">`subscript`</span>, <span class="na">:sup:</span><span class="nv">`superscript`</span> and more!
-You can even reference <span class="na">:pep:</span><span class="nv">`13`</span>. Yes, this is reStructuredText.
-
-Hyperlinks can take various forms, so here's a list of them:
-
-<span class="m">-</span> standalone hyperlink: https://python.org/
-<span class="m">-</span> hyperlink using references: link_
-<span class="m">-</span> hyperlink with inline URL: <span class="s">`link </span><span class="si">&lt;https://python.org/&gt;</span><span class="s">`_</span>
-<span class="m">-</span> hyperlink to a different page: <span class="na">:any:</span><span class="nv">`link &lt;../quickstart&gt;`</span>
-<span class="m">-</span> hyperlink to a specific API element: <span class="na">:class:</span><span class="nv">`pathlib.Path`</span>
-
-You can even have abbreviations like <span class="na">:abbr:</span><span class="nv">`HTML (Hyper Text Markup Language)`</span>.
-
-<span class="p">..</span> <span class="nt">_link:</span> https://python.org/
-</pre></div>
-</div>
-<p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
-<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
-You can even reference <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is reStructuredText.</p>
-<p>Hyperlinks can take various forms, so here’s a list of them:</p>
-<ul class="simple">
-<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
-<li><p>hyperlink using references: <a href="#id1"><span class="problematic" id="id2">link_</span></a></p></li>
-<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
-<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc">link</span></a></p></li>
-<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
-</ul>
-<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
-</div>
-<input id="791a4cda-856d-4568-a111-aa671d373f9d" name="7c98e62a-a327-4c41-8721-ea802a9daaff" type="radio"/>
-<label class="tabbed-label" for="791a4cda-856d-4568-a111-aa671d373f9d">
-Markdown (MyST)</label><div class="tabbed-content docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
-<span class="sb">`inline literals`</span>, {sub}`subscript`, {sup}`superscript` and more!
-You can even reference {pep}`13`. Yes, this is Markdown.
-
-Hyperlinks can take various forms, so here's a list of them:
-
-<span class="k">-</span> standalone hyperlink: &lt;https://python.org/&gt;
-<span class="k">-</span> hyperlink using references: [<span class="nt">link</span>][<span class="nl">markdown-external-hyperlink</span>]
-<span class="k">-</span> hyperlink with inline URL: [<span class="nt">link</span>](<span class="na">https://python.org/</span>)
-<span class="k">-</span> hyperlink to a different page: [<span class="nt">link</span>](<span class="na">../quickstart</span>)
-<span class="k">-</span> hyperlink to a specific API element: {class}`pathlib.Path`
-
-You can even have abbreviations like {abbr}`HTML (Hyper Text Markup Language)`.
-
-[<span class="nl">markdown-external-hyperlink</span>]: <span class="na">https://python.org/</span>
-</pre></div>
-</div>
-<p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
-<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
-You can even reference <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is Markdown.</p>
-<p>Hyperlinks can take various forms, so here’s a list of them:</p>
-<ul class="simple">
-<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
-<li><p>hyperlink using references: <a class="reference external" href="https://python.org/">link</a></p></li>
-<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
-<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc std std-doc">link</span></a></p></li>
-<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
-</ul>
-<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
-<div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="4c64ca51-5544-42d9-8cfa-553119682698" name="16ba10f2-7f3a-44e4-8a8d-a07d0cc5506a" type="radio"/>
-<label class="tabbed-label" for="4c64ca51-5544-42d9-8cfa-553119682698">
-reStructuredText</label><div class="tabbed-content docutils">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> Lists in reStructuredText are fairly straightforward.
-<span class="m">-</span> A bunch of bullet points.
-
-  <span class="m">-</span> Nested bullets should be indented by <span class="gs">**exactly**</span> two spaces.
-  <span class="m">-</span> They also need a blank line before them, otherwise it doesn't work right.
-
-<span class="m">1.</span> Numbered lists are not complicated.
-<span class="m">2.</span> They do exactly what you think they do.
-
-Definition Lists
-   An extremely useful tool for describing stuff.
-
-Term
-   Definition
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Lists in reStructuredText are fairly straightforward.</p></li>
-<li><p>A bunch of bullet points.</p>
-<ul>
-<li><p>Nested bullets should be indented by <strong>exactly</strong> two spaces.</p></li>
-<li><p>They also need a blank line before them, otherwise it doesn’t work right.</p></li>
-</ul>
-</li>
-</ul>
-<ol class="arabic simple">
-<li><p>Numbered lists are not complicated.</p></li>
-<li><p>They do exactly what you think they do.</p></li>
-</ol>
-<dl class="simple">
-<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
-</dd>
-<dt>Term</dt><dd><p>Definition</p>
-</dd>
-</dl>
-</div>
-<input id="80d08544-b22e-43d5-a354-9ef792df70aa" name="16ba10f2-7f3a-44e4-8a8d-a07d0cc5506a" type="radio"/>
-<label class="tabbed-label" for="80d08544-b22e-43d5-a354-9ef792df70aa">
-Markdown (MyST)</label><div class="tabbed-content docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> Lists in Markdown are pretty straightforward.
-<span class="k">-</span> A bunch of bullet points.
-  <span class="k">-</span> Nested bullets should be indented by two or more spaces.
-  <span class="k">-</span> They can just "show up" inline with the rest of the list.
-
-
-<span class="k">1.</span> Numbered lists are not complicated.
-<span class="k">2.</span> They do exactly what you think they do.
-
-Definition Lists
-:  An extremely useful tool for describing stuff.
-
-Term
-:  Definition
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Lists in Markdown are pretty straightforward.</p></li>
-<li><p>A bunch of bullet points.</p>
-<ul>
-<li><p>Nested bullets should be indented by two or more spaces.</p></li>
-<li><p>They can just “show up” inline with the rest of the list.</p></li>
-</ul>
-</li>
-</ul>
-<ol class="simple">
-<li><p>Numbered lists are not complicated.</p></li>
-<li><p>They do exactly what you think they do.</p></li>
-</ol>
-<dl class="simple myst">
-<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
-</dd>
-<dt>Term</dt><dd><p>Definition</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="code">
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="38d03107-f70b-4cdc-8db5-747f4d4f4ca2" name="c05af7f3-1b07-42a3-b9d1-85d31373e15f" type="radio"/>
-<label class="tabbed-label" for="38d03107-f70b-4cdc-8db5-747f4d4f4ca2">
+<input checked="checked" id="f203722b-e0fb-4a84-a571-1cf22ade3815" name="63cd7764-d500-4311-a309-4cac3426eac7" type="radio"/>
+<label class="tabbed-label" for="f203722b-e0fb-4a84-a571-1cf22ade3815">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
 
@@ -305,8 +150,8 @@ reStructuredText</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="15815e5a-2c0c-4dd9-ab1e-21466d578d42" name="c05af7f3-1b07-42a3-b9d1-85d31373e15f" type="radio"/>
-<label class="tabbed-label" for="15815e5a-2c0c-4dd9-ab1e-21466d578d42">
+<input id="2be2ad6f-b1b2-405a-9f91-9153d432d7eb" name="63cd7764-d500-4311-a309-4cac3426eac7" type="radio"/>
+<label class="tabbed-label" for="2be2ad6f-b1b2-405a-9f91-9153d432d7eb">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="sb">```python</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello from Markdown"</span><span class="p">)</span>
@@ -324,8 +169,8 @@ Markdown (MyST)</label><div class="tabbed-content docutils">
 <h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="953b01ae-b22d-49f8-9571-fb4b6d226a1b" name="33f3cb14-4122-4a83-b4e5-1d67ba3df857" type="radio"/>
-<label class="tabbed-label" for="953b01ae-b22d-49f8-9571-fb4b6d226a1b">
+<input checked="checked" id="0a6202b1-4188-42e9-a52b-047abec8f4ee" name="a27a6c4e-a3e3-4e8d-9976-718e9bcfcf66" type="radio"/>
+<label class="tabbed-label" for="0a6202b1-4188-42e9-a52b-047abec8f4ee">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
 
@@ -335,8 +180,8 @@ This is from reStructuredText.
 <img alt="https://source.unsplash.com/200x200/daily?ferret" src="https://source.unsplash.com/200x200/daily?ferret"/>
 <p>This is from reStructuredText.</p>
 </div>
-<input id="4567b4e6-c457-4f71-b444-47ffcd3bb082" name="33f3cb14-4122-4a83-b4e5-1d67ba3df857" type="radio"/>
-<label class="tabbed-label" for="4567b4e6-c457-4f71-b444-47ffcd3bb082">
+<input id="5742082a-5d54-4570-bd74-8feda807a978" name="a27a6c4e-a3e3-4e8d-9976-718e9bcfcf66" type="radio"/>
+<label class="tabbed-label" for="5742082a-5d54-4570-bd74-8feda807a978">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>![](https://source.unsplash.com/200x200/daily?ferret)
 
@@ -398,8 +243,6 @@ This is from Markdown.
         <div class="toc-tree">
           <ul>
 <li><a class="reference internal" href="#">Basic Markup</a><ul>
-<li><a class="reference internal" href="#inline-formatting">Inline Formatting</a></li>
-<li><a class="reference internal" href="#lists">Lists</a></li>
 <li><a class="reference internal" href="#code">Code</a></li>
 <li><a class="reference internal" href="#images">Images</a></li>
 </ul>

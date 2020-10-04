@@ -1,15 +1,15 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="License" href="../license/" /><link rel="prev" title="Design Goals" href="../contributing/design-goals/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" />
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.09.28.dev9"/>
-        <title>Changelog - Furo</title>
+        <title>Overview: module code - Furo</title>
       <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../_static/styles/default.css?201fef77eb16945764e010f1">
-    <link rel="stylesheet" href="../_static/pygments.css?201fef77eb16945764e010f1">
+    <link rel="stylesheet" href="../_static/styles/default.css?731c9194fc8d8506b2b21931">
+    <link rel="stylesheet" href="../_static/pygments.css?731c9194fc8d8506b2b21931">
     
 <style>
   :root {
@@ -24,7 +24,7 @@
         <script src="../_static/doctools.js" defer></script>
       
         <script src="../_static/language_data.js" defer></script>
-      <script src="../_static/scripts/main.js?201fef77eb16945764e010f1"></script></head>
+      <script src="../_static/scripts/main.js?731c9194fc8d8506b2b21931"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -109,14 +109,14 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/workflow/">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/internals/">Internals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/design-goals/">Design Goals</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license/">License</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pradyunsg/furo">GitHub Repository</a></li>
 </ul>
@@ -129,108 +129,19 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon" for="__toc">
+        <label class="toc-overlay-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="changelog">
-<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="beta7">
-<h2>2020.09.15.beta7<a class="headerlink" href="#beta7" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Automate version management</p></li>
-<li><p>Use correct width for elements on small screens (100% instead of 100vw)</p></li>
+        <h1>All modules for which code is available</h1>
+<ul><li><a href="sphinx/ext/autodoc/">sphinx.ext.autodoc</a></li>
+<li><a href="sphinx/ext/todo/">sphinx.ext.todo</a></li>
 </ul>
-</div>
-<div class="section" id="beta6">
-<h2>2020.09.15.beta6<a class="headerlink" href="#beta6" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Tweak header on small screens.</p></li>
-<li><p>Tweak spacing for small screens.</p></li>
-<li><p>Place “sidebar” directive’s contents inline, on small screens.</p></li>
-</ul>
-</div>
-<div class="section" id="beta5">
-<h2>2020.08.14.beta5<a class="headerlink" href="#beta5" title="Permalink to this headline">¶</a></h2>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This release was not correctly versioned and is not installed preferentially over beta4.</p>
-</div>
-<ul class="simple">
-<li><p>Add CSS variables for header foreground and background.</p></li>
-<li><p>Add styling for captions.</p></li>
-<li><p>Add styling for correctly handling permalinks.</p></li>
-<li><p>Correctly stylize <em>only</em> definition lists with the rules intended for them.</p></li>
-<li><p>Fix next/prev links flowing into one-another by limiting width to 50%.</p></li>
-<li><p>Fix positioning of collapsed contents sidebar icon.</p></li>
-<li><p>Fix shrinking arrows in next/prev links.</p></li>
-<li><p>Include <code class="docutils literal notranslate"><span class="pre">basic</span></code> theme’s JS files unconditionally. This should help with compatibility with various Sphinx extensions and ReadTheDocs.</p></li>
-<li><p>Make <code class="docutils literal notranslate"><span class="pre">math</span></code> elements scrollable, when wider than the page.</p></li>
-<li><p>Tweak images to be responsive.</p></li>
-<li><p>Tweak spacing of paragraphs.</p></li>
-<li><p>Tweak location of ReadTheDocs’ injected version helper.</p></li>
-</ul>
-</div>
-<div class="section" id="beta4">
-<h2>2020.9.8.beta4<a class="headerlink" href="#beta4" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>More fixes for Python 3.7 support.</p></li>
-</ul>
-</div>
-<div class="section" id="beta3">
-<h2>2020.9.8.beta3<a class="headerlink" href="#beta3" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code>.</p></li>
-<li><p>Add support for hiding name in sidebar.</p></li>
-<li><p>Add reference to deployed documentation in README.</p></li>
-<li><p>Tweak font size for admonitions.</p></li>
-<li><p>Tweak spacing for contents sidebar.</p></li>
-<li><p>Tweak styling of inline code.</p></li>
-<li><p>Fix support for Python &lt; 3.8.</p></li>
-</ul>
-</div>
-<div class="section" id="beta2">
-<h2>2020.9.8.beta2<a class="headerlink" href="#beta2" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Add support for logos in the sidebar.</p></li>
-<li><p>Fix path used for search page.</p></li>
-<li><p>Tweak height for short pages on mobile (100vh resulted in a scroll).</p></li>
-<li><p>Tweak definition lists.</p></li>
-<li><p>Tweak line height in contents, to accommodate for code literals.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">em</span></code> as the unit for layout sizes.</p></li>
-<li><p>Start writing theme’s documentation.</p></li>
-<li><p>Deploy documentation on <a class="reference external" href="https://pradyunsg.me/furo/">https://pradyunsg.me/furo/</a>.</p></li>
-</ul>
-</div>
-<div class="section" id="beta1">
-<h2>2020.9.2.beta1<a class="headerlink" href="#beta1" title="Permalink to this headline">¶</a></h2>
-<p>Initial release.</p>
-</div>
-</div>
-
       </article>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../license/">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">License</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../contributing/design-goals/">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Design Goals</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
 
         <div class="related-information">
@@ -242,31 +153,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree">
-          <ul>
-<li><a class="reference internal" href="#">Changelog</a><ul>
-<li><a class="reference internal" href="#beta7">2020.09.15.beta7</a></li>
-<li><a class="reference internal" href="#beta6">2020.09.15.beta6</a></li>
-<li><a class="reference internal" href="#beta5">2020.08.14.beta5</a></li>
-<li><a class="reference internal" href="#beta4">2020.9.8.beta4</a></li>
-<li><a class="reference internal" href="#beta3">2020.9.8.beta3</a></li>
-<li><a class="reference internal" href="#beta2">2020.9.8.beta2</a></li>
-<li><a class="reference internal" href="#beta1">2020.9.2.beta1</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
       
       
     </aside>

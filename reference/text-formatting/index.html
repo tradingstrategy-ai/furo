@@ -1,15 +1,15 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Text Formatting" href="../text-formatting/" /><link rel="prev" title="Lists" href="../lists/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Contributing" href="../../contributing/" /><link rel="prev" title="Tables" href="../tables/" />
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.09.28.dev9"/>
-        <title>Tables - Furo</title>
+        <title>Text Formatting - Furo</title>
       <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?8a3c3a5f31c22c734085397a">
-    <link rel="stylesheet" href="../../_static/pygments.css?8a3c3a5f31c22c734085397a">
+    <link rel="stylesheet" href="../../_static/styles/default.css?a7a85373a302b3e0afd18099">
+    <link rel="stylesheet" href="../../_static/pygments.css?a7a85373a302b3e0afd18099">
     
 <style>
   :root {
@@ -24,7 +24,7 @@
         <script src="../../_static/doctools.js" defer></script>
       
         <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?8a3c3a5f31c22c734085397a"></script></head>
+      <script src="../../_static/scripts/main.js?a7a85373a302b3e0afd18099"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -103,8 +103,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code-blocks/">Code Blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../text-formatting/">Text Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Text Formatting</a></li>
 </ul>
 </li>
 </ul>
@@ -132,181 +132,75 @@
         <label class="toc-overlay-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="tables">
-<h1>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h1>
+        <div class="section" id="text-formatting">
+<h1>Text Formatting<a class="headerlink" href="#text-formatting" title="Permalink to this headline">¶</a></h1>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="4ccb7be8-8177-47f5-95e0-02cd6e1531bb" name="eaf4cf90-e73f-4419-a4ed-bdccd7f1ec2f" type="radio"/>
-<label class="tabbed-label" for="4ccb7be8-8177-47f5-95e0-02cd6e1531bb">
+<input checked="checked" id="4325cf2c-892f-4291-912f-711d65374880" name="0a198982-bafe-4bf9-a158-d97235ebc5e9" type="radio"/>
+<label class="tabbed-label" for="4325cf2c-892f-4291-912f-711d65374880">
 reStructuredText</label><div class="tabbed-content docutils">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Grid table:
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
+<span class="s">``inline literals``</span>, <span class="na">:sub:</span><span class="nv">`subscript`</span>, <span class="na">:sup:</span><span class="nv">`superscript`</span> and more!
+You can even reference <span class="na">:pep:</span><span class="nv">`13`</span>. Yes, this is reStructuredText.
 
-+------------+------------+-----------+
-<span class="o">|</span> Header 1   | Header 2   | Header 3  |
-+============+============+===========+
-<span class="o">|</span> body row 1 | column 2   | column 3  |
-+------------+------------+-----------+
-<span class="o">|</span> body row 2 | Cells may span columns.|
-+------------+------------+-----------+
-<span class="o">|</span> body row 3 | Cells may  | - Cells   |
-+------------+ span rows. | - contain |
-<span class="o">|</span> body row 4 |            | - blocks. |
-+------------+------------+-----------+
+Hyperlinks can take various forms, so here's a list of them:
 
-Simple table:
+<span class="m">-</span> standalone hyperlink: https://python.org/
+<span class="m">-</span> hyperlink using references: link_ (this is borked due to a MyST bug)
+<span class="m">-</span> hyperlink with inline URL: <span class="s">`link </span><span class="si">&lt;https://python.org/&gt;</span><span class="s">`_</span>
+<span class="m">-</span> hyperlink to a different page: <span class="na">:any:</span><span class="nv">`link &lt;../quickstart&gt;`</span>
+<span class="m">-</span> hyperlink to a specific API element: <span class="na">:class:</span><span class="nv">`pathlib.Path`</span>
 
-=====  =====  ======
-   Inputs     Output
-------------  ------
-  A      B    A or B
-=====  =====  ======
-False  False  False
-True   False  True
-False  True   True
-True   True   True
-=====  =====  ======
+You can even have abbreviations like <span class="na">:abbr:</span><span class="nv">`HTML (Hyper Text Markup Language)`</span>.
+
+<span class="p">..</span> <span class="nt">_link:</span> https://python.org/
 </pre></div>
 </div>
-<p>Grid table:</p>
-<div class="table-wrapper"><table class="docutils align-default">
-<colgroup>
-<col style="width: 34%"/>
-<col style="width: 34%"/>
-<col style="width: 31%"/>
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Header 1</p></th>
-<th class="head"><p>Header 2</p></th>
-<th class="head"><p>Header 3</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>body row 1</p></td>
-<td><p>column 2</p></td>
-<td><p>column 3</p></td>
-</tr>
-<tr class="row-odd"><td><p>body row 2</p></td>
-<td colspan="2"><p>Cells may span columns.</p></td>
-</tr>
-<tr class="row-even"><td><p>body row 3</p></td>
-<td rowspan="2"><p>Cells may
-span rows.</p></td>
-<td rowspan="2"><ul class="simple">
-<li><p>Cells</p></li>
-<li><p>contain</p></li>
-<li><p>blocks.</p></li>
+<p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
+<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
+You can even reference <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is reStructuredText.</p>
+<p>Hyperlinks can take various forms, so here’s a list of them:</p>
+<ul class="simple">
+<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
+<li><p>hyperlink using references: <a href="#id1"><span class="problematic" id="id2">link_</span></a> (this is borked due to a MyST bug)</p></li>
+<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
+<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc">link</span></a></p></li>
+<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
 </ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p>body row 4</p></td>
-</tr>
-</tbody>
-</table></div>
-<p>Simple table:</p>
-<div class="table-wrapper"><table class="docutils align-default">
-<colgroup>
-<col style="width: 31%"/>
-<col style="width: 31%"/>
-<col style="width: 38%"/>
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head" colspan="2"><p>Inputs</p></th>
-<th class="head"><p>Output</p></th>
-</tr>
-<tr class="row-even"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
-<th class="head"><p>A or B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-odd"><td><p>False</p></td>
-<td><p>False</p></td>
-<td><p>False</p></td>
-</tr>
-<tr class="row-even"><td><p>True</p></td>
-<td><p>False</p></td>
-<td><p>True</p></td>
-</tr>
-<tr class="row-odd"><td><p>False</p></td>
-<td><p>True</p></td>
-<td><p>True</p></td>
-</tr>
-<tr class="row-even"><td><p>True</p></td>
-<td><p>True</p></td>
-<td><p>True</p></td>
-</tr>
-</tbody>
-</table></div>
+<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
 </div>
-<input id="201352f8-6fc4-4250-83c4-9d48281ef8b0" name="eaf4cf90-e73f-4419-a4ed-bdccd7f1ec2f" type="radio"/>
-<label class="tabbed-label" for="201352f8-6fc4-4250-83c4-9d48281ef8b0">
+<input id="b42e633a-927c-4631-acbc-d6f0819e1445" name="0a198982-bafe-4bf9-a158-d97235ebc5e9" type="radio"/>
+<label class="tabbed-label" for="b42e633a-927c-4631-acbc-d6f0819e1445">
 Markdown (MyST)</label><div class="tabbed-content docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>MyST supports tables like [<span class="nt">GitHub Flavoured Markdown</span>][<span class="nl">1</span>].
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
+<span class="sb">`inline literals`</span>, {sub}`subscript`, {sup}`superscript` and more!
+You can even reference {pep}`13`. Yes, this is Markdown.
 
-| Header  | Another header |
-|---------|----------------|
-| field 1 | something      |
-| field 2 | something else |
+Hyperlinks can take various forms, so here's a list of them:
 
-List tables are also a thing:
+<span class="k">-</span> standalone hyperlink: &lt;https://python.org/&gt;
+<span class="k">-</span> hyperlink using references: [<span class="nt">link</span>][<span class="nl">markdown-external-hyperlink</span>]
+<span class="k">-</span> hyperlink with inline URL: [<span class="nt">link</span>](<span class="na">https://python.org/</span>)
+<span class="k">-</span> hyperlink to a different page: [<span class="nt">link</span>](<span class="na">../quickstart</span>)
+<span class="k">-</span> hyperlink to a specific API element: {class}`pathlib.Path`
 
-```{list-table}
-:header-rows: 1
+You can even have abbreviations like {abbr}`HTML (Hyper Text Markup Language)`.
 
-<span class="k">*</span> - This is
-  <span class="k">-</span> the header
-  <span class="k">-</span> row
-<span class="k">*</span> - First
-  <span class="k">-</span> row of
-  <span class="k">-</span> very important content
-<span class="k">*</span> - Second
-  <span class="k">-</span> row of
-  <span class="k">-</span> very important content
-```
-
-[<span class="nl">1</span>]: <span class="na">https://docs.github.com/en/github/writing-on-github/organizing-information-with-tables</span>
+[<span class="nl">markdown-external-hyperlink</span>]: <span class="na">https://python.org/</span>
 </pre></div>
 </div>
-<p>MyST supports tables like <a class="reference external" href="https://docs.github.com/en/github/writing-on-github/organizing-information-with-tables">GitHub Flavoured Markdown</a>.</p>
-<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Header</p></th>
-<th class="head"><p>Another header</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>field 1</p></td>
-<td><p>something</p></td>
-</tr>
-<tr class="row-odd"><td><p>field 2</p></td>
-<td><p>something else</p></td>
-</tr>
-</tbody>
-</table></div>
-<p>List tables are also a thing:</p>
-<div class="table-wrapper"><table class="docutils align-default">
-<colgroup>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>This is</p></th>
-<th class="head"><p>the header</p></th>
-<th class="head"><p>row</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>First</p></td>
-<td><p>row of</p></td>
-<td><p>very important content</p></td>
-</tr>
-<tr class="row-odd"><td><p>Second</p></td>
-<td><p>row of</p></td>
-<td><p>very important content</p></td>
-</tr>
-</tbody>
-</table></div>
+<p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
+<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
+You can even reference <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is Markdown.</p>
+<p>Hyperlinks can take various forms, so here’s a list of them:</p>
+<ul class="simple">
+<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
+<li><p>hyperlink using references: <a class="reference external" href="https://python.org/">link</a></p></li>
+<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
+<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc std std-doc">link</span></a></p></li>
+<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
+</ul>
+<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
 </div>
 </div>
 </div>
@@ -316,23 +210,23 @@ List tables are also a thing:
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../text-formatting/">
+          <a class="next-page" href="../../contributing/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Text Formatting</div>
+                <div class="title">Contributing</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../lists/">
+          <a class="prev-page" href="../tables/">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Lists</div>
+                <div class="title">Tables</div>
                 
               </div>
             </a>
