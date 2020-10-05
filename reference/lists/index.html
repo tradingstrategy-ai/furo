@@ -8,8 +8,8 @@
       <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?3d204ff74afae29a0d65edeb">
-    <link rel="stylesheet" href="../../_static/pygments.css?3d204ff74afae29a0d65edeb">
+    <link rel="stylesheet" href="../../_static/styles/default.css?f3c0c9fed57de71ec63154dd">
+    <link rel="stylesheet" href="../../_static/pygments.css?f3c0c9fed57de71ec63154dd">
     
 <style>
   :root {
@@ -24,7 +24,7 @@
         <script src="../../_static/doctools.js" defer></script>
       
         <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?3d204ff74afae29a0d65edeb"></script></head>
+      <script src="../../_static/scripts/main.js?f3c0c9fed57de71ec63154dd"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -130,90 +130,148 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
         <div class="section" id="lists">
 <h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
+<p>Lists are useful because they emphasize certain information in regular text. They can able be used to enumerate or provide an easier reference. Sphinx allows for various forms of lists, each of which can be used in a different manner.</p>
+<div class="section" id="bullet-lists">
+<h2>Bullet Lists<a class="headerlink" href="#bullet-lists" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="bd5a6523-e7d0-4606-96d2-7375ceac1b6d" name="939935eb-8d51-4cfa-b299-e8054ddd13be" type="radio"/>
-<label class="tabbed-label" for="bd5a6523-e7d0-4606-96d2-7375ceac1b6d">
+<input checked="checked" id="7fa71ba8-6137-49a0-9026-1cd858059202" name="4567fdd9-5f30-4129-9293-c684a18977b2" type="radio"/>
+<label class="tabbed-label" for="7fa71ba8-6137-49a0-9026-1cd858059202">
 reStructuredText</label><div class="tabbed-content docutils">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> Lists in reStructuredText are fairly straightforward.
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> Bullet lists in reStructuredText are fairly straightforward.
 <span class="m">-</span> A bunch of bullet points.
 
   <span class="m">-</span> Nested bullets should be indented by <span class="gs">**exactly**</span> two spaces.
-  <span class="m">-</span> They also need a blank line before them, otherwise it doesn't work right.
+  <span class="m">-</span> They also need a blank line before and after them, otherwise it doesn't
+    work right.
 
-<span class="m">1.</span> Numbered lists are not complicated.
-<span class="m">2.</span> They do exactly what you think they do.
+<span class="m">-</span> It is also possible to have multiple paragraphs in a bullet.
 
-Definition Lists
-   An extremely useful tool for describing stuff.
-
-Term
-   Definition
+  Make sure to have a blank line between the paragraphs, and to indent the
+  paragraphs to the correct level.
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Lists in reStructuredText are fairly straightforward.</p></li>
-<li><p>A bunch of bullet points.</p>
 <ul>
+<li><p>Bullet lists in reStructuredText are fairly straightforward.</p></li>
+<li><p>A bunch of bullet points.</p>
+<ul class="simple">
 <li><p>Nested bullets should be indented by <strong>exactly</strong> two spaces.</p></li>
-<li><p>They also need a blank line before them, otherwise it doesn’t work right.</p></li>
+<li><p>They also need a blank line before and after them, otherwise it doesn’t
+work right.</p></li>
 </ul>
 </li>
+<li><p>It is also possible to have multiple paragraphs in a bullet.</p>
+<p>Make sure to have a blank line between the paragraphs, and to indent the
+paragraphs to the correct level.</p>
+</li>
 </ul>
+</div>
+<input id="64d2772c-7990-4a08-b096-9a30c53c79fc" name="4567fdd9-5f30-4129-9293-c684a18977b2" type="radio"/>
+<label class="tabbed-label" for="64d2772c-7990-4a08-b096-9a30c53c79fc">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> Bullet lists in Markdown are pretty straightforward.
+<span class="k">-</span> A bunch of bullet points.
+  <span class="k">-</span> Nested bullets should be indented by two or more spaces.
+  <span class="k">-</span> They can just "show up" inline with the rest of the list. Adding blank lines
+    before and after is also permitted.
+<span class="k">-</span> It is also possible to have multiple paragraphs in a bullet.
+
+  Make sure to have a blank line between the paragraphs, and to indent the
+  paragraphs to the correct level.
+</pre></div>
+</div>
+<ul>
+<li><p>Bullet lists in Markdown are pretty straightforward.</p></li>
+<li><p>A bunch of bullet points.</p>
+<ul class="simple">
+<li><p>Nested bullets should be indented by two or more spaces.</p></li>
+<li><p>They can just “show up” inline with the rest of the list. Adding blank lines
+before and after is also permitted.</p></li>
+</ul>
+</li>
+<li><p>It is also possible to have multiple paragraphs in a bullet.</p>
+<p>Make sure to have a blank line between the paragraphs, and to indent the
+paragraphs to the correct level.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numbered-lists">
+<h2>Numbered Lists<a class="headerlink" href="#numbered-lists" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="ec3a4945-a4c5-4500-9adc-06c2cd80ea74" name="e98f5db9-b4f4-4787-ba35-28c7b4d4909d" type="radio"/>
+<label class="tabbed-label" for="ec3a4945-a4c5-4500-9adc-06c2cd80ea74">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> Numbered lists are not complicated.
+<span class="m">2.</span> They do exactly what you think they do.
+</pre></div>
+</div>
 <ol class="arabic simple">
 <li><p>Numbered lists are not complicated.</p></li>
 <li><p>They do exactly what you think they do.</p></li>
 </ol>
-<dl class="simple">
-<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
-</dd>
-<dt>Term</dt><dd><p>Definition</p>
-</dd>
-</dl>
 </div>
-<input id="095109f5-9506-49c3-9710-fb80eb72de54" name="939935eb-8d51-4cfa-b299-e8054ddd13be" type="radio"/>
-<label class="tabbed-label" for="095109f5-9506-49c3-9710-fb80eb72de54">
+<input id="393ca757-28c6-4c39-89e8-9c238c584323" name="e98f5db9-b4f4-4787-ba35-28c7b4d4909d" type="radio"/>
+<label class="tabbed-label" for="393ca757-28c6-4c39-89e8-9c238c584323">
 Markdown (MyST)</label><div class="tabbed-content docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> Lists in Markdown are pretty straightforward.
-<span class="k">-</span> A bunch of bullet points.
-  <span class="k">-</span> Nested bullets should be indented by two or more spaces.
-  <span class="k">-</span> They can just "show up" inline with the rest of the list.
-
-
-<span class="k">1.</span> Numbered lists are not complicated.
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">1.</span> Numbered lists are not complicated.
 <span class="k">2.</span> They do exactly what you think they do.
-
-Definition Lists
-:  An extremely useful tool for describing stuff.
-
-Term
-:  Definition
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Lists in Markdown are pretty straightforward.</p></li>
-<li><p>A bunch of bullet points.</p>
-<ul>
-<li><p>Nested bullets should be indented by two or more spaces.</p></li>
-<li><p>They can just “show up” inline with the rest of the list.</p></li>
-</ul>
-</li>
-</ul>
 <ol class="simple">
 <li><p>Numbered lists are not complicated.</p></li>
 <li><p>They do exactly what you think they do.</p></li>
 </ol>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="definition-lists">
+<h2>Definition Lists<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="22349734-8308-47a8-83ae-8e4661e19716" name="27bf6a78-eb02-475e-8f52-9eb837b8c8f0" type="radio"/>
+<label class="tabbed-label" for="22349734-8308-47a8-83ae-8e4661e19716">
+reStructuredText</label><div class="tabbed-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Definition Lists
+   An extremely useful tool for describing stuff.
+
+Complicated Term
+   Definition
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
+</dd>
+<dt>Complicated Term</dt><dd><p>Definition</p>
+</dd>
+</dl>
+</div>
+<input id="d877ddb0-9594-48ff-b28a-864acf089ee0" name="27bf6a78-eb02-475e-8f52-9eb837b8c8f0" type="radio"/>
+<label class="tabbed-label" for="d877ddb0-9594-48ff-b28a-864acf089ee0">
+Markdown (MyST)</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Definition Lists
+:  An extremely useful tool for describing stuff.
+
+Complicated Term
+:  Definition
+</pre></div>
+</div>
 <dl class="simple myst">
 <dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
 </dd>
-<dt>Term</dt><dd><p>Definition</p>
+<dt>Complicated Term</dt><dd><p>Definition</p>
 </dd>
 </dl>
+</div>
 </div>
 </div>
 </div>
@@ -254,8 +312,27 @@ Term
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Lists</a><ul>
+<li><a class="reference internal" href="#bullet-lists">Bullet Lists</a></li>
+<li><a class="reference internal" href="#numbered-lists">Numbered Lists</a></li>
+<li><a class="reference internal" href="#definition-lists">Definition Lists</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
       
       
     </aside>
