@@ -1,15 +1,15 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Contributing" href="../../contributing/" /><link rel="prev" title="Tables" href="../tables/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Admonitions" href="../admonitions/" /><link rel="prev" title="Reference" href="../" />
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
         <title>Text Formatting - Furo</title>
       <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?112c59948dd6cad1a9d95cc7">
-    <link rel="stylesheet" href="../../_static/pygments.css?112c59948dd6cad1a9d95cc7">
+    <link rel="stylesheet" href="../../_static/styles/default.css?e337e3a28d9ebcbdade5a72c">
+    <link rel="stylesheet" href="../../_static/pygments.css?e337e3a28d9ebcbdade5a72c">
     
 <style>
   :root {
@@ -24,7 +24,7 @@
         <script src="../../_static/doctools.js" defer></script>
       
         <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?112c59948dd6cad1a9d95cc7"></script></head>
+      <script src="../../_static/scripts/main.js?e337e3a28d9ebcbdade5a72c"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -98,13 +98,14 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../basic/">Basic Markup</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Text Formatting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code-blocks/">Code Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hyperlinks/">Hyperlinks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Text Formatting</a></li>
 </ul>
 </li>
 </ul>
@@ -134,73 +135,62 @@
         </label>
         <div class="section" id="text-formatting">
 <h1>Text Formatting<a class="headerlink" href="#text-formatting" title="Permalink to this headline">¶</a></h1>
+<p>Text formatting is an important aspect of written text. Sphinx provides support for several ways to apply specific formatting.</p>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="16b4c798-dd1b-4069-b2aa-f542a8e809ed" name="13927818-e381-446e-87cb-b7d0530df0a6" type="radio"/>
-<label class="tabbed-label" for="16b4c798-dd1b-4069-b2aa-f542a8e809ed">
+<input checked="checked" id="b876330d-2f2d-49bd-aff3-f28dae3bbc96" name="e187eecd-4953-48dd-a06d-695ce67bc248" type="radio"/>
+<label class="tabbed-label" for="b876330d-2f2d-49bd-aff3-f28dae3bbc96">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
-<span class="s">``inline literals``</span>, <span class="na">:sub:</span><span class="nv">`subscript`</span>, <span class="na">:sup:</span><span class="nv">`superscript`</span> and more!
-You can even reference <span class="na">:pep:</span><span class="nv">`13`</span>. Yes, this is reStructuredText.
+<span class="s">``inline literals``</span>, <span class="na">:sub:</span><span class="nv">`subscript`</span>, <span class="na">:sup:</span><span class="nv">`superscript`</span> and so much more.
+Providing a reference to <span class="na">:pep:</span><span class="nv">`8`</span> is straightforward. You can also include
+abbreviations like <span class="na">:abbr:</span><span class="nv">`HTML (Hyper Text Markup Language)`</span>.
 
-Hyperlinks can take various forms, so here's a list of them:
+It is possible to have multiple paragraphs of text, which get separated
+from each other visually. When stronger visual separation is desired, a
+horizontal separator can be used (4 or more punctuation characters on a line).
 
-<span class="m">-</span> standalone hyperlink: https://python.org/
-<span class="m">-</span> hyperlink using references: link_ (this is borked due to a MyST bug)
-<span class="m">-</span> hyperlink with inline URL: <span class="s">`link </span><span class="si">&lt;https://python.org/&gt;</span><span class="s">`_</span>
-<span class="m">-</span> hyperlink to a different page: <span class="na">:any:</span><span class="nv">`link &lt;../quickstart&gt;`</span>
-<span class="m">-</span> hyperlink to a specific API element: <span class="na">:class:</span><span class="nv">`pathlib.Path`</span>
+----
 
-You can even have abbreviations like <span class="na">:abbr:</span><span class="nv">`HTML (Hyper Text Markup Language)`</span>.
-
-<span class="p">..</span> <span class="nt">_link:</span> https://python.org/
+This is written in reStructuredText.
 </pre></div>
 </div>
 <p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
-<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
-You can even reference <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is reStructuredText.</p>
-<p>Hyperlinks can take various forms, so here’s a list of them:</p>
-<ul class="simple">
-<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
-<li><p>hyperlink using references: <a href="#id1"><span class="problematic" id="id2">link_</span></a> (this is borked due to a MyST bug)</p></li>
-<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
-<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc">link</span></a></p></li>
-<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
-</ul>
-<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and so much more.
+Providing a reference to <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> is straightforward. You can also include
+abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+<p>It is possible to have multiple paragraphs of text, which get separated
+from each other visually. When stronger visual separation is desired, a
+horizontal separator can be used (4 or more punctuation characters on a line).</p>
+<hr class="docutils"/>
+<p>This is written in reStructuredText.</p>
 </div>
-<input id="6815d0b7-d6da-498f-a1d7-3522eea6f065" name="13927818-e381-446e-87cb-b7d0530df0a6" type="radio"/>
-<label class="tabbed-label" for="6815d0b7-d6da-498f-a1d7-3522eea6f065">
+<input id="7da70dff-08a5-4e26-9627-7beec35745b2" name="e187eecd-4953-48dd-a06d-695ce67bc248" type="radio"/>
+<label class="tabbed-label" for="7da70dff-08a5-4e26-9627-7beec35745b2">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
-<span class="sb">`inline literals`</span>, {sub}`subscript`, {sup}`superscript` and more!
-You can even reference {pep}`13`. Yes, this is Markdown.
+<span class="sb">`inline literals`</span>, {sub}`subscript`, {sup}`superscript` and so much more.
+Providing a reference to {pep}`8` is straightforward. You can also include
+abbreviations like {abbr}`HTML (Hyper Text Markup Language)`.
 
-Hyperlinks can take various forms, so here's a list of them:
+It is possible to have multiple paragraphs of text, which get separated
+from each other visually. When stronger visual separation is desired, a
+horizontal separator can be used (3 or more punctuation characters on a line).
 
-<span class="k">-</span> standalone hyperlink: &lt;https://python.org/&gt;
-<span class="k">-</span> hyperlink using references: [<span class="nt">link</span>][<span class="nl">markdown-external-hyperlink</span>]
-<span class="k">-</span> hyperlink with inline URL: [<span class="nt">link</span>](<span class="na">https://python.org/</span>)
-<span class="k">-</span> hyperlink to a different page: [<span class="nt">link</span>](<span class="na">../quickstart</span>)
-<span class="k">-</span> hyperlink to a specific API element: {class}`pathlib.Path`
+---
 
-You can even have abbreviations like {abbr}`HTML (Hyper Text Markup Language)`.
-
-[<span class="nl">markdown-external-hyperlink</span>]: <span class="na">https://python.org/</span>
+This is written in Markdown.
 </pre></div>
 </div>
 <p>Content can have inline markup like <em>emphasis</em>, <strong>strong emphasis</strong>,
-<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and more!
-You can even reference <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0013"><strong>PEP 13</strong></a>. Yes, this is Markdown.</p>
-<p>Hyperlinks can take various forms, so here’s a list of them:</p>
-<ul class="simple">
-<li><p>standalone hyperlink: <a class="reference external" href="https://python.org/">https://python.org/</a></p></li>
-<li><p>hyperlink using references: <a class="reference external" href="https://python.org/">link</a></p></li>
-<li><p>hyperlink with inline URL: <a class="reference external" href="https://python.org/">link</a></p></li>
-<li><p>hyperlink to a different page: <a class="reference internal" href="../../quickstart/"><span class="doc std std-doc">link</span></a></p></li>
-<li><p>hyperlink to a specific API element: <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></p></li>
-</ul>
-<p>You can even have abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+<code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>, <sub>subscript</sub>, <sup>superscript</sup> and so much more.
+Providing a reference to <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> is straightforward. You can also include
+abbreviations like <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+<p>It is possible to have multiple paragraphs of text, which get separated
+from each other visually. When stronger visual separation is desired, a
+horizontal separator can be used (3 or more punctuation characters on a line).</p>
+<hr class="docutils"/>
+<p>This is written in Markdown.</p>
 </div>
 </div>
 </div>
@@ -210,23 +200,23 @@ You can even reference <span class="target" id="index-1"></span><a class="pep re
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../contributing/">
+          <a class="next-page" href="../admonitions/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Contributing</div>
+                <div class="title">Admonitions</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../tables/">
+          <a class="prev-page" href="../">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Tables</div>
+                <div class="title">Reference</div>
                 
               </div>
             </a>
