@@ -4,27 +4,34 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing colors" href="../colors/" /><link rel="prev" title="Adding a logo" href="../logo/" />
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
-        <title>Adding a landing page - Furo</title>
-      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?72c09477eee53ea58cc1219b">
-    <link rel="stylesheet" href="../../_static/pygments.css?72c09477eee53ea58cc1219b">
+        <title>Changing landing page - Furo</title>
+      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?ddd918ed29d3b13a1744f858">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    <link rel="stylesheet" href="../../_static/pygments_dark.css">
     
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: #000000;
+    --color-code-foreground: black;
   
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      
+    }
   }
 </style>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
-      <script src="../../_static/underscore.js"></script>
-      
-        <script src="../../_static/doctools.js" defer></script>
-      
-        <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?72c09477eee53ea58cc1219b"></script></head>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/scripts/main.js?ddd918ed29d3b13a1744f858"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -91,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../logo/">Adding a logo</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Adding a landing page</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fonts/">Changing fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../toc/">Hiding Contents sidebar</a></li>
@@ -133,19 +140,20 @@
         <label class="toc-overlay-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="adding-a-landing-page">
-<h1>Adding a landing page<a class="headerlink" href="#adding-a-landing-page" title="Permalink to this headline">¶</a></h1>
-<p>It is possible to have a custom landing page in Sphinx documentation. This requires  To do this, you need to:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_additional_pages</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"index"</span><span class="p">:</span> <span class="s2">"home.html"</span>
+        <div class="section" id="changing-landing-page">
+<h1>Changing landing page<a class="headerlink" href="#changing-landing-page" title="Permalink to this headline">¶</a></h1>
+<p>It is possible to have a custom landing page in Sphinx documentation. This is achieved by adding a custom template file for that page and setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_additional_pages"><code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_templates"</span><span class="p">]</span>
+<span class="n">html_additional_pages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"index"</span><span class="p">:</span> <span class="s2">"your-custom-landing-page.html"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This works since Sphinx will copy this file <em>after</em> writing the rest.</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Flesh this out, with a cute example?</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll need to write HTML for the page in <code class="docutils literal notranslate"><span class="pre">_templates/your-custom-landing-page.html</span></code>, if you use the above example as-is.</p>
 </div>
+<p>In case you’re curious, this works because Sphinx allows overwriting existing files when generating the website and processes <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code> <em>after</em> processing the pages normally. These two behaviours combined mean that we can overwrite the page generated with the default layout by specifying the same document with a different template in <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code>.</p>
 </div>
 
       </article>

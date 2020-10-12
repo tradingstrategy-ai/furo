@@ -5,26 +5,33 @@
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
         <title>API documentation - Furo</title>
-      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?4927d561dad0c712745045b3">
-    <link rel="stylesheet" href="../../_static/pygments.css?4927d561dad0c712745045b3">
+      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?d58a11a2db24c68627fc75f2">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    <link rel="stylesheet" href="../../_static/pygments_dark.css">
     
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: #000000;
+    --color-code-foreground: black;
   
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      
+    }
   }
 </style>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
-      <script src="../../_static/underscore.js"></script>
-      
-        <script src="../../_static/doctools.js" defer></script>
-      
-        <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?4927d561dad0c712745045b3"></script></head>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/scripts/main.js?d58a11a2db24c68627fc75f2"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -91,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
@@ -139,8 +146,8 @@
 <p>This example uses <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc" title="(in Sphinx v4.0.0+)"><code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> for generating the API documentation skeleton. <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v4.0.0+)"><code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a> provides links for classes in type annotations.</p>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="0c030dfc-e4b5-47c3-9df2-31651937e922" name="d1c63566-d814-4ae8-86e9-ad9f28c7e777" type="radio"/>
-<label class="tabbed-label" for="0c030dfc-e4b5-47c3-9df2-31651937e922">
+<input checked="checked" id="6be0d9a9-9a80-4d77-ba70-c4060d3a8583" name="b4431098-3145-4cf3-87db-abbd9b4326a8" type="radio"/>
+<label class="tabbed-label" for="6be0d9a9-9a80-4d77-ba70-c4060d3a8583">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> sphinx.ext.todo.TodoDomain
     <span class="nc">:members:</span>
@@ -171,8 +178,8 @@ inventory (coming from a subprocess in parallel builds).</p>
 </dd></dl>
 <p>This is a small example from reStructuredText.</p>
 </div>
-<input id="b863c85c-949e-4e32-b800-e617531217c8" name="d1c63566-d814-4ae8-86e9-ad9f28c7e777" type="radio"/>
-<label class="tabbed-label" for="b863c85c-949e-4e32-b800-e617531217c8">
+<input id="9dabae55-32a1-412c-b152-addc863ad75e" name="b4431098-3145-4cf3-87db-abbd9b4326a8" type="radio"/>
+<label class="tabbed-label" for="9dabae55-32a1-412c-b152-addc863ad75e">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
 .. autoclass:: sphinx.ext.todo.TodoDomain

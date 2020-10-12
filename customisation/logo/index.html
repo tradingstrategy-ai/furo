@@ -1,30 +1,37 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Adding a landing page" href="../landing-page/" /><link rel="prev" title="Customisation" href="../" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing landing page" href="../landing-page/" /><link rel="prev" title="Customisation" href="../" />
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
         <title>Adding a logo - Furo</title>
-      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?dd81b9afd636338629a9041c">
-    <link rel="stylesheet" href="../../_static/pygments.css?dd81b9afd636338629a9041c">
+      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?a98965d204711c945ed04c29">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    <link rel="stylesheet" href="../../_static/pygments_dark.css">
     
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: #000000;
+    --color-code-foreground: black;
   
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      
+    }
   }
 </style>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
-      <script src="../../_static/underscore.js"></script>
-      
-        <script src="../../_static/doctools.js" defer></script>
-      
-        <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?dd81b9afd636338629a9041c"></script></head>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/scripts/main.js?a98965d204711c945ed04c29"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -91,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fonts/">Changing fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../toc/">Hiding Contents sidebar</a></li>
@@ -135,11 +142,11 @@
         </label>
         <div class="section" id="adding-a-logo">
 <h1>Adding a logo<a class="headerlink" href="#adding-a-logo" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Write this thing.</p>
-<p>Mention hiding the project name here too.</p>
+<p>Logos are a point of recognition and an important part of branding. Furo supports the standard Sphinx mechanism to add your project’s logo in the documentation. This is done by setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_logo"><code class="docutils literal notranslate"><span class="pre">html_logo</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_logo</span> <span class="o">=</span> <span class="s2">"logo.png"</span>
+</pre></div>
 </div>
+<p>It is also possible to <a class="reference internal" href="../#sidebar-hide-name"><span class="std std-ref">hide the name of the project in the sidebar</span></a>, which might be desirable if the logo contains the project name.</p>
 </div>
 
       </article>
@@ -151,7 +158,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Adding a landing page</div>
+                <div class="title">Changing landing page</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>

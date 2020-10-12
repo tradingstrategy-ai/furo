@@ -5,26 +5,33 @@
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
         <title>Customisation - Furo</title>
-      <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../_static/styles/default.css?2d9ca963b4389ff4f5a92212">
-    <link rel="stylesheet" href="../_static/pygments.css?2d9ca963b4389ff4f5a92212">
+      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../_static/styles/default.css?540d21450a90ff633f85b73c">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link rel="stylesheet" href="../_static/pygments_dark.css">
     
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: #000000;
+    --color-code-foreground: black;
   
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      
+    }
   }
 </style>
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script><script src="../_static/jquery.js"></script>
-      <script src="../_static/underscore.js"></script>
-      
-        <script src="../_static/doctools.js" defer></script>
-      
-        <script src="../_static/language_data.js" defer></script>
-      <script src="../_static/scripts/main.js?2d9ca963b4389ff4f5a92212"></script></head>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/scripts/main.js?540d21450a90ff633f85b73c"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -91,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fonts/">Changing fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toc/">Hiding Contents sidebar</a></li>
@@ -135,71 +142,54 @@
         </label>
         <div class="section" id="customisation">
 <h1>Customisation<a class="headerlink" href="#customisation" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>This entire page is still a work-in-progress.</p>
-</div>
-<p>Furo can be customised in many ways.</p>
-<ul class="simple">
-<li><p>provides a lot of points for customising the generated documentation</p></li>
-<li><p>is possible to tweak:</p>
-<ul>
-<li><p>the overall theme’s look</p></li>
-<li><p>the sidebar’s contents</p></li>
-<li><p>selectively hide UI elements/TOC on a certain pages</p></li>
-</ul>
-</li>
-</ul>
+<p>Furo supports customisation of the overall theme’s look and feel.</p>
 <div class="toctree-wrapper compound">
 </div>
-<p>colors-and-fonts
-nav-sidebar
-toc-sidebar
-announcement
-landing-page
-admonitions</p>
 <div class="section" id="theme-options">
 <h2>Theme options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
-<p>Furo utilizes <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> key in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> for customisation of the overall theme.</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> is used for customisations that affect the entire documentation. This is for stuff like fonts and colors.</p>
 <div class="section" id="css-variables">
 <h3><code class="docutils literal notranslate"><span class="pre">css_variables</span></code><a class="headerlink" href="#css-variables" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>This needs rewriting, and more… “prominence”.</p>
-</div>
-<p>Furo’s stylesheet makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. It is possible to change look and feel of the documentation.</p>
-<p><code class="docutils literal notranslate"><span class="pre">css_variables</span></code> provides an easy way to override Furo’s default values for these variables.</p>
+<p>Furo makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. These can be overridden by the user and are used for stylizing nearly all elements of the documentation.</p>
+<p>Setting <code class="docutils literal notranslate"><span class="pre">css_variables</span></code> is the recommended mechanism to override Furo’s default values for these variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"css_variables"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#CC3333"</span><span class="p">,}</span>
+    <span class="s2">"css_variables"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span>
+        <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#CC3333"</span><span class="p">,</span>
+        <span class="s2">"color-admonition-background"</span><span class="p">:</span> <span class="s2">"orange"</span><span class="p">,</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
 <p>Typos in the <code class="docutils literal notranslate"><span class="pre">css_variables</span></code> dictionary are silently ignored, and do not raise any errors or warnings. Double check that your spellings and values are correct and valid.</p>
 </div>
 </div>
 <div class="section" id="sidebar-hide-name">
 <h3><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code><a class="headerlink" href="#sidebar-hide-name" title="Permalink to this headline">¶</a></h3>
 <p>Controls whether you see the project’s name in the sidebar of the documentation. This is useful when you only want to show your documentation’s logo in the sidebar.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-python notranslate"><div class="table-wrapper"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"sidebar_hide_name"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table></div></div>
 </div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The configuration options that are inherited from the built-in <code class="docutils literal notranslate"><span class="pre">basic</span></code> Sphinx theme are <em>not</em> supported in Furo.</p>
 </div>
+<div class="section" id="page-specific-tweaks">
+<h2>Page specific tweaks<a class="headerlink" href="#page-specific-tweaks" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a> is used for per-page customisation, usually for controlling which UI elements are presented.</p>
+<div class="section" id="hide-toc">
+<h3><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code><a class="headerlink" href="#hide-toc" title="Permalink to this headline">¶</a></h3>
+<p>The “Contents” sidebar is automatically hidden for any pages that don’t have any inner headings. It is possible to hide it even when a page has inner headings, by setting <code class="docutils literal notranslate"><span class="pre">hide-toc</span></code> at the page level. See <a class="reference internal" href="toc/"><span class="doc">Hiding Contents sidebar</span></a> for an example.</p>
 </div>
 </div>
 <div class="section" id="custom-css-files">
 <h2>Custom CSS files<a class="headerlink" href="#custom-css-files" title="Permalink to this headline">¶</a></h2>
 <p>If you want more control than what is provided by the above theme options, you can add custom stylesheets to your documentation.</p>
 <p>ReadTheDocs has an excellent explanation on <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/adding-custom-css.html">how to add custom CSS files</a> to Sphinx-based documentation.</p>
-</div>
-<div class="section" id="page-specific-tweaks">
-<h2>Page specific tweaks<a class="headerlink" href="#page-specific-tweaks" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -255,8 +245,11 @@ admonitions</p>
 <li><a class="reference internal" href="#sidebar-hide-name"><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#page-specific-tweaks">Page specific tweaks</a><ul>
+<li><a class="reference internal" href="#hide-toc"><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#custom-css-files">Custom CSS files</a></li>
-<li><a class="reference internal" href="#page-specific-tweaks">Page specific tweaks</a></li>
 </ul>
 </li>
 </ul>

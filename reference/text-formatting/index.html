@@ -5,26 +5,33 @@
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
         <title>Text Formatting - Furo</title>
-      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?d27c9c3551263140374bb97b">
-    <link rel="stylesheet" href="../../_static/pygments.css?d27c9c3551263140374bb97b">
+      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?3fe0ca1c4fabbdbd9b0eb116">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    <link rel="stylesheet" href="../../_static/pygments_dark.css">
     
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: #000000;
+    --color-code-foreground: black;
   
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      
+    }
   }
 </style>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
-      <script src="../../_static/underscore.js"></script>
-      
-        <script src="../../_static/doctools.js" defer></script>
-      
-        <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?d27c9c3551263140374bb97b"></script></head>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/scripts/main.js?3fe0ca1c4fabbdbd9b0eb116"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -91,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
@@ -138,8 +145,8 @@
 <p>Text formatting is an important aspect of written text. Sphinx provides support for several ways to apply specific formatting.</p>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="7ff22d79-2d76-4edc-b1f2-08425db9ef49" name="1e1dee1f-2e2e-40d3-9b3d-0a6ca6ae3192" type="radio"/>
-<label class="tabbed-label" for="7ff22d79-2d76-4edc-b1f2-08425db9ef49">
+<input checked="checked" id="d63a3c0f-1fd2-421f-9e60-608782c37d2d" name="bd3bbc02-57d6-4692-9466-9163b228606d" type="radio"/>
+<label class="tabbed-label" for="d63a3c0f-1fd2-421f-9e60-608782c37d2d">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
 <span class="s">``inline literals``</span>, <span class="na">:sub:</span><span class="nv">`subscript`</span>, <span class="na">:sup:</span><span class="nv">`superscript`</span> and so much more.
@@ -165,8 +172,8 @@ horizontal separator can be used (4 or more punctuation characters on a line).</
 <hr class="docutils"/>
 <p>This is written in reStructuredText.</p>
 </div>
-<input id="b43bec95-5f7d-46d5-8d2a-4101022bbb8a" name="1e1dee1f-2e2e-40d3-9b3d-0a6ca6ae3192" type="radio"/>
-<label class="tabbed-label" for="b43bec95-5f7d-46d5-8d2a-4101022bbb8a">
+<input id="d0b64959-cd64-43cf-8f20-896012e6fc84" name="bd3bbc02-57d6-4692-9466-9163b228606d" type="radio"/>
+<label class="tabbed-label" for="d0b64959-cd64-43cf-8f20-896012e6fc84">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
 <span class="sb">`inline literals`</span>, {sub}`subscript`, {sup}`superscript` and so much more.

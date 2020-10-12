@@ -5,26 +5,33 @@
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
         <title>Hyperlinks - Furo</title>
-      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?088208b44a298d7610f9ad17">
-    <link rel="stylesheet" href="../../_static/pygments.css?088208b44a298d7610f9ad17">
+      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?3215ad4b550c6e52d980aae8">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    <link rel="stylesheet" href="../../_static/pygments_dark.css">
     
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: #000000;
+    --color-code-foreground: black;
   
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      
+    }
   }
 </style>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
-      <script src="../../_static/underscore.js"></script>
-      
-        <script src="../../_static/doctools.js" defer></script>
-      
-        <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?088208b44a298d7610f9ad17"></script></head>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/scripts/main.js?3215ad4b550c6e52d980aae8"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -91,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
@@ -138,8 +145,8 @@
 <p>Hyperlinks are extremely useful for connecting related topics without having to depart from a clear linear exposition. Sphinx supports various formats for creating hyperlinks, with <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v4.0.0+)"><code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a> being a great tool for cross-documentation hyperlinks.</p>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="319bb5f0-b5a4-47e0-8bd0-e4e755b23c58" name="e41b1214-7327-4bc1-adf7-e2438973d35d" type="radio"/>
-<label class="tabbed-label" for="319bb5f0-b5a4-47e0-8bd0-e4e755b23c58">
+<input checked="checked" id="b3f470bc-c98b-46aa-8a73-9c144a9e5b71" name="bfd667ac-ea16-45c9-84bc-dadb5edadbef" type="radio"/>
+<label class="tabbed-label" for="b3f470bc-c98b-46aa-8a73-9c144a9e5b71">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Hyperlinks can take various forms, so here's a list of them:
 
@@ -161,8 +168,8 @@ reStructuredText</label><div class="tabbed-content docutils">
 <li><p>hyperlink to a specific API element: <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a></p></li>
 </ul>
 </div>
-<input id="dcbdefe7-b8a8-4fd6-aab2-52bda29e0d47" name="e41b1214-7327-4bc1-adf7-e2438973d35d" type="radio"/>
-<label class="tabbed-label" for="dcbdefe7-b8a8-4fd6-aab2-52bda29e0d47">
+<input id="8e2dafc6-0459-4e02-b94e-1c184ff8fed5" name="bfd667ac-ea16-45c9-84bc-dadb5edadbef" type="radio"/>
+<label class="tabbed-label" for="8e2dafc6-0459-4e02-b94e-1c184ff8fed5">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Hyperlinks can take various forms, so here's a list of them:
 

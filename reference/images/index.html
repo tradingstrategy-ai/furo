@@ -5,26 +5,33 @@
 
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.05.dev10"/>
         <title>Images - Furo</title>
-      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?d3aafa85133c863705288c2c">
-    <link rel="stylesheet" href="../../_static/pygments.css?d3aafa85133c863705288c2c">
+      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?c0e308479882490340e366f9">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    <link rel="stylesheet" href="../../_static/pygments_dark.css">
     
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: #000000;
+    --color-code-foreground: black;
   
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      
+    }
   }
 </style>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
-      <script src="../../_static/underscore.js"></script>
-      
-        <script src="../../_static/doctools.js" defer></script>
-      
-        <script src="../../_static/language_data.js" defer></script>
-      <script src="../../_static/scripts/main.js?d3aafa85133c863705288c2c"></script></head>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/scripts/main.js?c0e308479882490340e366f9"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -91,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Adding a landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
@@ -140,8 +147,8 @@
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="ba7e12d5-f4cc-4b4b-8869-b7e027b49848" name="0f612d83-ccce-45fe-b770-5601d112d41d" type="radio"/>
-<label class="tabbed-label" for="ba7e12d5-f4cc-4b4b-8869-b7e027b49848">
+<input checked="checked" id="243095fa-edf8-4d04-9845-26be477669ec" name="1989697c-3827-45d0-92d3-bb89ab2d822a" type="radio"/>
+<label class="tabbed-label" for="243095fa-edf8-4d04-9845-26be477669ec">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
 
@@ -151,8 +158,8 @@ This is from reStructuredText.
 <img alt="https://source.unsplash.com/200x200/daily?ferret" src="https://source.unsplash.com/200x200/daily?ferret"/>
 <p>This is from reStructuredText.</p>
 </div>
-<input id="51104c86-c01d-4ad6-920f-60a3f10f820e" name="0f612d83-ccce-45fe-b770-5601d112d41d" type="radio"/>
-<label class="tabbed-label" for="51104c86-c01d-4ad6-920f-60a3f10f820e">
+<input id="02538c7e-7806-4469-b223-b51c17f72654" name="1989697c-3827-45d0-92d3-bb89ab2d822a" type="radio"/>
+<label class="tabbed-label" for="02538c7e-7806-4469-b223-b51c17f72654">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>![](https://source.unsplash.com/200x200/daily?ferret)
 
@@ -169,8 +176,8 @@ This is from Markdown.
 <h2>Alignment<a class="headerlink" href="#alignment" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="1351b317-cc5f-4cd1-b369-33c8b8e1685c" name="fd62d8b1-47dd-41ea-ae51-da71128f8d96" type="radio"/>
-<label class="tabbed-label" for="1351b317-cc5f-4cd1-b369-33c8b8e1685c">
+<input checked="checked" id="4d09cfec-756c-4fb8-98a1-7bc30ae13ddf" name="5a2a820c-d271-4c22-8e39-d103c4a4db4d" type="radio"/>
+<label class="tabbed-label" for="4d09cfec-756c-4fb8-98a1-7bc30ae13ddf">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
    <span class="nc">:align:</span> center
@@ -181,8 +188,8 @@ This is from reStructuredText.
 <img alt="https://source.unsplash.com/200x200/daily?ferret" class="align-center" src="https://source.unsplash.com/200x200/daily?ferret"/>
 <p>This is from reStructuredText.</p>
 </div>
-<input id="f562cf5f-43cf-4053-8b2c-5c09a401913c" name="fd62d8b1-47dd-41ea-ae51-da71128f8d96" type="radio"/>
-<label class="tabbed-label" for="f562cf5f-43cf-4053-8b2c-5c09a401913c">
+<input id="48c9e943-7e96-4bca-88d1-48cc7d891585" name="5a2a820c-d271-4c22-8e39-d103c4a4db4d" type="radio"/>
+<label class="tabbed-label" for="48c9e943-7e96-4bca-88d1-48cc7d891585">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{image} https://source.unsplash.com/200x200/daily?ferret
 :align: center
@@ -201,8 +208,8 @@ This is from Markdown.
 <h2>Captions<a class="headerlink" href="#captions" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
 <div class="tabbed-set docutils">
-<input checked="checked" id="20771c6c-91ff-4256-94e1-220e20461e7d" name="ee848488-9e0d-4912-848f-98c3eb0929f3" type="radio"/>
-<label class="tabbed-label" for="20771c6c-91ff-4256-94e1-220e20461e7d">
+<input checked="checked" id="fc98cc0d-6c39-4ea3-8853-d39f16e80e8b" name="64a7dfe6-ee11-4dbf-8a82-6981204f6937" type="radio"/>
+<label class="tabbed-label" for="fc98cc0d-6c39-4ea3-8853-d39f16e80e8b">
 reStructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
 
@@ -217,8 +224,8 @@ This is from reStructuredText.
 </div>
 <p>This is from reStructuredText.</p>
 </div>
-<input id="9fb788c4-194c-440c-a83b-40bbf21d48d3" name="ee848488-9e0d-4912-848f-98c3eb0929f3" type="radio"/>
-<label class="tabbed-label" for="9fb788c4-194c-440c-a83b-40bbf21d48d3">
+<input id="a0280219-48f8-4a3e-b16f-4d3e7ae9330b" name="64a7dfe6-ee11-4dbf-8a82-6981204f6937" type="radio"/>
+<label class="tabbed-label" for="a0280219-48f8-4a3e-b16f-4d3e7ae9330b">
 Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{figure} https://source.unsplash.com/200x200/daily?ferret
 This is a captioned image, which needs the "figure" directive.
