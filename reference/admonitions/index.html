@@ -6,10 +6,8 @@
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.13.dev13"/>
         <title>Admonitions - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?63f1ce440858e8eb743021e0">
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?c64fb82aa3d0ff91abcf8c2b">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -31,7 +29,8 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/scripts/main.js?63f1ce440858e8eb743021e0"></script></head>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/scripts/main.js?c64fb82aa3d0ff91abcf8c2b"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -146,10 +145,8 @@
 <div class="section" id="basic-usage">
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="e380927d-8da4-4fcd-b2f1-7e8c077f8f06" name="a1fc0fb4-d577-466a-9ffa-3530cca9e011" type="radio"/>
-<label class="tabbed-label" for="e380927d-8da4-4fcd-b2f1-7e8c077f8f06">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is what the most basic admonitions look like in reStructuredText.
 
 <span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
@@ -168,9 +165,7 @@ reStructuredText</label><div class="tabbed-content docutils">
 <p>If you really want, you can even have lists, or code, or tables.</p>
 </div>
 </div>
-<input id="468873a2-d087-47a1-8a86-3b6140e43fec" name="a1fc0fb4-d577-466a-9ffa-3530cca9e011" type="radio"/>
-<label class="tabbed-label" for="468873a2-d087-47a1-8a86-3b6140e43fec">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{note}
 This is what the most basic admonitions look like in Markdown.
 ```
@@ -198,10 +193,8 @@ If you really want, you can even have lists, or code, or tables.
 <div class="section" id="custom-titles">
 <h2>Custom Titles<a class="headerlink" href="#custom-titles" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="4115bdd9-9cf3-4e3e-8d5a-e6275e2f5767" name="5a7b8f84-0d28-4dcd-ae93-e65cb7d3cbc5" type="radio"/>
-<label class="tabbed-label" for="4115bdd9-9cf3-4e3e-8d5a-e6275e2f5767">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Look ma! A custom title.
 
    It looks different though.
@@ -221,9 +214,7 @@ reStructuredText</label><div class="tabbed-content docutils">
 <p>Maaa! I made it look the same by setting the class.</p>
 </div>
 </div>
-<input id="8e19184a-7801-4c02-b611-715d8d781f36" name="5a7b8f84-0d28-4dcd-ae93-e65cb7d3cbc5" type="radio"/>
-<label class="tabbed-label" for="8e19184a-7801-4c02-b611-715d8d781f36">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{admonition} Look ma! A custom title.
 It looks different though.
 ```

@@ -6,10 +6,8 @@
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.13.dev13"/>
         <title>Text Formatting - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?12c84dd77f82b5196d818543">
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?12aaa74e9cf88d2576f62b81">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -31,7 +29,8 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/scripts/main.js?12c84dd77f82b5196d818543"></script></head>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/scripts/main.js?12aaa74e9cf88d2576f62b81"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -144,10 +143,8 @@
 <h1>Text Formatting<a class="headerlink" href="#text-formatting" title="Permalink to this headline">¶</a></h1>
 <p>Text formatting is an important aspect of written text. Sphinx provides support for several ways to apply specific formatting.</p>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="765f5cac-f330-47fd-884f-cc7e17a836aa" name="4b4f49b3-68aa-4305-b50f-9004b5a342d5" type="radio"/>
-<label class="tabbed-label" for="765f5cac-f330-47fd-884f-cc7e17a836aa">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
 <span class="s">``inline literals``</span>, <span class="na">:sub:</span><span class="nv">`subscript`</span>, <span class="na">:sup:</span><span class="nv">`superscript`</span> and so much more.
 Providing a reference to <span class="na">:pep:</span><span class="nv">`8`</span> is straightforward. You can also include
@@ -172,9 +169,7 @@ horizontal separator can be used (4 or more punctuation characters on a line).</
 <hr class="docutils"/>
 <p>This is written in reStructuredText.</p>
 </div>
-<input id="9db5375c-f091-4097-9a3a-c66b0b60e8e3" name="4b4f49b3-68aa-4305-b50f-9004b5a342d5" type="radio"/>
-<label class="tabbed-label" for="9db5375c-f091-4097-9a3a-c66b0b60e8e3">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content can have inline markup like <span class="ge">*emphasis*</span>, <span class="gs">**strong emphasis**</span>,
 <span class="sb">`inline literals`</span>, {sub}`subscript`, {sup}`superscript` and so much more.
 Providing a reference to {pep}`8` is straightforward. You can also include

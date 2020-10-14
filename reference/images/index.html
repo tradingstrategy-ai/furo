@@ -6,10 +6,8 @@
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.13.dev13"/>
         <title>Images - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?bcfa900780e9b768f02a72d7">
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?1db6be8cad4ae1f707d08462">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -31,7 +29,8 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/scripts/main.js?bcfa900780e9b768f02a72d7"></script></head>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/scripts/main.js?1db6be8cad4ae1f707d08462"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -146,10 +145,8 @@
 <div class="section" id="basic-usage">
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="1b636d52-5258-4381-97ef-3efdb2a6d514" name="01abb61d-868c-46c7-b5e6-f592a300d4ca" type="radio"/>
-<label class="tabbed-label" for="1b636d52-5258-4381-97ef-3efdb2a6d514">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
 
 This is from reStructuredText.
@@ -158,9 +155,7 @@ This is from reStructuredText.
 <img alt="https://source.unsplash.com/200x200/daily?ferret" src="https://source.unsplash.com/200x200/daily?ferret"/>
 <p>This is from reStructuredText.</p>
 </div>
-<input id="dc32ed3a-c4b7-43a3-939c-b7071f5421d0" name="01abb61d-868c-46c7-b5e6-f592a300d4ca" type="radio"/>
-<label class="tabbed-label" for="dc32ed3a-c4b7-43a3-939c-b7071f5421d0">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>![](https://source.unsplash.com/200x200/daily?ferret)
 
 This is from Markdown.
@@ -175,10 +170,8 @@ This is from Markdown.
 <div class="section" id="alignment">
 <h2>Alignment<a class="headerlink" href="#alignment" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="48be952d-9b3d-4ea3-9b78-ccedb38e2d24" name="3519e9fb-460b-4396-8bca-43dd7acb4e48" type="radio"/>
-<label class="tabbed-label" for="48be952d-9b3d-4ea3-9b78-ccedb38e2d24">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
    <span class="nc">:align:</span> center
 
@@ -188,9 +181,7 @@ This is from reStructuredText.
 <img alt="https://source.unsplash.com/200x200/daily?ferret" class="align-center" src="https://source.unsplash.com/200x200/daily?ferret"/>
 <p>This is from reStructuredText.</p>
 </div>
-<input id="0a51eb13-69bc-46b6-bba0-5ca402746ed6" name="3519e9fb-460b-4396-8bca-43dd7acb4e48" type="radio"/>
-<label class="tabbed-label" for="0a51eb13-69bc-46b6-bba0-5ca402746ed6">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{image} https://source.unsplash.com/200x200/daily?ferret
 :align: center
 ```
@@ -207,10 +198,8 @@ This is from Markdown.
 <div class="section" id="captions">
 <h2>Captions<a class="headerlink" href="#captions" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="fa098b16-38ea-4647-bde6-5ddd7ac54f03" name="7dc83f38-54c3-42cf-b2ed-d5ac5987b731" type="radio"/>
-<label class="tabbed-label" for="fa098b16-38ea-4647-bde6-5ddd7ac54f03">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?ferret
 
     This is a captioned image, which needs the "figure" directive.
@@ -224,9 +213,7 @@ This is from reStructuredText.
 </div>
 <p>This is from reStructuredText.</p>
 </div>
-<input id="34c0e004-4d95-4fa4-9ad6-d242492f78d2" name="7dc83f38-54c3-42cf-b2ed-d5ac5987b731" type="radio"/>
-<label class="tabbed-label" for="34c0e004-4d95-4fa4-9ad6-d242492f78d2">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{figure} https://source.unsplash.com/200x200/daily?ferret
 This is a captioned image, which needs the "figure" directive.
 ```

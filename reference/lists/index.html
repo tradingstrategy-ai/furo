@@ -6,10 +6,8 @@
     <meta name="generator" content="sphinx-3.2.1, furo 2020.10.13.dev13"/>
         <title>Lists - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?06e45ce7810775815446de44">
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" href="../../_static/styles/default.css?82bec23013ab89bf096d5d5a">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -31,7 +29,8 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/scripts/main.js?06e45ce7810775815446de44"></script></head>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/scripts/main.js?82bec23013ab89bf096d5d5a"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -146,10 +145,8 @@
 <div class="section" id="bullet-lists">
 <h2>Bullet Lists<a class="headerlink" href="#bullet-lists" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="0db3894e-a541-45f4-b60b-72d961448e05" name="61f129af-12e7-45d4-8169-f7f6e558c2dd" type="radio"/>
-<label class="tabbed-label" for="0db3894e-a541-45f4-b60b-72d961448e05">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> Bullet lists in reStructuredText are fairly straightforward.
 <span class="m">-</span> A bunch of bullet points.
 
@@ -178,9 +175,7 @@ paragraphs to the correct level.</p>
 </li>
 </ul>
 </div>
-<input id="80249b91-8d2e-4f5c-832d-b5f7f647c56e" name="61f129af-12e7-45d4-8169-f7f6e558c2dd" type="radio"/>
-<label class="tabbed-label" for="80249b91-8d2e-4f5c-832d-b5f7f647c56e">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> Bullet lists in Markdown are pretty straightforward.
 <span class="k">-</span> A bunch of bullet points.
   <span class="k">-</span> Nested bullets should be indented by two or more spaces.
@@ -213,10 +208,8 @@ paragraphs to the correct level.</p>
 <div class="section" id="numbered-lists">
 <h2>Numbered Lists<a class="headerlink" href="#numbered-lists" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="b852976c-64a7-44b0-871f-e2aecf89e84a" name="9058b515-56be-491e-aae6-bf53921d0db5" type="radio"/>
-<label class="tabbed-label" for="b852976c-64a7-44b0-871f-e2aecf89e84a">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> Numbered lists are not complicated.
 <span class="m">2.</span> They do exactly what you think they do.
 </pre></div>
@@ -226,9 +219,7 @@ reStructuredText</label><div class="tabbed-content docutils">
 <li><p>They do exactly what you think they do.</p></li>
 </ol>
 </div>
-<input id="c56c4ea4-b595-48ea-bc68-b3876a8bc91d" name="9058b515-56be-491e-aae6-bf53921d0db5" type="radio"/>
-<label class="tabbed-label" for="c56c4ea4-b595-48ea-bc68-b3876a8bc91d">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">1.</span> Numbered lists are not complicated.
 <span class="k">2.</span> They do exactly what you think they do.
 </pre></div>
@@ -244,10 +235,8 @@ Markdown (MyST)</label><div class="tabbed-content docutils">
 <div class="section" id="definition-lists">
 <h2>Definition Lists<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tabbed-set docutils">
-<input checked="checked" id="e9fd16d9-3230-4fa2-a74d-0a597149fe38" name="31b49717-cd8b-48b5-988b-c85fc4f53ab2" type="radio"/>
-<label class="tabbed-label" for="e9fd16d9-3230-4fa2-a74d-0a597149fe38">
-reStructuredText</label><div class="tabbed-content docutils">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils container">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Definition Lists
    An extremely useful tool for describing stuff.
 
@@ -262,9 +251,7 @@ Complicated Term
 </dd>
 </dl>
 </div>
-<input id="39217a7f-19ef-4efc-8a48-51ef6d679bbe" name="31b49717-cd8b-48b5-988b-c85fc4f53ab2" type="radio"/>
-<label class="tabbed-label" for="39217a7f-19ef-4efc-8a48-51ef6d679bbe">
-Markdown (MyST)</label><div class="tabbed-content docutils">
+<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Definition Lists
 :  An extremely useful tool for describing stuff.
 
