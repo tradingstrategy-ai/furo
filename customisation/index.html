@@ -7,22 +7,36 @@
         <title>Customisation - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" href="../_static/styles/default.css?e7f403140d793aff659a2f9b">
+    <link rel="stylesheet" href="../_static/styles/default.css?52cb77efaf0790846f4cb934">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
     
+
+
 <style>
   :root {
     --color-code-background: #f8f8f8;
-    --color-code-foreground: black;
+  --color-code-foreground: black;
   
   }
   @media (prefers-color-scheme: dark) {
     :root {
-    --color-code-background: #202020;
-    --color-code-foreground: #d0d0d0;
-      
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
     }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
   }
 </style>
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script><script src="../_static/jquery.js"></script>
@@ -30,7 +44,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/language_data.js"></script>
     <script src="../_static/tabs.js"></script>
-    <script src="../_static/scripts/main.js?e7f403140d793aff659a2f9b"></script></head>
+    <script src="../_static/scripts/main.js?52cb77efaf0790846f4cb934"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -115,6 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/images/">Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/lists/">Lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/really-long/">Really Long Page</a></li>
 </ul>
 </li>
 </ul>
@@ -156,12 +171,12 @@
 <p class="admonition-title">Note</p>
 <p>Note that only the configuration options list here are supported (not the ones inherited from the built-in <code class="docutils literal notranslate"><span class="pre">basic</span></code> Sphinx theme).</p>
 </div>
-<div class="section" id="css-variables">
-<h3><code class="docutils literal notranslate"><span class="pre">css_variables</span></code><a class="headerlink" href="#css-variables" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="light-css-variables-dark-css-variables">
+<h3><code class="docutils literal notranslate"><span class="pre">light_css_variables</span></code>/<code class="docutils literal notranslate"><span class="pre">dark_css_variables</span></code><a class="headerlink" href="#light-css-variables-dark-css-variables" title="Permalink to this headline">¶</a></h3>
 <p>Furo makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. These can be overridden by the user and are used for stylizing nearly all elements of the documentation.</p>
-<p>Setting <code class="docutils literal notranslate"><span class="pre">css_variables</span></code> is the recommended mechanism to override Furo’s default values for these variables.</p>
+<p>Setting <code class="docutils literal notranslate"><span class="pre">*_css_variables</span></code> is the recommended mechanism to override Furo’s default values for these variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"css_variables"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"light_css_variables"</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span>
         <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#CC3333"</span><span class="p">,</span>
         <span class="s2">"color-admonition-background"</span><span class="p">:</span> <span class="s2">"orange"</span><span class="p">,</span>
@@ -171,7 +186,7 @@
 </div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>Typos in the <code class="docutils literal notranslate"><span class="pre">css_variables</span></code> dictionary are silently ignored, and do not raise any errors or warnings. Double check that your spellings and values are correct and valid.</p>
+<p>Typos in the <code class="docutils literal notranslate"><span class="pre">*_css_variables</span></code> dictionary are silently ignored, and do not raise any errors or warnings. Double check that your spellings and values are correct and valid.</p>
 </div>
 </div>
 <div class="section" id="sidebar-hide-name">
@@ -256,7 +271,7 @@
           <ul>
 <li><a class="reference internal" href="#">Customisation</a><ul>
 <li><a class="reference internal" href="#theme-options">Theme options</a><ul>
-<li><a class="reference internal" href="#css-variables"><code class="docutils literal notranslate"><span class="pre">css_variables</span></code></a></li>
+<li><a class="reference internal" href="#light-css-variables-dark-css-variables"><code class="docutils literal notranslate"><span class="pre">light_css_variables</span></code>/<code class="docutils literal notranslate"><span class="pre">dark_css_variables</span></code></a></li>
 <li><a class="reference internal" href="#sidebar-hide-name"><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code></a></li>
 <li><a class="reference internal" href="#navigation-with-keys"><code class="docutils literal notranslate"><span class="pre">navigation_with_keys</span></code></a></li>
 </ul>
