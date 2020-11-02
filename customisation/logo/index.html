@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing landing page" href="../landing-page/" /><link rel="prev" title="Customisation" href="../" />
 
-    <meta name="generator" content="sphinx-3.2.1, furo 2020.11.01.dev15"/>
+    <meta name="generator" content="sphinx-3.3.0, furo 2020.11.01.dev15"/>
         <title>Adding a logo - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/default.css?f98374bdde782f63c9923ef7">
+    <link rel="stylesheet" href="../../_static/styles/default.css?3cc87514dcc2096b3085fea5">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -44,7 +44,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script src="../../_static/scripts/main.js?f98374bdde782f63c9923ef7"></script></head>
+    <script src="../../_static/scripts/main.js?3cc87514dcc2096b3085fea5"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -132,6 +132,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../reference/really-long/">Really Long Page</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../recommendations/">Recommendations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
@@ -147,7 +148,8 @@
 </ul>
 
   </div>
-  <div id="ethical-ad-placement"></div>
+  
+  
 </div>
       </div>
       
@@ -156,16 +158,40 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
         <div class="section" id="adding-a-logo">
 <h1>Adding a logo<a class="headerlink" href="#adding-a-logo" title="Permalink to this headline">¶</a></h1>
-<p>Logos are a point of recognition and an important part of branding. Furo supports the standard Sphinx mechanism to add your project’s logo in the documentation. This is done by setting <a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_logo"><code class="docutils literal notranslate"><span class="pre">html_logo</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<p>Logos are a point of recognition and an important part of branding. Furo support adding your project’s logo at the top of the navigational (left) sidebar, like most other Sphinx themes.</p>
+<div class="section" id="same-logo-for-light-and-dark-mode">
+<h2>Same logo for light and dark mode<a class="headerlink" href="#same-logo-for-light-and-dark-mode" title="Permalink to this headline">¶</a></h2>
+<p>Furo supports the standard Sphinx mechanism to add your project’s logo in the documentation.</p>
+<p>This is done by setting standard <a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_logo"><code class="docutils literal notranslate"><span class="pre">html_logo</span></code></a> variable in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_logo</span> <span class="o">=</span> <span class="s2">"logo.png"</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="different-logos-for-light-and-dark-mode">
+<h2>Different logos for light and dark mode<a class="headerlink" href="#different-logos-for-light-and-dark-mode" title="Permalink to this headline">¶</a></h2>
+<p>Furo also supports setting different logos for light and dark mode. This can be necessary if the project’s logo is transparent and does not maintain sufficient contrast with the background in both modes.</p>
+<p>This is done by setting <code class="docutils literal notranslate"><span class="pre">light_logo</span></code> and <code class="docutils literal notranslate"><span class="pre">dark_logo</span></code> in <a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"light_logo"</span><span class="p">:</span> <span class="s2">"logo-light-mode.png"</span><span class="p">,</span>
+    <span class="s2">"dark_logo"</span><span class="p">:</span> <span class="s2">"logo-dark-mode.png"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The filenames must be relative to the <a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a> folder.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Implement hiding of the not-this-mode logo.</p>
+</div>
+</div>
+<div class="section" id="related-information">
+<h2>Related Information<a class="headerlink" href="#related-information" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to <a class="reference internal" href="../#sidebar-hide-name"><span class="std std-ref">hide the name of the project in the sidebar</span></a>, which might be desirable if the logo contains the project name.</p>
+</div>
 </div>
 
       </article>
@@ -195,16 +221,42 @@
         </div>
 
         <div class="related-information">
-          <span class="copyright">Copyright &copy; 2020, Pradyun Gedam</span> |
-          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
-          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+              Copyright &#169; 2020, Pradyun Gedam
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../../_sources/customisation/logo.md.txt"
+               rel="nofollow">
+              Show Source
+            </a>
         </div>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Adding a logo</a><ul>
+<li><a class="reference internal" href="#same-logo-for-light-and-dark-mode">Same logo for light and dark mode</a></li>
+<li><a class="reference internal" href="#different-logos-for-light-and-dark-mode">Different logos for light and dark mode</a></li>
+<li><a class="reference internal" href="#related-information">Related Information</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
       
       
     </aside>
