@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Tables" href="../tables/" /><link rel="prev" title="Images" href="../images/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Really Long Page" href="../really-long/" /><link rel="prev" title="Tables" href="../tables/" />
 
     <meta name="generator" content="sphinx-3.3.0, furo 2020.11.01.dev15"/>
-        <title>Lists - Furo</title>
+        <title>Tabs - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo.css?state=9fb11a1b4c2dc08a6defde71">
+    <link rel="stylesheet" href="../../_static/styles/furo.css?state=236c55187621e7fda9ecc555">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -44,7 +44,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script src="../../_static/scripts/main.js?state=9fb11a1b4c2dc08a6defde71"></script></head>
+    <script src="../../_static/scripts/main.js?state=236c55187621e7fda9ecc555"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -99,7 +99,7 @@
       <a href="../../"><div class="brand">Furo</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -133,9 +133,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../code-blocks/">Code Blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hyperlinks/">Hyperlinks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../images/">Images</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tabs/">Tabs</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Tabs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page</a></li>
 </ul>
 </li>
@@ -165,135 +165,56 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="lists">
-<h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
-<p>Lists are useful because they emphasize certain information in regular text. They can able be used to enumerate or provide an easier reference. Sphinx allows for various forms of lists, each of which can be used in a different manner.</p>
-<div class="section" id="bullet-lists">
-<h2>Bullet Lists<a class="headerlink" href="#bullet-lists" title="Permalink to this headline">¶</a></h2>
+        <div class="section" id="tabs">
+<h1>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h1>
+<p>Tabs are good way to organize content, where the reader has choice they can make (usually based on their environment). Furo works well with <a class="reference external" href="https://github.com/pradyunsg/sphinx-inline-tabs#readme">sphinx-inline-tabs</a>, which provides beautiful and functional tabs, grouping code blocks and synchronisation.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This example is gonna be <em>very</em> meta.</p>
+</div>
 <div class="docutils container">
 <div class="tab-set docutils container">
 <input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> Bullet lists in reStructuredText are fairly straightforward.
-<span class="m">-</span> A bunch of bullet points.
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tab</span><span class="p">::</span> One
 
-  <span class="m">-</span> Nested bullets should be indented by <span class="gs">**exactly**</span> two spaces.
-  <span class="m">-</span> They also need a blank line before and after them, otherwise it doesn't
-    work right.
+    First.
 
-<span class="m">-</span> It is also possible to have multiple paragraphs in a bullet.
+<span class="p">..</span> <span class="ow">tab</span><span class="p">::</span> Two
 
-  Make sure to have a blank line between the paragraphs, and to indent the
-  paragraphs to the correct level.
+    Second.
 </pre></div>
 </div>
-<ul>
-<li><p>Bullet lists in reStructuredText are fairly straightforward.</p></li>
-<li><p>A bunch of bullet points.</p>
-<ul class="simple">
-<li><p>Nested bullets should be indented by <strong>exactly</strong> two spaces.</p></li>
-<li><p>They also need a blank line before and after them, otherwise it doesn’t
-work right.</p></li>
-</ul>
-</li>
-<li><p>It is also possible to have multiple paragraphs in a bullet.</p>
-<p>Make sure to have a blank line between the paragraphs, and to indent the
-paragraphs to the correct level.</p>
-</li>
-</ul>
-</div>
-<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> Bullet lists in Markdown are pretty straightforward.
-<span class="k">-</span> A bunch of bullet points.
-  <span class="k">-</span> Nested bullets should be indented by two or more spaces.
-  <span class="k">-</span> They can just "show up" inline with the rest of the list. Adding blank lines
-    before and after is also permitted.
-<span class="k">-</span> It is also possible to have multiple paragraphs in a bullet.
-
-  Make sure to have a blank line between the paragraphs, and to indent the
-  paragraphs to the correct level.
-</pre></div>
-</div>
-<ul>
-<li><p>Bullet lists in Markdown are pretty straightforward.</p></li>
-<li><p>A bunch of bullet points.</p>
-<ul class="simple">
-<li><p>Nested bullets should be indented by two or more spaces.</p></li>
-<li><p>They can just “show up” inline with the rest of the list. Adding blank lines
-before and after is also permitted.</p></li>
-</ul>
-</li>
-<li><p>It is also possible to have multiple paragraphs in a bullet.</p>
-<p>Make sure to have a blank line between the paragraphs, and to indent the
-paragraphs to the correct level.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="numbered-lists">
-<h2>Numbered Lists<a class="headerlink" href="#numbered-lists" title="Permalink to this headline">¶</a></h2>
-<div class="docutils container">
 <div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">reStructuredText</label><div class="tab-content docutils container">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> Numbered lists are not complicated.
-<span class="m">2.</span> They do exactly what you think they do.
-</pre></div>
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">One</label><div class="tab-content docutils container">
+<p>First.</p>
 </div>
-<ol class="arabic simple">
-<li><p>Numbered lists are not complicated.</p></li>
-<li><p>They do exactly what you think they do.</p></li>
-</ol>
-</div>
-<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">1.</span> Numbered lists are not complicated.
-<span class="k">2.</span> They do exactly what you think they do.
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Numbered lists are not complicated.</p></li>
-<li><p>They do exactly what you think they do.</p></li>
-</ol>
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Two</label><div class="tab-content docutils container">
+<p>Second.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="definition-lists">
-<h2>Definition Lists<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h2>
-<div class="docutils container">
 <div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils container">
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Definition Lists
-   An extremely useful tool for describing stuff.
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">Markdown (MyST)</label><div class="tab-content docutils container">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{tab} One
+First.
+```
 
-Complicated Term
-   Definition
+```{tab} Two
+Second.
+```
 </pre></div>
 </div>
-<dl class="simple">
-<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
-</dd>
-<dt>Complicated Term</dt><dd><p>Definition</p>
-</dd>
-</dl>
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--1">One</label><div class="tab-content docutils container">
+<p>First.</p>
 </div>
-<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Definition Lists
-:  An extremely useful tool for describing stuff.
-
-Complicated Term
-:  Definition
-</pre></div>
+<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--2">Two</label><div class="tab-content docutils container">
+<p>Second.</p>
 </div>
-<dl class="simple myst">
-<dt>Definition Lists</dt><dd><p>An extremely useful tool for describing stuff.</p>
-</dd>
-<dt>Complicated Term</dt><dd><p>Definition</p>
-</dd>
-</dl>
 </div>
 </div>
 </div>
@@ -304,23 +225,23 @@ Complicated Term
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../tables/">
+          <a class="next-page" href="../really-long/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Tables</div>
+                <div class="title">Really Long Page</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../images/">
+          <a class="prev-page" href="../tables/">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Images</div>
+                <div class="title">Tables</div>
                 
               </div>
             </a>
@@ -334,7 +255,7 @@ Complicated Term
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
-            <a class="muted-link" href="../../_sources/reference/lists.md.txt"
+            <a class="muted-link" href="../../_sources/reference/tabs.md.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -342,27 +263,8 @@ Complicated Term
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree">
-          <ul>
-<li><a class="reference internal" href="#">Lists</a><ul>
-<li><a class="reference internal" href="#bullet-lists">Bullet Lists</a></li>
-<li><a class="reference internal" href="#numbered-lists">Numbered Lists</a></li>
-<li><a class="reference internal" href="#definition-lists">Definition Lists</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
       
       
     </aside>
