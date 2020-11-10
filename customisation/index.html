@@ -7,7 +7,7 @@
         <title>Customisation - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" href="../_static/styles/furo.css?state=94bda9bd34424c57422ea514">
+    <link rel="stylesheet" href="../_static/styles/furo.css?state=df0d5ab7ced5f89dbcd00f88">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
     
@@ -44,7 +44,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/language_data.js"></script>
     <script src="../_static/tabs.js"></script>
-    <script src="../_static/scripts/main.js?state=94bda9bd34424c57422ea514"></script></head>
+    <script src="../_static/scripts/main.js?state=df0d5ab7ced5f89dbcd00f88"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -146,7 +146,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/workflow/">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/internals/">Internals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/design-goals/">Design Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/design/">Design Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
@@ -170,18 +170,19 @@
         </label>
         <div class="section" id="customisation">
 <h1>Customisation<a class="headerlink" href="#customisation" title="Permalink to this headline">¶</a></h1>
-<p>Furo supports customisation of the overall theme’s look and feel.</p>
+<p>Furo supports customisation of the theme’s overall look and feel (through theme options) as well as a few per-page tweaks.</p>
+<p>This section serves to guide the user with customising Furo-based documentation. This page lists all the theme-specific customisations, as provided by this theme. Other pages in this section provide guidance for making specific customisations when using Sphinx with Furo.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="section" id="theme-options">
 <h2>Theme options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> is used for customisations that affect the entire documentation. This is for stuff like fonts and colors.</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> is used for customisations that affect the entire documentation. This is for stuff like fonts and colors.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note that only the configuration options list here are supported (not the ones inherited from the built-in <code class="docutils literal notranslate"><span class="pre">basic</span></code> Sphinx theme).</p>
 </div>
 <div class="section" id="light-css-variables-dark-css-variables">
-<h3><code class="docutils literal notranslate"><span class="pre">light_css_variables</span></code>/<code class="docutils literal notranslate"><span class="pre">dark_css_variables</span></code><a class="headerlink" href="#light-css-variables-dark-css-variables" title="Permalink to this headline">¶</a></h3>
+<span id="css-variables"></span><h3><code class="docutils literal notranslate"><span class="pre">light_css_variables</span></code>/<code class="docutils literal notranslate"><span class="pre">dark_css_variables</span></code><a class="headerlink" href="#light-css-variables-dark-css-variables" title="Permalink to this headline">¶</a></h3>
 <p>Furo makes extensive use of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. These can be overridden by the user and are used for stylizing nearly all elements of the documentation.</p>
 <p>Setting <code class="docutils literal notranslate"><span class="pre">*_css_variables</span></code> is the recommended mechanism to override Furo’s default values for these variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
@@ -189,7 +190,7 @@
         <span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span>
         <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#CC3333"</span><span class="p">,</span>
         <span class="s2">"color-admonition-background"</span><span class="p">:</span> <span class="s2">"orange"</span><span class="p">,</span>
-    <span class="p">}</span>
+    <span class="p">},</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -219,7 +220,7 @@
 </div>
 <div class="section" id="page-specific-tweaks">
 <h2>Page specific tweaks<a class="headerlink" href="#page-specific-tweaks" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a> is used for per-page customisation, usually for controlling which UI elements are presented.</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a> is used for per-page customisation, primarily for controlling which UI elements are presented.</p>
 <div class="section" id="hide-toc">
 <h3><code class="docutils literal notranslate"><span class="pre">hide-toc</span></code><a class="headerlink" href="#hide-toc" title="Permalink to this headline">¶</a></h3>
 <p>The “Contents” sidebar is automatically hidden for any pages that don’t have any inner headings. It is possible to hide it even when a page has inner headings, by setting <code class="docutils literal notranslate"><span class="pre">hide-toc</span></code> at the page level. See <a class="reference internal" href="toc/"><span class="doc">Hiding Contents sidebar</span></a> for an example.</p>

@@ -7,7 +7,7 @@
         <title>Adding a logo - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo.css?state=7fe02c97aa614f13a56ab251">
+    <link rel="stylesheet" href="../../_static/styles/furo.css?state=cc823868d18c78df7f0549a1">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -44,7 +44,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script src="../../_static/scripts/main.js?state=7fe02c97aa614f13a56ab251"></script></head>
+    <script src="../../_static/scripts/main.js?state=cc823868d18c78df7f0549a1"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -146,7 +146,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/workflow/">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/internals/">Internals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/design-goals/">Design Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/design/">Design Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
@@ -174,7 +174,7 @@
 <div class="section" id="same-logo-for-light-and-dark-mode">
 <h2>Same logo for light and dark mode<a class="headerlink" href="#same-logo-for-light-and-dark-mode" title="Permalink to this headline">¶</a></h2>
 <p>Furo supports the standard Sphinx mechanism to add your project’s logo in the documentation.</p>
-<p>This is done by setting standard <a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_logo"><code class="docutils literal notranslate"><span class="pre">html_logo</span></code></a> variable in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<p>This is done by setting standard <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_logo"><code class="docutils literal notranslate"><span class="pre">html_logo</span></code></a> variable in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_logo</span> <span class="o">=</span> <span class="s2">"logo.png"</span>
 </pre></div>
 </div>
@@ -182,14 +182,19 @@
 <div class="section" id="different-logos-for-light-and-dark-mode">
 <h2>Different logos for light and dark mode<a class="headerlink" href="#different-logos-for-light-and-dark-mode" title="Permalink to this headline">¶</a></h2>
 <p>Furo also supports setting different logos for light and dark mode. This can be necessary if the project’s logo is transparent and does not maintain sufficient contrast with the background in both modes.</p>
-<p>This is done by setting <code class="docutils literal notranslate"><span class="pre">light_logo</span></code> and <code class="docutils literal notranslate"><span class="pre">dark_logo</span></code> in <a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+<p>This is done by setting <code class="docutils literal notranslate"><span class="pre">light_logo</span></code> and <code class="docutils literal notranslate"><span class="pre">dark_logo</span></code> in <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="s2">"_static"</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"light_logo"</span><span class="p">:</span> <span class="s2">"logo-light-mode.png"</span><span class="p">,</span>
     <span class="s2">"dark_logo"</span><span class="p">:</span> <span class="s2">"logo-dark-mode.png"</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The filenames must be relative to the <a class="reference external" href="https://www.sphinx-doc.org/en/main/usage/configuration.html#confval-html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a> folder.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The filenames must be relative to the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a> folder. In the above example, that’d be <code class="docutils literal notranslate"><span class="pre">_static/logo-light-mode.png</span></code> and <code class="docutils literal notranslate"><span class="pre">_static/logo-dark-mode.png</span></code>.</p>
+<p>This is different from how <code class="docutils literal notranslate"><span class="pre">html_logo</span></code> works, which copies the given filename into the correct location automagically.</p>
+</div>
 </div>
 <div class="section" id="related-information">
 <h2>Related Information<a class="headerlink" href="#related-information" title="Permalink to this headline">¶</a></h2>

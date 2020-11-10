@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changelog" href="../../changelog/" /><link rel="prev" title="Internals" href="../internals/" />
 
     <meta name="generator" content="sphinx-3.3.0, furo 2020.11.10.dev16"/>
-        <title>Design Goals - Furo</title>
+        <title>Design Notes - Furo</title>
       <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo.css?state=6a0395edc1ff6c72973f3e65">
+    <link rel="stylesheet" href="../../_static/styles/furo.css?state=300c453493f686e0225b3214">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -44,7 +44,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script src="../../_static/scripts/main.js?state=6a0395edc1ff6c72973f3e65"></script></head>
+    <script src="../../_static/scripts/main.js?state=300c453493f686e0225b3214"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -99,7 +99,7 @@
       <a href="../../"><div class="brand">Furo</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -146,7 +146,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Contributing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../workflow/">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internals/">Internals</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Design Goals</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Design Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
@@ -165,32 +165,34 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="design-goals">
-<h1>Design Goals<a class="headerlink" href="#design-goals" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Write this.</p>
-</div>
+        <div class="section" id="design-notes">
+<h1>Design Notes<a class="headerlink" href="#design-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reason-for-existence">
+<h2>Reason for existence<a class="headerlink" href="#reason-for-existence" title="Permalink to this headline">¶</a></h2>
+<p>Furo exists because, at the time of writing, no existing Sphinx documentation theme quite fit what I wanted. The rough structural elements I wanted were:</p>
 <ul class="simple">
-<li><p>why I wrote this.</p>
-<ul>
-<li><p>good navigational capabilities in sidebar</p></li>
-<li><p>“content in the middle” three-column layout</p></li>
-<li><p>inspired by justthedocs and mkdocs-material</p></li>
+<li><p>Three-column layout, for proper in-page navigation.</p></li>
+<li><p>Clear navigational sidebar.</p></li>
+<li><p>Good search.</p></li>
+<li><p>Good typography.</p></li>
+<li><p>Good looking design.</p></li>
 </ul>
-</li>
-<li><p>what were the guiding ideas?</p>
-<ul>
-<li><p>content is the focus</p></li>
-<li><p>more stuff is not more good</p></li>
-<li><p>graceful degradation</p></li>
-<li><p>no need to look the same everywhere</p></li>
+<p>Every existing theme either didn’t check all of the boxes above, or tried to do too many things at the same time. There were a few that came close, but nothing really felt quite polished to me.</p>
+</div>
+<div class="section" id="guiding-ideas">
+<h2>“Guiding” ideas<a class="headerlink" href="#guiding-ideas" title="Permalink to this headline">¶</a></h2>
+<p>Furo’s design follows a few of the ideas I’ve had discovered over the course of browsing the existing documentation themes across ecosystems and static site generators.</p>
+<ul class="simple">
+<li><p>Focus <em>must</em> be on the content.</p></li>
+<li><p>More stuff is not more good.</p></li>
+<li><p>Graceful degradation is important, so are niceties.</p></li>
+<li><p>Simple and good enough, is more than sufficient.</p></li>
+<li><p>This is for the 80% – don’t need to cover all possible usecases.</p></li>
 </ul>
-</li>
-</ul>
+</div>
 </div>
 
       </article>
@@ -227,7 +229,7 @@
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
-            <a class="muted-link" href="../../_sources/contributing/design-goals.md.txt"
+            <a class="muted-link" href="../../_sources/contributing/design.md.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -235,8 +237,26 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Design Notes</a><ul>
+<li><a class="reference internal" href="#reason-for-existence">Reason for existence</a></li>
+<li><a class="reference internal" href="#guiding-ideas">“Guiding” ideas</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
       
       
     </aside>
