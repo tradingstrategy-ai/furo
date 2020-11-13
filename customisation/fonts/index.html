@@ -1,13 +1,11 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Hiding Contents sidebar" href="../toc/" /><link rel="prev" title="Changing colors" href="../colors/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing landing page" href="../landing-page/" /><link rel="prev" title="Changing colors" href="../colors/" />
 
-    <meta name="generator" content="sphinx-3.3.0, furo 2020.11.10.dev16"/>
+    <meta name="generator" content="sphinx-3.3.1, furo 2020.11.10.dev16"/>
         <title>Changing fonts - Furo</title>
-      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo.css?state=f5101ff5f6c2c2b8cb5dfc8e">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?state=dbb7ca1dcc2c8cb9ffb9fab3">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -38,13 +36,15 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style>
+</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?state=dbb7ca1dcc2c8cb9ffb9fab3">
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script src="../../_static/scripts/main.js?state=f5101ff5f6c2c2b8cb5dfc8e"></script></head>
+    <script src="../../_static/scripts/main.js?state=dbb7ca1dcc2c8cb9ffb9fab3"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -120,9 +120,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colors/">Changing colors</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Changing fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../toc/">Hiding Contents sidebar</a></li>
 </ul>
 </li>
@@ -170,9 +170,19 @@
         </label>
         <div class="section" id="changing-fonts">
 <h1>Changing fonts<a class="headerlink" href="#changing-fonts" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Write this thing.</p>
+<p>Furo makes it fairly straightforward to change the fonts across the entire page.</p>
+<p>This is done by changing the values of the relevant CSS variables: <code class="docutils literal notranslate"><span class="pre">font-stack</span></code> (for regular text) and <code class="docutils literal notranslate"><span class="pre">font-stack--monospace</span></code> (for code blocks and inline code). This can be done using Furo’s <a class="reference internal" href="../#css-variables"><span class="std std-ref">mechanism for setting CSS variables</span></a> – specifically by setting them as the fonts for the light mode (which is inherited by the dark mode).</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"light_css_variables"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"font-stack"</span><span class="p">:</span> <span class="s2">"Arial, sans-serif"</span><span class="p">,</span>
+        <span class="s2">"font-stack--monospace"</span><span class="p">:</span> <span class="s2">"Courier, monospace"</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is strongly recommended to not change the fonts unless there is a strong reason (such as brand identity) since Furo’s default fonts are carefully selected to look good across all major platforms.</p>
 </div>
 </div>
 
@@ -180,12 +190,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../toc/">
+          <a class="next-page" href="../landing-page/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Hiding Contents sidebar</div>
+                <div class="title">Changing landing page</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>

@@ -1,13 +1,11 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing fonts" href="../fonts/" /><link rel="prev" title="Changing landing page" href="../landing-page/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing fonts" href="../fonts/" /><link rel="prev" title="Adding a logo" href="../logo/" />
 
-    <meta name="generator" content="sphinx-3.3.0, furo 2020.11.10.dev16"/>
+    <meta name="generator" content="sphinx-3.3.1, furo 2020.11.10.dev16"/>
         <title>Changing colors - Furo</title>
-      <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo.css?state=dd1938b45fdb768dfcaa3b25">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?state=b7ebea5b64bb083ee269fce7">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -38,13 +36,15 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style>
+</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?state=b7ebea5b64bb083ee269fce7">
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script src="../../_static/scripts/main.js?state=dd1938b45fdb768dfcaa3b25"></script></head>
+    <script src="../../_static/scripts/main.js?state=b7ebea5b64bb083ee269fce7"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -99,7 +99,7 @@
       <a href="../../"><div class="brand">Furo</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -120,9 +120,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fonts/">Changing fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../toc/">Hiding Contents sidebar</a></li>
 </ul>
 </li>
@@ -165,14 +165,45 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
         <div class="section" id="changing-colors">
 <h1>Changing colors<a class="headerlink" href="#changing-colors" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Write this thing.</p>
+<p>Furo allows customising colors to fit your brand’s identity, by using CSS variables. These can be declared directly in <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a>, in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="section" id="how-light-and-dark-mode-work">
+<h2>How light and dark mode work<a class="headerlink" href="#how-light-and-dark-mode-work" title="Permalink to this headline">¶</a></h2>
+<p>Furo is in light mode by default, switching to the dark mode when requested by the user’s browser (through <code class="docutils literal notranslate"><span class="pre">prefers-color-scheme:</span> <span class="pre">dark</span></code>).</p>
+<p>As a consequence of this design, the dark mode inherits the variable definitions from the light mode, only overriding specific values to adapt the theme. While the mechanism for switching between light/dark mode is not configurable, the exact CSS variable definitions used in this process can be configured.</p>
+</div>
+<div class="section" id="defining-overrides-for-defaults">
+<h2>Defining overrides for defaults<a class="headerlink" href="#defining-overrides-for-defaults" title="Permalink to this headline">¶</a></h2>
+<p>Furo allows defining <a class="reference internal" href="../#css-variables"><span class="std std-ref">CSS variables that overrides its default values</span></a>. The exact variable names to use can be found in Furo’s source code, where the <a class="reference external" href="https://github.com/pradyunsg/furo/tree/main/src/furo/assets/styles/variables">variable declarations</a> are made.</p>
+<p>This mechanism allows configuring nearly every facet of Furo’s design, including spacing between various items and the colors of nearly every component.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>Changing Furo’s blue accent (used for stylising links, sidebar’s content etc) to a purple one:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"light_css_variables"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"#7C4DFF"</span><span class="p">,</span>
+        <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#7C4DFF"</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">"dark_css_variables"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"color-brand-primary"</span><span class="p">:</span> <span class="s2">"#7C4DFF"</span><span class="p">,</span>
+        <span class="s2">"color-brand-content"</span><span class="p">:</span> <span class="s2">"#7C4DFF"</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="code-block-styling">
+<h2>Code block styling<a class="headerlink" href="#code-block-styling" title="Permalink to this headline">¶</a></h2>
+<p>Furo does not directly handle highlighting of the code blocks. This is done by Sphinx, and is configurable using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-pygments_style"><code class="docutils literal notranslate"><span class="pre">pygments_style</span></code></a> and <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-pygments_dark_style"><code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">pygments_style</span> <span class="o">=</span> <span class="s2">"sphinx"</span>
+<span class="n">pygments_dark_style</span> <span class="o">=</span> <span class="s2">"monokai"</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -189,14 +220,14 @@
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../landing-page/">
+          <a class="prev-page" href="../logo/">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Changing landing page</div>
+                <div class="title">Adding a logo</div>
                 
               </div>
             </a>
@@ -218,8 +249,29 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Changing colors</a><ul>
+<li><a class="reference internal" href="#how-light-and-dark-mode-work">How light and dark mode work</a></li>
+<li><a class="reference internal" href="#defining-overrides-for-defaults">Defining overrides for defaults</a></li>
+<li><a class="reference internal" href="#code-block-styling">Code block styling</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
