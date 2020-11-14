@@ -1,11 +1,11 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing sidebar elements" href="../sidebar/" /><link rel="prev" title="Changing fonts" href="../fonts/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Hiding Contents sidebar" href="../toc/" /><link rel="prev" title="Changing landing page" href="../landing-page/" />
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.11.14.dev17"/>
-        <title>Changing landing page - Furo</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?state=f07cc55da46c1bedbb4ec82b">
+        <title>Changing sidebar elements - Furo</title>
+      <link rel="stylesheet" href="../../_static/styles/furo.css?state=33a5384f80c09410f693f546">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -38,14 +38,14 @@
   }
 </style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?state=f07cc55da46c1bedbb4ec82b">
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?state=33a5384f80c09410f693f546">
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script defer src="../../_static/jquery.js"></script>
     <script defer src="../../_static/underscore.js"></script>
     <script defer src="../../_static/doctools.js"></script>
     <script defer src="../../_static/language_data.js"></script>
     <script defer src="../../_static/tabs.js"></script>
-    <script defer src="../../_static/scripts/main.js?state=f07cc55da46c1bedbb4ec82b"></script></head>
+    <script defer src="../../_static/scripts/main.js?state=33a5384f80c09410f693f546"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -100,7 +100,7 @@
       <a href="../../"><div class="brand">Furo</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -122,8 +122,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../logo/">Adding a logo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fonts/">Changing fonts</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Changing landing page</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sidebar/">Changing sidebar elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Changing sidebar elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../toc/">Hiding Contents sidebar</a></li>
 </ul>
 </li>
@@ -164,46 +164,96 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="changing-landing-page">
-<h1>Changing landing page<a class="headerlink" href="#changing-landing-page" title="Permalink to this headline">¶</a></h1>
-<p>It is possible to have a custom landing page in Sphinx documentation. This is achieved by adding a custom template file for that page and setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_additional_pages"><code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_templates"</span><span class="p">]</span>
-<span class="n">html_additional_pages</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"index"</span><span class="p">:</span> <span class="s2">"your-custom-landing-page.html"</span>
-<span class="p">}</span>
+        <div class="section" id="changing-sidebar-elements">
+<h1>Changing sidebar elements<a class="headerlink" href="#changing-sidebar-elements" title="Permalink to this headline">¶</a></h1>
+<p>Furo supports customising the elements that show up in the navigational sidebar (left). This is to provide documentation authors who are willing to work with HTML/CSS to change and tweak how the sidebar looks.</p>
+<div class="section" id="default-design">
+<h2>Default design<a class="headerlink" href="#default-design" title="Permalink to this headline">¶</a></h2>
+<p>The following code snippet lists the fragments (HTML files from Furo’s theme folder) that are used for the default sidebar design.</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">sidebars</span> <span class="o">=</span><span class="s"></span>
+<span class="s">  sidebar/brand.html,</span>
+<span class="s">  sidebar/search.html,</span>
+<span class="s">  sidebar/scroll-start.html,</span>
+<span class="s">  sidebar/navigation.html,</span>
+<span class="s">  sidebar/ethical-ads.html,</span>
+<span class="s">  sidebar/scroll-end.html</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You’ll need to write HTML for the page in <code class="docutils literal notranslate"><span class="pre">_templates/your-custom-landing-page.html</span></code>, if you use the above example as-is.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The scrollable region in the sidebar is determined by <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-start.html</span></code> and <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-end.html</span></code>. Any elements that fall between them can be scrolled.</p>
 </div>
-<p>In case you’re curious, this works because Sphinx allows overwriting existing files when generating the website and processes <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code> <em>after</em> processing the pages normally. These two behaviours combined mean that we can overwrite the page generated with the default layout by specifying the same document with a different template in <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code>.</p>
+</div>
+<div class="section" id="making-changes">
+<h2>Making changes<a class="headerlink" href="#making-changes" title="Permalink to this headline">¶</a></h2>
+<p>There are two main ways to customise Furo’s sidebar:</p>
+<ul class="simple">
+<li><p>override the content of the default templates with your own templates, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a>.</p></li>
+<li><p>change the entire sidebar structure, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_sidebars"><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code></a>.</p></li>
+</ul>
+<div class="section" id="using-templates-path">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">templates_path</span></code><a class="headerlink" href="#using-templates-path" title="Permalink to this headline">¶</a></h3>
+<p>This is useful when you want to change a specific element of the sidebar. A good example for when you might want to use this: adding a tagline after your project’s name/logo.</p>
+<p>This is done by setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a> in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and correctly adding files within the configured paths.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_templates"</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For the above example – adding a tagline after the name/logo – you’d want to add an <code class="docutils literal notranslate"><span class="pre">_templates/sidebar/brand.html</span></code> file, that overrides the appropriate content. For more information on how to do so, <a class="reference external" href="https://www.sphinx-doc.org/en/master/development/theming.html#templating">Sphinx’s templating documentation</a>.</p>
+</div>
+<div class="section" id="using-html-sidebars">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code><a class="headerlink" href="#using-html-sidebars" title="Permalink to this headline">¶</a></h3>
+<p>This is useful when you want to make drastic or major changes to the design of Furo’s sidebar.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Making changes using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code> can break the layout. Please be mindful that Furo is not designed to accommodate for all potential sidebar designs.</p>
+</div>
+<p>As an example, to make the <em>entire</em> sidebar scrollable, it is possible to set <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-start.html</span></code> as the first fragment and <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-end.html</span></code> as the last fragment.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"sidebar/scroll-start.html"</span><span class="p">,</span>
+    <span class="s2">"sidebar/brand.html"</span><span class="p">,</span>
+    <span class="s2">"sidebar/search.html"</span><span class="p">,</span>
+    <span class="s2">"sidebar/navigation.html"</span><span class="p">,</span>
+    <span class="s2">"sidebar/ethical-ads.html"</span><span class="p">,</span>
+    <span class="s2">"sidebar/scroll-end.html"</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">sidebar/scroll-start.html</span></code> and <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-end.html</span></code> must be included in the sidebar. Ensure that the “non-scrollable” elements (i.e. that don’t occur between these two) do not go beyond the height of the viewport.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you’re hosting your documentation on ReadTheDocs, please make sure that <code class="docutils literal notranslate"><span class="pre">sidebar/ethical-ads.html</span></code> is included in the sidebar. This helps keep ReadTheDocs sustainable.</p>
+</div>
+</div>
+</div>
 </div>
 
       </article>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../sidebar/">
+          <a class="next-page" href="../toc/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Changing sidebar elements</div>
+                <div class="title">Hiding Contents sidebar</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../fonts/">
+          <a class="prev-page" href="../landing-page/">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Changing fonts</div>
+                <div class="title">Changing landing page</div>
                 
               </div>
             </a>
@@ -217,7 +267,7 @@
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
-            <a class="muted-link" href="../../_sources/customisation/landing-page.md.txt"
+            <a class="muted-link" href="../../_sources/customisation/sidebar.md.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -225,8 +275,32 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Changing sidebar elements</a><ul>
+<li><a class="reference internal" href="#default-design">Default design</a></li>
+<li><a class="reference internal" href="#making-changes">Making changes</a><ul>
+<li><a class="reference internal" href="#using-templates-path">Using <code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a></li>
+<li><a class="reference internal" href="#using-html-sidebars">Using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
