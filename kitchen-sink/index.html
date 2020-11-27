@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Paragraph Level Markup" href="demo/" /><link rel="prev" title="Design Notes" href="../contributing/design/" />
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.11.19.dev19"/>
-        <title>Overview: module code - Furo</title>
+        <title>Kitchen Sink - Furo</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=898b7241b9d573b14f61664c8ef178b75430e240">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -144,19 +144,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../recommendations/">Recommendations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/workflow/">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/internals/">Internals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/design/">Design Notes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../kitchen-sink/">Kitchen Sink</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/demo/">Paragraph Level Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/lists_tables/">Lists &amp; Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/really-long/">Really Long Page</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/structure/">Structural Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Kitchen Sink</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo/">Paragraph Level Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lists_tables/">Lists &amp; Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="really-long/">Really Long Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure/#structural-elements-2">Structural Elements 2</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
@@ -176,15 +176,46 @@
         <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <h1>All modules for which code is available</h1>
-<ul><li><a href="sphinx/ext/todo/">sphinx.ext.todo</a></li>
+        <div class="section" id="kitchen-sink">
+<h1>Kitchen Sink<a class="headerlink" href="#kitchen-sink" title="Permalink to this headline">¶</a></h1>
+<p>This section exists as a dump of “all sorts of edge cases” in Furo’s styling.
+It is built upon an excellent base provided by Sphinx-RTD-Theme, as written by the amazing folks at ReadTheDocs.</p>
+<p>The goal is to ensure that we’re adding more content here that looks good, without breaking anything externally. :)</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/">Paragraph Level Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lists_tables/">Lists &amp; Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="really-long/">Really Long Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure/">Structural Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure/#structural-elements-2">Structural Elements 2</a></li>
 </ul>
+</div>
+</div>
+
       </article>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="demo/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Paragraph Level Markup</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../contributing/design/">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Design Notes</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">
@@ -194,6 +225,11 @@
               and
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/kitchen-sink/index.md.txt"
+               rel="nofollow">
+              Show Source
+            </a>
         </div>
         
       </footer>
