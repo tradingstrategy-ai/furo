@@ -5,7 +5,7 @@
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.11.27.dev20"/>
         <title>Changing sidebar elements - Furo</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=2baf986623f64a8b1402f1e9705b100170f8e3a9">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=64982379f352ce563f9ae08667d0e96e7b17b06d">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -177,6 +177,21 @@
         <div class="section" id="changing-sidebar-elements">
 <h1>Changing sidebar elements<a class="headerlink" href="#changing-sidebar-elements" title="Permalink to this headline">¶</a></h1>
 <p>Furo supports customising the elements that show up in the navigational sidebar (left). This is to provide documentation authors who are willing to work with HTML/CSS to change and tweak how the sidebar looks.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Furo is not designed to accommodate for all potential custom sidebar designs. It is also possible to get suboptimal results (or even break the layout!) when overriding the default sidebar.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Info</p>
+<p>The general expectation is that users who override the sidebar would also carefully consider how their documentation looks across various platforms (i.e. not take a “looks OK on my machine” approach) and would be willing to override Furo’s styles to make it work with their sidebar design.</p>
+<p>Some things to consider when doing this are:</p>
+<ul class="simple">
+<li><p>different OSs/browsers handle scrollbars and their widths differently,
+with different effects on the layouting</p></li>
+<li><p>end users can customise the look of their default scrollbars at an OS level(like overlay, hidden, visible-and-takes-space and maybe more?)</p></li>
+<li><p>different viewport heights will differ across devices</p></li>
+</ul>
+</div>
 <div class="section" id="default-design">
 <h2>Default design<a class="headerlink" href="#default-design" title="Permalink to this headline">¶</a></h2>
 <p>The following code snippet lists the fragments (HTML files from Furo’s theme folder) that are used for the default sidebar design.</p>
@@ -213,10 +228,6 @@
 <div class="section" id="using-html-sidebars">
 <h3>Using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code><a class="headerlink" href="#using-html-sidebars" title="Permalink to this headline">¶</a></h3>
 <p>This is useful when you want to make drastic or major changes to the design of Furo’s sidebar.</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Making changes using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code> can break the layout. Please be mindful that Furo is not designed to accommodate for all potential sidebar designs.</p>
-</div>
 <p>As an example, to make the <em>entire</em> sidebar scrollable, it is possible to set <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-start.html</span></code> as the first fragment and <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-end.html</span></code> as the last fragment.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">"sidebar/scroll-start.html"</span><span class="p">,</span>
