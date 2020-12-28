@@ -7,7 +7,7 @@
 
     <meta name="generator" content="sphinx-3.4.1, furo 2020.12.28.dev23"/>
         <title>Paragraph Level Markup - Furo</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=46d81faf234a65f286d3bea1a2f5cb2c6d8c56ed">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=20bc478bf5d5bbc431750131711b664607ab852d">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -38,12 +38,15 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+</style><link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script defer="defer" src="../../_static/jquery.js"></script>
     <script defer="defer" src="../../_static/underscore.js"></script>
     <script defer="defer" src="../../_static/doctools.js"></script>
+    <script defer="defer" src="../../_static/clipboard.min.js"></script>
+    <script defer="defer" src="../../_static/copybutton.js"></script>
     <script defer="defer" src="../../_static/tabs.js"></script>
     <script async="async" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script defer="defer" type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
@@ -306,17 +309,20 @@ own it, and what it is too.</p>
 </div>
 <div class="section" id="doctest-blocks">
 <h3>Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="Permalink to this headline">¶</a></h3>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'Python-specific usage examples; begun with "&gt;&gt;&gt;"'</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Python-specific usage examples; begun with "&gt;&gt;&gt;"'</span><span class="p">)</span>
 <span class="go">Python-specific usage examples; begun with "&gt;&gt;&gt;"</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'(cut and pasted from interactive Python sessions)'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">"(cut and pasted from interactive Python sessions)"</span><span class="p">)</span>
 <span class="go">(cut and pasted from interactive Python sessions)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">"This is an intentionally very long line because I want to make sure that we're handling scrollable code blocks correctly."</span><span class="p">)</span>
+<span class="go">This is an intentionally very long line because I want to make sure that we're handling scrollable code blocks correctly.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="code-blocks">
 <h3>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block"># parsed-literal test
-curl -O <a class="reference external" href="http://someurl/release">http://someurl/release</a>-.tar-gz</pre>
+curl -O <a class="reference external" href="http://someurl/release">http://someurl/release</a>-.tar-gz
+echo "This is an intentionally very long line because I want to make sure that we're handling scrollable code blocks correctly."</pre>
 <div class="literal-block-wrapper docutils container" id="id23">
 <div class="code-block-caption"><span class="caption-text">Code Blocks can have captions.</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -330,7 +336,7 @@ curl -O <a class="reference external" href="http://someurl/release">http://someu
         <span class="p">]</span>
         <span class="p">},</span>
         <span class="p">{</span>
-        <span class="nt">"shell_command"</span><span class="p">:</span> <span class="s2">"echo 'single commands'"</span>
+        <span class="nt">"shell_command"</span><span class="p">:</span> <span class="s2">"echo 'This is an intentionally very long line because I want to make sure that we\\'re handling scrollable code blocks correctly.'"</span>
         <span class="p">},</span>
         <span class="s2">"echo 'for panes'"</span>
     <span class="p">],</span>
@@ -348,12 +354,14 @@ curl -O <a class="reference external" href="http://someurl/release">http://someu
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
     <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="hll">    <span class="nb">print</span> <span class="s2">"This line is highlighted."</span>
-</span>    <span class="nb">print</span> <span class="s2">"This one is not..."</span>
-<span class="hll">    <span class="nb">print</span> <span class="s2">"...but this one is."</span>
-</span></pre></div>
+<span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="s2">"This line is highlighted."</span><span class="p">)</span>
+</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"This one is not..."</span><span class="p">)</span>
+<span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="s2">"...but this one is."</span><span class="p">)</span>
+</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"This is an intentionally very long line because I want to make sure that we're handling scrollable code blocks correctly."</span><span class="p">)</span>
+</pre></div>
 </td></tr></table></div></div>
 </div>
 </div>

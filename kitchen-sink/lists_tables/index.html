@@ -5,7 +5,7 @@
 
     <meta name="generator" content="sphinx-3.4.1, furo 2020.12.28.dev23"/>
         <title>Lists &amp; Tables - Furo</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=46d81faf234a65f286d3bea1a2f5cb2c6d8c56ed">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=20bc478bf5d5bbc431750131711b664607ab852d">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -36,12 +36,15 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+</style><link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script defer="defer" src="../../_static/jquery.js"></script>
     <script defer="defer" src="../../_static/underscore.js"></script>
     <script defer="defer" src="../../_static/doctools.js"></script>
+    <script defer="defer" src="../../_static/clipboard.min.js"></script>
+    <script defer="defer" src="../../_static/copybutton.js"></script>
     <script defer="defer" src="../../_static/tabs.js"></script>
     <script async="async" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script defer="defer" type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
@@ -666,6 +669,34 @@ empty: <code class="docutils literal notranslate"><span class="pre">--&gt;</span
 </table></div>
 </div>
 </div>
+<div class="section" id="table-containing-code">
+<h3>Table containing code<a class="headerlink" href="#table-containing-code" title="Permalink to this headline">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 23%"/>
+<col style="width: 77%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Installing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pradyun’s pip fork and installer</p></td>
+<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install <span class="s2">"pip @ git+https://github.com/pradyunsg/pip#20.3.3"</span> <span class="s2">"installer @ git+https://github.com/pradyunsg/installer"</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>PyPI</p></td>
+<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pip installer
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <div class="section" id="list-tables">
 <h3>List Tables<a class="headerlink" href="#list-tables" title="Permalink to this headline">¶</a></h3>
 <div class="table-wrapper"><table class="colwidths-given docutils align-default" id="id13">
@@ -804,6 +835,7 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
 <li><a class="reference internal" href="#giant-tables">Giant Tables</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#table-containing-code">Table containing code</a></li>
 <li><a class="reference internal" href="#list-tables">List Tables</a></li>
 </ul>
 </li>
