@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="License" href="../license/" /><link rel="prev" title="Structural Elements" href="../kitchen-sink/structure/" />
 
-    <meta name="generator" content="sphinx-3.4.1, furo 2020.12.09.dev22"/>
+    <meta name="generator" content="sphinx-3.4.1, furo 2020.12.28.dev23"/>
         <title>Changelog - Furo</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=d315feae89b83a5365ff3ccc3644a1018972e3a0">
     <link rel="stylesheet" href="../_static/pygments.css">
@@ -175,6 +175,30 @@
         </label>
         <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="beta22">
+<h2>2020.12.28.beta22<a class="headerlink" href="#beta22" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MAJOR: Move theme files into a “furo” folder.</p>
+<ul>
+<li><p>This affects any users deriving from furo’s templates.</p></li>
+</ul>
+</li>
+<li><p>Add (custom) support for <code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code>.</p></li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">genindex</span></code> pages.</p>
+<ul>
+<li><p>Note that <code class="docutils literal notranslate"><span class="pre">html_split_index</span></code> is not supported at this time.</p></li>
+</ul>
+</li>
+<li><p>Add support for highlighting API elements, when accessed via “#hash” in URL.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">language_data.js</span></code> to search page, fixing <code class="docutils literal notranslate"><span class="pre">Stemmer</span></code> related failures in Sphinx 3.4.</p></li>
+<li><p>Document how to add a site-wide announcement.</p></li>
+<li><p>Fix sphinx-copybutton placement on scrollable code blocks.</p></li>
+<li><p>Generate an error page, for documents using <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> from Sphinx’s <code class="docutils literal notranslate"><span class="pre">basic</span></code> theme.</p></li>
+<li><p>Translate placeholder in sidebar’s search.</p></li>
+<li><p>Tweak how additional h1 headings are handled in ToC sidebar.</p></li>
+<li><p>Update dependency constraints, limiting compatibility to Sphinx 3.x versions.</p></li>
+</ul>
+</div>
 <div class="section" id="beta21">
 <h2>2020.12.09.beta21<a class="headerlink" href="#beta21" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -465,6 +489,7 @@ in the previous release.</p></li>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#beta22">2020.12.28.beta22</a></li>
 <li><a class="reference internal" href="#beta21">2020.12.09.beta21</a></li>
 <li><a class="reference internal" href="#beta20">2020.12.09.beta20</a></li>
 <li><a class="reference internal" href="#beta19">2020.11.27.beta19</a></li>
