@@ -5,7 +5,7 @@
 
     <meta name="generator" content="sphinx-3.4.1, furo 2020.12.09.dev22"/>
         <title>Internals - Furo</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=a5be0732bed01a4cf2fae17f35e3e8ba6677686c">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=a16d4d5a6016c60cff880a592a5e46c807f5317f">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -194,10 +194,14 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">navigation.py</span></code> – Generates the sidebar navigation HTML.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinxext.py</span></code> – Defines the internal-only <code class="docutils literal notranslate"><span class="pre">furo-demo</span></code> directive.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assets/</span></code> – contains Sass and JS source code.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">theme/</span></code> – the actual folder that Sphinx looks inside.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">theme/</span></code> – the folder that Sphinx adds to template lookup.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">furo/</span></code> – main Sphinx theme folder</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">static/</span></code> – contains compiles CSS and JS code.</p></li>
 <li><p>everything else here – the underlying HTML templates.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -212,7 +216,7 @@
 </div>
 <div class="section" id="theme-build-process">
 <h2>Theme build process<a class="headerlink" href="#theme-build-process" title="Permalink to this headline">¶</a></h2>
-<p>Furo’s build process uses Gulp. Running <code class="docutils literal notranslate"><span class="pre">gulp</span> <span class="pre">build</span></code> in the repository root will compile the theme’s CSS and JS assets (<code class="docutils literal notranslate"><span class="pre">src/furo/assets/</span></code>) into the correct final files (inside <code class="docutils literal notranslate"><span class="pre">src/furo/theme/static</span></code>).</p>
+<p>Furo’s build process uses Gulp. Running <code class="docutils literal notranslate"><span class="pre">gulp</span> <span class="pre">build</span></code> in the repository root will compile the theme’s CSS and JS assets (<code class="docutils literal notranslate"><span class="pre">src/furo/assets/</span></code>) into the correct final files (inside <code class="docutils literal notranslate"><span class="pre">src/furo/theme/furo/static</span></code>).</p>
 <p>When building the distributions for upload, <code class="docutils literal notranslate"><span class="pre">gulp</span> <span class="pre">build</span></code> is run once and the <code class="docutils literal notranslate"><span class="pre">src/furo/assets/</span></code> directory is excluded for the final distribution. Thus, <em>both</em> the source distribution and wheel distribution do not contain the original source code for Furo and only contain the compiled SCSS and JS files.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -235,7 +239,7 @@
 </div>
 <div class="section" id="css-variables-for-customisation">
 <h3>CSS variables for customisation<a class="headerlink" href="#css-variables-for-customisation" title="Permalink to this headline">¶</a></h3>
-<p>This is pretty much the “USP” of this theme. In <code class="docutils literal notranslate"><span class="pre">src/furo/theme/partials/_head_css_variables.html</span></code>, the user provided CSS variables are translated and written into each page’s HTML. This is set up, such that these declarations overrides any other declarations made in the CSS of the theme.</p>
+<p>This is pretty much the “USP” of this theme. In <code class="docutils literal notranslate"><span class="pre">src/furo/theme/furo/partials/_head_css_variables.html</span></code>, the user provided CSS variables are translated and written into each page’s HTML. This is set up, such that these declarations overrides any other declarations made in the CSS of the theme.</p>
 <p>This essentially allows the user to control the values of the CSS variables, and hence control how the theme looks.</p>
 </div>
 <div class="section" id="furo-demo-directive">
