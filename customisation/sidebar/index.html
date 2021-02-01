@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Hiding Contents sidebar" href="../toc/" /><link rel="prev" title="Changing landing page" href="../landing-page/" />
 
-    <meta name="generator" content="sphinx-3.4.1, furo 2020.12.30.dev25"/>
+    <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.dev25"/>
         <title>Changing sidebar elements - Furo</title>
       <link rel="stylesheet" href="../../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../../_static/pygments.css">
@@ -38,17 +38,7 @@
   }
 </style><link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script defer="defer" src="../../_static/jquery.js"></script>
-    <script defer="defer" src="../../_static/underscore.js"></script>
-    <script defer="defer" src="../../_static/doctools.js"></script>
-    <script defer="defer" src="../../_static/clipboard.min.js"></script>
-    <script defer="defer" src="../../_static/copybutton.js"></script>
-    <script defer="defer" src="../../_static/tabs.js"></script>
-    <script async="async" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script defer="defer" type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script defer src="../../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></head>
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60"></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -127,6 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Changing sidebar elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../toc/">Hiding Contents sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../injecting/">Injecting code</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../reference/">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -197,13 +188,13 @@ with different effects on the layouting</p></li>
 <div class="section" id="default-design">
 <h2>Default design<a class="headerlink" href="#default-design" title="Permalink to this headline">¶</a></h2>
 <p>The following code snippet lists the fragments (HTML files from Furo’s theme folder) that are used for the default sidebar design.</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">sidebars</span> <span class="o">=</span><span class="s"></span>
-<span class="s">  sidebar/brand.html,</span>
-<span class="s">  sidebar/search.html,</span>
-<span class="s">  sidebar/scroll-start.html,</span>
-<span class="s">  sidebar/navigation.html,</span>
-<span class="s">  sidebar/ethical-ads.html,</span>
-<span class="s">  sidebar/scroll-end.html</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">sidebars</span> <span class="o">=</span>
+  <span class="na">sidebar/brand.html,</span>
+  <span class="na">sidebar/search.html,</span>
+  <span class="na">sidebar/scroll-start.html,</span>
+  <span class="na">sidebar/navigation.html,</span>
+  <span class="na">sidebar/ethical-ads.html,</span>
+  <span class="na">sidebar/scroll-end.html</span>
 </pre></div>
 </div>
 <div class="admonition hint">
@@ -326,5 +317,14 @@ with different effects on the layouting</p></li>
     </aside>
   </main>
 </div>
-  </body>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="../../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
 </html>
