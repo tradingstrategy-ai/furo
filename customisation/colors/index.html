@@ -38,7 +38,7 @@
   }
 </style><link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60"></head>
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -198,10 +198,14 @@
 </div>
 <div class="section" id="code-block-styling">
 <h2>Code block styling<a class="headerlink" href="#code-block-styling" title="Permalink to this headline">¶</a></h2>
-<p>Furo does not directly handle highlighting of the code blocks. This is done by Sphinx, and is configurable using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-pygments_style"><code class="docutils literal notranslate"><span class="pre">pygments_style</span></code></a> and <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-pygments_dark_style"><code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<p>Furo does not directly handle highlighting of the code blocks. This is done by Sphinx, and is configurable using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-pygments_style"><code class="docutils literal notranslate"><span class="pre">pygments_style</span></code></a> and <code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">pygments_style</span> <span class="o">=</span> <span class="s2">"sphinx"</span>
 <span class="n">pygments_dark_style</span> <span class="o">=</span> <span class="s2">"monokai"</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code> is Furo-specific at this time.</p>
 </div>
 </div>
 </div>
