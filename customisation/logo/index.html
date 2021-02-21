@@ -181,7 +181,7 @@
 <h2>Different logos for light and dark mode<a class="headerlink" href="#different-logos-for-light-and-dark-mode" title="Permalink to this headline">¶</a></h2>
 <p>Furo also supports setting different logos for light and dark mode. This can be necessary if the project’s logo is transparent and does not maintain sufficient contrast with the background in both modes.</p>
 <p>This is done by setting <code class="docutils literal notranslate"><span class="pre">light_logo</span></code> and <code class="docutils literal notranslate"><span class="pre">dark_logo</span></code> in <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="s2">"_static"</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_static"</span><span class="p">]</span>
 <span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"light_logo"</span><span class="p">:</span> <span class="s2">"logo-light-mode.png"</span><span class="p">,</span>
     <span class="s2">"dark_logo"</span><span class="p">:</span> <span class="s2">"logo-dark-mode.png"</span><span class="p">,</span>
