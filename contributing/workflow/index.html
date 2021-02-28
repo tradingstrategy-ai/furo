@@ -246,8 +246,10 @@
 <li><p>Once that command succeeds, you’re done!</p></li>
 </ul>
 </div>
-<div class="section" id="installing-directly-from-the-repository-development">
-<h2>Installing directly from the repository (development)<a class="headerlink" href="#installing-directly-from-the-repository-development" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-directly-from-github">
+<h2>Installing directly from GitHub<a class="headerlink" href="#installing-directly-from-github" title="Permalink to this headline">¶</a></h2>
+<p>There are times when you might want to install the in-development version of Furo (mostly for testing that a fix actually does fix things).</p>
+<p>Furo cannot be installed directly using pip with the Git repository directly. This is because the Git repository does not contained the compiled CSS/JS. The distributions on PyPI have the compiled assets (because they’re platform agnostic and plain text).</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repository</span>
 git clone https://github.com/pradyunsg/furo.git
 <span class="nb">cd</span> furo
@@ -325,7 +327,7 @@ pip install .
 </ul>
 </li>
 <li><a class="reference internal" href="#release-process">Release process</a></li>
-<li><a class="reference internal" href="#installing-directly-from-the-repository-development">Installing directly from the repository (development)</a></li>
+<li><a class="reference internal" href="#installing-directly-from-github">Installing directly from GitHub</a></li>
 </ul>
 </li>
 </ul>
