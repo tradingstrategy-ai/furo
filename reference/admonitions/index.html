@@ -5,7 +5,7 @@
 
     <meta name="generator" content="sphinx-3.5.1, furo 2021.02.28.dev29"/>
         <title>Admonitions - Furo</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=32c7bbc7780561f6283fc60ff77e9a026622341f">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=99f42f4fed7255902c3afda8972edb919e065629">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -340,6 +340,79 @@ It looks different though.
 <p>Describe the CSS variables needed.</p>
 </div>
 </div>
+<div class="section" id="nesting-admonitions">
+<h2>Nesting admonitions<a class="headerlink" href="#nesting-admonitions" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+
+   You can nest admonitions.
+
+<span class="p">   ..</span> <span class="ow">warning</span><span class="p">::</span>
+
+      But you really should not.
+
+<span class="p">      ..</span> <span class="ow">danger</span><span class="p">::</span>
+
+         It's distracting.
+
+      And can be confusing for the user to understand.
+
+   And, honestly, looks weird.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can nest admonitions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>But you really should not.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>It’s distracting.</p>
+</div>
+<p>And can be confusing for the user to understand.</p>
+</div>
+<p>And, honestly, looks weird.</p>
+</div>
+</div>
+<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>`````{note}
+You can nest admonitions.
+
+````{warning}
+But you really should not.
+
+```{danger}
+It's distracting.
+```
+
+And can be confusing for the user to understand.
+````
+
+And, honestly, looks weird.
+`````
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can nest admonitions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>But you really should not.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>It’s distracting.</p>
+</div>
+<p>And can be confusing for the user to understand.</p>
+</div>
+<p>And, honestly, looks weird.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
       </article>
@@ -401,6 +474,7 @@ It looks different though.
 <li><a class="reference internal" href="#custom-titles">Custom Titles</a></li>
 <li><a class="reference internal" href="#supported-types">Supported types</a></li>
 <li><a class="reference internal" href="#custom-admonitions">Custom Admonitions</a></li>
+<li><a class="reference internal" href="#nesting-admonitions">Nesting admonitions</a></li>
 </ul>
 </li>
 </ul>
