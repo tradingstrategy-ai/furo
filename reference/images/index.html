@@ -266,8 +266,44 @@ out-of-the-box. However, certain images do not work well against certain
 backgrounds (eg: if the image has a white background).</p>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">only-light</span></code> and <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> classes, to show different images
 based on the currently active colour scheme.</p>
+<div class="docutils container">
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?cute+dogs
+   <span class="nc">:align:</span> center
+   <span class="nc">:class:</span> only-light
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://source.unsplash.com/200x200/daily?cute+cats
+   <span class="nc">:align:</span> center
+   <span class="nc">:class:</span> only-dark
+
+This is from reStructuredText.
+</pre></div>
+</div>
 <img alt="https://source.unsplash.com/200x200/daily?cute+dogs" class="only-light align-center" src="https://source.unsplash.com/200x200/daily?cute+dogs"/>
 <img alt="https://source.unsplash.com/200x200/daily?cute+cats" class="only-dark align-center" src="https://source.unsplash.com/200x200/daily?cute+cats"/>
+<p>This is from reStructuredText.</p>
+</div>
+<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{image} https://source.unsplash.com/200x200/daily?cute+dogs
+:align: center
+:class: only-light
+<span class="sb">```</span>
+
+<span class="sb">```{image} https://source.unsplash.com/200x200/daily?cute+cats</span>
+<span class="sb">:align: center</span>
+<span class="sb">:class: only-dark</span>
+<span class="sb">```</span>
+
+This is from Markdown.
+</pre></div>
+</div>
+<img alt="https://source.unsplash.com/200x200/daily?cute+dogs" class="only-light align-center" src="https://source.unsplash.com/200x200/daily?cute+dogs"/>
+<img alt="https://source.unsplash.com/200x200/daily?cute+cats" class="only-dark align-center" src="https://source.unsplash.com/200x200/daily?cute+cats"/>
+<p>This is from Markdown.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 
