@@ -492,7 +492,7 @@
 
 <div class="viewcode-block" id="Retry.from_int"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.from_int">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_int</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">retries</span><span class="p">,</span> <span class="n">redirect</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">""" Backwards-compatibility for the old retries format."""</span>
+        <span class="sd">"""Backwards-compatibility for the old retries format."""</span>
         <span class="k">if</span> <span class="n">retries</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">retries</span> <span class="o">=</span> <span class="n">default</span> <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT</span>
 
@@ -545,7 +545,7 @@
         <span class="k">return</span> <span class="n">seconds</span>
 
 <div class="viewcode-block" id="Retry.get_retry_after"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.get_retry_after">[docs]</a>    <span class="k">def</span> <span class="nf">get_retry_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
-        <span class="sd">""" Get the value of Retry-After in seconds. """</span>
+        <span class="sd">"""Get the value of Retry-After in seconds."""</span>
 
         <span class="n">retry_after</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="s2">"Retry-After"</span><span class="p">)</span>
 
@@ -639,7 +639,7 @@
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="Retry.is_exhausted"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.is_exhausted">[docs]</a>    <span class="k">def</span> <span class="nf">is_exhausted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">""" Are we out of retries? """</span>
+        <span class="sd">"""Are we out of retries?"""</span>
         <span class="n">retry_counts</span> <span class="o">=</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">,</span>
