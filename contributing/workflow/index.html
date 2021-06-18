@@ -2,9 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Internals" href="../internals/" /><link rel="prev" title="Contributing" href="../" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Internals" href="../internals/" /><link rel="prev" title="Contributing" href="../" />
 
-    <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.dev35"/>
+    <meta name="generator" content="sphinx-4.0.2, furo 2021.04.11.dev35"/>
         <title>Workflow - Furo</title>
       <link rel="stylesheet" href="../../_static/styles/furo.css?digest=c7979e4dd037ed5d3c15220d24c83a2afc93bc2f">
     <link rel="stylesheet" href="../../_static/pygments.css">
@@ -37,9 +38,11 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+</style><link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=ee12cdd73c4bbac24afec78d92c4afd7c2d8ea7f"></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -169,10 +172,10 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="tex2jax_ignore mathjax_ignore section" id="workflow">
+        <section class="tex2jax_ignore mathjax_ignore" id="workflow">
 <h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h1>
 <p>This page describes the tooling used during development of this project. It also serves as a reference for the various commands that you would use when working on this project.</p>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>This project uses the <a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> for collaboration. The codebase contains Python code, <a class="reference external" href="https://jinja.palletsprojects.com">Jinja2</a>-based HTML pages, <a class="reference external" href="https://sass-lang.com">Sass</a> stylesheets and Javascript code.</p>
 <ul class="simple">
@@ -181,8 +184,8 @@
 <li><p><a class="reference external" href="https://github.com/executablebooks/sphinx-autobuild">sphinx-autobuild</a> is used to provide live-reloading pages when working on the theme.</p></li>
 <li><p><a class="reference external" href="https://pre-commit.com/">pre-commit</a> is used for running the linters.</p></li>
 </ul>
-</div>
-<div class="section" id="initial-setup">
+</section>
+<section id="initial-setup">
 <h2>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">¶</a></h2>
 <p>To work on this project, you need to have git 2.17+, Python 3.6+ and NodeJS 12.</p>
 <ul>
@@ -200,17 +203,17 @@
 </li>
 </ul>
 <p>You’re all set for working on this project.</p>
-</div>
-<div class="section" id="commands">
+</section>
+<section id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="code-linting">
+<section id="code-linting">
 <h3>Code Linting<a class="headerlink" href="#code-linting" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">lint</span>
 </pre></div>
 </div>
 <p>Run the linters, as configured with <a class="reference external" href="https://pre-commit.com/">pre-commit</a>.</p>
-</div>
-<div class="section" id="local-development-server">
+</section>
+<section id="local-development-server">
 <h3>Local Development Server<a class="headerlink" href="#local-development-server" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">docs</span><span class="o">-</span><span class="n">live</span>
 </pre></div>
@@ -231,24 +234,24 @@
 </ul>
 <p>- @pradyunsg</p>
 </div>
-</div>
-<div class="section" id="documentation-generation">
+</section>
+<section id="documentation-generation">
 <h3>Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">docs</span>
 </pre></div>
 </div>
 <p>Generate the documentation for Furo into the <code class="docutils literal notranslate"><span class="pre">build/docs</span></code> folder. This (mostly) does the same thing as <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">docs-live</span></code>, except it invokes <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> instead of <a class="reference external" href="https://github.com/executablebooks/sphinx-autobuild">sphinx-autobuild</a>.</p>
-</div>
-</div>
-<div class="section" id="release-process">
+</section>
+</section>
+<section id="release-process">
 <h2>Release process<a class="headerlink" href="#release-process" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Update the changelog</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">release</span></code></p></li>
 <li><p>Once that command succeeds, you’re done!</p></li>
 </ul>
-</div>
-<div class="section" id="installing-directly-from-github">
+</section>
+<section id="installing-directly-from-github">
 <h2>Installing directly from GitHub<a class="headerlink" href="#installing-directly-from-github" title="Permalink to this headline">¶</a></h2>
 <p>There are times when you might want to install the in-development version of Furo (mostly for testing that a fix actually does fix things).</p>
 <p>Furo cannot be installed directly using pip with the Git repository directly. This is because the Git repository does not contained the compiled CSS/JS. The distributions on PyPI have the compiled assets (because they’re platform agnostic and plain text).</p>
@@ -262,8 +265,8 @@ npm install
 pip install .
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
       </article>
       <footer>
@@ -343,6 +346,7 @@ pip install .
   </main>
 </div>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>

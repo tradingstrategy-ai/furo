@@ -2,9 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing fonts" href="../fonts/" /><link rel="prev" title="Adding a logo" href="../logo/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing fonts" href="../fonts/" /><link rel="prev" title="Adding a logo" href="../logo/" />
 
-    <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.dev35"/>
+    <meta name="generator" content="sphinx-4.0.2, furo 2021.04.11.dev35"/>
         <title>Changing colors - Furo</title>
       <link rel="stylesheet" href="../../_static/styles/furo.css?digest=c7979e4dd037ed5d3c15220d24c83a2afc93bc2f">
     <link rel="stylesheet" href="../../_static/pygments.css">
@@ -37,9 +38,11 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+</style><link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=ee12cdd73c4bbac24afec78d92c4afd7c2d8ea7f"></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -169,18 +172,18 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="tex2jax_ignore mathjax_ignore section" id="changing-colors">
+        <section class="tex2jax_ignore mathjax_ignore" id="changing-colors">
 <h1>Changing colors<a class="headerlink" href="#changing-colors" title="Permalink to this headline">¶</a></h1>
 <p>Furo allows customising colors to fit your brand’s identity, by using CSS variables. These can be declared directly in <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a>, in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
-<div class="section" id="how-light-and-dark-mode-work">
+<section id="how-light-and-dark-mode-work">
 <h2>How light and dark mode work<a class="headerlink" href="#how-light-and-dark-mode-work" title="Permalink to this headline">¶</a></h2>
 <p>Furo is in light mode by default, switching to the dark mode when requested by the user’s browser (through <code class="docutils literal notranslate"><span class="pre">prefers-color-scheme:</span> <span class="pre">dark</span></code>).</p>
 <p>As a consequence of this design, the dark mode inherits the variable definitions from the light mode, only overriding specific values to adapt the theme. While the mechanism for switching between light/dark mode is not configurable, the exact CSS variable definitions used in this process can be configured.</p>
 <p>It is possible to use different content for light and dark mode, by setting
 <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> and <code class="docutils literal notranslate"><span class="pre">only-light</span></code> classes on the content. This is the
 <a class="reference internal" href="../../reference/images/#light-dark-images"><span class="std std-ref">recommended approach</span></a> for handling images with backgrounds.</p>
-</div>
-<div class="section" id="defining-overrides-for-defaults">
+</section>
+<section id="defining-overrides-for-defaults">
 <h2>Defining overrides for defaults<a class="headerlink" href="#defining-overrides-for-defaults" title="Permalink to this headline">¶</a></h2>
 <p>Furo allows defining <a class="reference internal" href="../#css-variables"><span class="std std-ref">CSS variables that overrides its default values</span></a>. The exact variable names to use can be found in Furo’s source code, where the <a class="reference external" href="https://github.com/pradyunsg/furo/tree/main/src/furo/assets/styles/variables">variable declarations</a> are made.</p>
 <p>This mechanism allows configuring nearly every facet of Furo’s design, including spacing between various items and the colors of nearly every component.</p>
@@ -200,8 +203,8 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="code-block-styling">
+</section>
+<section id="code-block-styling">
 <h2>Code block styling<a class="headerlink" href="#code-block-styling" title="Permalink to this headline">¶</a></h2>
 <p>Furo does not directly handle highlighting of the code blocks. This is done by Sphinx, and is configurable using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-pygments_style"><code class="docutils literal notranslate"><span class="pre">pygments_style</span></code></a> and <code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">pygments_style</span> <span class="o">=</span> <span class="s2">"sphinx"</span>
@@ -212,8 +215,8 @@
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code> is Furo-specific at this time.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
       </article>
       <footer>
@@ -286,6 +289,7 @@
   </main>
 </div>
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
