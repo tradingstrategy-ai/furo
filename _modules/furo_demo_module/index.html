@@ -2,10 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Injecting code" href="../injecting/" /><link rel="prev" title="Changing sidebar elements" href="../sidebar/" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
 
     <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.dev35"/>
-        <title>Hiding Contents sidebar - Furo</title>
+        <title>furo_demo_module - Furo</title>
       <link rel="stylesheet" href="../../_static/styles/furo.css?digest=c7979e4dd037ed5d3c15220d24c83a2afc93bc2f">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
@@ -109,16 +109,16 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
+  <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../colors/">Changing colors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fonts/">Changing fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../landing-page/">Changing landing page</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sidebar/">Changing sidebar elements</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Hiding Contents sidebar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../injecting/">Injecting code</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../customisation/">Customisation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/logo/">Adding a logo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/colors/">Changing colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/fonts/">Changing fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/landing-page/">Changing landing page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/sidebar/">Changing sidebar elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/toc/">Hiding Contents sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../customisation/injecting/">Injecting code</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../reference/">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -169,54 +169,42 @@
         <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="tex2jax_ignore mathjax_ignore section" id="hiding-contents-sidebar">
-<h1>Hiding Contents sidebar<a class="headerlink" href="#hiding-contents-sidebar" title="Permalink to this headline">¶</a></h1>
-<p>Furo supports hiding the “Contents” sidebar (right), and does so automatically for any pages that don’t have any inner headings.</p>
-<p>To explicitly hide it on a specific page, <code class="docutils literal notranslate"><span class="pre">hide-toc</span></code> can be set in the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a> for that page.</p>
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:hide-toc:</span>
+        <h1>Source code for furo_demo_module</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""</span>
+<span class="sd">This is a demo module included in the docs in order to exercise viewcode,</span>
+<span class="sd">autodoc, and other related functionality.</span>
+<span class="sd">"""</span>
 
-[page contents]
+
+<div class="viewcode-block" id="Foo"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.Foo">[docs]</a><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    A demo class of type Foo.</span>
+
+<span class="sd">    Has a method baz() returning ints.</span>
+<span class="sd">    """</span>
+
+<div class="viewcode-block" id="Foo.baz"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.Foo.baz">[docs]</a>    <span class="k">def</span> <span class="nf">baz</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Return a random integer.</span>
+<span class="sd">        See also: https://xkcd.com/221/</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="mi">3</span></div></div>
+
+
+<div class="viewcode-block" id="bar"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.bar">[docs]</a><span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">Foo</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Foo</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    the identity function, but only for Foos</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Foo</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span>
+    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Expected a Foo!"</span><span class="p">)</span></div>
 </pre></div>
-</div>
-</div>
-<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">hide-toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="nn">---</span>
-
-<span class="p p-Indicator">[</span><span class="nv">page contents</span><span class="p p-Indicator">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-
       </article>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../injecting/">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Injecting code</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../sidebar/">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Changing sidebar elements</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
 
         <div class="related-information">
@@ -226,11 +214,6 @@
               and
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            |
-            <a class="muted-link" href="../../_sources/customisation/toc.md.txt"
-               rel="nofollow">
-              Show Source
-            </a>
         </div>
         
       </footer>
