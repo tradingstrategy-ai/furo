@@ -9,8 +9,12 @@
 
     <meta name="generator" content="sphinx-4.0.2, furo 2021.06.18.dev37"/>
         <title>Paragraph Level Markup - Furo</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=c7979e4dd037ed5d3c15220d24c83a2afc93bc2f">
-    <link rel="stylesheet" href="../../_static/pygments.css">
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pied-piper-admonition.css" />
     
 
 
@@ -39,13 +43,7 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pied-piper-admonition.css" />
-    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
-    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=ee12cdd73c4bbac24afec78d92c4afd7c2d8ea7f"></head>
+</style><link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css"></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -390,42 +388,42 @@ of the ruler or leader of men, who through his power awakens and develops their 
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="n">__version__</span> <span class="o">=</span> <span class="s2">"2021.06.18.dev37"</span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="linenos"> 6</span><span class="kn">import</span> <span class="nn">logging</span>
-<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
-<span class="linenos"> 8</span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="linenos"> 9</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">import</span> <span class="nn">pygments</span>
-<span class="linenos">12</span><span class="kn">import</span> <span class="nn">sphinx</span>
-<span class="linenos">13</span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="linenos">14</span><span class="kn">from</span> <span class="nn">sphinx.highlighting</span> <span class="kn">import</span> <span class="n">PygmentsBridge</span>
-<span class="linenos">15</span>
-<span class="linenos">16</span><span class="kn">from</span> <span class="nn">.navigation</span> <span class="kn">import</span> <span class="n">get_navigation_tree</span>
-<span class="linenos">17</span>
-<span class="linenos">18</span><span class="n">THEME_PATH</span> <span class="o">=</span> <span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"theme"</span> <span class="o">/</span> <span class="s2">"furo"</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
-<span class="linenos">19</span>
-<span class="linenos">20</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="linenos"> 8</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pygments</span>
+<span class="linenos">11</span><span class="kn">import</span> <span class="nn">sphinx</span>
+<span class="linenos">12</span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="linenos">13</span><span class="kn">from</span> <span class="nn">sphinx.highlighting</span> <span class="kn">import</span> <span class="n">PygmentsBridge</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="kn">from</span> <span class="nn">.navigation</span> <span class="kn">import</span> <span class="n">get_navigation_tree</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="n">THEME_PATH</span> <span class="o">=</span> <span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"theme"</span> <span class="o">/</span> <span class="s2">"furo"</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos">20</span>
 <span class="linenos">21</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="linenos">24</span><span class="k">def</span> <span class="nf">has_exactly_one_list_item</span><span class="p">(</span><span class="n">toc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="linenos">25</span>    <span class="sd">"""Check if the toc has exactly one list item."""</span>
-<span class="linenos">26</span>    <span class="k">assert</span> <span class="n">toc</span>
-<span class="linenos">27</span>
-<span class="linenos">28</span>    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">toc</span><span class="p">,</span> <span class="s2">"html.parser"</span><span class="p">)</span>
-<span class="linenos">29</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<span class="linenos">30</span>        <span class="k">return</span> <span class="kc">True</span>
-<span class="linenos">31</span>
-<span class="linenos">32</span>    <span class="k">return</span> <span class="kc">False</span>
+<span class="linenos">22</span><span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">23</span><span class="k">def</span> <span class="nf">has_exactly_one_list_item</span><span class="p">(</span><span class="n">toc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos">24</span>    <span class="sd">"""Check if the toc has exactly one list item."""</span>
+<span class="linenos">25</span>    <span class="k">assert</span> <span class="n">toc</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">toc</span><span class="p">,</span> <span class="s2">"html.parser"</span><span class="p">)</span>
+<span class="linenos">28</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="linenos">29</span>        <span class="k">return</span> <span class="kc">True</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span>    <span class="k">return</span> <span class="kc">False</span>
+<span class="linenos">32</span>
 <span class="linenos">33</span>
-<span class="linenos">34</span>
-<span class="linenos">35</span><span class="k">def</span> <span class="nf">wrap_elements_that_can_get_too_wide</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="linenos">36</span>    <span class="s2">"""Wrap the elements that could get too wide, with a div to allow controlling width.</span>
-<span class="linenos">37</span>
-<span class="linenos">38</span><span class="s2">    - &lt;table&gt;</span>
-<span class="linenos">39</span><span class="s2">    - [class=math]</span>
-<span class="linenos">40</span>
+<span class="linenos">34</span><span class="k">def</span> <span class="nf">wrap_elements_that_can_get_too_wide</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="linenos">35</span>    <span class="sd">"""Wrap the elements that could get too wide, with a div to allow controlling width.</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="sd">    - &lt;table&gt;</span>
+<span class="linenos">38</span><span class="sd">    - [class=math]</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="sd">    """</span>
 </pre></div>
 </div>
 </div>
@@ -800,16 +798,15 @@ with the “compound” directive.</p>
       
     </aside>
   </main>
-</div>
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/tabs.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script src="../../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+    </body>
 </html>
