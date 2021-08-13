@@ -474,12 +474,12 @@ of the ruler or leader of men, who through his power awakens and develops their 
 <span class="linenos">32</span>
 <span class="linenos">33</span>
 <span class="linenos">34</span><span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="linenos">35</span><span class="k">def</span> <span class="nf">has_exactly_one_list_item</span><span class="p">(</span><span class="n">toc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="linenos">36</span>    <span class="sd">"""Check if the toc has exactly one list item."""</span>
+<span class="linenos">35</span><span class="k">def</span> <span class="nf">has_not_enough_items_to_show_toc</span><span class="p">(</span><span class="n">toc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos">36</span>    <span class="sd">"""Check if the toc has one or fewer items."""</span>
 <span class="linenos">37</span>    <span class="k">assert</span> <span class="n">toc</span>
 <span class="linenos">38</span>
 <span class="linenos">39</span>    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">toc</span><span class="p">,</span> <span class="s2">"html.parser"</span><span class="p">)</span>
-<span class="linenos">40</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="linenos">40</span>    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
