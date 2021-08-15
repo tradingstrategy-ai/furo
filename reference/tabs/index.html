@@ -8,10 +8,11 @@
     <meta name="generator" content="sphinx-4.1.2, furo 2021.08.11.dev43"/>
         <title>Tabs - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=170a9f91c9de7824256ec0840a3469148d2bd420" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=910ac4ccc9d7c023151c34010d7b500fb9777a51" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=93475b62d1c3bc01323a0eefdc14a62d77b12690" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=f529586d1c6b152464b85c8c330d370e3e69a7ce" />
     <link rel="stylesheet" type="text/css" href="../../_static/pied-piper-admonition.css" />
     
     
@@ -135,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -197,6 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/">Structural Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/autodoc/">Autodoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/sphinx-design/">sphinx-design stuff</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
@@ -222,21 +224,21 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <section class="tex2jax_ignore mathjax_ignore" id="tabs">
 <h1>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h1>
-<p>Tabs are good way to organize content, where the reader has choice they can make (usually based on their environment). Furo works well with <a class="reference external" href="https://github.com/pradyunsg/sphinx-inline-tabs#readme">sphinx-inline-tabs</a>, which provides beautiful and functional tabs, grouping code blocks and synchronisation.</p>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>This example is gonna be <em>very</em> meta.</p>
-</div>
+<p>Tabs are good way to organize content, where the reader has choice they can make (usually based on their environment).</p>
+<p>While Sphinx does not provide tabs out-of-the-box, it is achievable by using extensions with Sphinx. Furo works well with the following extensions.</p>
+<section id="sphinx-inline-tabs">
+<h2><a class="reference external" href="https://github.com/pradyunsg/sphinx-inline-tabs#readme">sphinx-inline-tabs</a><a class="headerlink" href="#sphinx-inline-tabs" title="Permalink to this headline">¶</a></h2>
+<p>This is a small package that provides one thing: good-looking tabs that work.</p>
 <div class="docutils container">
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tab</span><span class="p">::</span> One
 
     First.
@@ -246,16 +248,16 @@
     Second.
 </pre></div>
 </div>
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">One</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">One</label><div class="tab-content docutils">
 <p>First.</p>
 </div>
-<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Two</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Two</label><div class="tab-content docutils">
 <p>Second.</p>
 </div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{tab} One
 First.
 <span class="sb">```</span>
@@ -265,17 +267,76 @@ First.
 <span class="sb">```</span>
 </pre></div>
 </div>
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">One</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">One</label><div class="tab-content docutils">
 <p>First.</p>
 </div>
-<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Two</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Two</label><div class="tab-content docutils">
 <p>Second.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
+</section>
+<section id="sphinx-design">
+<h2><a class="reference external" href="https://sphinx-design.readthedocs.io/en/furo-theme/">sphinx-design</a><a class="headerlink" href="#sphinx-design" title="Permalink to this headline">¶</a></h2>
+<p>A wide ranging extension, providing many reusable components for site content, including tabs.</p>
+<div class="docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--1">reStructuredText</label><div class="tab-content docutils">
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tab-set</span><span class="p">::</span>
+
+<span class="p">    ..</span> <span class="ow">tab-item</span><span class="p">::</span> Label1
+
+        reStructuredText 1
+
+<span class="p">    ..</span> <span class="ow">tab-item</span><span class="p">::</span> Label2
+
+        reStructuredText 2
+</pre></div>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="8f2ab322-8bd2-49c9-811e-ecf3ee0c7622" name="30179261-0693-4b05-b30b-d8a6c6b61fa6" type="radio"/>
+<label class="sd-tab-label" for="8f2ab322-8bd2-49c9-811e-ecf3ee0c7622">
+Label1</label><div class="sd-tab-content docutils">
+<p>reStructuredText 1</p>
+</div>
+<input id="349d201a-aa9b-4757-a64a-6e4d2a17d028" name="30179261-0693-4b05-b30b-d8a6c6b61fa6" type="radio"/>
+<label class="sd-tab-label" for="349d201a-aa9b-4757-a64a-6e4d2a17d028">
+Label2</label><div class="sd-tab-content docutils">
+<p>reStructuredText 2</p>
+</div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--2">Markdown (MyST)</label><div class="tab-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>````{tab-set}
+```{tab-item} Label1
+Markdown 1
+<span class="sb">```</span>
+
+<span class="sb">```{tab-item} Label2</span>
+<span class="sb">Markdown 2</span>
+<span class="sb">```</span>
+````
+</pre></div>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="211e38a0-44f6-4188-a0fc-89fab3b951c7" name="50c2e0eb-006b-4cfa-9258-2ff6d99554f7" type="radio"/>
+<label class="sd-tab-label" for="211e38a0-44f6-4188-a0fc-89fab3b951c7">
+Label1</label><div class="sd-tab-content docutils">
+<p>Markdown 1</p>
+</div>
+<input id="822a4c15-7480-40b0-8239-5e1670a0e2c5" name="50c2e0eb-006b-4cfa-9258-2ff6d99554f7" type="radio"/>
+<label class="sd-tab-label" for="822a4c15-7480-40b0-8239-5e1670a0e2c5">
+Label2</label><div class="sd-tab-content docutils">
+<p>Markdown 2</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
       </article>
@@ -320,8 +381,28 @@ First.
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Tabs</a><ul>
+<li><a class="reference internal" href="#sphinx-inline-tabs">sphinx-inline-tabs</a></li>
+<li><a class="reference internal" href="#sphinx-design">sphinx-design</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -334,5 +415,6 @@ First.
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     </body>
 </html>

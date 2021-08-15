@@ -8,10 +8,11 @@
     <meta name="generator" content="sphinx-4.1.2, furo 2021.08.11.dev43"/>
         <title>API documentation - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=170a9f91c9de7824256ec0840a3469148d2bd420" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=910ac4ccc9d7c023151c34010d7b500fb9777a51" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=93475b62d1c3bc01323a0eefdc14a62d77b12690" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=f529586d1c6b152464b85c8c330d370e3e69a7ce" />
     <link rel="stylesheet" type="text/css" href="../../_static/pied-piper-admonition.css" />
     
     
@@ -197,6 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/">Structural Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/autodoc/">Autodoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/sphinx-design/">sphinx-design stuff</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
@@ -232,8 +234,8 @@
 <p>API documentation serves as an important reference in technical documentation. Sphinx provides many approaches to writing API documentation, from writing them manually as well as automatically generating it from docstrings in your code.</p>
 <p>This example uses <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc" title="(in Sphinx v5.0.0+)"><code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> for generating the API documentation skeleton. <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v5.0.0+)"><code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a> provides links for classes in type annotations.</p>
 <div class="docutils container">
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> urllib3.util.Retry
     <span class="nc">:members:</span>
     <span class="nc">:noindex:</span>
@@ -604,7 +606,7 @@ to start a timer that has been started already.</p>
 </dd></dl>
 <p>This is a small example from reStructuredText.</p>
 </div>
-<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
 .. autoclass:: urllib3.util.Retry
     :members:
@@ -1037,5 +1039,6 @@ to start a timer that has been started already.</p>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     </body>
 </html>

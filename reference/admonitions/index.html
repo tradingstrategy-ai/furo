@@ -8,10 +8,11 @@
     <meta name="generator" content="sphinx-4.1.2, furo 2021.08.11.dev43"/>
         <title>Admonitions - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=170a9f91c9de7824256ec0840a3469148d2bd420" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=910ac4ccc9d7c023151c34010d7b500fb9777a51" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=93475b62d1c3bc01323a0eefdc14a62d77b12690" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=f529586d1c6b152464b85c8c330d370e3e69a7ce" />
     <link rel="stylesheet" type="text/css" href="../../_static/pied-piper-admonition.css" />
     
     
@@ -197,6 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/">Structural Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/autodoc/">Autodoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/sphinx-design/">sphinx-design stuff</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
@@ -233,8 +235,8 @@
 <section id="basic-usage">
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--1">reStructuredText</label><div class="tab-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is what the most basic admonitions look like.
 
 
@@ -258,7 +260,7 @@ This is from reStructuredText.
 </div>
 <p>This is from reStructuredText.</p>
 </div>
-<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"/><label class="tab-label" for="tab-set--0-input--2">Markdown (MyST)</label><div class="tab-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{note} This is what the most basic admonitions look like.
 <span class="sb">```</span>
 
@@ -288,8 +290,8 @@ This is from Markdown.
 <section id="custom-titles">
 <h2>Custom Titles<a class="headerlink" href="#custom-titles" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--1">reStructuredText</label><div class="tab-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Look ma! A custom title.
 
    It looks different though.
@@ -310,7 +312,7 @@ This is from Markdown.
 <p>Maaa! I made it look the same by setting the class.</p>
 </div>
 </div>
-<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"/><label class="tab-label" for="tab-set--1-input--2">Markdown (MyST)</label><div class="tab-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{admonition} Look ma! A custom title.
 It looks different though.
 <span class="sb">```</span>
@@ -404,8 +406,8 @@ It looks different though.
 <section id="nesting-admonitions">
 <h2>Nesting admonitions<a class="headerlink" href="#nesting-admonitions" title="Permalink to this headline">¶</a></h2>
 <div class="docutils container">
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--1">reStructuredText</label><div class="tab-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
 
    You can nest admonitions.
@@ -438,7 +440,7 @@ It looks different though.
 <p>And, honestly, looks weird.</p>
 </div>
 </div>
-<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>`````{note}
 You can nest admonitions.
 
@@ -500,8 +502,8 @@ the CSS would be something like:</p>
 <p>With this, you can now use this by setting the <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">pied-piper</span></code> on an
 admonition:</p>
 <div class="docutils container">
-<div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--1">reStructuredText</label><div class="tab-content docutils container">
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--1">reStructuredText</label><div class="tab-content docutils">
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Pied Piper
    <span class="nc">:class:</span> pied-piper
 
@@ -517,7 +519,7 @@ This is from reStructuredText.
 </div>
 <p>This is from reStructuredText.</p>
 </div>
-<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--2">Markdown (MyST)</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"/><label class="tab-label" for="tab-set--3-input--2">Markdown (MyST)</label><div class="tab-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{admonition} Pied Piper
 :class: pied-piper
 
@@ -617,5 +619,6 @@ This is from Markdown.
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     </body>
 </html>
