@@ -201,6 +201,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/sphinx-design/">sphinx-design stuff</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../stability/">Stability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license/">License</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pradyunsg/furo">GitHub Repository</a></li>
@@ -238,10 +239,14 @@
 </section>
 <section id="html">
 <h2>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h2>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This customisation considered “unstable” under Furo’s <span class="xref myst">stability</span> policy.</p>
+</div>
 <p>This is entirely powered by Sphinx’s templating mechanism, which is built upon <a class="reference external" href="https://pypi.org/project/Jinja2/">Jinja2</a>.</p>
 <p>The primary way to do this is to override the content of the Furo’s default templates with your own templates, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a>. For more information on how to do so, <a class="reference external" href="https://www.sphinx-doc.org/en/master/development/theming.html#templating">Sphinx’s templating documentation</a>.</p>
-<div class="tip admonition">
-<p class="admonition-title">Info</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The expectation is that users who override Furo’s templates would also carefully consider how their documentation looks across various platforms (i.e. not take a “looks OK on my machine” approach) and would also be willing to extend Furo’s CSS to make their HTML changes work well.</p>
 </div>
 </section>

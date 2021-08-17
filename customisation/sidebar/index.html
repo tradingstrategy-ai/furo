@@ -201,6 +201,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/sphinx-design/">sphinx-design stuff</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../stability/">Stability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license/">License</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pradyunsg/furo">GitHub Repository</a></li>
@@ -232,21 +233,23 @@
         <section class="tex2jax_ignore mathjax_ignore" id="changing-sidebar-elements">
 <h1>Changing sidebar elements<a class="headerlink" href="#changing-sidebar-elements" title="Permalink to this headline">¶</a></h1>
 <p>Furo supports customising the elements that show up in the navigational sidebar (left). This is to provide documentation authors who are willing to work with HTML/CSS to change and tweak how the sidebar looks.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This customisation considered “unstable” under Furo’s <span class="xref myst">stability</span> policy.</p>
 <p>Furo is not designed to accommodate for all potential custom sidebar designs. It is also possible to get suboptimal results (or even break the layout!) when overriding the default sidebar.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Info</p>
-<p>The general expectation is that users who override the sidebar would also carefully consider how their documentation looks across various platforms (i.e. not take a “looks OK on my machine” approach) and would be willing to override Furo’s styles to make it work with their sidebar design.</p>
+<section id="expectations">
+<h2>Expectations<a class="headerlink" href="#expectations" title="Permalink to this headline">¶</a></h2>
+<p>It is expected that users who override the sidebar would also carefully consider how their documentation looks across various platforms (i.e. not take a “looks OK on my machine” approach) and would be willing to override Furo’s styles to make it work with their sidebar design.</p>
 <p>Some things to consider when doing this are:</p>
 <ul class="simple">
 <li><p>different OSs/browsers handle scrollbars and their widths differently,
 with different effects on the layouting</p></li>
 <li><p>end users can customise the look of their default scrollbars at an OS level(like overlay, hidden, visible-and-takes-space and maybe more?)</p></li>
 <li><p>different viewport heights will differ across devices</p></li>
+<li><p>“user interaction flows”, such as looking for a certain page in the sidebar or via search.</p></li>
 </ul>
-</div>
+</section>
 <section id="default-design">
 <h2>Default design<a class="headerlink" href="#default-design" title="Permalink to this headline">¶</a></h2>
 <p>The following code snippet lists the fragments (HTML files from Furo’s theme folder) that are used for the default sidebar design.</p>
@@ -361,6 +364,7 @@ with different effects on the layouting</p></li>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Changing sidebar elements</a><ul>
+<li><a class="reference internal" href="#expectations">Expectations</a></li>
 <li><a class="reference internal" href="#default-design">Default design</a></li>
 <li><a class="reference internal" href="#making-changes">Making changes</a><ul>
 <li><a class="reference internal" href="#using-templates-path">Using <code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a></li>
