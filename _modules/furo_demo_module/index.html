@@ -7,7 +7,7 @@
     <meta name="generator" content="sphinx-4.1.2, furo 2021.08.17.dev44"/>
         <title>furo_demo_module - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=4678e90059e253a36f134a69ac578437d3621d4a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=c7c65a82b42f6b978e58466c1e9ef2509836d916" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" />
@@ -234,29 +234,56 @@
 <span class="sd">autodoc, and other related functionality.</span>
 <span class="sd">"""</span>
 
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
 
-<div class="viewcode-block" id="Foo"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.Foo">[docs]</a><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
-    <span class="sd">"""</span>
-<span class="sd">    A demo class of type Foo.</span>
 
-<span class="sd">    Has a method baz() returning ints.</span>
+<div class="viewcode-block" id="show_warning"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.show_warning">[docs]</a><span class="k">def</span> <span class="nf">show_warning</span><span class="p">(</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="ne">Warning</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="ne">Warning</span><span class="p">],</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TextIO</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">line</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">"""Show a warning to the end user.</span>
+
+<span class="sd">    :param message: What you want to tell the user.</span>
+<span class="sd">    :param category: The type of warning.</span>
+<span class="sd">    :param filename: The file that the warning is for.</span>
+<span class="sd">    :param lineno: The line that the warning is for.</span>
+<span class="sd">    :param file: Where to write the warning.</span>
+<span class="sd">    :param line: line of source code to be included in the warning message</span>
+<span class="sd">    """</span></div>
+
+
+<div class="viewcode-block" id="RandomNumberGenerator"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator">[docs]</a><span class="k">class</span> <span class="nc">RandomNumberGenerator</span><span class="p">:</span>
+    <span class="sd">"""A random number generator.</span>
+
+<span class="sd">    You can use this as follows.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">       RNG = RandomNumberGenerator()</span>
+<span class="sd">       print(RNG.get_random_integer())</span>
+
+<span class="sd">    This is hopefully useful to somebody.</span>
 <span class="sd">    """</span>
 
-<div class="viewcode-block" id="Foo.baz"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.Foo.baz">[docs]</a>    <span class="k">def</span> <span class="nf">baz</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Return a random integer.</span>
-<span class="sd">        See also: https://xkcd.com/221/</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">seed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""The seed for random number generation.</span>
+
+<span class="sd">        .. seealso:: https://xkcd.com/221/</span>
 <span class="sd">        """</span>
-        <span class="k">return</span> <span class="mi">3</span></div></div>
+        <span class="k">return</span> <span class="mi">4</span>
 
+<div class="viewcode-block" id="RandomNumberGenerator.get_random_integer"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_random_integer">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_integer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""Return a random integer."""</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed</span></div>
 
-<div class="viewcode-block" id="bar"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.bar">[docs]</a><span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">Foo</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Foo</span><span class="p">:</span>
-    <span class="sd">"""</span>
-<span class="sd">    the identity function, but only for Foos</span>
-<span class="sd">    """</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Foo</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">f</span>
-    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Expected a Foo!"</span><span class="p">)</span></div>
+<div class="viewcode-block" id="RandomNumberGenerator.get_random_float"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_random_float">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">"""Return a random float."""</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">)</span></div></div>
 </pre></div>
       </article>
       <footer>
