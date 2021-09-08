@@ -217,7 +217,7 @@
   </aside>
   <div class="main">
     <div class="content">
-      <article role="main">
+      <div class="article-container">
         <div class="content-icon-container">
           <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
@@ -232,7 +232,8 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <section class="tex2jax_ignore mathjax_ignore" id="hiding-contents-sidebar">
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="hiding-contents-sidebar">
 <h1>Hiding Contents sidebar<a class="headerlink" href="#hiding-contents-sidebar" title="Permalink to this headline">¶</a></h1>
 <p>Furo supports hiding the “Contents” sidebar (right), and does so automatically for any pages that don’t have any inner headings.</p>
 <p>To explicitly hide it on a specific page, <code class="docutils literal notranslate"><span class="pre">hide-toc</span></code> can be set in the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata">File-Wide metadata</a> for that page.</p>
@@ -256,7 +257,8 @@
 </div>
 </section>
 
-      </article>
+        </article>
+      </div>
       <footer>
         
         <div class="related-pages">

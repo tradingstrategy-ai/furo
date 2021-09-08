@@ -217,7 +217,7 @@
   </aside>
   <div class="main">
     <div class="content">
-      <article role="main">
+      <div class="article-container">
         <div class="content-icon-container">
           <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
@@ -232,7 +232,8 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <section class="tex2jax_ignore mathjax_ignore" id="changing-landing-page">
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="changing-landing-page">
 <h1>Changing landing page<a class="headerlink" href="#changing-landing-page" title="Permalink to this headline">¶</a></h1>
 <p>It is possible to have a custom landing page in Sphinx documentation. This is achieved by adding a custom template file for that page and setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_additional_pages"><code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_templates"</span><span class="p">]</span>
@@ -248,7 +249,8 @@
 <p>In case you’re curious, this works because Sphinx allows overwriting existing files when generating the website and processes <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code> <em>after</em> processing the pages normally. These two behaviours combined mean that we can overwrite the page generated with the default layout by specifying the same document with a different template in <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code>.</p>
 </section>
 
-      </article>
+        </article>
+      </div>
       <footer>
         
         <div class="related-pages">

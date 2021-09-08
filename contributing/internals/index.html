@@ -217,7 +217,7 @@
   </aside>
   <div class="main">
     <div class="content">
-      <article role="main">
+      <div class="article-container">
         <div class="content-icon-container">
           <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
@@ -232,7 +232,8 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <section class="tex2jax_ignore mathjax_ignore" id="internals">
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="internals">
 <h1>Internals<a class="headerlink" href="#internals" title="Permalink to this headline">¶</a></h1>
 <p>Furo’s internals contain an interesting mix of stupid-things-that-work and all kinds of bodges. Most of this project was built slowly over the span of a few weeks, as a part of an attempt to take a break from working on Python packaging stuff.</p>
 <section id="repository-layout">
@@ -319,7 +320,8 @@
 </section>
 </section>
 
-      </article>
+        </article>
+      </div>
       <footer>
         
         <div class="related-pages">

@@ -217,7 +217,7 @@
   </aside>
   <div class="main">
     <div class="content">
-      <article role="main">
+      <div class="article-container">
         <div class="content-icon-container">
           <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
@@ -232,7 +232,8 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <section class="tex2jax_ignore mathjax_ignore" id="changing-sidebar-title">
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="changing-sidebar-title">
 <h1>Changing sidebar title<a class="headerlink" href="#changing-sidebar-title" title="Permalink to this headline">¶</a></h1>
 <p>It is possible to have a custom sidebar title in the Sphinx documentation. This is
 achieved by adding a variable to the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
@@ -247,7 +248,8 @@ achieved by adding a variable to the <code class="docutils literal notranslate">
 If <code class="docutils literal notranslate"><span class="pre">release</span></code> is not specified, it will be omitted from the title.</p>
 </section>
 
-      </article>
+        </article>
+      </div>
       <footer>
         
         <div class="related-pages">
