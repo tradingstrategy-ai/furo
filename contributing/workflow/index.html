@@ -8,11 +8,11 @@
     <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09.dev1"/>
         <title>Workflow - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=80473fdbfee2377ad92d1527d021e2138a2342de" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=dcb1c95e321d5d03d190e7594e92676472e5283b" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=499dbb84ce1f004813518e43a92de7d9c57c2931" />
     <link rel="stylesheet" type="text/css" href="../../_static/pied-piper-admonition.css" />
     
     
@@ -245,7 +245,7 @@
 <p>This project uses the <a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> for collaboration. The codebase contains Python code, <a class="reference external" href="https://jinja.palletsprojects.com">Jinja2</a>-based HTML pages, <a class="reference external" href="https://sass-lang.com">Sass</a> stylesheets and Javascript code.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://nox.readthedocs.io/en/stable/">nox</a> is used for automating development tasks.</p></li>
-<li><p><a class="reference external" href="https://gulpjs.com">Gulp</a>-based build pipeline is used to process the Sass and Javascript files.</p></li>
+<li><p><a class="reference external" href="https://gruntjs.com/">Grunt</a>-based build pipeline is used to process the Sass and Javascript files.</p></li>
 <li><p><a class="reference external" href="https://github.com/executablebooks/sphinx-autobuild">sphinx-autobuild</a> is used to provide live-reloading pages when working on the theme.</p></li>
 <li><p><a class="reference external" href="https://pre-commit.com/">pre-commit</a> is used for running the linters.</p></li>
 </ul>
@@ -319,15 +319,8 @@
 <section id="installing-directly-from-github">
 <h2>Installing directly from GitHub<a class="headerlink" href="#installing-directly-from-github" title="Permalink to this headline">¶</a></h2>
 <p>There are times when you might want to install the in-development version of Furo (mostly for testing that a fix actually does fix things).</p>
-<p>Furo cannot be installed directly using pip with the Git repository directly. This is because the Git repository does not contained the compiled CSS/JS. The distributions on PyPI have the compiled assets (because they’re platform agnostic and plain text).</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repository</span>
-git clone https://github.com/pradyunsg/furo.git
-<span class="nb">cd</span> furo
-<span class="c1"># Build the static assets</span>
-npm install
-./node_modules/.bin/gulp build
-<span class="c1"># Install with pip</span>
-pip install .
+<p>This can be done by directly telling pip to install from Furo from GitHub. You likely want to install from a zip archive, to avoid cloning the entire Git history:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install https://github.com/pradyunsg/furo/archive/refs/heads/main.zip
 </pre></div>
 </div>
 </section>
