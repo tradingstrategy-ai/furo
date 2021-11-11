@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Code Blocks" href="../code-blocks/" /><link rel="prev" title="Admonitions" href="../admonitions/" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09.dev1"/>
+    <meta name="generator" content="sphinx-4.3.0, furo 2021.10.09.dev1"/>
         <title>API documentation - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=dcb1c95e321d5d03d190e7594e92676472e5283b" />
@@ -257,7 +257,7 @@ This is a small example from reStructuredText.
 </div>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Retry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">total=10</span></em>, <em class="sig-param"><span class="pre">connect=None</span></em>, <em class="sig-param"><span class="pre">read=None</span></em>, <em class="sig-param"><span class="pre">redirect=None</span></em>, <em class="sig-param"><span class="pre">status=None</span></em>, <em class="sig-param"><span class="pre">other=None</span></em>, <em class="sig-param"><span class="pre">allowed_methods=&lt;object</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">status_forcelist=None</span></em>, <em class="sig-param"><span class="pre">backoff_factor=0</span></em>, <em class="sig-param"><span class="pre">raise_on_redirect=True</span></em>, <em class="sig-param"><span class="pre">raise_on_status=True</span></em>, <em class="sig-param"><span class="pre">history=None</span></em>, <em class="sig-param"><span class="pre">respect_retry_after_header=True</span></em>, <em class="sig-param"><span class="pre">remove_headers_on_redirect=&lt;object</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">method_whitelist=&lt;object</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Retry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total=10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connect=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowed_methods=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_forcelist=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backoff_factor=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_on_redirect=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_on_status=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">history=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">respect_retry_after_header=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_headers_on_redirect=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_whitelist=&lt;object</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Retry configuration.</p>
 <p>Each retry attempt will create a new Retry object with updated values, so
 they can be safely reused.</p>
@@ -363,27 +363,27 @@ request.</p></li>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">BACKOFF_MAX</span></span><em class="property"> <span class="pre">=</span> <span class="pre">120</span></em></dt>
+<span class="sig-name descname"><span class="pre">BACKOFF_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">120</span></em></dt>
 <dd><p>Maximum backoff time.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DEFAULT_ALLOWED_METHODS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">frozenset({'DELETE',</span> <span class="pre">'GET',</span> <span class="pre">'HEAD',</span> <span class="pre">'OPTIONS',</span> <span class="pre">'PUT',</span> <span class="pre">'TRACE'})</span></em></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_ALLOWED_METHODS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({'DELETE',</span> <span class="pre">'GET',</span> <span class="pre">'HEAD',</span> <span class="pre">'OPTIONS',</span> <span class="pre">'PUT',</span> <span class="pre">'TRACE'})</span></em></dt>
 <dd><p>Default methods to be used for <code class="docutils literal notranslate"><span class="pre">allowed_methods</span></code></p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">frozenset({'Authorization'})</span></em></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({'Authorization'})</span></em></dt>
 <dd><p>Default headers to be used for <code class="docutils literal notranslate"><span class="pre">remove_headers_on_redirect</span></code></p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">RETRY_AFTER_STATUS_CODES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">frozenset({413,</span> <span class="pre">429,</span> <span class="pre">503})</span></em></dt>
+<span class="sig-name descname"><span class="pre">RETRY_AFTER_STATUS_CODES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({413,</span> <span class="pre">429,</span> <span class="pre">503})</span></em></dt>
 <dd><p>Default status codes to be used for <code class="docutils literal notranslate"><span class="pre">status_forcelist</span></code></p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.from_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.from_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Backwards-compatibility for the old retries format.</p>
 </dd></dl>
 <dl class="py method">
@@ -445,7 +445,7 @@ this method will return immediately.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">total=None</span></em>, <em class="sig-param"><span class="pre">connect=&lt;object</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">read=&lt;object</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connect=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read=&lt;object</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Timeout configuration.</p>
 <p>Timeouts can be defined as a default for a pool:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">timeout</span> <span class="o">=</span> <span class="n">Timeout</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="mf">7.0</span><span class="p">)</span>
@@ -507,7 +507,7 @@ request.</p>
 </div>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DEFAULT_TIMEOUT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;object</span> <span class="pre">object&gt;</span></em></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_TIMEOUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;object</span> <span class="pre">object&gt;</span></em></dt>
 <dd><p>A sentinel object representing the default timeout value</p>
 </dd></dl>
 <dl class="py method">
@@ -527,7 +527,7 @@ Timeout object to ensure each one has its own start/stop configured.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">connect_timeout</span></span></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect_timeout</span></span></dt>
 <dd><p>Get the value to use when setting a connection timeout.</p>
 <p>This will be a positive float or integer, the value None
 (never timeout), or the default system timeout.</p>
@@ -542,7 +542,7 @@ Timeout object to ensure each one has its own start/stop configured.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.from_float"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.from_float"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Create a new Timeout from a legacy timeout value.</p>
 <p>The timeout value used by httplib.py sets the same timeout on the
 connect(), and recv() socket requests. This creates a <code class="xref py py-class docutils literal notranslate"><span class="pre">Timeout</span></code>
@@ -579,7 +579,7 @@ to get duration for a timer that hasn’t been started.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">read_timeout</span></span></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read_timeout</span></span></dt>
 <dd><p>Get the value for the read timeout.</p>
 <p>This assumes some time has elapsed in the connection timeout and
 computes the read timeout appropriately.</p>
@@ -630,7 +630,7 @@ This is a small example from Markdown.
 </div>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Retry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">total=10</span></em>, <em class="sig-param"><span class="pre">connect=None</span></em>, <em class="sig-param"><span class="pre">read=None</span></em>, <em class="sig-param"><span class="pre">redirect=None</span></em>, <em class="sig-param"><span class="pre">status=None</span></em>, <em class="sig-param"><span class="pre">other=None</span></em>, <em class="sig-param"><span class="pre">allowed_methods=&lt;object</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">status_forcelist=None</span></em>, <em class="sig-param"><span class="pre">backoff_factor=0</span></em>, <em class="sig-param"><span class="pre">raise_on_redirect=True</span></em>, <em class="sig-param"><span class="pre">raise_on_status=True</span></em>, <em class="sig-param"><span class="pre">history=None</span></em>, <em class="sig-param"><span class="pre">respect_retry_after_header=True</span></em>, <em class="sig-param"><span class="pre">remove_headers_on_redirect=&lt;object</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">method_whitelist=&lt;object</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Retry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total=10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connect=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowed_methods=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_forcelist=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backoff_factor=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_on_redirect=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_on_status=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">history=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">respect_retry_after_header=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_headers_on_redirect=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_whitelist=&lt;object</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Retry configuration.</p>
 <p>Each retry attempt will create a new Retry object with updated values, so
 they can be safely reused.</p>
@@ -736,27 +736,27 @@ request.</p></li>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">BACKOFF_MAX</span></span><em class="property"> <span class="pre">=</span> <span class="pre">120</span></em></dt>
+<span class="sig-name descname"><span class="pre">BACKOFF_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">120</span></em></dt>
 <dd><p>Maximum backoff time.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DEFAULT_ALLOWED_METHODS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">frozenset({'DELETE',</span> <span class="pre">'GET',</span> <span class="pre">'HEAD',</span> <span class="pre">'OPTIONS',</span> <span class="pre">'PUT',</span> <span class="pre">'TRACE'})</span></em></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_ALLOWED_METHODS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({'DELETE',</span> <span class="pre">'GET',</span> <span class="pre">'HEAD',</span> <span class="pre">'OPTIONS',</span> <span class="pre">'PUT',</span> <span class="pre">'TRACE'})</span></em></dt>
 <dd><p>Default methods to be used for <code class="docutils literal notranslate"><span class="pre">allowed_methods</span></code></p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">frozenset({'Authorization'})</span></em></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({'Authorization'})</span></em></dt>
 <dd><p>Default headers to be used for <code class="docutils literal notranslate"><span class="pre">remove_headers_on_redirect</span></code></p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">RETRY_AFTER_STATUS_CODES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">frozenset({413,</span> <span class="pre">429,</span> <span class="pre">503})</span></em></dt>
+<span class="sig-name descname"><span class="pre">RETRY_AFTER_STATUS_CODES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({413,</span> <span class="pre">429,</span> <span class="pre">503})</span></em></dt>
 <dd><p>Default status codes to be used for <code class="docutils literal notranslate"><span class="pre">status_forcelist</span></code></p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.from_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.from_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Backwards-compatibility for the old retries format.</p>
 </dd></dl>
 <dl class="py method">
@@ -818,7 +818,7 @@ this method will return immediately.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">total=None</span></em>, <em class="sig-param"><span class="pre">connect=&lt;object</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">read=&lt;object</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib3.util.</span></span><span class="sig-name descname"><span class="pre">Timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connect=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read=&lt;object</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Timeout configuration.</p>
 <p>Timeouts can be defined as a default for a pool:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">timeout</span> <span class="o">=</span> <span class="n">Timeout</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="mf">7.0</span><span class="p">)</span>
@@ -880,7 +880,7 @@ request.</p>
 </div>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DEFAULT_TIMEOUT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;object</span> <span class="pre">object&gt;</span></em></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_TIMEOUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;object</span> <span class="pre">object&gt;</span></em></dt>
 <dd><p>A sentinel object representing the default timeout value</p>
 </dd></dl>
 <dl class="py method">
@@ -900,7 +900,7 @@ Timeout object to ensure each one has its own start/stop configured.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">connect_timeout</span></span></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect_timeout</span></span></dt>
 <dd><p>Get the value to use when setting a connection timeout.</p>
 <p>This will be a positive float or integer, the value None
 (never timeout), or the default system timeout.</p>
@@ -915,7 +915,7 @@ Timeout object to ensure each one has its own start/stop configured.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.from_float"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.from_float"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Create a new Timeout from a legacy timeout value.</p>
 <p>The timeout value used by httplib.py sets the same timeout on the
 connect(), and recv() socket requests. This creates a <code class="xref py py-class docutils literal notranslate"><span class="pre">Timeout</span></code>
@@ -952,7 +952,7 @@ to get duration for a timer that hasn’t been started.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">read_timeout</span></span></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read_timeout</span></span></dt>
 <dd><p>Get the value for the read timeout.</p>
 <p>This assumes some time has elapsed in the connection timeout and
 computes the read timeout appropriately.</p>
