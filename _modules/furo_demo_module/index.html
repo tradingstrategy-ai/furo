@@ -7,7 +7,7 @@
     <meta name="generator" content="sphinx-4.3.0, furo 2021.11.16.dev1"/>
         <title>furo_demo_module - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=5bd8f140f1ef6d4d3c65dd1feb22df66ec84bb1f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=7f06404f957f65a3b580954bdcfd6021afbf33a3" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -242,7 +242,9 @@
 <span class="sd">autodoc, and other related functionality.</span>
 <span class="sd">"""</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">NewType</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="n">MagicNumber</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s2">"MagicNumber"</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="show_warning"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.show_warning">[docs]</a><span class="k">def</span> <span class="nf">show_warning</span><span class="p">(</span>
@@ -277,6 +279,16 @@
 <span class="sd">    This is hopefully useful to somebody.</span>
 <span class="sd">    """</span>
 
+<div class="viewcode-block" id="RandomNumberGenerator.magic_number"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.magic_number">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">magic_number</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""Returns a magical number."""</span>
+        <span class="k">return</span> <span class="mi">0</span></div>
+
+<div class="viewcode-block" id="RandomNumberGenerator.get_seed"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_seed">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_seed</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MagicNumber</span><span class="p">:</span>
+        <span class="sd">"""Returns a random seed."""</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">()</span><span class="o">.</span><span class="n">seed</span></div>
+
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">seed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">"""The seed for random number generation.</span>
@@ -286,11 +298,11 @@
         <span class="k">return</span> <span class="mi">4</span>
 
 <div class="viewcode-block" id="RandomNumberGenerator.get_random_integer"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_random_integer">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_integer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">"""Return a random integer."""</span>
+        <span class="sd">"""Returns a random integer."""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed</span></div>
 
 <div class="viewcode-block" id="RandomNumberGenerator.get_random_float"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_random_float">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="sd">"""Return a random float."""</span>
+        <span class="sd">"""Returns a random float."""</span>
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">)</span></div></div>
 </pre></div>
         </article>
