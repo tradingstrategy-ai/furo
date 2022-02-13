@@ -235,7 +235,7 @@
         </div>
         <article role="main">
           <section id="changing-footer-icons">
-<h1>Changing footer icons<a class="headerlink" href="#changing-footer-icons" title="Permalink to this headline">¶</a></h1>
+<h1>Changing footer icons<a class="headerlink" href="#changing-footer-icons" title="Permalink to this headline">#</a></h1>
 <p>Furo allows customising the icons that are presented in the page footer. These icons can be used to link to relevant resources for your project and documentation.</p>
 <div class="caution admonition">
 <p class="admonition-title">Unstable, seeking feedback</p>
@@ -243,7 +243,7 @@
 <p>It currently needs input from documentation authors, about how useful and usable this is and how “ergonomic” it is.</p>
 </div>
 <section id="default-icons">
-<h2>Default icons<a class="headerlink" href="#default-icons" title="Permalink to this headline">¶</a></h2>
+<h2>Default icons<a class="headerlink" href="#default-icons" title="Permalink to this headline">#</a></h2>
 <p>Furo includes two default icons, when the documentation is built on Read the Docs:</p>
 <ul class="simple">
 <li><p>A link to the Read the Docs project page, for the documentation.</p></li>
@@ -252,7 +252,7 @@
 <p>If the documentation is not built on Read the Docs, there are no icons included by default.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h2>
 <p>To add custom footer icons, you need to provide the <code class="docutils literal notranslate"><span class="pre">footer_icons</span></code> configuration value to Furo. If this configuration value is non-empty, the default footer icons are disabled.</p>
 <p>The value for this configuration value is a list of dictionaries. Each dictionary needs to have the following structure:</p>
 <ul class="simple">
@@ -262,7 +262,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: This is included as-is in the class attribute of the <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.</p></li>
 </ul>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
 <p>As an example, this is what Furo does to include a GitHub icon in the footer of the site you’re currently reading:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"footer_icons"</span><span class="p">:</span> <span class="p">[</span>
@@ -282,12 +282,12 @@
 </div>
 </section>
 <section id="recommendations-for-images">
-<h3>Recommendations for images<a class="headerlink" href="#recommendations-for-images" title="Permalink to this headline">¶</a></h3>
+<h3>Recommendations for images<a class="headerlink" href="#recommendations-for-images" title="Permalink to this headline">#</a></h3>
 <p>Since <code class="docutils literal notranslate"><span class="pre">image_html</span></code> is expected to be static HTML, you can not use relative paths to images included in the Sphinx documentation set, at least not without resorting to ugly hacks.<a class="footnote-reference brackets" href="#id3" id="id1">1</a> Instead, it is recommended to either embed the image directly (eg: in an <code class="docutils literal notranslate"><span class="pre">svg</span></code> tag), or to link to images “outside” of the documentation.</p>
 <p>It is generally preferable to use SVG images, that respect <code class="docutils literal notranslate"><span class="pre">currentColor</span></code>. A decently large set of common SVG-based icons can be found on: <a class="reference external" href="https://react-icons.github.io/react-icons/">https://react-icons.github.io/react-icons/</a><a class="footnote-reference brackets" href="#id4" id="id2">2</a>.</p>
 </section>
 <section id="different-icons-for-light-mode-vs-dark-mode">
-<h3>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this headline">#</a></h3>
 <p>You can specify <code class="docutils literal notranslate"><span class="pre">only-light</span></code> or <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">class</span></code> in the mapping. This mechanism exists primarily to help you use different <code class="docutils literal notranslate"><span class="pre">img</span></code> tags to present the same icon in a different location.</p>
 <hr class="footnotes docutils"/>
 <dl class="footnote brackets">

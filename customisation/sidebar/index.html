@@ -235,10 +235,10 @@
         </div>
         <article role="main">
           <section id="changing-sidebar-elements">
-<h1>Changing sidebar elements<a class="headerlink" href="#changing-sidebar-elements" title="Permalink to this headline">¶</a></h1>
+<h1>Changing sidebar elements<a class="headerlink" href="#changing-sidebar-elements" title="Permalink to this headline">#</a></h1>
 <p>Furo supports customising the elements that show up in the navigational sidebar (left). This is to provide documentation authors who are willing to work with HTML/CSS to change and tweak how the sidebar looks.</p>
 <section id="expectations">
-<h2>Expectations<a class="headerlink" href="#expectations" title="Permalink to this headline">¶</a></h2>
+<h2>Expectations<a class="headerlink" href="#expectations" title="Permalink to this headline">#</a></h2>
 <p>It is expected that users who override the sidebar would also carefully consider how their documentation looks across various platforms (i.e. not take a “looks OK on my machine” approach) and would be willing to override Furo’s styles to make it work with their sidebar design.</p>
 <p>Some things to consider when doing this are:</p>
 <ul class="simple">
@@ -250,7 +250,7 @@ with different effects on the layouting</p></li>
 </ul>
 </section>
 <section id="default-design">
-<h2>Default design<a class="headerlink" href="#default-design" title="Permalink to this headline">¶</a></h2>
+<h2>Default design<a class="headerlink" href="#default-design" title="Permalink to this headline">#</a></h2>
 <p>The following code snippet lists the fragments (HTML files from Furo’s theme folder) that are used for the default sidebar design.</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">sidebars</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="w">  </span><span class="na">sidebar/brand.html,</span><span class="w"></span>
@@ -268,14 +268,14 @@ with different effects on the layouting</p></li>
 </div>
 </section>
 <section id="making-changes">
-<h2>Making changes<a class="headerlink" href="#making-changes" title="Permalink to this headline">¶</a></h2>
+<h2>Making changes<a class="headerlink" href="#making-changes" title="Permalink to this headline">#</a></h2>
 <p>There are two main ways to customise Furo’s sidebar:</p>
 <ul class="simple">
 <li><p>override the content of the default templates with your own templates, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a>.</p></li>
 <li><p>change the entire sidebar structure, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_sidebars"><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code></a>.</p></li>
 </ul>
 <section id="using-templates-path">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">templates_path</span></code><a class="headerlink" href="#using-templates-path" title="Permalink to this headline">¶</a></h3>
+<h3>Using <code class="docutils literal notranslate"><span class="pre">templates_path</span></code><a class="headerlink" href="#using-templates-path" title="Permalink to this headline">#</a></h3>
 <p>This is useful when you want to change a specific element of the sidebar. A good example for when you might want to use this: adding a tagline after your project’s name/logo.</p>
 <p>This is done by setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a> in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and correctly adding files within the configured paths.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_templates"</span><span class="p">]</span>
@@ -284,7 +284,7 @@ with different effects on the layouting</p></li>
 <p>For the above example – adding a tagline after the name/logo – you’d want to add an <code class="docutils literal notranslate"><span class="pre">_templates/sidebar/brand.html</span></code> file, that overrides the appropriate content. For more information on how to do so, <a class="reference external" href="https://www.sphinx-doc.org/en/master/development/theming.html#templating">Sphinx’s templating documentation</a>.</p>
 </section>
 <section id="using-html-sidebars">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code><a class="headerlink" href="#using-html-sidebars" title="Permalink to this headline">¶</a></h3>
+<h3>Using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code><a class="headerlink" href="#using-html-sidebars" title="Permalink to this headline">#</a></h3>
 <p>This is useful when you want to make drastic or major changes to the design of Furo’s sidebar.</p>
 <p>As an example, to make the <em>entire</em> sidebar scrollable, it is possible to set <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-start.html</span></code> as the first fragment and <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-end.html</span></code> as the last fragment.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">[</span>

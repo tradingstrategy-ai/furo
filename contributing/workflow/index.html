@@ -235,10 +235,10 @@
         </div>
         <article role="main">
           <section id="workflow">
-<h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h1>
+<h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">#</a></h1>
 <p>This page describes the tooling used during development of this project. It also serves as a reference for the various commands that you would use when working on this project.</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <p>This project uses the <a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> for collaboration. The codebase contains Python code, <a class="reference external" href="https://jinja.palletsprojects.com">Jinja2</a>-based HTML pages, <a class="reference external" href="https://sass-lang.com">Sass</a> stylesheets and Javascript code.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://nox.readthedocs.io/en/stable/">nox</a> is used for automating development tasks.</p></li>
@@ -248,7 +248,7 @@
 </ul>
 </section>
 <section id="initial-setup">
-<h2>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">#</a></h2>
 <p>To work on this project, you need to have git 2.17+ and Python 3.6+. You also need to be on a platform that is officially supported by NodeJS 16.</p>
 <ul>
 <li><p>Clone this project using git:</p>
@@ -266,16 +266,16 @@
 <p>You’re all set for working on this project.</p>
 </section>
 <section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h2>
 <section id="code-linting">
-<h3>Code Linting<a class="headerlink" href="#code-linting" title="Permalink to this headline">¶</a></h3>
+<h3>Code Linting<a class="headerlink" href="#code-linting" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">lint</span>
 </pre></div>
 </div>
 <p>Run the linters, as configured with <a class="reference external" href="https://pre-commit.com/">pre-commit</a>.</p>
 </section>
 <section id="local-development-server">
-<h3>Local Development Server<a class="headerlink" href="#local-development-server" title="Permalink to this headline">¶</a></h3>
+<h3>Local Development Server<a class="headerlink" href="#local-development-server" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">docs</span><span class="o">-</span><span class="n">live</span>
 </pre></div>
 </div>
@@ -297,7 +297,7 @@
 </div>
 </section>
 <section id="documentation-generation">
-<h3>Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permalink to this headline">¶</a></h3>
+<h3>Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">docs</span>
 </pre></div>
 </div>
@@ -305,7 +305,7 @@
 </section>
 </section>
 <section id="release-process">
-<h2>Release process<a class="headerlink" href="#release-process" title="Permalink to this headline">¶</a></h2>
+<h2>Release process<a class="headerlink" href="#release-process" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Update the changelog</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">release</span></code></p></li>
@@ -313,7 +313,7 @@
 </ul>
 </section>
 <section id="installing-directly-from-github">
-<h2>Installing directly from GitHub<a class="headerlink" href="#installing-directly-from-github" title="Permalink to this headline">¶</a></h2>
+<h2>Installing directly from GitHub<a class="headerlink" href="#installing-directly-from-github" title="Permalink to this headline">#</a></h2>
 <p>There are times when you might want to install the in-development version of Furo (mostly for testing that a fix actually does fix things).</p>
 <p>This can be done by directly telling pip to install from Furo from GitHub. You likely want to install from a zip archive, to avoid cloning the entire Git history:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install https://github.com/pradyunsg/furo/archive/refs/heads/main.zip
