@@ -2,12 +2,13 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Blocks" href="../blocks/" /><link rel="prev" title="Admonitions" href="../admonitions/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.01.02.dev1"/>
-        <title>furo_demo_module - Furo</title>
+        <title>API documentation - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=cbd501d50e94217ef066eb826d45b35214282890" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=35c4bebe9ffb4ca4f78dd5196c253697a71e27d6" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -182,21 +183,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../../recommendations/">Recommendations</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../contributing/">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/workflow/">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/internals/">Internals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/design/">Design Notes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../kitchen-sink/">Kitchen Sink</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/demo/">Paragraph Level Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/lists_tables/">Lists &amp; Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/really-long/">Really Long Page</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/">Structural Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/structure/#structural-elements-2">Structural Elements 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/autodoc/">Autodoc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../kitchen-sink/sphinx-design/">sphinx-design stuff</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Kitchen Sink</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../really-long/">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-design/">sphinx-design stuff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../stability/">Stability Policy</a></li>
@@ -228,82 +234,97 @@
           </label>
         </div>
         <article role="main">
-          <h1>Source code for furo_demo_module</h1><div class="highlight"><pre>
-<span></span><span class="sd">"""</span>
-<span class="sd">This is a demo module included in the docs in order to exercise viewcode,</span>
-<span class="sd">autodoc, and other related functionality.</span>
-<span class="sd">"""</span>
+          <section id="api-documentation">
+<h1>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Using Sphinx’s <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc" title="(in Sphinx v5.0.0+)"><code class="xref any docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> plugin, it is possible to auto-generate documentation of a Python module.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Avoid having in-function-signature type annotations with autodoc,
+by setting the following options:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for autodoc ----------------------------------------------------</span>
+<span class="c1"># https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">NewType</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+<span class="c1"># Automatically extract typehints when specified and place them in</span>
+<span class="c1"># descriptions of the relevant function/method.</span>
+<span class="n">autodoc_typehints</span> <span class="o">=</span> <span class="s2">"description"</span>
 
-<span class="n">MagicNumber</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s2">"MagicNumber"</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
-
-
-<div class="viewcode-block" id="show_warning"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.show_warning">[docs]</a><span class="k">def</span> <span class="nf">show_warning</span><span class="p">(</span>
-    <span class="n">message</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="ne">Warning</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
-    <span class="n">category</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="ne">Warning</span><span class="p">],</span>
-    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-    <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TextIO</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">line</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">"""Show a warning to the end user.</span>
-
-<span class="sd">    :param message: What you want to tell the user.</span>
-<span class="sd">    :param category: The type of warning.</span>
-<span class="sd">    :param filename: The file that the warning is for.</span>
-<span class="sd">    :param lineno: The line that the warning is for.</span>
-<span class="sd">    :param file: Where to write the warning.</span>
-<span class="sd">    :param line: line of source code to be included in the warning message</span>
-<span class="sd">    """</span></div>
-
-
-<div class="viewcode-block" id="RandomNumberGenerator"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator">[docs]</a><span class="k">class</span> <span class="nc">RandomNumberGenerator</span><span class="p">:</span>
-    <span class="sd">"""A random number generator.</span>
-
-<span class="sd">    You can use this as follows.</span>
-
-<span class="sd">    .. code-block:: python</span>
-
-<span class="sd">       RNG = RandomNumberGenerator()</span>
-<span class="sd">       print(RNG.get_random_integer())</span>
-
-<span class="sd">    This is hopefully useful to somebody.</span>
-<span class="sd">    """</span>
-
-<div class="viewcode-block" id="RandomNumberGenerator.magic_number"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.magic_number">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">magic_number</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">"""Returns a magical number."""</span>
-        <span class="k">return</span> <span class="mi">0</span></div>
-
-<div class="viewcode-block" id="RandomNumberGenerator.get_seed"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_seed">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">get_seed</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MagicNumber</span><span class="p">:</span>
-        <span class="sd">"""Returns a random seed."""</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="p">()</span><span class="o">.</span><span class="n">seed</span></div>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">seed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""The seed for random number generation.</span>
-
-<span class="sd">        .. seealso:: https://xkcd.com/221/</span>
-<span class="sd">        """</span>
-        <span class="k">return</span> <span class="mi">4</span>
-
-<div class="viewcode-block" id="RandomNumberGenerator.get_random_integer"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_random_integer">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_integer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">"""Returns a random integer."""</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed</span></div>
-
-<div class="viewcode-block" id="RandomNumberGenerator.get_random_float"><a class="viewcode-back" href="../../kitchen-sink/autodoc/#furo_demo_module.RandomNumberGenerator.get_random_float">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="sd">"""Returns a random float."""</span>
-        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">)</span></div></div>
+<span class="c1"># Don't show class signature with the class' name.</span>
+<span class="n">autodoc_class_signature</span> <span class="o">=</span> <span class="s2">"separated"</span>
 </pre></div>
+</div>
+</div>
+<span class="target" id="module-furo._demo_module"></span><p>This is a demo module included in the docs in order to exercise autodoc.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="furo._demo_module.RandomNumberGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">furo._demo_module.</span></span><span class="sig-name descname"><span class="pre">RandomNumberGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/furo/_demo_module/#RandomNumberGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#furo._demo_module.RandomNumberGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>A random number generator.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="furo._demo_module.RandomNumberGenerator.get_random_float">
+<span class="sig-name descname"><span class="pre">get_random_float</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../../_modules/furo/_demo_module/#RandomNumberGenerator.get_random_float"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#furo._demo_module.RandomNumberGenerator.get_random_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a random float.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="furo._demo_module.RandomNumberGenerator.get_random_integer">
+<span class="sig-name descname"><span class="pre">get_random_integer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></span><a class="reference internal" href="../../_modules/furo/_demo_module/#RandomNumberGenerator.get_random_integer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#furo._demo_module.RandomNumberGenerator.get_random_integer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a random integer.</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="furo._demo_module.RandomNumberGenerator.seed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">seed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#furo._demo_module.RandomNumberGenerator.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get seed for random number generation.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://xkcd.com/221/">https://xkcd.com/221/</a></p>
+</div>
+</dd></dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="furo._demo_module.show_warning">
+<span class="sig-prename descclassname"><span class="pre">furo._demo_module.</span></span><span class="sig-name descname"><span class="pre">show_warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Warning" title="(in Python v3.10)"><span class="pre">Warning</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.10)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Warning" title="(in Python v3.10)"><span class="pre">Warning</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.TextIO" title="(in Python v3.10)"><span class="pre">TextIO</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../../_modules/furo/_demo_module/#show_warning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#furo._demo_module.show_warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a warning to the end user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">warnings</span><span class="o">.</span><span class="n">showwarning</span> <span class="o">=</span> <span class="n">show_warning</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – What you want to tell the user.</p></li>
+<li><p><strong>category</strong> – The type of warning.</p></li>
+<li><p><strong>filename</strong> – The file that the warning is for.</p></li>
+<li><p><strong>lineno</strong> – The line that the warning is for.</p></li>
+<li><p><strong>file</strong> – Where to write the warning.</p></li>
+<li><p><strong>line</strong> – line of source code to be included in the warning message</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="../blocks/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Blocks</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../admonitions/">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Admonitions</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">

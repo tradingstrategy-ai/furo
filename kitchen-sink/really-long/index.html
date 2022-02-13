@@ -3,12 +3,12 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Structural Elements" href="../structure/" /><link rel="prev" title="Lists &amp; Tables" href="../lists_tables/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="sphinx-design stuff" href="../sphinx-design/" /><link rel="prev" title="Lists" href="../lists/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.01.02.dev1"/>
-        <title>Really Long Page - Furo</title>
+        <title>Really Long Page Title because we should test sidebar wrapping - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=cbd501d50e94217ef066eb826d45b35214282890" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=35c4bebe9ffb4ca4f78dd5196c253697a71e27d6" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -191,13 +191,18 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Kitchen Sink</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../demo/">Paragraph Level Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists_tables/">Lists &amp; Tables</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Really Long Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/">API documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generic/">Generic items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../images/">Images &amp; Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/">Lists</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Really Long Page Title because we should test sidebar wrapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-design/">sphinx-design stuff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure/">Structural Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure/#structural-elements-2">Structural Elements 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../autodoc/">Autodoc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sphinx-design/">sphinx-design stuff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables/">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../typography/">Typography</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../stability/">Stability Policy</a></li>
@@ -229,19 +234,27 @@
           </label>
         </div>
         <article role="main">
-          <div class="warning admonition">
-<p class="admonition-title">Mimicking Read the Docs’ PR previews</p>
-<p>This is simulating how Read the Docs puts admonitions on top of previews.</p>
+          <!--
+ ~ Copyright (c) 2021 Pradyun Gedam
+ ~ Licensed under Creative Commons Attribution-ShareAlike 4.0 International License
+ ~ SPDX-License-Identifier: CC-BY-SA-4.0
+ -->
+<div class="warning admonition">
+<p class="admonition-title">Mimicking ReadTheDocs’ PR previews</p>
+<p>This is simulating how ReadTheDocs puts admonitions on top of previews.</p>
 </div>
-<section id="really-long-page">
-<h1>Really Long Page<a class="headerlink" href="#really-long-page" title="Permalink to this headline">¶</a></h1>
-<p>This page basically exists to show-off Furo’s cool table of contents sidebar.</p>
+<section id="really-long-page-title-because-we-should-test-sidebar-wrapping">
+<h1>Really Long Page Title because we should test sidebar wrapping<a class="headerlink" href="#really-long-page-title-because-we-should-test-sidebar-wrapping" title="Permalink to this headline">¶</a></h1>
+<p>This page basically exists to show-off the cool table of contents sidebar.</p>
 <section id="heading-1">
 <h2>Heading 1<a class="headerlink" href="#heading-1" title="Permalink to this headline">¶</a></h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit temporibus cupiditate in ducimus illum assumenda dolor, dignissimos laboriosam voluptate dolorem dolore eum repellendus minima, nisi sequi? Eveniet, dignissimos asperiores!</p>
+<!-- prettier-ignore-start -->
 </section>
 <section id="heading-2">
-<h2>Heading 2<a class="headerlink" href="#heading-2" title="Permalink to this headline">¶</a></h2>
+<span id="second-heading-yet-again"></span><span id="second-heading-again"></span><span id="second-heading"></span><h2>Heading 2<a class="headerlink" href="#heading-2" title="Permalink to this headline">¶</a></h2>
+<!-- prettier-ignore-end -->
+<p>Let’s make sure multiple permalinks work: <a class="reference internal" href="#second-heading"><span class="std std-ref">one</span></a>, <a class="reference internal" href="#second-heading-again"><span class="std std-ref">two</span></a>, <a class="reference internal" href="#second-heading-yet-again"><span class="std std-ref">three</span></a>.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit temporibus cupiditate in ducimus illum assumenda dolor, dignissimos laboriosam voluptate dolorem dolore eum repellendus minima, nisi sequi? Eveniet, dignissimos asperiores!</p>
 </section>
 <section id="heading-3">
@@ -431,23 +444,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../structure/">
+          <a class="next-page" href="../sphinx-design/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Structural Elements</div>
+                <div class="title">sphinx-design stuff</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../lists_tables/">
+          <a class="prev-page" href="../lists/">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Lists &amp; Tables</div>
+                <div class="title">Lists</div>
                 
               </div>
             </a>
@@ -488,7 +501,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Really Long Page</a><ul>
+<li><a class="reference internal" href="#">Really Long Page Title because we should test sidebar wrapping</a><ul>
 <li><a class="reference internal" href="#heading-1">Heading 1</a></li>
 <li><a class="reference internal" href="#heading-2">Heading 2</a></li>
 <li><a class="reference internal" href="#heading-3">Heading 3</a></li>
