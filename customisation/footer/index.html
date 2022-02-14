@@ -8,7 +8,7 @@
     <meta name="generator" content="sphinx-4.4.0, furo 2022.01.02.dev1"/>
         <title>Changing footer icons - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=35c4bebe9ffb4ca4f78dd5196c253697a71e27d6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=db9fd9c307e9061cf037794b9278d4b9a0dd9fcc" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -261,9 +261,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">html</span></code>: The exact raw HTML that is included as the “icon”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: This is included as-is in the class attribute of the <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.</p></li>
 </ul>
-<section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
-<p>As an example, this is what Furo does to include a GitHub icon in the footer of the site you’re currently reading:</p>
+<section id="using-embedded-svgs">
+<h3>Using embedded SVGs<a class="headerlink" href="#using-embedded-svgs" title="Permalink to this headline">#</a></h3>
+<p>This is what Furo does to include a GitHub icon in the footer of the site you’re currently reading:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"footer_icons"</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -280,25 +280,60 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="recommendations-for-images">
-<h3>Recommendations for images<a class="headerlink" href="#recommendations-for-images" title="Permalink to this headline">#</a></h3>
-<p>Since <code class="docutils literal notranslate"><span class="pre">image_html</span></code> is expected to be static HTML, you can not use relative paths to images included in the Sphinx documentation set, at least not without resorting to ugly hacks.<a class="footnote-reference brackets" href="#id3" id="id1">1</a> Instead, it is recommended to either embed the image directly (eg: in an <code class="docutils literal notranslate"><span class="pre">svg</span></code> tag), or to link to images “outside” of the documentation.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">html</span></code> is expected to be static HTML, you can not use relative paths to images included in the Sphinx documentation set, at least not without resorting to ugly hacks.<a class="footnote-reference brackets" href="#id3" id="id1">1</a> Instead, it is recommended to either embed the image directly (eg: in an <code class="docutils literal notranslate"><span class="pre">svg</span></code> tag), or to link to images “outside” of the documentation.</p>
 <p>It is generally preferable to use SVG images, that respect <code class="docutils literal notranslate"><span class="pre">currentColor</span></code>. A decently large set of common SVG-based icons can be found on: <a class="reference external" href="https://react-icons.github.io/react-icons/">https://react-icons.github.io/react-icons/</a><a class="footnote-reference brackets" href="#id4" id="id2">2</a>.</p>
 </section>
+<section id="using-icon-packs">
+<h3>Using icon packs<a class="headerlink" href="#using-icon-packs" title="Permalink to this headline">#</a></h3>
+<p>You can use icon packs that provide icons, with the footer. Usually, icons pack have a non-negligible impact on first page load times and need more data needing to be downloaded. That said, you also get more convenient access to a well designed set of icons. :)</p>
+<section id="font-awesome">
+<h4>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">#</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With the release of Font Awesome 6, Fonticons Inc has revamped the documentation to consistently upsell their <a class="reference external" href="https://fontawesome.com/v6/docs/web/setup/use-kit">Kits</a>. These kits can help reduce load times on pages but have limited number of page views, so we’ll use Font Awesome via a CDN in this example.</p>
+</div>
+<p>If you wish to use Font Awesome icons in the footer, it’s a two step process.</p>
+<ul>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">html_css_files</span></code>, add the CSS file(s) for Font Awesome.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="s2">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css"</span><span class="p">,</span>
+      <span class="s2">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css"</span><span class="p">,</span>
+      <span class="s2">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css"</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">class</span></code> to use the relevant Font Awesome icons in <code class="docutils literal notranslate"><span class="pre">footer_icons</span></code>. You can search the <a class="reference external" href="https://fontawesome.com/v6/search?s=solid%2Cbrands">free Font Awesome icons</a>, and clicking on a specific icon shows the class you need to use. The configuration would look as follows:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"footer_icons"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"GitHub"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/pradyunsg/furo"</span><span class="p">,</span>
+            <span class="s2">"html"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+            <span class="s2">"class"</span><span class="p">:</span> <span class="s2">"fa-solid fa-github fa-2x"</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">fa-2x</span></code> is necessary to get a reasonable sized icon.</p>
+</li>
+</ul>
+</section>
+</section>
+</section>
 <section id="different-icons-for-light-mode-vs-dark-mode">
-<h3>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this headline">#</a></h3>
-<p>You can specify <code class="docutils literal notranslate"><span class="pre">only-light</span></code> or <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">class</span></code> in the mapping. This mechanism exists primarily to help you use different <code class="docutils literal notranslate"><span class="pre">img</span></code> tags to present the same icon in a different location.</p>
+<h2>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this headline">#</a></h2>
+<p>You can specify <code class="docutils literal notranslate"><span class="pre">only-light</span></code> or <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">class</span></code> in the dictionary. This mechanism exists primarily to help you use different <code class="docutils literal notranslate"><span class="pre">img</span></code> tags to present the same icon in a different colour.</p>
 <hr class="footnotes docutils"/>
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>You need to use your browser’s developer tools to get the SVG directly from the page: inspect element + copy svg element (ctrl+c) + paste + remove <code class="docutils literal notranslate"><span class="pre">height="1em"</span> <span class="pre">width="1em"</span></code>. The workflow is… slightly clunky.</p>
+<dd><p>Yes, I’m aware that it can be argued that embedding raw HTML in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file is… ugly. :)</p>
 </dd>
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Yes, I’m aware that it can be argued that embedding raw HTML in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file is hacky. :)</p>
+<dd><p>You need to use your browser’s developer tools to get the SVG directly from the page: inspect element + copy svg element (ctrl+c) + paste.</p>
 </dd>
 </dl>
-</section>
 </section>
 </section>
 
@@ -367,11 +402,14 @@
 <li><a class="reference internal" href="#">Changing footer icons</a><ul>
 <li><a class="reference internal" href="#default-icons">Default icons</a></li>
 <li><a class="reference internal" href="#configuration">Configuration</a><ul>
-<li><a class="reference internal" href="#example">Example</a></li>
-<li><a class="reference internal" href="#recommendations-for-images">Recommendations for images</a></li>
-<li><a class="reference internal" href="#different-icons-for-light-mode-vs-dark-mode">Different icons for light mode vs dark mode</a></li>
+<li><a class="reference internal" href="#using-embedded-svgs">Using embedded SVGs</a></li>
+<li><a class="reference internal" href="#using-icon-packs">Using icon packs</a><ul>
+<li><a class="reference internal" href="#font-awesome">Font Awesome</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a class="reference internal" href="#different-icons-for-light-mode-vs-dark-mode">Different icons for light mode vs dark mode</a></li>
 </ul>
 </li>
 </ul>
