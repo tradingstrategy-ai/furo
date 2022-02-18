@@ -2,13 +2,12 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Design Notes" href="../design/" /><link rel="prev" title="Workflow" href="../workflow/" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Design Notes" href="../design/" /><link rel="prev" title="Workflow" href="../workflow/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.dev2"/>
         <title>Internals - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=8778cc38062d85d701055abdc12ae124dc7affa1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a0d39db9eacc868807f670733f1bccd717b27010" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -221,6 +220,12 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
+        <a href="#" class="back-to-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
         <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
@@ -235,10 +240,10 @@
           </label>
         </div>
         <article role="main">
-          <section id="internals">
+          <div class="section" id="internals">
 <h1>Internals<a class="headerlink" href="#internals" title="Permalink to this headline">#</a></h1>
 <p>Furo’s internals contain an interesting mix of stupid-things-that-work and all kinds of bodges. Most of this project was built slowly over the span of a few weeks, as a part of an attempt to take a break from working on Python packaging stuff.</p>
-<section id="repository-layout">
+<div class="section" id="repository-layout">
 <h2>Repository Layout<a class="headerlink" href="#repository-layout" title="Permalink to this headline">#</a></h2>
 <p>The repository layout is pretty standard for a Python project, with a few quirks due to the need for compiling Sass and JS files.</p>
 <ul class="simple">
@@ -275,32 +280,32 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> – for Python Packaging.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">webpack.config.js</span></code> – for <a class="reference external" href="https://webpack.js.org/">Webpack</a>.</p></li>
 </ul>
-</section>
-<section id="theme-build-process">
+</div>
+<div class="section" id="theme-build-process">
 <h2>Theme build process<a class="headerlink" href="#theme-build-process" title="Permalink to this headline">#</a></h2>
 <p>Furo’s build process uses <a class="reference external" href="https://pypi.org/project/sphinx-theme-builder/">sphinx-theme-builder</a> and Webpack. Running <code class="docutils literal notranslate"><span class="pre">webpack</span></code> in the repository root will compile the theme’s CSS and JS assets (<code class="docutils literal notranslate"><span class="pre">src/furo/assets/</span></code>) into the correct final files (inside <code class="docutils literal notranslate"><span class="pre">src/furo/theme/furo/static</span></code>).</p>
 <p>When generating a wheel (eg: for upload, or for installing from a source distribution), <code class="docutils literal notranslate"><span class="pre">sphinx-theme-builder</span></code> will use <a class="reference external" href="https://pypi.org/project/nodeenv/">nodeenv</a> to create an isolated NodeJS installation (using the system NodeJS version if it matches the requirements).</p>
 <p>Thus, the source distribution does not contain the compiled JS artifacts and wheel distribution does. Both contain the original SASS/JS source code for Furo. Using the SASS/JS source code of Furo is consider “unstable” under the stability policy.</p>
-</section>
-<section id="how-stuff-works">
+</div>
+<div class="section" id="how-stuff-works">
 <h2>How stuff works<a class="headerlink" href="#how-stuff-works" title="Permalink to this headline">#</a></h2>
-<section id="sidebar-navigation-tree">
+<div class="section" id="sidebar-navigation-tree">
 <h3>Sidebar Navigation Tree<a class="headerlink" href="#sidebar-navigation-tree" title="Permalink to this headline">#</a></h3>
 <p>This is was really tricky to get right. It is essentially a pure-CSS port of the Just the Docs theme’s sidebar navigation.</p>
 <p>Each list item has a fixed height and a different color on hover. Items with a subtree underneath have a hidden checkbox, that is triggered when clicking the item. The checkbox holds the state of “expanded vs collapsed”, which is used in the CSS to show the subtree appropriately. The checkbox is automatically checked if it is for the current page, or a parent of the current page.</p>
 <p>There was a painful amount of tweaking the CSS to get the subtrees to look just right even when there’s long text and lots of content/subtrees etc. It works now, and that’s all I care about.</p>
-</section>
-<section id="contents-sidebar">
+</div>
+<div class="section" id="contents-sidebar">
 <h3>Contents sidebar<a class="headerlink" href="#contents-sidebar" title="Permalink to this headline">#</a></h3>
 <p>This uses the <code class="docutils literal notranslate"><span class="pre">toc</span></code> variable that’s provided by Sphinx. There’s some CSS to hide the top-level bullet referring to this page’s title. The rest of the tree is stylised without much complexity.</p>
 <p>The fancy bit is that Gumshoe.js is used to highlight the currently active heading (which heading is the content at the top pixel under). This is combined with some custom JS to scroll to the currently active heading in the toctree, which results in the contents sidebar scrolling with the user as they go.</p>
-</section>
-<section id="css-variables-for-customisation">
+</div>
+<div class="section" id="css-variables-for-customisation">
 <h3>CSS variables for customisation<a class="headerlink" href="#css-variables-for-customisation" title="Permalink to this headline">#</a></h3>
 <p>This is pretty much the “USP” of this theme. In <code class="docutils literal notranslate"><span class="pre">src/furo/theme/furo/partials/_head_css_variables.html</span></code>, the user provided CSS variables are translated and written into each page’s HTML. This is set up, such that these declarations overrides any other declarations made in the CSS of the theme.</p>
 <p>This essentially allows the user to control the values of the CSS variables, and hence control how the theme looks.</p>
-</section>
-<section id="furo-demo-directive">
+</div>
+<div class="section" id="furo-demo-directive">
 <h3><code class="docutils literal notranslate"><span class="pre">furo-demo</span></code> directive<a class="headerlink" href="#furo-demo-directive" title="Permalink to this headline">#</a></h3>
 <p>This directive was written to make it easier to write the examples used in the <a class="reference internal" href="../../reference/"><span class="doc std std-doc">Reference</span></a> section. The way it works is pretty straightforward really:</p>
 <ul class="simple">
@@ -314,9 +319,9 @@
 </ul>
 <p>This approach has significant limitations however, since the A/B comparision format means that it is not directly usable to showcase functionality that is different between the two.</p>
 <p>For that, we keep one of the snippets empty, which thanks to a conditional, results in the tab for that language (MyST or reST) not being rendered.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
         </article>
       </div>

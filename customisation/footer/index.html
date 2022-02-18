@@ -2,13 +2,12 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing landing page" href="../landing-page/" /><link rel="prev" title="Changing fonts" href="../fonts/" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing landing page" href="../landing-page/" /><link rel="prev" title="Changing fonts" href="../fonts/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.dev2"/>
         <title>Changing footer icons - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=8778cc38062d85d701055abdc12ae124dc7affa1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a0d39db9eacc868807f670733f1bccd717b27010" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -221,6 +220,12 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
+        <a href="#" class="back-to-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
         <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
@@ -235,7 +240,7 @@
           </label>
         </div>
         <article role="main">
-          <section id="changing-footer-icons">
+          <div class="section" id="changing-footer-icons">
 <h1>Changing footer icons<a class="headerlink" href="#changing-footer-icons" title="Permalink to this headline">#</a></h1>
 <p>Furo allows customising the icons that are presented in the page footer. These icons can be used to link to relevant resources for your project and documentation.</p>
 <div class="caution admonition">
@@ -243,7 +248,7 @@
 <p>This feature is treated as “unstable” under Furo’s <a class="reference internal" href="../../stability/"><span class="doc">Stability Policy</span></a>.</p>
 <p>It currently needs input from documentation authors, about how useful and usable this is and how “ergonomic” it is.</p>
 </div>
-<section id="default-icons">
+<div class="section" id="default-icons">
 <h2>Default icons<a class="headerlink" href="#default-icons" title="Permalink to this headline">#</a></h2>
 <p>Furo includes two default icons, when the documentation is built on Read the Docs:</p>
 <ul class="simple">
@@ -251,8 +256,8 @@
 <li><p>A link to the GitHub repository, if configured as a GitHub project on RTD.</p></li>
 </ul>
 <p>If the documentation is not built on Read the Docs, there are no icons included by default.</p>
-</section>
-<section id="configuration">
+</div>
+<div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h2>
 <p>To add custom footer icons, you need to provide the <code class="docutils literal notranslate"><span class="pre">footer_icons</span></code> configuration value to Furo. If this configuration value is non-empty, the default footer icons are disabled.</p>
 <p>The value for this configuration value is a list of dictionaries. Each dictionary needs to have the following structure:</p>
@@ -262,7 +267,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">html</span></code>: The exact raw HTML that is included as the “icon”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: This is included as-is in the class attribute of the <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.</p></li>
 </ul>
-<section id="using-embedded-svgs">
+<div class="section" id="using-embedded-svgs">
 <h3>Using embedded SVGs<a class="headerlink" href="#using-embedded-svgs" title="Permalink to this headline">#</a></h3>
 <p>This is what Furo does to include a GitHub icon in the footer of the site you’re currently reading:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
@@ -283,11 +288,11 @@
 </div>
 <p>Since <code class="docutils literal notranslate"><span class="pre">html</span></code> is expected to be static HTML, you can not use relative paths to images included in the Sphinx documentation set, at least not without resorting to ugly hacks.<a class="footnote-reference brackets" href="#id3" id="id1">1</a> Instead, it is recommended to either embed the image directly (eg: in an <code class="docutils literal notranslate"><span class="pre">svg</span></code> tag), or to link to images “outside” of the documentation.</p>
 <p>It is generally preferable to use SVG images, that respect <code class="docutils literal notranslate"><span class="pre">currentColor</span></code>. A decently large set of common SVG-based icons can be found on: <a class="reference external" href="https://react-icons.github.io/react-icons/">https://react-icons.github.io/react-icons/</a><a class="footnote-reference brackets" href="#id4" id="id2">2</a>.</p>
-</section>
-<section id="using-icon-packs">
+</div>
+<div class="section" id="using-icon-packs">
 <h3>Using icon packs<a class="headerlink" href="#using-icon-packs" title="Permalink to this headline">#</a></h3>
 <p>You can use icon packs that provide icons, with the footer. Usually, icons pack have a non-negligible impact on first page load times and need more data needing to be downloaded. That said, you also get more convenient access to a well designed set of icons. :)</p>
-<section id="font-awesome">
+<div class="section" id="font-awesome">
 <h4>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">#</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -320,10 +325,10 @@
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">fa-2x</span></code> is necessary to get a reasonable sized icon.</p>
 </li>
 </ul>
-</section>
-</section>
-</section>
-<section id="different-icons-for-light-mode-vs-dark-mode">
+</div>
+</div>
+</div>
+<div class="section" id="different-icons-for-light-mode-vs-dark-mode">
 <h2>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this headline">#</a></h2>
 <p>You can specify <code class="docutils literal notranslate"><span class="pre">only-light</span></code> or <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">class</span></code> in the dictionary. This mechanism exists primarily to help you use different <code class="docutils literal notranslate"><span class="pre">img</span></code> tags to present the same icon in a different colour.</p>
 <hr class="footnotes docutils"/>
@@ -335,8 +340,8 @@
 <dd><p>You need to use your browser’s developer tools to get the SVG directly from the page: inspect element + copy svg element (ctrl+c) + paste.</p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
         </article>
       </div>

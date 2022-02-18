@@ -2,13 +2,12 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Lists" href="../lists/" /><link rel="prev" title="Hyperlinks" href="../hyperlinks/" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Lists" href="../lists/" /><link rel="prev" title="Hyperlinks" href="../hyperlinks/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.dev2"/>
         <title>Images - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=8778cc38062d85d701055abdc12ae124dc7affa1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a0d39db9eacc868807f670733f1bccd717b27010" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -221,6 +220,12 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
+        <a href="#" class="back-to-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
         <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
@@ -235,10 +240,10 @@
           </label>
         </div>
         <article role="main">
-          <section id="images">
+          <div class="section" id="images">
 <h1>Images<a class="headerlink" href="#images" title="Permalink to this headline">#</a></h1>
 <p>Images can be a great supplement to technical documentation text. Sphinx provides control for their alignment in the content, as well as the ability to add captions.</p>
-<section id="basic-usage">
+<div class="section" id="basic-usage">
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">#</a></h2>
 <div class="docutils container">
 <div class="tab-set docutils">
@@ -262,8 +267,8 @@ This is from Markdown.
 </div>
 </div>
 </div>
-</section>
-<section id="alignment">
+</div>
+<div class="section" id="alignment">
 <h2>Alignment<a class="headerlink" href="#alignment" title="Permalink to this headline">#</a></h2>
 <div class="docutils container">
 <div class="tab-set docutils">
@@ -291,8 +296,8 @@ This is from Markdown.
 </div>
 </div>
 </div>
-</section>
-<section id="captions">
+</div>
+<div class="section" id="captions">
 <h2>Captions<a class="headerlink" href="#captions" title="Permalink to this headline">#</a></h2>
 <div class="docutils container">
 <div class="tab-set docutils">
@@ -304,12 +309,10 @@ This is from Markdown.
 This is from reStructuredText.
 </pre></div>
 </div>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals"/>
-<figcaption>
-<p><span class="caption-text">This is a captioned image, which needs the “figure” directive.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">This is a captioned image, which needs the “figure” directive.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</div>
 <p>This is from reStructuredText.</p>
 </div>
 <input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"/><label class="tab-label" for="tab-set--2-input--2">Markdown (MyST)</label><div class="tab-content docutils">
@@ -320,18 +323,16 @@ This is a captioned image, which needs the "figure" directive.
 This is from Markdown.
 </pre></div>
 </div>
-<figure class="align-default" id="id2">
+<div class="figure align-default" id="id2">
 <img alt="https://source.unsplash.com/200x200/daily?cute+animals" src="https://source.unsplash.com/200x200/daily?cute+animals"/>
-<figcaption>
-<p><span class="caption-text">This is a captioned image, which needs the “figure” directive.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">This is a captioned image, which needs the “figure” directive.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</div>
 <p>This is from Markdown.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="different-images-for-dark-light-mode">
+</div>
+<div class="section" id="different-images-for-dark-light-mode">
 <span id="light-dark-images"></span><h2>Different images for dark/light mode<a class="headerlink" href="#different-images-for-dark-light-mode" title="Permalink to this headline">#</a></h2>
 <p>Furo supports <a class="reference internal" href="../../customisation/colors/"><span class="doc std std-doc">light mode and dark mode</span></a> colours
 out-of-the-box. However, certain images do not work well against certain
@@ -378,8 +379,8 @@ This is from Markdown.
 </div>
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
         </article>
       </div>

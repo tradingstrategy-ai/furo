@@ -2,13 +2,12 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Images &amp; Figures" href="../images/" /><link rel="prev" title="Blocks" href="../blocks/" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Images &amp; Figures" href="../images/" /><link rel="prev" title="Blocks" href="../blocks/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.dev2"/>
         <title>Generic items - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=8778cc38062d85d701055abdc12ae124dc7affa1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a0d39db9eacc868807f670733f1bccd717b27010" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -221,6 +220,12 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
+        <a href="#" class="back-to-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
         <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
@@ -235,10 +240,10 @@
           </label>
         </div>
         <article role="main">
-          <section id="generic-items">
+          <div class="section" id="generic-items">
 <h1>Generic items<a class="headerlink" href="#generic-items" title="Permalink to this headline">#</a></h1>
 <p>These are the things that don’t quite fit into other groupings.</p>
-<section id="inline-markup">
+<div class="section" id="inline-markup">
 <h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">#</a></h2>
 <p>One of the nice things about markup languages is the ability to have inline
 markup. This makes the presentation <em>much</em> nicer. The <strong>bold</strong> text shouldn’t
@@ -248,7 +253,7 @@ greater than the regular prose; otherwise the spacing looks weird.</p>
 <p>It is also possible to use explicit roles to do things like a <sub>subscript</sub>,
 a <sup>superscript</sup>, <em>emphasis</em>, <strong>strong</strong>, and
 <code class="docutils literal notranslate"><span class="pre">literal</span></code>.</p>
-<section id="hyperlinks">
+<div class="section" id="hyperlinks">
 <h3>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Permalink to this headline">#</a></h3>
 <p>It is a website, so it’ll have hyperlinks like <a class="reference external" href="http://www.python.org">http://www.python.org</a> (inline),
 or <a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id20">4</a> (external reference), <a class="reference internal" href="#example">example</a> (internal reference),
@@ -261,21 +266,21 @@ substitution references (<a class="reference internal" href="https://source.unsp
 someone might be using it, so here’s an example: <strong>re</strong><code class="docutils literal notranslate"><span class="pre">Structured</span></code><em>Text</em>.</p>
 <p>It is also possible to link to documented items, such as
 <code class="xref py py-class docutils literal notranslate"><span class="pre">api_sample.RandomNumberGenerator</span></code>.</p>
-</section>
-<section id="interpreted-text">
+</div>
+<div class="section" id="interpreted-text">
 <h3>Interpreted text<a class="headerlink" href="#interpreted-text" title="Permalink to this headline">#</a></h3>
 <p>The default role for “interpreted text” (AKA single backticks) is
 <cite>Title Reference</cite>. There are other reference syntaxes as well: <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0287"><strong>PEP 287</strong></a> and
 <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2822.html"><strong>RFC 2822</strong></a>.</p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">--pep-references</span></code> option was supplied, there should be a live link to
 PEP 258 here.</p>
-<section id="gui-labels">
+<div class="section" id="gui-labels">
 <h4>GUI labels<a class="headerlink" href="#gui-labels" title="Permalink to this headline">#</a></h4>
 <p>According to the RST demo, GUI labels (like <span class="guilabel">this label</span>) are a way to
 indicate that some action is to be taken by the user. Like inline code literals,
 GUI labels should not run over line height.</p>
-</section>
-<section id="keys-menu-labels">
+</div>
+<div class="section" id="keys-menu-labels">
 <h4>Keys / Menu labels<a class="headerlink" href="#keys-menu-labels" title="Permalink to this headline">#</a></h4>
 <p>Key-bindings indicate that the read is to press a button on the keyboard or
 mouse, for example <kbd class="kbd docutils literal notranslate">MMB</kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">⌘</kbd>+<kbd class="kbd docutils literal notranslate">⇧</kbd>+<kbd class="kbd docutils literal notranslate">M</kbd></kbd> and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">MMB</kbd></kbd>. Another
@@ -283,8 +288,8 @@ useful way is <code class="docutils literal notranslate"><span class="pre">menus
 <span class="menuselection">My ‣ Software ‣ Some menu ‣ Some sub menu 1 ‣ Some sub menu 2 ‣ Some sub menu 3</span></p>
 <p>For example, <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> should break when it is too long to fit on a
 single line.</p>
-</section>
-<section id="long-inline-code-wrapping">
+</div>
+<div class="section" id="long-inline-code-wrapping">
 <h4>Long inline code wrapping<a class="headerlink" href="#long-inline-code-wrapping" title="Permalink to this headline">#</a></h4>
 <p>Let’s test wrapping and whitespace significance in inline literals:
 <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">example</span> <span class="pre">of</span> <span class="pre">--inline-literal</span> <span class="pre">--text,</span> <span class="pre">--including</span> <span class="pre">some--</span>
@@ -292,10 +297,10 @@ single line.</p>
 <span class="pre">to</span> <span class="pre">see</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">text</span> <span class="pre">is</span> <span class="pre">wrapped.</span>  <span class="pre">--</span> <span class="pre">----</span> <span class="pre">--------</span>  <span class="pre">Now</span> <span class="pre">note</span>    <span class="pre">the</span>
 <span class="pre">spacing</span>    <span class="pre">between</span> <span class="pre">the</span>    <span class="pre">words</span> <span class="pre">of</span>    <span class="pre">this</span> <span class="pre">sentence</span>    <span class="pre">(words</span>
 <span class="pre">should</span>    <span class="pre">be</span> <span class="pre">grouped</span>    <span class="pre">in</span> <span class="pre">pairs).</span></code></p>
-</section>
-</section>
-</section>
-<section id="math">
+</div>
+</div>
+</div>
+<div class="section" id="math">
 <h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">#</a></h2>
 <p>This is a test. Here is an equation:
 <span class="math notranslate nohighlight">\(X_{0:5} = (X_0, X_1, X_2, X_3, X_4)\)</span>.
@@ -309,27 +314,27 @@ Here is another:</p>
 \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}\]</div></div>
 <p>You can add a link to equations like the one above <a class="reference internal" href="#equation-this-is-a-label">(1)</a> by using
 <code class="docutils literal notranslate"><span class="pre">:eq:</span></code>.</p>
-</section>
-<section id="sidebar">
+</div>
+<div class="section" id="sidebar">
 <h2>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">#</a></h2>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Ch’ien / The Creative</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 <img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy"/>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-</aside>
+</div>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
 voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
 voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
 voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
 voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
-<section id="code-with-sidebar">
+<div class="section" id="code-with-sidebar">
 <h3>Code with Sidebar<a class="headerlink" href="#code-with-sidebar" title="Permalink to this headline">#</a></h3>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">A code example</p>
 <p>With a sidebar on the right.</p>
-</aside>
+</div>
 <div class="literal-block-wrapper docutils container" id="id18">
 <div class="code-block-caption"><span class="caption-text">Code blocks can also have captions.</span><a class="headerlink" href="#id18" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">print</span><span class="p">(</span><span class="s2">"one"</span><span class="p">)</span>
@@ -349,11 +354,11 @@ voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
 </pre></div>
 </div>
 </div>
-</section>
-</section>
-<section id="references">
+</div>
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<section id="footnotes">
+<div class="section" id="footnotes">
 <h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">#</a></h3>
 <dl class="footnote brackets">
 <dt class="label" id="id6"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
@@ -380,8 +385,8 @@ Here’s a reference to the next footnote: <a class="footnote-reference brackets
 <dd><p>This footnote shows the next symbol in the sequence.</p>
 </dd>
 </dl>
-</section>
-<section id="citations">
+</div>
+<div class="section" id="citations">
 <h3>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">#</a></h3>
 <dl class="footnote brackets">
 <dt class="label" id="id13"><span class="brackets">12</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id16">2</a>)</span></dt>
@@ -394,8 +399,8 @@ Here’s a reference to the next footnote: <a class="footnote-reference brackets
 </dl>
 <p>Here’s a reference to the above, <a class="footnote-reference brackets" href="#id13" id="id16">12</a> citation.</p>
 <p>Here is another type of citation: <cite>citation</cite></p>
-</section>
-<section id="targets">
+</div>
+<div class="section" id="targets">
 <h3>Targets<a class="headerlink" href="#targets" title="Permalink to this headline">#</a></h3>
 <p id="example">This paragraph is pointed to by the explicit “example” target.
 A reference can be found under <a class="reference internal" href="#inline-markup">Inline Markup</a>, above. <a class="reference internal" href="#inline-hyperlink-targets">Inline
@@ -405,22 +410,22 @@ hyperlink targets</a> are also possible.</p>
 <p>Explicit external targets are interpolated into references such as “<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id19" id="id21">4</a>”.</p>
 <p>Targets may be indirect and anonymous.  Thus <a class="reference internal" href="#targets">this phrase</a> may also
 refer to the <a class="reference internal" href="#targets">Targets</a> section.</p>
-</section>
-<section id="target-footnotes">
+</div>
+<div class="section" id="target-footnotes">
 <h3>Target Footnotes<a class="headerlink" href="#target-footnotes" title="Permalink to this headline">#</a></h3>
 <dl class="footnote brackets">
 <dt class="label" id="id19"><span class="brackets">4</span><span class="fn-backref">(<a href="#id20">1</a>,<a href="#id21">2</a>)</span></dt>
 <dd><p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="centered-text">
+</div>
+</div>
+<div class="section" id="centered-text">
 <h2>Centered text<a class="headerlink" href="#centered-text" title="Permalink to this headline">#</a></h2>
 <p>You can create a statement with centered text with <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">centered::</span></code></p>
 <p class="centered">
-<strong>This is centered text!</strong></p></section>
-<section id="rubric">
+<strong>This is centered text!</strong></p></div>
+<div class="section" id="rubric">
 <h2>Rubric<a class="headerlink" href="#rubric" title="Permalink to this headline">#</a></h2>
 <blockquote>
 <div><p>A rubric is like an informal heading that doesn’t correspond to the document’s structure.</p>
@@ -433,9 +438,9 @@ refer to the <a class="reference internal" href="#targets">Targets</a> section.<
 </div></blockquote>
 <p>This is stylized as docutils tells us to stylize it, since it is used for footnote headers (see end of <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html">https://docs.python.org/3/reference/lexical_analysis.html</a>)</p>
 <p class="rubric">This is a rubric</p>
-<section id="sidebars-and-rubrics">
+<div class="section" id="sidebars-and-rubrics">
 <h3>Sidebars and Rubrics<a class="headerlink" href="#sidebars-and-rubrics" title="Permalink to this headline">#</a></h3>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Sidebar Title</p>
 <p class="sidebar-subtitle">Optional Subtitle</p>
 <p>This is a sidebar.  It is for text outside the flow of the main
@@ -443,7 +448,7 @@ text.</p>
 <p class="rubric">This is a rubric inside a sidebar</p>
 <p>Sidebars often appears beside the main text with a border and
 background color.</p>
-</aside>
+</div>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
 voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
 voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
@@ -456,13 +461,13 @@ voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
 voluptatum tenetur libero nulla esse veritatis accusantium earum commodi hic
 voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam.</p>
-</section>
-</section>
-<section id="download-links">
+</div>
+</div>
+<div class="section" id="download-links">
 <h2>Download Links<a class="headerlink" href="#download-links" title="Permalink to this headline">#</a></h2>
 <p><a class="reference download external" download="" href="https://source.unsplash.com/200x200/daily?cute+puppy"><code class="xref download docutils literal notranslate"><span class="pre">This</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">download</span> <span class="pre">link</span> <span class="pre">should</span> <span class="pre">wrap</span> <span class="pre">white-spaces</span></code></a></p>
-</section>
-</section>
+</div>
+</div>
 
         </article>
       </div>
