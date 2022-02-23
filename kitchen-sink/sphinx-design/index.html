@@ -7,7 +7,7 @@
     <meta name="generator" content="sphinx-4.4.0, furo 2022.02.23.dev1"/>
         <title>sphinx-design stuff - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3c656993158f05539f962c5cea52a5e6c184bb8c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=db6844f8d9da522830fefd3265f8585715beb318" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -23,16 +23,18 @@
   --color-code-foreground: black;
   
   }
-  body[data-theme="dark"] {
-    --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-  }
-  @media (prefers-color-scheme: dark) {
-    body:not([data-theme="light"]) {
+  @media not print {
+    body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
   
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
     }
   }
 </style></head>
@@ -249,13 +251,13 @@
 <div class="section" id="tabs">
 <h2>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="e789dd87-f44d-4871-8329-a61fbaf43574" name="b0d5657b-89de-4721-85a2-f1e987391f45" type="radio"/>
-<label class="sd-tab-label" for="e789dd87-f44d-4871-8329-a61fbaf43574">
+<input checked="checked" id="50465101-c093-4a45-a04e-cfde80896d6a" name="d3c80c0a-5e7c-4b46-980a-6d6995c6c5a5" type="radio"/>
+<label class="sd-tab-label" for="50465101-c093-4a45-a04e-cfde80896d6a">
 Label1</label><div class="sd-tab-content docutils">
 <p>Markdown 1</p>
 </div>
-<input id="f694704c-4f25-4726-9ed3-750382c78fcf" name="b0d5657b-89de-4721-85a2-f1e987391f45" type="radio"/>
-<label class="sd-tab-label" for="f694704c-4f25-4726-9ed3-750382c78fcf">
+<input id="b7b2172b-ac5c-4d5c-85e9-e8197992c711" name="d3c80c0a-5e7c-4b46-980a-6d6995c6c5a5" type="radio"/>
+<label class="sd-tab-label" for="b7b2172b-ac5c-4d5c-85e9-e8197992c711">
 Label2</label><div class="sd-tab-content docutils">
 <p>Markdown 2</p>
 </div>

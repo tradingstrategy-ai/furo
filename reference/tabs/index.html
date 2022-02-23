@@ -7,7 +7,7 @@
     <meta name="generator" content="sphinx-4.4.0, furo 2022.02.23.dev1"/>
         <title>Tabs - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3c656993158f05539f962c5cea52a5e6c184bb8c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=db6844f8d9da522830fefd3265f8585715beb318" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
@@ -23,16 +23,18 @@
   --color-code-foreground: black;
   
   }
-  body[data-theme="dark"] {
-    --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-  }
-  @media (prefers-color-scheme: dark) {
-    body:not([data-theme="light"]) {
+  @media not print {
+    body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
   
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
     }
   }
 </style></head>
@@ -308,13 +310,13 @@ First.
 </pre></div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="575e3e77-d277-4eb8-a04c-797bdf49a6ee" name="37c0e7bf-d354-432b-b406-cf3c6df96ef2" type="radio"/>
-<label class="sd-tab-label" for="575e3e77-d277-4eb8-a04c-797bdf49a6ee">
+<input checked="checked" id="9245a772-29bd-4dd3-8680-dad52c6a26ff" name="8d610772-231a-490a-943e-8d7214d88b66" type="radio"/>
+<label class="sd-tab-label" for="9245a772-29bd-4dd3-8680-dad52c6a26ff">
 Label1</label><div class="sd-tab-content docutils">
 <p>reStructuredText 1</p>
 </div>
-<input id="eb74d00c-d499-49ca-b0f0-d51bf734b1ed" name="37c0e7bf-d354-432b-b406-cf3c6df96ef2" type="radio"/>
-<label class="sd-tab-label" for="eb74d00c-d499-49ca-b0f0-d51bf734b1ed">
+<input id="bf3ab477-b771-4b86-a384-e00b8906668d" name="8d610772-231a-490a-943e-8d7214d88b66" type="radio"/>
+<label class="sd-tab-label" for="bf3ab477-b771-4b86-a384-e00b8906668d">
 Label2</label><div class="sd-tab-content docutils">
 <p>reStructuredText 2</p>
 </div>
@@ -333,13 +335,13 @@ Markdown 1
 </pre></div>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="20ffd65c-dc69-4d58-9572-554bfc52fa93" name="8e374cce-a793-4d60-b49f-37e158eb6efd" type="radio"/>
-<label class="sd-tab-label" for="20ffd65c-dc69-4d58-9572-554bfc52fa93">
+<input checked="checked" id="a7ad873e-b671-4c96-b514-858caa45c7fa" name="936c9c72-6a8e-47ac-a877-61ea220162fa" type="radio"/>
+<label class="sd-tab-label" for="a7ad873e-b671-4c96-b514-858caa45c7fa">
 Label1</label><div class="sd-tab-content docutils">
 <p>Markdown 1</p>
 </div>
-<input id="f853af9e-c8fa-4051-9edc-61f3786d7aa3" name="8e374cce-a793-4d60-b49f-37e158eb6efd" type="radio"/>
-<label class="sd-tab-label" for="f853af9e-c8fa-4051-9edc-61f3786d7aa3">
+<input id="22fac06a-1d01-4917-a820-23c003a16ff0" name="936c9c72-6a8e-47ac-a877-61ea220162fa" type="radio"/>
+<label class="sd-tab-label" for="22fac06a-1d01-4917-a820-23c003a16ff0">
 Label2</label><div class="sd-tab-content docutils">
 <p>Markdown 2</p>
 </div>
