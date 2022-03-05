@@ -300,14 +300,16 @@ with different effects on the layouting</p></li>
 <h3>Using <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code><a class="headerlink" href="#using-html-sidebars" title="Permalink to this headline">#</a></h3>
 <p>This is useful when you want to make drastic or major changes to the design of Furo’s sidebar.</p>
 <p>As an example, to make the <em>entire</em> sidebar scrollable, it is possible to set <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-start.html</span></code> as the first fragment and <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-end.html</span></code> as the last fragment.</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">"sidebar/scroll-start.html"</span><span class="p">,</span>
-    <span class="s2">"sidebar/brand.html"</span><span class="p">,</span>
-    <span class="s2">"sidebar/search.html"</span><span class="p">,</span>
-    <span class="s2">"sidebar/navigation.html"</span><span class="p">,</span>
-    <span class="s2">"sidebar/ethical-ads.html"</span><span class="p">,</span>
-    <span class="s2">"sidebar/scroll-end.html"</span><span class="p">,</span>
-<span class="p">]</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"**"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"sidebar/scroll-start.html"</span><span class="p">,</span>
+        <span class="s2">"sidebar/brand.html"</span><span class="p">,</span>
+        <span class="s2">"sidebar/search.html"</span><span class="p">,</span>
+        <span class="s2">"sidebar/navigation.html"</span><span class="p">,</span>
+        <span class="s2">"sidebar/ethical-ads.html"</span><span class="p">,</span>
+        <span class="s2">"sidebar/scroll-end.html"</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="admonition warning">
