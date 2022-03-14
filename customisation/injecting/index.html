@@ -2,7 +2,8 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Reference" href="../../reference/" /><link rel="prev" title="Hiding Contents sidebar" href="../toc/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Reference" href="../../reference/" /><link rel="prev" title="Hiding Contents sidebar" href="../toc/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04.dev1"/>
         <title>Injecting code - Furo</title>
@@ -242,7 +243,7 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="injecting-code">
+          <section id="injecting-code">
 <h1>Injecting code<a class="headerlink" href="#injecting-code" title="Permalink to this headline">#</a></h1>
 <p>Sphinx makes it fairly straightforward to add custom JS/CSS/HTML code to your pages. Furo supports the mechanisms provided by Sphinx for this.</p>
 <div class="caution admonition">
@@ -250,11 +251,11 @@
 <p>This customisation considered “unstable” under Furo’s <a class="reference internal" href="../../stability/"><span class="doc">Stability Policy</span></a>.</p>
 <p>Customisations done directly with CSS/JS/HTML are unbounded. Furo is not designed to accommodate for custom CSS/JS/HTML in any meaningful way, and no effort is made to stay compatible with such customisations.</p>
 </div>
-<div class="section" id="css-or-js">
+<section id="css-or-js">
 <h2>CSS or JS<a class="headerlink" href="#css-or-js" title="Permalink to this headline">#</a></h2>
 <p>Read the Docs has an excellent explanation on <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/adding-custom-css.html">how to add custom CSS or JS files</a> to Sphinx-based documentation. No point repeating information in two places. 😄</p>
-</div>
-<div class="section" id="html">
+</section>
+<section id="html">
 <h2>HTML<a class="headerlink" href="#html" title="Permalink to this headline">#</a></h2>
 <p>This is entirely powered by Sphinx’s templating mechanism, which is built upon <a class="reference external" href="https://pypi.org/project/Jinja2/">Jinja2</a>.</p>
 <p>The primary way to do this is to override the content of the Furo’s default templates with your own templates, using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a>. For more information on how to do so, <a class="reference external" href="https://www.sphinx-doc.org/en/master/development/theming.html#templating">Sphinx’s templating documentation</a>.</p>
@@ -262,8 +263,8 @@
 <p class="admonition-title">Note</p>
 <p>The expectation is that users who override Furo’s templates would also carefully consider how their documentation looks across various platforms (i.e. not take a “looks OK on my machine” approach) and would also be willing to extend Furo’s CSS to make their HTML changes work well.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
         </article>
       </div>

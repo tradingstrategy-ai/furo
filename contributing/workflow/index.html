@@ -2,7 +2,8 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Internals" href="../internals/" /><link rel="prev" title="Contributing" href="../" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Internals" href="../internals/" /><link rel="prev" title="Contributing" href="../" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04.dev1"/>
         <title>Workflow - Furo</title>
@@ -242,10 +243,10 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="workflow">
+          <section id="workflow">
 <h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">#</a></h1>
 <p>This page describes the tooling used during development of this project. It also serves as a reference for the various commands that you would use when working on this project.</p>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <p>This project uses the <a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> for collaboration. The codebase contains Python code, <a class="reference external" href="https://jinja.palletsprojects.com">Jinja2</a>-based HTML pages, <a class="reference external" href="https://sass-lang.com">Sass</a> stylesheets and Javascript code.</p>
 <ul class="simple">
@@ -254,8 +255,8 @@
 <li><p><a class="reference external" href="https://github.com/executablebooks/sphinx-autobuild">sphinx-autobuild</a> is used to provide live-reloading pages when working on the theme.</p></li>
 <li><p><a class="reference external" href="https://pre-commit.com/">pre-commit</a> is used for running the linters.</p></li>
 </ul>
-</div>
-<div class="section" id="initial-setup">
+</section>
+<section id="initial-setup">
 <h2>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">#</a></h2>
 <p>To work on this project, you need to have git 2.17+ and Python 3.6+. You also need to be on a platform that is officially supported by NodeJS 16.</p>
 <ul>
@@ -272,17 +273,17 @@
 </li>
 </ul>
 <p>You’re all set for working on this project.</p>
-</div>
-<div class="section" id="commands">
+</section>
+<section id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h2>
-<div class="section" id="code-linting">
+<section id="code-linting">
 <h3>Code Linting<a class="headerlink" href="#code-linting" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">lint</span>
 </pre></div>
 </div>
 <p>Run the linters, as configured with <a class="reference external" href="https://pre-commit.com/">pre-commit</a>.</p>
-</div>
-<div class="section" id="local-development-server">
+</section>
+<section id="local-development-server">
 <h3>Local Development Server<a class="headerlink" href="#local-development-server" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">docs</span><span class="o">-</span><span class="n">live</span>
 </pre></div>
@@ -303,32 +304,32 @@
 </ul>
 <p>- @pradyunsg</p>
 </div>
-</div>
-<div class="section" id="documentation-generation">
+</section>
+<section id="documentation-generation">
 <h3>Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nox</span> <span class="o">-</span><span class="n">s</span> <span class="n">docs</span>
 </pre></div>
 </div>
 <p>Generate the documentation for Furo into the <code class="docutils literal notranslate"><span class="pre">build/docs</span></code> folder. This (mostly) does the same thing as <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">docs-live</span></code>, except it invokes <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> instead of <a class="reference external" href="https://github.com/executablebooks/sphinx-autobuild">sphinx-autobuild</a>.</p>
-</div>
-</div>
-<div class="section" id="release-process">
+</section>
+</section>
+<section id="release-process">
 <h2>Release process<a class="headerlink" href="#release-process" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Update the changelog</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">release</span></code></p></li>
 <li><p>Once that command succeeds, you’re done!</p></li>
 </ul>
-</div>
-<div class="section" id="installing-directly-from-github">
+</section>
+<section id="installing-directly-from-github">
 <h2>Installing directly from GitHub<a class="headerlink" href="#installing-directly-from-github" title="Permalink to this headline">#</a></h2>
 <p>There are times when you might want to install the in-development version of Furo (mostly for testing that a fix actually does fix things).</p>
 <p>This can be done by directly telling pip to install from Furo from GitHub. You likely want to install from a zip archive, to avoid cloning the entire Git history:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install https://github.com/pradyunsg/furo/archive/refs/heads/main.zip
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
         </article>
       </div>

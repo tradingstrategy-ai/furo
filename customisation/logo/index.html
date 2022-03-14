@@ -2,7 +2,8 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Adding an edit button" href="../edit-button/" /><link rel="prev" title="Customisation" href="../" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Adding an edit button" href="../edit-button/" /><link rel="prev" title="Customisation" href="../" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04.dev1"/>
         <title>Adding a logo - Furo</title>
@@ -242,17 +243,17 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="adding-a-logo">
+          <section id="adding-a-logo">
 <h1>Adding a logo<a class="headerlink" href="#adding-a-logo" title="Permalink to this headline">#</a></h1>
 <p>Logos are a point of recognition and an important part of branding. Furo supports adding your project’s logo at the top of the navigational (left) sidebar, like most other Sphinx themes.</p>
-<div class="section" id="same-logo-for-light-and-dark-mode">
+<section id="same-logo-for-light-and-dark-mode">
 <h2>Same logo for light and dark mode<a class="headerlink" href="#same-logo-for-light-and-dark-mode" title="Permalink to this headline">#</a></h2>
 <p>Furo supports the standard Sphinx mechanism to add your project’s logo in the documentation, using the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_logo"><code class="docutils literal notranslate"><span class="pre">html_logo</span></code></a> variable in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_logo</span> <span class="o">=</span> <span class="s2">"logo.png"</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="different-logos-for-light-and-dark-mode">
+</section>
+<section id="different-logos-for-light-and-dark-mode">
 <h2>Different logos for light and dark mode<a class="headerlink" href="#different-logos-for-light-and-dark-mode" title="Permalink to this headline">#</a></h2>
 <p>Furo also supports setting different logos for light and dark mode. This can be necessary if the project’s logo is transparent and does not maintain sufficient contrast with the background in both modes.</p>
 <p>This is done by setting <code class="docutils literal notranslate"><span class="pre">light_logo</span></code> and <code class="docutils literal notranslate"><span class="pre">dark_logo</span></code> in <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
@@ -268,12 +269,12 @@
 <p>The filenames must be relative to the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a> folder. In the above example, that’d be <code class="docutils literal notranslate"><span class="pre">_static/logo-light-mode.png</span></code> and <code class="docutils literal notranslate"><span class="pre">_static/logo-dark-mode.png</span></code>.</p>
 <p>This is different from how <code class="docutils literal notranslate"><span class="pre">html_logo</span></code> works, which copies the given filename into the correct location automagically.</p>
 </div>
-</div>
-<div class="section" id="related-information">
+</section>
+<section id="related-information">
 <h2>Related Information<a class="headerlink" href="#related-information" title="Permalink to this headline">#</a></h2>
 <p>It is also possible to <a class="reference internal" href="../#sidebar-hide-name"><span class="std std-ref">hide the name of the project in the sidebar</span></a>, which might be desirable if the logo contains the project name.</p>
-</div>
-</div>
+</section>
+</section>
 
         </article>
       </div>

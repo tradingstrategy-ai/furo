@@ -2,7 +2,8 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing fonts" href="../fonts/" /><link rel="prev" title="Adding an edit button" href="../edit-button/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing fonts" href="../fonts/" /><link rel="prev" title="Adding an edit button" href="../edit-button/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04.dev1"/>
         <title>Changing colors - Furo</title>
@@ -242,18 +243,18 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="changing-colors">
+          <section id="changing-colors">
 <h1>Changing colors<a class="headerlink" href="#changing-colors" title="Permalink to this headline">#</a></h1>
 <p>Furo allows customising colors to fit your brand’s identity, by using CSS variables. These can be declared directly in <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a>, in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
-<div class="section" id="how-light-and-dark-mode-work">
+<section id="how-light-and-dark-mode-work">
 <h2>How light and dark mode work<a class="headerlink" href="#how-light-and-dark-mode-work" title="Permalink to this headline">#</a></h2>
 <p>Furo is in light mode by default, switching to the dark mode when requested by the user’s browser (through <code class="docutils literal notranslate"><span class="pre">prefers-color-scheme:</span> <span class="pre">dark</span></code>).</p>
 <p>As a consequence of this design, the dark mode inherits the variable definitions from the light mode, only overriding specific values to adapt the theme. While the mechanism for switching between light/dark mode is not configurable, the exact CSS variable definitions used in this process can be configured.</p>
 <p>It is possible to use different content for light and dark mode, by setting
 <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> and <code class="docutils literal notranslate"><span class="pre">only-light</span></code> classes on the content. This is the
 <a class="reference internal" href="../../reference/images/#light-dark-images"><span class="std std-ref">recommended approach</span></a> for handling images with backgrounds.</p>
-</div>
-<div class="section" id="defining-overrides-for-defaults">
+</section>
+<section id="defining-overrides-for-defaults">
 <h2>Defining overrides for defaults<a class="headerlink" href="#defining-overrides-for-defaults" title="Permalink to this headline">#</a></h2>
 <p>Furo allows defining <a class="reference internal" href="../#css-variables"><span class="std std-ref">CSS variables that overrides its default values</span></a>. The exact variable names to use can be found in Furo’s source code <a class="reference external" href="https://github.com/pradyunsg/furo/tree/main/src/furo/assets/styles/variables">here</a>.</p>
 <p>This mechanism allows configuring nearly every facet of Furo’s design, including spacing between various items and the colors of nearly every component.</p>
@@ -269,8 +270,8 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="code-block-styling">
+</section>
+<section id="code-block-styling">
 <h2>Code block styling<a class="headerlink" href="#code-block-styling" title="Permalink to this headline">#</a></h2>
 <p>Furo does not directly handle highlighting of the code blocks. This is done by Sphinx, and is configurable using <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-pygments_style"><code class="docutils literal notranslate"><span class="pre">pygments_style</span></code></a> and <code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">pygments_style</span> <span class="o">=</span> <span class="s2">"sphinx"</span>
@@ -281,8 +282,8 @@
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">pygments_dark_style</span></code> is Furo-specific at this time.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
         </article>
       </div>

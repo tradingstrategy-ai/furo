@@ -2,7 +2,8 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing sidebar elements" href="../sidebar/" /><link rel="prev" title="Changing footer icons" href="../footer/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing sidebar elements" href="../sidebar/" /><link rel="prev" title="Changing footer icons" href="../footer/" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04.dev1"/>
         <title>Changing landing page - Furo</title>
@@ -242,7 +243,7 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="changing-landing-page">
+          <section id="changing-landing-page">
 <h1>Changing landing page<a class="headerlink" href="#changing-landing-page" title="Permalink to this headline">#</a></h1>
 <p>It is possible to have a custom landing page in Sphinx documentation. This is achieved by adding a custom template file for that page and setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_additional_pages"><code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code></a> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_templates"</span><span class="p">]</span>
@@ -256,7 +257,7 @@
 <p>You’ll need to write HTML for the page in <code class="docutils literal notranslate"><span class="pre">_templates/your-custom-landing-page.html</span></code>, if you use the above example as-is.</p>
 </div>
 <p>In case you’re curious, this works because Sphinx allows overwriting existing files when generating the website and processes <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code> <em>after</em> processing the pages normally. These two behaviours combined mean that we can overwrite the page generated with the default layout by specifying the same document with a different template in <code class="docutils literal notranslate"><span class="pre">html_additional_pages</span></code>.</p>
-</div>
+</section>
 
         </article>
       </div>
