@@ -3,12 +3,12 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing colors" href="../colors/" /><link rel="prev" title="Adding a site-wide announcement" href="../announcement/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing colors" href="../colors/" /><link rel="prev" title="Adding an announcement banner" href="../announcement/" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07.dev1"/>
         <title>Adding an edit button - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=51304f5f031b768f7e07670d93472e599a89a223" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
@@ -138,7 +138,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -162,7 +162,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../announcement/">Adding a site-wide announcement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../announcement/">Adding an announcement banner</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Adding an edit button</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fonts/">Changing fonts</a></li>
@@ -232,7 +232,17 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/pradyunsg/furo/edit/main/docs/customisation/edit-button.md" title="Edit this page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+    </svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -240,7 +250,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -248,8 +258,19 @@
         <article role="main">
           <section id="adding-an-edit-button">
 <h1>Adding an edit button<a class="headerlink" href="#adding-an-edit-button" title="Permalink to this headline">#</a></h1>
-<p>Furo will automatically add a small edit button to each document, when the documentation is generated on Read the Docs using a GitHub repository as the source.</p>
-<p>At this time, the edit button can not be added outside of the Read the Docs + GitHub combination. Further, it can not be disabled either for such a combination.</p>
+<p>Furo can add a small edit button to each document.</p>
+<p>This is automatically added, when the documentation is generated on Read the Docs using a GitHub repository as the source. It is possible to provide this, outside of Read the Docs, by setting the following keys in <code class="xref any docutils literal notranslate"><span class="pre">html_theme_options</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"source_repository"</span><span class="p">:</span> <span class="s2">"https://github.com/pradyunsg/furo/"</span><span class="p">,</span>
+  <span class="s2">"source_branch"</span><span class="p">:</span> <span class="s2">"main"</span><span class="p">,</span>
+  <span class="s2">"source_directory"</span><span class="p">:</span> <span class="s2">"docs/"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="disabling-on-read-the-docs">
+<h2>Disabling on Read the Docs<a class="headerlink" href="#disabling-on-read-the-docs" title="Permalink to this headline">#</a></h2>
+<p>If you’re building documentation on Read the Docs using a GitHub repository as the source, the edit button is enabled by default. If you wish to disable this, use <a class="reference internal" href="../#top-of-page-button"><span class="std std-ref">top_of_page_button</span></a>.</p>
+</section>
 </section>
 
         </article>
@@ -273,7 +294,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Adding a site-wide announcement</div>
+                <div class="title">Adding an announcement banner</div>
                 
               </div>
             </a>
@@ -302,8 +323,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Adding an edit button</a><ul>
+<li><a class="reference internal" href="#disabling-on-read-the-docs">Disabling on Read the Docs</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

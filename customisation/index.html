@@ -8,7 +8,7 @@
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07.dev1"/>
         <title>Customisation - Furo</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=51304f5f031b768f7e07670d93472e599a89a223" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
@@ -162,7 +162,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quickstart</a></li>
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Customisation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="logo/">Adding a logo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="announcement/">Adding a site-wide announcement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcement/">Adding an announcement banner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="edit-button/">Adding an edit button</a></li>
 <li class="toctree-l2"><a class="reference internal" href="colors/">Changing colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fonts/">Changing fonts</a></li>
@@ -232,7 +232,17 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/pradyunsg/furo/edit/main/docs/customisation/index.md" title="Edit this page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+    </svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -295,9 +305,18 @@
 </pre></div>
 </div>
 </section>
+<section id="top-of-page-button">
+<span id="id1"></span><h3><code class="docutils literal notranslate"><span class="pre">top_of_page_button</span></code><a class="headerlink" href="#top-of-page-button" title="Permalink to this headline">#</a></h3>
+<p>Controls which button is shown on the top of the page. The only supported values are <code class="docutils literal notranslate"><span class="pre">"edit"</span></code> (the default) and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"top_of_page_button"</span><span class="p">:</span> <span class="s2">"edit"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 <section id="announcement">
 <h3><code class="docutils literal notranslate"><span class="pre">announcement</span></code><a class="headerlink" href="#announcement" title="Permalink to this headline">#</a></h3>
-<p>Add a site-wide announcement, to the top of every page when set. See <a class="reference internal" href="announcement/"><span class="doc">Adding a site-wide announcement</span></a> for the details.</p>
+<p>Add a site-wide announcement, to the top of every page when set. See <a class="reference internal" href="announcement/"><span class="doc">Adding an announcement banner</span></a> for the details.</p>
 </section>
 <section id="footer-icons">
 <h3><code class="docutils literal notranslate"><span class="pre">footer_icons</span></code><a class="headerlink" href="#footer-icons" title="Permalink to this headline">#</a></h3>
@@ -385,6 +404,7 @@
 <li><a class="reference internal" href="#light-css-variables-dark-css-variables"><code class="docutils literal notranslate"><span class="pre">light_css_variables</span></code>/<code class="docutils literal notranslate"><span class="pre">dark_css_variables</span></code></a></li>
 <li><a class="reference internal" href="#sidebar-hide-name"><code class="docutils literal notranslate"><span class="pre">sidebar_hide_name</span></code></a></li>
 <li><a class="reference internal" href="#navigation-with-keys"><code class="docutils literal notranslate"><span class="pre">navigation_with_keys</span></code></a></li>
+<li><a class="reference internal" href="#top-of-page-button"><code class="docutils literal notranslate"><span class="pre">top_of_page_button</span></code></a></li>
 <li><a class="reference internal" href="#announcement"><code class="docutils literal notranslate"><span class="pre">announcement</span></code></a></li>
 <li><a class="reference internal" href="#footer-icons"><code class="docutils literal notranslate"><span class="pre">footer_icons</span></code></a></li>
 </ul>
