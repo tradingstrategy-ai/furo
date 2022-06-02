@@ -481,14 +481,14 @@ A1B 2C3</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">sphinx.application</span>
-<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
 <span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">pygments.formatters</span> <span class="kn">import</span> <span class="n">HtmlFormatter</span>
 <span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">pygments.style</span> <span class="kn">import</span> <span class="n">Style</span>
 <span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">pygments.token</span> <span class="kn">import</span> <span class="n">Text</span>
 <span class="linenos"> 8</span><span class="kn">from</span> <span class="nn">sphinx.builders.html</span> <span class="kn">import</span> <span class="n">StandaloneHTMLBuilder</span>
-<span class="linenos"> 9</span><span class="kn">from</span> <span class="nn">sphinx.highlighting</span> <span class="kn">import</span> <span class="n">PygmentsBridge</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">.navigation</span> <span class="kn">import</span> <span class="n">get_navigation_tree</span>
+<span class="linenos"> 9</span><span class="kn">from</span> <span class="nn">sphinx.environment.adapters.toctree</span> <span class="kn">import</span> <span class="n">TocTree</span>
+<span class="linenos">10</span><span class="kn">from</span> <span class="nn">sphinx.highlighting</span> <span class="kn">import</span> <span class="n">PygmentsBridge</span>
+<span class="linenos">11</span><span class="kn">from</span> <span class="nn">sphinx.transforms.post_transforms</span> <span class="kn">import</span> <span class="n">SphinxPostTransform</span>
 </pre></div>
 </div>
 </li>
@@ -532,7 +532,7 @@ A1B 2C3</p>
 </section>
 <section id="hlists">
 <h2>Hlists<a class="headerlink" href="#hlists" title="Permalink to this headline">#</a></h2>
-<div class="table-wrapper"><table class="hlist"><tr><td><ul class="simple">
+<table class="hlist"><tr><td><ul class="simple">
 <li><p>First item</p></li>
 <li><p>Second item</p></li>
 <li><p>Third item</p></li>
@@ -542,11 +542,11 @@ A1B 2C3</p>
 <li><p>Fifth item</p></li>
 <li><p>Sixths item</p></li>
 </ul>
-</td></tr></table></div>
+</td></tr></table>
 <p class="rubric">Hlist with images</p>
-<div class="table-wrapper"><table class="hlist"><tr><td><ul>
+<table class="hlist"><tr><td><ul>
 <li><figure class="align-default" id="id11">
-<img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy"/>
+<img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy" />
 <figcaption>
 <p><span class="caption-text">This is a short caption for a figure.</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -555,7 +555,7 @@ A1B 2C3</p>
 </ul>
 </td><td><ul>
 <li><figure class="align-default" id="id12">
-<img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy"/>
+<img alt="https://source.unsplash.com/200x200/daily?cute+puppy" src="https://source.unsplash.com/200x200/daily?cute+puppy" />
 <figcaption>
 <p><span class="caption-text">This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
@@ -563,7 +563,7 @@ Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis j
 </figure>
 </li>
 </ul>
-</td></tr></table></div>
+</td></tr></table>
 </section>
 <section id="numbered-list">
 <h2>Numbered List<a class="headerlink" href="#numbered-list" title="Permalink to this headline">#</a></h2>

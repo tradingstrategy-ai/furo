@@ -273,7 +273,7 @@
 
 <span class="c1"># Data structure for representing the metadata of requests that result in a retry.</span>
 <span class="n">RequestHistory</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span>
-    <span class="s2">"RequestHistory"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"method"</span><span class="p">,</span> <span class="s2">"url"</span><span class="p">,</span> <span class="s2">"error"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">,</span> <span class="s2">"redirect_location"</span><span class="p">]</span>
+    <span class="s2">&quot;RequestHistory&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;method&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;redirect_location&quot;</span><span class="p">]</span>
 <span class="p">)</span>
 
 
@@ -285,8 +285,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">DEFAULT_METHOD_WHITELIST</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-            <span class="s2">"Using 'Retry.DEFAULT_METHOD_WHITELIST' is deprecated and "</span>
-            <span class="s2">"will be removed in v2.0. Use 'Retry.DEFAULT_ALLOWED_METHODS' instead"</span><span class="p">,</span>
+            <span class="s2">&quot;Using &#39;Retry.DEFAULT_METHOD_WHITELIST&#39; is deprecated and &quot;</span>
+            <span class="s2">&quot;will be removed in v2.0. Use &#39;Retry.DEFAULT_ALLOWED_METHODS&#39; instead&quot;</span><span class="p">,</span>
             <span class="ne">DeprecationWarning</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT_ALLOWED_METHODS</span>
@@ -294,8 +294,8 @@
     <span class="nd">@DEFAULT_METHOD_WHITELIST</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">DEFAULT_METHOD_WHITELIST</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-            <span class="s2">"Using 'Retry.DEFAULT_METHOD_WHITELIST' is deprecated and "</span>
-            <span class="s2">"will be removed in v2.0. Use 'Retry.DEFAULT_ALLOWED_METHODS' instead"</span><span class="p">,</span>
+            <span class="s2">&quot;Using &#39;Retry.DEFAULT_METHOD_WHITELIST&#39; is deprecated and &quot;</span>
+            <span class="s2">&quot;will be removed in v2.0. Use &#39;Retry.DEFAULT_ALLOWED_METHODS&#39; instead&quot;</span><span class="p">,</span>
             <span class="ne">DeprecationWarning</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT_ALLOWED_METHODS</span> <span class="o">=</span> <span class="n">value</span>
@@ -303,8 +303,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">DEFAULT_REDIRECT_HEADERS_BLACKLIST</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-            <span class="s2">"Using 'Retry.DEFAULT_REDIRECT_HEADERS_BLACKLIST' is deprecated and "</span>
-            <span class="s2">"will be removed in v2.0. Use 'Retry.DEFAULT_REMOVE_HEADERS_ON_REDIRECT' instead"</span><span class="p">,</span>
+            <span class="s2">&quot;Using &#39;Retry.DEFAULT_REDIRECT_HEADERS_BLACKLIST&#39; is deprecated and &quot;</span>
+            <span class="s2">&quot;will be removed in v2.0. Use &#39;Retry.DEFAULT_REMOVE_HEADERS_ON_REDIRECT&#39; instead&quot;</span><span class="p">,</span>
             <span class="ne">DeprecationWarning</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span>
@@ -312,8 +312,8 @@
     <span class="nd">@DEFAULT_REDIRECT_HEADERS_BLACKLIST</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">DEFAULT_REDIRECT_HEADERS_BLACKLIST</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-            <span class="s2">"Using 'Retry.DEFAULT_REDIRECT_HEADERS_BLACKLIST' is deprecated and "</span>
-            <span class="s2">"will be removed in v2.0. Use 'Retry.DEFAULT_REMOVE_HEADERS_ON_REDIRECT' instead"</span><span class="p">,</span>
+            <span class="s2">&quot;Using &#39;Retry.DEFAULT_REDIRECT_HEADERS_BLACKLIST&#39; is deprecated and &quot;</span>
+            <span class="s2">&quot;will be removed in v2.0. Use &#39;Retry.DEFAULT_REMOVE_HEADERS_ON_REDIRECT&#39; instead&quot;</span><span class="p">,</span>
             <span class="ne">DeprecationWarning</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span> <span class="o">=</span> <span class="n">value</span>
@@ -321,8 +321,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">BACKOFF_MAX</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-            <span class="s2">"Using 'Retry.BACKOFF_MAX' is deprecated and "</span>
-            <span class="s2">"will be removed in v2.0. Use 'Retry.DEFAULT_BACKOFF_MAX' instead"</span><span class="p">,</span>
+            <span class="s2">&quot;Using &#39;Retry.BACKOFF_MAX&#39; is deprecated and &quot;</span>
+            <span class="s2">&quot;will be removed in v2.0. Use &#39;Retry.DEFAULT_BACKOFF_MAX&#39; instead&quot;</span><span class="p">,</span>
             <span class="ne">DeprecationWarning</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT_BACKOFF_MAX</span>
@@ -330,8 +330,8 @@
     <span class="nd">@BACKOFF_MAX</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">BACKOFF_MAX</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-            <span class="s2">"Using 'Retry.BACKOFF_MAX' is deprecated and "</span>
-            <span class="s2">"will be removed in v2.0. Use 'Retry.DEFAULT_BACKOFF_MAX' instead"</span><span class="p">,</span>
+            <span class="s2">&quot;Using &#39;Retry.BACKOFF_MAX&#39; is deprecated and &quot;</span>
+            <span class="s2">&quot;will be removed in v2.0. Use &#39;Retry.DEFAULT_BACKOFF_MAX&#39; instead&quot;</span><span class="p">,</span>
             <span class="ne">DeprecationWarning</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT_BACKOFF_MAX</span> <span class="o">=</span> <span class="n">value</span>
@@ -339,7 +339,7 @@
 
 <div class="viewcode-block" id="Retry"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry">[docs]</a><span class="nd">@six</span><span class="o">.</span><span class="n">add_metaclass</span><span class="p">(</span><span class="n">_RetryMeta</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Retry</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">"""Retry configuration.</span>
+    <span class="sd">&quot;&quot;&quot;Retry configuration.</span>
 
 <span class="sd">    Each retry attempt will create a new Retry object with updated values, so</span>
 <span class="sd">    they can be safely reused.</span>
@@ -348,15 +348,15 @@
 
 <span class="sd">        retries = Retry(connect=5, read=2, redirect=5)</span>
 <span class="sd">        http = PoolManager(retries=retries)</span>
-<span class="sd">        response = http.request('GET', 'http://example.com/')</span>
+<span class="sd">        response = http.request(&#39;GET&#39;, &#39;http://example.com/&#39;)</span>
 
 <span class="sd">    Or per-request (which overrides the default for the pool)::</span>
 
-<span class="sd">        response = http.request('GET', 'http://example.com/', retries=Retry(10))</span>
+<span class="sd">        response = http.request(&#39;GET&#39;, &#39;http://example.com/&#39;, retries=Retry(10))</span>
 
 <span class="sd">    Retries can be disabled by passing ``False``::</span>
 
-<span class="sd">        response = http.request('GET', 'http://example.com/', retries=False)</span>
+<span class="sd">        response = http.request(&#39;GET&#39;, &#39;http://example.com/&#39;, retries=False)</span>
 
 <span class="sd">    Errors will be wrapped in :class:`~urllib3.exceptions.MaxRetryError` unless</span>
 <span class="sd">    retries are disabled, in which case the causing exception will be raised.</span>
@@ -415,7 +415,7 @@
 
 <span class="sd">        Set to ``0`` to fail on the first retry of this type.</span>
 
-<span class="sd">        If ``total`` is not set, it's a good idea to set this to 0 to account</span>
+<span class="sd">        If ``total`` is not set, it&#39;s a good idea to set this to 0 to account</span>
 <span class="sd">        for unexpected edge cases and avoid infinite retry loops.</span>
 
 <span class="sd">    :param iterable allowed_methods:</span>
@@ -473,18 +473,18 @@
 <span class="sd">        Sequence of headers to remove from the request when a response</span>
 <span class="sd">        indicating a redirect is returned before firing off the redirected</span>
 <span class="sd">        request.</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1">#: Default methods to be used for ``allowed_methods``</span>
     <span class="n">DEFAULT_ALLOWED_METHODS</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span>
-        <span class="p">[</span><span class="s2">"HEAD"</span><span class="p">,</span> <span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"PUT"</span><span class="p">,</span> <span class="s2">"DELETE"</span><span class="p">,</span> <span class="s2">"OPTIONS"</span><span class="p">,</span> <span class="s2">"TRACE"</span><span class="p">]</span>
+        <span class="p">[</span><span class="s2">&quot;HEAD&quot;</span><span class="p">,</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="s2">&quot;DELETE&quot;</span><span class="p">,</span> <span class="s2">&quot;OPTIONS&quot;</span><span class="p">,</span> <span class="s2">&quot;TRACE&quot;</span><span class="p">]</span>
     <span class="p">)</span>
 
     <span class="c1">#: Default status codes to be used for ``status_forcelist``</span>
     <span class="n">RETRY_AFTER_STATUS_CODES</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">413</span><span class="p">,</span> <span class="mi">429</span><span class="p">,</span> <span class="mi">503</span><span class="p">])</span>
 
     <span class="c1">#: Default headers to be used for ``remove_headers_on_redirect``</span>
-    <span class="n">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="s2">"Authorization"</span><span class="p">])</span>
+    <span class="n">DEFAULT_REMOVE_HEADERS_ON_REDIRECT</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="s2">&quot;Authorization&quot;</span><span class="p">])</span>
 
     <span class="c1">#: Maximum backoff time.</span>
     <span class="n">DEFAULT_BACKOFF_MAX</span> <span class="o">=</span> <span class="mi">120</span>
@@ -512,13 +512,13 @@
         <span class="k">if</span> <span class="n">method_whitelist</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">_Default</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">allowed_methods</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">_Default</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                    <span class="s2">"Using both 'allowed_methods' and "</span>
-                    <span class="s2">"'method_whitelist' together is not allowed. "</span>
-                    <span class="s2">"Instead only use 'allowed_methods'"</span>
+                    <span class="s2">&quot;Using both &#39;allowed_methods&#39; and &quot;</span>
+                    <span class="s2">&quot;&#39;method_whitelist&#39; together is not allowed. &quot;</span>
+                    <span class="s2">&quot;Instead only use &#39;allowed_methods&#39;&quot;</span>
                 <span class="p">)</span>
             <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-                <span class="s2">"Using 'method_whitelist' with Retry is deprecated and "</span>
-                <span class="s2">"will be removed in v2.0. Use 'allowed_methods' instead"</span><span class="p">,</span>
+                <span class="s2">&quot;Using &#39;method_whitelist&#39; with Retry is deprecated and &quot;</span>
+                <span class="s2">&quot;will be removed in v2.0. Use &#39;allowed_methods&#39; instead&quot;</span><span class="p">,</span>
                 <span class="ne">DeprecationWarning</span><span class="p">,</span>
                 <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
             <span class="p">)</span>
@@ -567,28 +567,28 @@
             <span class="n">respect_retry_after_header</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">respect_retry_after_header</span><span class="p">,</span>
         <span class="p">)</span>
 
-        <span class="c1"># TODO: If already given in **kw we use what's given to us</span>
+        <span class="c1"># TODO: If already given in **kw we use what&#39;s given to us</span>
         <span class="c1"># If not given we need to figure out what to pass. We decide</span>
-        <span class="c1"># based on whether our class has the 'method_whitelist' property</span>
-        <span class="c1"># and if so we pass the deprecated 'method_whitelist' otherwise</span>
-        <span class="c1"># we use 'allowed_methods'. Remove in v2.0</span>
-        <span class="k">if</span> <span class="s2">"method_whitelist"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kw</span> <span class="ow">and</span> <span class="s2">"allowed_methods"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kw</span><span class="p">:</span>
-            <span class="k">if</span> <span class="s2">"method_whitelist"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+        <span class="c1"># based on whether our class has the &#39;method_whitelist&#39; property</span>
+        <span class="c1"># and if so we pass the deprecated &#39;method_whitelist&#39; otherwise</span>
+        <span class="c1"># we use &#39;allowed_methods&#39;. Remove in v2.0</span>
+        <span class="k">if</span> <span class="s2">&quot;method_whitelist&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kw</span> <span class="ow">and</span> <span class="s2">&quot;allowed_methods&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kw</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;method_whitelist&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-                    <span class="s2">"Using 'method_whitelist' with Retry is deprecated and "</span>
-                    <span class="s2">"will be removed in v2.0. Use 'allowed_methods' instead"</span><span class="p">,</span>
+                    <span class="s2">&quot;Using &#39;method_whitelist&#39; with Retry is deprecated and &quot;</span>
+                    <span class="s2">&quot;will be removed in v2.0. Use &#39;allowed_methods&#39; instead&quot;</span><span class="p">,</span>
                     <span class="ne">DeprecationWarning</span><span class="p">,</span>
                 <span class="p">)</span>
-                <span class="n">params</span><span class="p">[</span><span class="s2">"method_whitelist"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_methods</span>
+                <span class="n">params</span><span class="p">[</span><span class="s2">&quot;method_whitelist&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_methods</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">params</span><span class="p">[</span><span class="s2">"allowed_methods"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_methods</span>
+                <span class="n">params</span><span class="p">[</span><span class="s2">&quot;allowed_methods&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_methods</span>
 
         <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kw</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Retry.from_int"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.from_int">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_int</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">retries</span><span class="p">,</span> <span class="n">redirect</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""Backwards-compatibility for the old retries format."""</span>
+        <span class="sd">&quot;&quot;&quot;Backwards-compatibility for the old retries format.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">retries</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">retries</span> <span class="o">=</span> <span class="n">default</span> <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT</span>
 
@@ -597,14 +597,14 @@
 
         <span class="n">redirect</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">redirect</span><span class="p">)</span> <span class="ow">and</span> <span class="kc">None</span>
         <span class="n">new_retries</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">retries</span><span class="p">,</span> <span class="n">redirect</span><span class="o">=</span><span class="n">redirect</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">"Converted retries value: </span><span class="si">%r</span><span class="s2"> -&gt; </span><span class="si">%r</span><span class="s2">"</span><span class="p">,</span> <span class="n">retries</span><span class="p">,</span> <span class="n">new_retries</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Converted retries value: </span><span class="si">%r</span><span class="s2"> -&gt; </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">retries</span><span class="p">,</span> <span class="n">new_retries</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">new_retries</span></div>
 
 <div class="viewcode-block" id="Retry.get_backoff_time"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.get_backoff_time">[docs]</a>    <span class="k">def</span> <span class="nf">get_backoff_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Formula for computing the current backoff</span>
+        <span class="sd">&quot;&quot;&quot;Formula for computing the current backoff</span>
 
 <span class="sd">        :rtype: float</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># We want to consider only the last consecutive errors sequence (Ignore redirects).</span>
         <span class="n">consecutive_errors_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span>
             <span class="nb">list</span><span class="p">(</span>
@@ -619,12 +619,12 @@
 
     <span class="k">def</span> <span class="nf">parse_retry_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">retry_after</span><span class="p">):</span>
         <span class="c1"># Whitespace: https://tools.ietf.org/html/rfc7230#section-3.2.4</span>
-        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">"^\s*[0-9]+\s*$"</span><span class="p">,</span> <span class="n">retry_after</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\s*[0-9]+\s*$&quot;</span><span class="p">,</span> <span class="n">retry_after</span><span class="p">):</span>
             <span class="n">seconds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">retry_after</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">retry_date_tuple</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">parsedate_tz</span><span class="p">(</span><span class="n">retry_after</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">retry_date_tuple</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="n">InvalidHeader</span><span class="p">(</span><span class="s2">"Invalid Retry-After header: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">retry_after</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="n">InvalidHeader</span><span class="p">(</span><span class="s2">&quot;Invalid Retry-After header: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">retry_after</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">retry_date_tuple</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># Python 2</span>
                 <span class="c1"># Assume UTC if no timezone was specified</span>
                 <span class="c1"># On Python2.7, parsedate_tz returns None for a timezone offset</span>
@@ -641,9 +641,9 @@
         <span class="k">return</span> <span class="n">seconds</span>
 
 <div class="viewcode-block" id="Retry.get_retry_after"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.get_retry_after">[docs]</a>    <span class="k">def</span> <span class="nf">get_retry_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
-        <span class="sd">"""Get the value of Retry-After in seconds."""</span>
+        <span class="sd">&quot;&quot;&quot;Get the value of Retry-After in seconds.&quot;&quot;&quot;</span>
 
-        <span class="n">retry_after</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="s2">"Retry-After"</span><span class="p">)</span>
+        <span class="n">retry_after</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="s2">&quot;Retry-After&quot;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">retry_after</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -665,13 +665,13 @@
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">backoff</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Retry.sleep"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.sleep">[docs]</a>    <span class="k">def</span> <span class="nf">sleep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""Sleep between retry attempts.</span>
+        <span class="sd">&quot;&quot;&quot;Sleep between retry attempts.</span>
 
-<span class="sd">        This method will respect a server's ``Retry-After`` response header</span>
+<span class="sd">        This method will respect a server&#39;s ``Retry-After`` response header</span>
 <span class="sd">        and sleep the duration of the time requested. If that is not present, it</span>
 <span class="sd">        will use an exponential backoff. By default, the backoff factor is 0 and</span>
 <span class="sd">        this method will return immediately.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">respect_retry_after_header</span> <span class="ow">and</span> <span class="n">response</span><span class="p">:</span>
             <span class="n">slept</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sleep_for_retry</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -681,29 +681,29 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sleep_backoff</span><span class="p">()</span></div>
 
     <span class="k">def</span> <span class="nf">_is_connection_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err</span><span class="p">):</span>
-        <span class="sd">"""Errors when we're fairly sure that the server did not receive the</span>
+        <span class="sd">&quot;&quot;&quot;Errors when we&#39;re fairly sure that the server did not receive the</span>
 <span class="sd">        request, so it should be safe to retry.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">ProxyError</span><span class="p">):</span>
             <span class="n">err</span> <span class="o">=</span> <span class="n">err</span><span class="o">.</span><span class="n">original_error</span>
         <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">ConnectTimeoutError</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_is_read_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err</span><span class="p">):</span>
-        <span class="sd">"""Errors that occur after the request has been started, so we should</span>
+        <span class="sd">&quot;&quot;&quot;Errors that occur after the request has been started, so we should</span>
 <span class="sd">        assume that the server began processing it.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="p">(</span><span class="n">ReadTimeoutError</span><span class="p">,</span> <span class="n">ProtocolError</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">_is_method_retryable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">):</span>
-        <span class="sd">"""Checks if a given HTTP method should be retried upon, depending if</span>
+        <span class="sd">&quot;&quot;&quot;Checks if a given HTTP method should be retried upon, depending if</span>
 <span class="sd">        it is included in the allowed_methods</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># TODO: For now favor if the Retry implementation sets its own method_whitelist</span>
         <span class="c1"># property outside of our constructor to avoid breaking custom implementations.</span>
-        <span class="k">if</span> <span class="s2">"method_whitelist"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;method_whitelist&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
             <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-                <span class="s2">"Using 'method_whitelist' with Retry is deprecated and "</span>
-                <span class="s2">"will be removed in v2.0. Use 'allowed_methods' instead"</span><span class="p">,</span>
+                <span class="s2">&quot;Using &#39;method_whitelist&#39; with Retry is deprecated and &quot;</span>
+                <span class="s2">&quot;will be removed in v2.0. Use &#39;allowed_methods&#39; instead&quot;</span><span class="p">,</span>
                 <span class="ne">DeprecationWarning</span><span class="p">,</span>
             <span class="p">)</span>
             <span class="n">allowed_methods</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">method_whitelist</span>
@@ -715,12 +715,12 @@
         <span class="k">return</span> <span class="kc">True</span>
 
 <div class="viewcode-block" id="Retry.is_retry"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.is_retry">[docs]</a>    <span class="k">def</span> <span class="nf">is_retry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">status_code</span><span class="p">,</span> <span class="n">has_retry_after</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""Is this method/status code retryable? (Based on allowlists and control</span>
+        <span class="sd">&quot;&quot;&quot;Is this method/status code retryable? (Based on allowlists and control</span>
 <span class="sd">        variables such as the number of total retries to allow, whether to</span>
 <span class="sd">        respect the Retry-After header, whether this header is present, and</span>
 <span class="sd">        whether the returned status code is on the list of status codes to</span>
 <span class="sd">        be retried upon on the presence of the aforementioned header)</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_method_retryable</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
@@ -735,7 +735,7 @@
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="Retry.is_exhausted"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Retry.is_exhausted">[docs]</a>    <span class="k">def</span> <span class="nf">is_exhausted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Are we out of retries?"""</span>
+        <span class="sd">&quot;&quot;&quot;Are we out of retries?&quot;&quot;&quot;</span>
         <span class="n">retry_counts</span> <span class="o">=</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">,</span>
@@ -759,7 +759,7 @@
         <span class="n">_pool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">_stacktrace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="p">):</span>
-        <span class="sd">"""Return a new Retry object with incremented retry counters.</span>
+        <span class="sd">&quot;&quot;&quot;Return a new Retry object with incremented retry counters.</span>
 
 <span class="sd">        :param response: A response object, or None, if the server did not</span>
 <span class="sd">            return a response.</span>
@@ -768,7 +768,7 @@
 <span class="sd">            None if the response was received successfully.</span>
 
 <span class="sd">        :return: A new ``Retry`` object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">total</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">error</span><span class="p">:</span>
             <span class="c1"># Disabled, indicate to re-raise the error.</span>
             <span class="k">raise</span> <span class="n">six</span><span class="o">.</span><span class="n">reraise</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">error</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="p">)</span>
@@ -782,7 +782,7 @@
         <span class="n">redirect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redirect</span>
         <span class="n">status_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
         <span class="n">other</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">other</span>
-        <span class="n">cause</span> <span class="o">=</span> <span class="s2">"unknown"</span>
+        <span class="n">cause</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
         <span class="n">status</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">redirect_location</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -809,7 +809,7 @@
             <span class="c1"># Redirect retry?</span>
             <span class="k">if</span> <span class="n">redirect</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">redirect</span> <span class="o">-=</span> <span class="mi">1</span>
-            <span class="n">cause</span> <span class="o">=</span> <span class="s2">"too many redirects"</span>
+            <span class="n">cause</span> <span class="o">=</span> <span class="s2">&quot;too many redirects&quot;</span>
             <span class="n">redirect_location</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get_redirect_location</span><span class="p">()</span>
             <span class="n">status</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span>
 
@@ -840,22 +840,22 @@
         <span class="k">if</span> <span class="n">new_retry</span><span class="o">.</span><span class="n">is_exhausted</span><span class="p">():</span>
             <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">))</span>
 
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">"Incremented Retry for (url='</span><span class="si">%s</span><span class="s2">'): </span><span class="si">%r</span><span class="s2">"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">new_retry</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Incremented Retry for (url=&#39;</span><span class="si">%s</span><span class="s2">&#39;): </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">new_retry</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">new_retry</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span>
-            <span class="s2">"</span><span class="si">{cls.__name__}</span><span class="s2">(total=</span><span class="si">{self.total}</span><span class="s2">, connect=</span><span class="si">{self.connect}</span><span class="s2">, "</span>
-            <span class="s2">"read=</span><span class="si">{self.read}</span><span class="s2">, redirect=</span><span class="si">{self.redirect}</span><span class="s2">, status=</span><span class="si">{self.status}</span><span class="s2">)"</span>
+            <span class="s2">&quot;</span><span class="si">{cls.__name__}</span><span class="s2">(total=</span><span class="si">{self.total}</span><span class="s2">, connect=</span><span class="si">{self.connect}</span><span class="s2">, &quot;</span>
+            <span class="s2">&quot;read=</span><span class="si">{self.read}</span><span class="s2">, redirect=</span><span class="si">{self.redirect}</span><span class="s2">, status=</span><span class="si">{self.status}</span><span class="s2">)&quot;</span>
         <span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="o">=</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">"method_whitelist"</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">&quot;method_whitelist&quot;</span><span class="p">:</span>
             <span class="c1"># TODO: Remove this deprecated alias in v2.0</span>
             <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-                <span class="s2">"Using 'method_whitelist' with Retry is deprecated and "</span>
-                <span class="s2">"will be removed in v2.0. Use 'allowed_methods' instead"</span><span class="p">,</span>
+                <span class="s2">&quot;Using &#39;method_whitelist&#39; with Retry is deprecated and &quot;</span>
+                <span class="s2">&quot;will be removed in v2.0. Use &#39;allowed_methods&#39; instead&quot;</span><span class="p">,</span>
                 <span class="ne">DeprecationWarning</span><span class="p">,</span>
             <span class="p">)</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_methods</span>

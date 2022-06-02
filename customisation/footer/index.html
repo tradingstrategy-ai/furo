@@ -287,16 +287,16 @@
 <h3>Using embedded SVGs<a class="headerlink" href="#using-embedded-svgs" title="Permalink to this headline">#</a></h3>
 <p>This is what Furo does to include a GitHub icon in the footer of the site you’re currently reading:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"footer_icons"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;footer_icons&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"GitHub"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/pradyunsg/furo"</span><span class="p">,</span>
-            <span class="s2">"html"</span><span class="p">:</span> <span class="s2">"""</span>
-<span class="s2">                &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"&gt;</span>
-<span class="s2">                    &lt;path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"&gt;&lt;/path&gt;</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GitHub&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/pradyunsg/furo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                &lt;svg stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; viewBox=&quot;0 0 16 16&quot;&gt;</span>
+<span class="s2">                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z&quot;&gt;&lt;/path&gt;</span>
 <span class="s2">                &lt;/svg&gt;</span>
-<span class="s2">            """</span><span class="p">,</span>
-            <span class="s2">"class"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+<span class="s2">            &quot;&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
 <span class="p">}</span>
@@ -318,21 +318,21 @@
 <ul>
 <li><p>Using <code class="docutils literal notranslate"><span class="pre">html_css_files</span></code>, add the CSS file(s) for Font Awesome.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="s2">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css"</span><span class="p">,</span>
-      <span class="s2">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css"</span><span class="p">,</span>
-      <span class="s2">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css"</span><span class="p">,</span>
+      <span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 </pre></div>
 </div>
 </li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">class</span></code> to use the relevant Font Awesome icons in <code class="docutils literal notranslate"><span class="pre">footer_icons</span></code>. You can search the <a class="reference external" href="https://fontawesome.com/v6/search?s=solid%2Cbrands">free Font Awesome icons</a>, and clicking on a specific icon shows the class you need to use. The configuration would look as follows:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"footer_icons"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;footer_icons&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"GitHub"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/pradyunsg/furo"</span><span class="p">,</span>
-            <span class="s2">"html"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
-            <span class="s2">"class"</span><span class="p">:</span> <span class="s2">"fa-solid fa-github fa-2x"</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GitHub&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/pradyunsg/furo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;fa-solid fa-github fa-2x&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
 <span class="p">}</span>
@@ -347,7 +347,7 @@
 <section id="different-icons-for-light-mode-vs-dark-mode">
 <h2>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this headline">#</a></h2>
 <p>You can specify <code class="docutils literal notranslate"><span class="pre">only-light</span></code> or <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">class</span></code> in the dictionary. This mechanism exists primarily to help you use different <code class="docutils literal notranslate"><span class="pre">img</span></code> tags to present the same icon in a different colour.</p>
-<hr class="footnotes docutils"/>
+<hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Yes, I’m aware that it can be argued that embedding raw HTML in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file is… ugly. :)</p>

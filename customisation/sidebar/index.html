@@ -305,7 +305,7 @@ with different effects on the layouting</p></li>
 <h3>Using <code class="docutils literal notranslate"><span class="pre">templates_path</span></code><a class="headerlink" href="#using-templates-path" title="Permalink to this headline">#</a></h3>
 <p>This is useful when you want to change a specific element of the sidebar. A good example for when you might want to use this: adding a tagline after your project’s name/logo.</p>
 <p>This is done by setting <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a> in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and correctly adding files within the configured paths.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_templates"</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_templates&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>For the above example – adding a tagline after the name/logo – you’d want to add an <code class="docutils literal notranslate"><span class="pre">_templates/sidebar/brand.html</span></code> file, that overrides the appropriate content. For more information on how to do so, <a class="reference external" href="https://www.sphinx-doc.org/en/master/development/theming.html#templating">Sphinx’s templating documentation</a>.</p>
@@ -315,13 +315,13 @@ with different effects on the layouting</p></li>
 <p>This is useful when you want to make drastic or major changes to the design of Furo’s sidebar.</p>
 <p>As an example, to make the <em>entire</em> sidebar scrollable, it is possible to set <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-start.html</span></code> as the first fragment and <code class="docutils literal notranslate"><span class="pre">sidebar/scroll-end.html</span></code> as the last fragment.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"**"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"sidebar/scroll-start.html"</span><span class="p">,</span>
-        <span class="s2">"sidebar/brand.html"</span><span class="p">,</span>
-        <span class="s2">"sidebar/search.html"</span><span class="p">,</span>
-        <span class="s2">"sidebar/navigation.html"</span><span class="p">,</span>
-        <span class="s2">"sidebar/ethical-ads.html"</span><span class="p">,</span>
-        <span class="s2">"sidebar/scroll-end.html"</span><span class="p">,</span>
+    <span class="s2">&quot;**&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;sidebar/scroll-start.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sidebar/brand.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sidebar/search.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sidebar/navigation.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sidebar/ethical-ads.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sidebar/scroll-end.html&quot;</span><span class="p">,</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>

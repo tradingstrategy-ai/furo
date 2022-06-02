@@ -251,7 +251,7 @@
 <span class="c1"># Licensed under the Open Software License version 3.0</span>
 <span class="c1"># SPDX-License-Identifier: OSL-3.0</span>
 
-<span class="sd">"""This is a demo module included in the docs in order to exercise autodoc."""</span>
+<span class="sd">&quot;&quot;&quot;This is a demo module included in the docs in order to exercise autodoc.&quot;&quot;&quot;</span>
 
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
 
@@ -264,7 +264,7 @@
     <span class="n">file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TextIO</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">line</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">"""Show a warning to the end user.</span>
+    <span class="sd">&quot;&quot;&quot;Show a warning to the end user.</span>
 
 <span class="sd">    .. code:: python</span>
 
@@ -276,30 +276,30 @@
 <span class="sd">    :param lineno: The line that the warning is for.</span>
 <span class="sd">    :param file: Where to write the warning.</span>
 <span class="sd">    :param line: line of source code to be included in the warning message</span>
-<span class="sd">    """</span></div>
+<span class="sd">    &quot;&quot;&quot;</span></div>
 
 
 <div class="viewcode-block" id="RandomNumberGenerator"><a class="viewcode-back" href="../../../kitchen-sink/api/#furo._demo_module.RandomNumberGenerator">[docs]</a><span class="k">class</span> <span class="nc">RandomNumberGenerator</span><span class="p">:</span>
-    <span class="sd">"""A random number generator."""</span>
+    <span class="sd">&quot;&quot;&quot;A random number generator.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">"""Initialize."""</span>
+        <span class="sd">&quot;&quot;&quot;Initialize.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_seed</span> <span class="o">=</span> <span class="mi">4</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">seed</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">"""Get seed for random number generation.</span>
+        <span class="sd">&quot;&quot;&quot;Get seed for random number generation.</span>
 
 <span class="sd">        .. seealso:: https://xkcd.com/221/</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_seed</span>
 
 <div class="viewcode-block" id="RandomNumberGenerator.get_random_integer"><a class="viewcode-back" href="../../../kitchen-sink/api/#furo._demo_module.RandomNumberGenerator.get_random_integer">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_integer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">"""Return a random integer."""</span>
+        <span class="sd">&quot;&quot;&quot;Return a random integer.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed</span></div>
 
 <div class="viewcode-block" id="RandomNumberGenerator.get_random_float"><a class="viewcode-back" href="../../../kitchen-sink/api/#furo._demo_module.RandomNumberGenerator.get_random_float">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="sd">"""Return a random float."""</span>
+        <span class="sd">&quot;&quot;&quot;Return a random float.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">)</span></div></div>
 </pre></div>
         </article>

@@ -263,11 +263,11 @@
 
 
 <span class="c1"># Use time.monotonic if available.</span>
-<span class="n">current_time</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="s2">"monotonic"</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+<span class="n">current_time</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="s2">&quot;monotonic&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="Timeout"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Timeout">[docs]</a><span class="k">class</span> <span class="nc">Timeout</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">"""Timeout configuration.</span>
+    <span class="sd">&quot;&quot;&quot;Timeout configuration.</span>
 
 <span class="sd">    Timeouts can be defined as a default for a pool:</span>
 
@@ -275,20 +275,20 @@
 
 <span class="sd">       timeout = Timeout(connect=2.0, read=7.0)</span>
 <span class="sd">       http = PoolManager(timeout=timeout)</span>
-<span class="sd">       response = http.request('GET', 'http://example.com/')</span>
+<span class="sd">       response = http.request(&#39;GET&#39;, &#39;http://example.com/&#39;)</span>
 
 <span class="sd">    Or per-request (which overrides the default for the pool):</span>
 
 <span class="sd">    .. code-block:: python</span>
 
-<span class="sd">       response = http.request('GET', 'http://example.com/', timeout=Timeout(10))</span>
+<span class="sd">       response = http.request(&#39;GET&#39;, &#39;http://example.com/&#39;, timeout=Timeout(10))</span>
 
 <span class="sd">    Timeouts can be disabled by setting all the parameters to ``None``:</span>
 
 <span class="sd">    .. code-block:: python</span>
 
 <span class="sd">       no_timeout = Timeout(connect=None, read=None)</span>
-<span class="sd">       response = http.request('GET', 'http://example.com/, timeout=no_timeout)</span>
+<span class="sd">       response = http.request(&#39;GET&#39;, &#39;http://example.com/, timeout=no_timeout)</span>
 
 
 <span class="sd">    :param total:</span>
@@ -326,7 +326,7 @@
 <span class="sd">        Many factors can affect the total amount of time for urllib3 to return</span>
 <span class="sd">        an HTTP response.</span>
 
-<span class="sd">        For example, Python's DNS resolver does not obey the timeout specified</span>
+<span class="sd">        For example, Python&#39;s DNS resolver does not obey the timeout specified</span>
 <span class="sd">        on the socket. Other factors that can affect total request time include</span>
 <span class="sd">        high CPU load, high swap, the program running at a low priority level,</span>
 <span class="sd">        or other behaviors.</span>
@@ -341,21 +341,21 @@
 <span class="sd">        several minutes to complete.</span>
 
 <span class="sd">        If your goal is to cut off any request after a set amount of wall clock</span>
-<span class="sd">        time, consider having a second "watcher" thread to cut off a slow</span>
+<span class="sd">        time, consider having a second &quot;watcher&quot; thread to cut off a slow</span>
 <span class="sd">        request.</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1">#: A sentinel object representing the default timeout value</span>
     <span class="n">DEFAULT_TIMEOUT</span> <span class="o">=</span> <span class="n">_GLOBAL_DEFAULT_TIMEOUT</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">connect</span><span class="o">=</span><span class="n">_Default</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">_Default</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_timeout</span><span class="p">(</span><span class="n">connect</span><span class="p">,</span> <span class="s2">"connect"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_read</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_timeout</span><span class="p">(</span><span class="n">read</span><span class="p">,</span> <span class="s2">"read"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_timeout</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="s2">"total"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_timeout</span><span class="p">(</span><span class="n">connect</span><span class="p">,</span> <span class="s2">&quot;connect&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_read</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_timeout</span><span class="p">(</span><span class="n">read</span><span class="p">,</span> <span class="s2">&quot;read&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_timeout</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_connect</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">(connect=</span><span class="si">%r</span><span class="s2">, read=</span><span class="si">%r</span><span class="s2">, total=</span><span class="si">%r</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">(connect=</span><span class="si">%r</span><span class="s2">, read=</span><span class="si">%r</span><span class="s2">, total=</span><span class="si">%r</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span>
             <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_read</span><span class="p">,</span>
@@ -367,7 +367,7 @@
 
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">_validate_timeout</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="sd">"""Check that a timeout attribute is valid.</span>
+        <span class="sd">&quot;&quot;&quot;Check that a timeout attribute is valid.</span>
 
 <span class="sd">        :param value: The timeout value to validate</span>
 <span class="sd">        :param name: The name of the timeout attribute to validate. This is</span>
@@ -375,7 +375,7 @@
 <span class="sd">        :return: The validated and casted version of the given value.</span>
 <span class="sd">        :raises ValueError: If it is a numeric value less than or equal to</span>
 <span class="sd">            zero, or the type is not an integer, float, or None.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">_Default</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">DEFAULT_TIMEOUT</span>
 
@@ -384,36 +384,36 @@
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s2">"Timeout cannot be a boolean value. It must "</span>
-                <span class="s2">"be an int, float or None."</span>
+                <span class="s2">&quot;Timeout cannot be a boolean value. It must &quot;</span>
+                <span class="s2">&quot;be an int, float or None.&quot;</span>
             <span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s2">"Timeout value </span><span class="si">%s</span><span class="s2"> was </span><span class="si">%s</span><span class="s2">, but it must be an "</span>
-                <span class="s2">"int, float or None."</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                <span class="s2">&quot;Timeout value </span><span class="si">%s</span><span class="s2"> was </span><span class="si">%s</span><span class="s2">, but it must be an &quot;</span>
+                <span class="s2">&quot;int, float or None.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
             <span class="p">)</span>
 
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                    <span class="s2">"Attempted to set </span><span class="si">%s</span><span class="s2"> timeout to </span><span class="si">%s</span><span class="s2">, but the "</span>
-                    <span class="s2">"timeout cannot be set to a value less "</span>
-                    <span class="s2">"than or equal to 0."</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                    <span class="s2">&quot;Attempted to set </span><span class="si">%s</span><span class="s2"> timeout to </span><span class="si">%s</span><span class="s2">, but the &quot;</span>
+                    <span class="s2">&quot;timeout cannot be set to a value less &quot;</span>
+                    <span class="s2">&quot;than or equal to 0.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
                 <span class="p">)</span>
         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
             <span class="c1"># Python 3</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s2">"Timeout value </span><span class="si">%s</span><span class="s2"> was </span><span class="si">%s</span><span class="s2">, but it must be an "</span>
-                <span class="s2">"int, float or None."</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                <span class="s2">&quot;Timeout value </span><span class="si">%s</span><span class="s2"> was </span><span class="si">%s</span><span class="s2">, but it must be an &quot;</span>
+                <span class="s2">&quot;int, float or None.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
             <span class="p">)</span>
 
         <span class="k">return</span> <span class="n">value</span>
 
 <div class="viewcode-block" id="Timeout.from_float"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Timeout.from_float">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_float</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
-        <span class="sd">"""Create a new Timeout from a legacy timeout value.</span>
+        <span class="sd">&quot;&quot;&quot;Create a new Timeout from a legacy timeout value.</span>
 
 <span class="sd">        The timeout value used by httplib.py sets the same timeout on the</span>
 <span class="sd">        connect(), and recv() socket requests. This creates a :class:`Timeout`</span>
@@ -424,58 +424,58 @@
 <span class="sd">        :type timeout: integer, float, sentinel default object, or None</span>
 <span class="sd">        :return: Timeout object</span>
 <span class="sd">        :rtype: :class:`Timeout`</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Timeout</span><span class="p">(</span><span class="n">read</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">connect</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Timeout.clone"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Timeout.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Create a copy of the timeout object</span>
+        <span class="sd">&quot;&quot;&quot;Create a copy of the timeout object</span>
 
 <span class="sd">        Timeout properties are stored per-pool but each request needs a fresh</span>
 <span class="sd">        Timeout object to ensure each one has its own start/stop configured.</span>
 
 <span class="sd">        :return: a copy of the timeout object</span>
 <span class="sd">        :rtype: :class:`Timeout`</span>
-<span class="sd">        """</span>
-        <span class="c1"># We can't use copy.deepcopy because that will also create a new object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># We can&#39;t use copy.deepcopy because that will also create a new object</span>
         <span class="c1"># for _GLOBAL_DEFAULT_TIMEOUT, which socket.py uses as a sentinel to</span>
         <span class="c1"># detect the user default.</span>
         <span class="k">return</span> <span class="n">Timeout</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_read</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Timeout.start_connect"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Timeout.start_connect">[docs]</a>    <span class="k">def</span> <span class="nf">start_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Start the timeout clock, used during a connect() attempt</span>
+        <span class="sd">&quot;&quot;&quot;Start the timeout clock, used during a connect() attempt</span>
 
 <span class="sd">        :raises urllib3.exceptions.TimeoutStateError: if you attempt</span>
 <span class="sd">            to start a timer that has been started already.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_connect</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">TimeoutStateError</span><span class="p">(</span><span class="s2">"Timeout timer has already been started."</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">TimeoutStateError</span><span class="p">(</span><span class="s2">&quot;Timeout timer has already been started.&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_connect</span> <span class="o">=</span> <span class="n">current_time</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_connect</span></div>
 
 <div class="viewcode-block" id="Timeout.get_connect_duration"><a class="viewcode-back" href="../../../../reference/api/#urllib3.util.Timeout.get_connect_duration">[docs]</a>    <span class="k">def</span> <span class="nf">get_connect_duration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Gets the time elapsed since the call to :meth:`start_connect`.</span>
+        <span class="sd">&quot;&quot;&quot;Gets the time elapsed since the call to :meth:`start_connect`.</span>
 
 <span class="sd">        :return: Elapsed time in seconds.</span>
 <span class="sd">        :rtype: float</span>
 <span class="sd">        :raises urllib3.exceptions.TimeoutStateError: if you attempt</span>
-<span class="sd">            to get duration for a timer that hasn't been started.</span>
-<span class="sd">        """</span>
+<span class="sd">            to get duration for a timer that hasn&#39;t been started.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_connect</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">TimeoutStateError</span><span class="p">(</span>
-                <span class="s2">"Can't get connect duration for timer that has not started."</span>
+                <span class="s2">&quot;Can&#39;t get connect duration for timer that has not started.&quot;</span>
             <span class="p">)</span>
         <span class="k">return</span> <span class="n">current_time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_connect</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">connect_timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Get the value to use when setting a connection timeout.</span>
+        <span class="sd">&quot;&quot;&quot;Get the value to use when setting a connection timeout.</span>
 
 <span class="sd">        This will be a positive float or integer, the value None</span>
 <span class="sd">        (never timeout), or the default system timeout.</span>
 
 <span class="sd">        :return: Connect timeout.</span>
 <span class="sd">        :rtype: int, float, :attr:`Timeout.DEFAULT_TIMEOUT` or None</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">total</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span>
 
@@ -486,7 +486,7 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">read_timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Get the value for the read timeout.</span>
+        <span class="sd">&quot;&quot;&quot;Get the value for the read timeout.</span>
 
 <span class="sd">        This assumes some time has elapsed in the connection timeout and</span>
 <span class="sd">        computes the read timeout appropriately.</span>
@@ -500,7 +500,7 @@
 <span class="sd">        :rtype: int, float, :attr:`Timeout.DEFAULT_TIMEOUT` or None</span>
 <span class="sd">        :raises urllib3.exceptions.TimeoutStateError: If :meth:`start_connect`</span>
 <span class="sd">            has not yet been called on this object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">total</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">total</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_TIMEOUT</span>
