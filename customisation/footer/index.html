@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing landing page" href="../landing-page/" /><link rel="prev" title="Changing fonts" href="../fonts/" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21.dev1"/>
+    <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21.dev1"/>
         <title>Changing footer icons - Furo</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=ed0832e8f449bfee71351ecca00ed8bc1cdd0a21" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
@@ -257,7 +257,7 @@
         </div>
         <article role="main">
           <section id="changing-footer-icons">
-<h1>Changing footer icons<a class="headerlink" href="#changing-footer-icons" title="Permalink to this headline">#</a></h1>
+<h1>Changing footer icons<a class="headerlink" href="#changing-footer-icons" title="Permalink to this heading">#</a></h1>
 <p>Furo allows customising the icons that are presented in the page footer. These icons can be used to link to relevant resources for your project and documentation.</p>
 <div class="caution admonition">
 <p class="admonition-title">Unstable, seeking feedback</p>
@@ -265,7 +265,7 @@
 <p>It currently needs input from documentation authors, about how useful and usable this is and how “ergonomic” it is.</p>
 </div>
 <section id="default-icons">
-<h2>Default icons<a class="headerlink" href="#default-icons" title="Permalink to this headline">#</a></h2>
+<h2>Default icons<a class="headerlink" href="#default-icons" title="Permalink to this heading">#</a></h2>
 <p>Furo includes two default icons, when the documentation is built on Read the Docs:</p>
 <ul class="simple">
 <li><p>A link to the Read the Docs project page, for the documentation.</p></li>
@@ -274,7 +274,7 @@
 <p>If the documentation is not built on Read the Docs, there are no icons included by default.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">#</a></h2>
 <p>To add custom footer icons, you need to provide the <code class="docutils literal notranslate"><span class="pre">footer_icons</span></code> configuration value to Furo. If this configuration value is non-empty, the default footer icons are disabled.</p>
 <p>The value for this configuration value is a list of dictionaries. Each dictionary needs to have the following structure:</p>
 <ul class="simple">
@@ -284,7 +284,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: This is included as-is in the class attribute of the <code class="docutils literal notranslate"><span class="pre">a</span></code> tag.</p></li>
 </ul>
 <section id="using-embedded-svgs">
-<h3>Using embedded SVGs<a class="headerlink" href="#using-embedded-svgs" title="Permalink to this headline">#</a></h3>
+<h3>Using embedded SVGs<a class="headerlink" href="#using-embedded-svgs" title="Permalink to this heading">#</a></h3>
 <p>This is what Furo does to include a GitHub icon in the footer of the site you’re currently reading:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;footer_icons&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -306,10 +306,10 @@
 <p>It is generally preferable to use SVG images, that respect <code class="docutils literal notranslate"><span class="pre">currentColor</span></code>. A decently large set of common SVG-based icons can be found on: <a class="reference external" href="https://react-icons.github.io/react-icons/">https://react-icons.github.io/react-icons/</a><a class="footnote-reference brackets" href="#id4" id="id2">2</a>.</p>
 </section>
 <section id="using-icon-packs">
-<h3>Using icon packs<a class="headerlink" href="#using-icon-packs" title="Permalink to this headline">#</a></h3>
+<h3>Using icon packs<a class="headerlink" href="#using-icon-packs" title="Permalink to this heading">#</a></h3>
 <p>You can use icon packs that provide icons, with the footer. Usually, icons pack have a non-negligible impact on first page load times and need more data needing to be downloaded. That said, you also get more convenient access to a well designed set of icons. :)</p>
 <section id="font-awesome">
-<h4>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">#</a></h4>
+<h4>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this heading">#</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>With the release of Font Awesome 6, Fonticons Inc has revamped the documentation to consistently upsell their <a class="reference external" href="https://fontawesome.com/v6/docs/web/setup/use-kit">Kits</a>. These kits can help reduce load times on pages but have limited number of page views, so we’ll use Font Awesome via a CDN in this example.</p>
@@ -345,7 +345,7 @@
 </section>
 </section>
 <section id="different-icons-for-light-mode-vs-dark-mode">
-<h2>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this headline">#</a></h2>
+<h2>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this heading">#</a></h2>
 <p>You can specify <code class="docutils literal notranslate"><span class="pre">only-light</span></code> or <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">class</span></code> in the dictionary. This mechanism exists primarily to help you use different <code class="docutils literal notranslate"><span class="pre">img</span></code> tags to present the same icon in a different colour.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
@@ -446,6 +446,7 @@
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
