@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Code Blocks" href="../code-blocks/" /><link rel="prev" title="Admonitions" href="../admonitions/" />
 
     <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21.dev1"/>
@@ -297,7 +297,7 @@ they can be safely reused.</p>
 <p>Errors will be wrapped in <code class="xref py py-class docutils literal notranslate"><span class="pre">MaxRetryError</span></code> unless
 retries are disabled, in which case the causing exception will be raised.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>total</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – <p>Total number of retries to allow. Takes precedence over other counts.</p>
 <p>Set to <code class="docutils literal notranslate"><span class="pre">None</span></code> to remove this constraint and fall back on other
@@ -415,7 +415,7 @@ request.</p></li>
 <span class="sig-name descname"><span class="pre">get_backoff_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.get_backoff_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Formula for computing the current backoff</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a></p>
 </dd>
 </dl>
@@ -432,7 +432,7 @@ request.</p></li>
 <span class="sig-name descname"><span class="pre">increment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_pool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_stacktrace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.increment"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Return a new Retry object with incremented retry counters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>response</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPResponse</span></code>) – A response object, or None, if the server did not
 return a response.</p></li>
@@ -440,7 +440,7 @@ return a response.</p></li>
 None if the response was received successfully.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A new <code class="docutils literal notranslate"><span class="pre">Retry</span></code> object.</p>
 </dd>
 </dl>
@@ -494,7 +494,7 @@ this method will return immediately.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>total</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, or </em><em>None</em>) – <p>This combines the connect and read timeouts into one; the read timeout
 will be set to the time leftover from the connect attempt. In the
@@ -549,10 +549,10 @@ request.</p>
 <p>Timeout properties are stored per-pool but each request needs a fresh
 Timeout object to ensure each one has its own start/stop configured.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a copy of the timeout object</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Timeout</span></code></p>
 </dd>
 </dl>
@@ -565,10 +565,10 @@ Timeout object to ensure each one has its own start/stop configured.</p>
 <p>This will be a positive float or integer, the value None
 (never timeout), or the default system timeout.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Connect timeout.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int, float, <code class="xref py py-attr docutils literal notranslate"><span class="pre">Timeout.DEFAULT_TIMEOUT</span></code> or None</p>
 </dd>
 </dl>
@@ -583,13 +583,13 @@ connect(), and recv() socket requests. This creates a <code class="xref py py-cl
 object that sets the individual timeouts to the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> value
 passed to this function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>timeout</strong> (<em>integer</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>sentinel default object</em><em>, or </em><em>None</em>) – The legacy timeout value.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Timeout object</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Timeout</span></code></p>
 </dd>
 </dl>
@@ -600,13 +600,13 @@ passed to this function.</p>
 <span class="sig-name descname"><span class="pre">get_connect_duration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.get_connect_duration"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Gets the time elapsed since the call to <code class="xref py py-meth docutils literal notranslate"><span class="pre">start_connect()</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Elapsed time in seconds.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a></p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>urllib3.exceptions.TimeoutStateError</strong> – if you attempt
 to get duration for a timer that hasn’t been started.</p>
 </dd>
@@ -624,13 +624,13 @@ time taken by the connect timeout. If the connection time has not been
 established, a <code class="xref py py-exc docutils literal notranslate"><span class="pre">TimeoutStateError</span></code> will be
 raised.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Value to use for the read timeout.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int, float, <code class="xref py py-attr docutils literal notranslate"><span class="pre">Timeout.DEFAULT_TIMEOUT</span></code> or None</p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>urllib3.exceptions.TimeoutStateError</strong> – If <code class="xref py py-meth docutils literal notranslate"><span class="pre">start_connect()</span></code>
 has not yet been called on this object.</p>
 </dd>
@@ -642,7 +642,7 @@ has not yet been called on this object.</p>
 <span class="sig-name descname"><span class="pre">start_connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.start_connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Start the timeout clock, used during a connect() attempt</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>urllib3.exceptions.TimeoutStateError</strong> – if you attempt
 to start a timer that has been started already.</p>
 </dd>
@@ -690,7 +690,7 @@ they can be safely reused.</p>
 <p>Errors will be wrapped in <code class="xref py py-class docutils literal notranslate"><span class="pre">MaxRetryError</span></code> unless
 retries are disabled, in which case the causing exception will be raised.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>total</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – <p>Total number of retries to allow. Takes precedence over other counts.</p>
 <p>Set to <code class="docutils literal notranslate"><span class="pre">None</span></code> to remove this constraint and fall back on other
@@ -808,7 +808,7 @@ request.</p></li>
 <span class="sig-name descname"><span class="pre">get_backoff_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.get_backoff_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Formula for computing the current backoff</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a></p>
 </dd>
 </dl>
@@ -825,7 +825,7 @@ request.</p></li>
 <span class="sig-name descname"><span class="pre">increment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_pool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_stacktrace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/retry/#Retry.increment"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Return a new Retry object with incremented retry counters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>response</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPResponse</span></code>) – A response object, or None, if the server did not
 return a response.</p></li>
@@ -833,7 +833,7 @@ return a response.</p></li>
 None if the response was received successfully.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A new <code class="docutils literal notranslate"><span class="pre">Retry</span></code> object.</p>
 </dd>
 </dl>
@@ -887,7 +887,7 @@ this method will return immediately.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>total</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, or </em><em>None</em>) – <p>This combines the connect and read timeouts into one; the read timeout
 will be set to the time leftover from the connect attempt. In the
@@ -942,10 +942,10 @@ request.</p>
 <p>Timeout properties are stored per-pool but each request needs a fresh
 Timeout object to ensure each one has its own start/stop configured.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a copy of the timeout object</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Timeout</span></code></p>
 </dd>
 </dl>
@@ -958,10 +958,10 @@ Timeout object to ensure each one has its own start/stop configured.</p>
 <p>This will be a positive float or integer, the value None
 (never timeout), or the default system timeout.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Connect timeout.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int, float, <code class="xref py py-attr docutils literal notranslate"><span class="pre">Timeout.DEFAULT_TIMEOUT</span></code> or None</p>
 </dd>
 </dl>
@@ -976,13 +976,13 @@ connect(), and recv() socket requests. This creates a <code class="xref py py-cl
 object that sets the individual timeouts to the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> value
 passed to this function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>timeout</strong> (<em>integer</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>sentinel default object</em><em>, or </em><em>None</em>) – The legacy timeout value.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Timeout object</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Timeout</span></code></p>
 </dd>
 </dl>
@@ -993,13 +993,13 @@ passed to this function.</p>
 <span class="sig-name descname"><span class="pre">get_connect_duration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.get_connect_duration"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Gets the time elapsed since the call to <code class="xref py py-meth docutils literal notranslate"><span class="pre">start_connect()</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Elapsed time in seconds.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a></p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>urllib3.exceptions.TimeoutStateError</strong> – if you attempt
 to get duration for a timer that hasn’t been started.</p>
 </dd>
@@ -1017,13 +1017,13 @@ time taken by the connect timeout. If the connection time has not been
 established, a <code class="xref py py-exc docutils literal notranslate"><span class="pre">TimeoutStateError</span></code> will be
 raised.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Value to use for the read timeout.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int, float, <code class="xref py py-attr docutils literal notranslate"><span class="pre">Timeout.DEFAULT_TIMEOUT</span></code> or None</p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>urllib3.exceptions.TimeoutStateError</strong> – If <code class="xref py py-meth docutils literal notranslate"><span class="pre">start_connect()</span></code>
 has not yet been called on this object.</p>
 </dd>
@@ -1035,7 +1035,7 @@ has not yet been called on this object.</p>
 <span class="sig-name descname"><span class="pre">start_connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/urllib3/util/timeout/#Timeout.start_connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Start the timeout clock, used during a connect() attempt</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>urllib3.exceptions.TimeoutStateError</strong> – if you attempt
 to start a timer that has been started already.</p>
 </dd>

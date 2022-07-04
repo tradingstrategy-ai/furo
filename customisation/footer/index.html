@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Changing landing page" href="../landing-page/" /><link rel="prev" title="Changing fonts" href="../fonts/" />
 
     <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21.dev1"/>
@@ -302,8 +302,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Since <code class="docutils literal notranslate"><span class="pre">html</span></code> is expected to be static HTML, you can not use relative paths to images included in the Sphinx documentation set, at least not without resorting to ugly hacks.<a class="footnote-reference brackets" href="#id3" id="id1">1</a> Instead, it is recommended to either embed the image directly (eg: in an <code class="docutils literal notranslate"><span class="pre">svg</span></code> tag), or to link to images “outside” of the documentation.</p>
-<p>It is generally preferable to use SVG images, that respect <code class="docutils literal notranslate"><span class="pre">currentColor</span></code>. A decently large set of common SVG-based icons can be found on: <a class="reference external" href="https://react-icons.github.io/react-icons/">https://react-icons.github.io/react-icons/</a><a class="footnote-reference brackets" href="#id4" id="id2">2</a>.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">html</span></code> is expected to be static HTML, you can not use relative paths to images included in the Sphinx documentation set, at least not without resorting to ugly hacks.<a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Instead, it is recommended to either embed the image directly (eg: in an <code class="docutils literal notranslate"><span class="pre">svg</span></code> tag), or to link to images “outside” of the documentation.</p>
+<p>It is generally preferable to use SVG images, that respect <code class="docutils literal notranslate"><span class="pre">currentColor</span></code>. A decently large set of common SVG-based icons can be found on: <a class="reference external" href="https://react-icons.github.io/react-icons/">https://react-icons.github.io/react-icons/</a><a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="using-icon-packs">
 <h3>Using icon packs<a class="headerlink" href="#using-icon-packs" title="Permalink to this heading">#</a></h3>
@@ -348,14 +348,14 @@
 <h2>Different icons for light mode vs dark mode<a class="headerlink" href="#different-icons-for-light-mode-vs-dark-mode" title="Permalink to this heading">#</a></h2>
 <p>You can specify <code class="docutils literal notranslate"><span class="pre">only-light</span></code> or <code class="docutils literal notranslate"><span class="pre">only-dark</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">class</span></code> in the dictionary. This mechanism exists primarily to help you use different <code class="docutils literal notranslate"><span class="pre">img</span></code> tags to present the same icon in a different colour.</p>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Yes, I’m aware that it can be argued that embedding raw HTML in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file is… ugly. :)</p>
-</dd>
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>You need to use your browser’s developer tools to get the SVG directly from the page: inspect element + copy svg element (ctrl+c) + paste.</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Yes, I’m aware that it can be argued that embedding raw HTML in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file is… ugly. :)</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>You need to use your browser’s developer tools to get the SVG directly from the page: inspect element + copy svg element (ctrl+c) + paste.</p>
+</aside>
 </section>
 </section>
 
