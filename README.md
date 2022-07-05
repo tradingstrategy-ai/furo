@@ -22,12 +22,8 @@ and place it to our Sphinx installation `_static/styles` folder:
 cp deps/furo/src/furo/theme/furo/static/styles/furo.css source/_static/styles
 ```
 
-Using theme
-===========
-
-- Initialize submodules in the main repository
-- Issue build command for the theme
-- After this, build Sphinx docs normally
+Because of Sphinx template/static override resolution,
+your custom build `furo.css` will be picked over the default one.
 
 Updating theme
 ==============
