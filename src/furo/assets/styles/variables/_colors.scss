@@ -15,8 +15,8 @@
   --color-foreground-muted: #646776; // for muted text
   --color-foreground-border: #878787; // for content borders
 
-  --color-background-primary: white; // for content
-  --color-background-secondary: #f8f9fb; // for navigation + ToC
+  --color-background-primary: #FDF8F2;
+  --color-background-secondary: #FBEEDB; // for navigation + ToC
   --color-background-hover: #efeff4ff; // for navigation-item hover
   --color-background-hover--transparent: #efeff400;
   --color-background-border: #eeebee; // for UI borders
@@ -28,7 +28,7 @@
 
   // Brand colors
   --color-brand-primary: #2962ff;
-  --color-brand-content: #2a5adf;
+  --color-brand-content: #0b0b14;
 
   // API documentation
   --color-api-background: var(--color-background-secondary);
@@ -130,11 +130,11 @@
 
   // Base Colors
   --color-foreground-primary: #ffffffcc; // for main text and headings
-  --color-foreground-secondary: #9ca0a5; // for secondary text
+  --color-foreground-secondary: #0B0B14; // for secondary text
   --color-foreground-muted: #81868d; // for muted text
   --color-foreground-border: #666666; // for content borders
 
-  --color-background-primary: #131416; // for content
+  --color-background-primary: #1D1D20; // for content
   --color-background-secondary: #1a1c1e; // for navigation + ToC
   --color-background-hover: #1e2124ff; // for navigation-item hover
   --color-background-hover--transparent: #1e212400;

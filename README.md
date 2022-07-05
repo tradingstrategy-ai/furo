@@ -1,104 +1,65 @@
-<h1 align="center">Furo</h1>
-<p align="center">
-  A clean customisable <a href="https://www.sphinx-doc.org/">Sphinx</a> documentation theme.
-</p>
-<a href="https://pradyunsg.me/furo/">
-  <img align="center" src="https://github.com/pradyunsg/furo/raw/main/docs/_static/demo.png" alt="Demo image">
-</a>
+Fork of [Furo Sphinx theme](https://pradyunsg.me/furo/) with different colours.
 
-## Elevator pitch
+- Added as a git submodule to [docs](https://github.com/tradingstrategy-ai/docs)
+- Added as an development Poetry dependency
 
-<!-- start elevator-pitch -->
+Building theme
+==============
 
-- **Intentionally minimal** --- the most important thing is the content, not the scaffolding around it.
-- **Responsive** --- adapting perfectly to the available screen space, to work on all sorts of devices.
-- **Customisable** --- change the color palette, font families, logo and more!
-- **Easy to navigate** --- with carefully-designed sidebar navigation and inter-page links.
-- **Good looking content** --- through clear typography and well-stylised elements.
-- **Good looking search** --- helps readers find what they want quickly.
-- **Biased for smaller docsets** --- intended for smaller documentation sets, where presenting the entire hierarchy in the sidebar is not overwhelming.
+To rebuild CSS files:
 
-<!-- end elevator-pitch -->
+```shell
+npm install
+npm run build
+```
 
-## Quickstart
+This will generate`theme/furo/static/styles/furo.css`
 
-<!-- start quickstart -->
+Now update the CSS file in the main docs repository
+and place it to our Sphinx installation `_static/styles` folder:
 
-Furo is distributed on [PyPI]. To use the theme in your Sphinx project:
+```shell
+cp deps/furo/src/furo/theme/furo/static/styles/furo.css source/_static/styles
+```
 
-1. Install Furo in documentation's build environment.
+Using theme
+===========
 
-   ```text
-   pip install furo
-   ```
+- Initialize submodules in the main repository
+- Issue build command for the theme
+- After this, build Sphinx docs normally
 
-2. Update the `html_theme` in `conf.py`.
+Updating theme
+==============
 
-   ```py
-   html_theme = "furo"
-   ```
+Edit Furo SASS files directy to change colour variables.
 
-3. Your Sphinx documentation's HTML pages will now be generated with this theme! 🎉
+[Edit _colors.sass](./src/furo/assets/styles/variables/_colors.scss).
 
-[pypi]: https://pypi.org/project/furo/
+`colors-dark` depends on `colors` being included at a lower specificity.
 
-<!-- end quickstart -->
+Preview
+=======
 
-For more information, visit [Furo's documentation][quickstart-docs].
+Just rebuild theme and then rebuild docs with:
 
-[quickstart-docs]: https://pradyunsg.me/furo/quickstart
+```shell
+make clean html
+```
 
-## Contributing
+Updating from upstream
+======================
 
-Furo is a volunteer maintained open source project, and we welcome contributions of all forms. Please take a look at our [Contributing Guide](https://pradyunsg.me/furo/contributing/) for more information.
+git pull changes from Furo master.
 
-## Acknowledgements
+Troubleshooting
+===============
 
-Furo is inspired by (and borrows elements from) some excellent technical documentation themes:
+Poetry does not recognise Furo filesystem checkout as a Python package and the following
+fails:
 
-- [mkdocs-material] for MkDocs
-- [Just the Docs] for Jekyll
-- [GitBook]
-- [pdoc3]
+```
+furo = {path = "deps/trade-executor", develop = true}
+```
 
-We use [BrowserStack] to test on real devices and browsers. Shoutout to them for supporting OSS projects!
-
-[mkdocs-material]: https://squidfunk.github.io/mkdocs-material/
-[just the docs]: https://just-the-docs.github.io/just-the-docs/
-[gitbook]: https://www.gitbook.com/
-[pdoc3]: https://pdoc3.github.io/pdoc/doc
-[browserstack]: https://browserstack.com/
-
-## What's with the name?
-
-I plucked this from the scientific name for [Domesticated Ferrets](https://en.wikipedia.org/wiki/Ferret): Mustela putorius **furo**.
-
-A ferret is actually a really good spirit animal for this project: cute, small, steals little things from various places, and hisses at you when you try to make it do things it doesn't like.
-
-> I plan on commissioning a logo for this project (or making one myself) consisting of a cute ferret. Please reach out if you're interested!
-
-## Used By
-
-<!-- start used-by -->
-
-> I'm being told that mentioning who uses `$thing` is a good way to promote `$thing`.
-
-- [urllib3] -- THE first adopter of Furo
-- [attrs] -- one of the early adopters!
-- [pip] -- what I wrote this for
-- [Python Developer’s Guide][devguide]
-- [psycopg3] -- another of the early adopters!
-- [black]
-
-[urllib3]: https://urllib3.readthedocs.io/
-[attrs]: https://www.attrs.org/
-[devguide]: https://devguide.python.org/
-[pip]: https://pip.pypa.io/
-[psycopg3]: https://www.psycopg.org/psycopg3/docs/
-[black]: https://black.readthedocs.io/en/stable/
-
-<!-- end used-by -->
-
-## License
-
-This project is licensed under the MIT License.
+Thus, the CSS copy hack
