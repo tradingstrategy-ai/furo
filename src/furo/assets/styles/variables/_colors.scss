@@ -10,17 +10,17 @@
   --color-problematic: #b30000;
 
   // Base Colors
-  --color-foreground-primary: #0b0b14; // for main text and headings
-  --color-foreground-secondary: #565661; // for secondary text
-  --color-foreground-muted: #646776; // for muted text
-  --color-foreground-border: #878787; // for content borders
+  --color-foreground-primary: #131210; // for main text and headings
+  --color-foreground-secondary: #3f3e3b; // for secondary text
+  --color-foreground-muted: #969088; // for muted text
+  --color-foreground-border: #b7b0a4; // for content borders
 
-  --color-background-primary: #FDF8F2;
-  --color-background-secondary: #FBEEDB; // for navigation + ToC
-  --color-background-hover: #efeff4ff; // for navigation-item hover
-  --color-background-hover--transparent: #efeff400;
-  --color-background-border: #eeebee; // for UI borders
-  --color-background-item: #ccc; // for "background" items (eg: copybutton)
+  --color-background-primary: #fff7eb;
+  --color-background-secondary: #f4e9d9; // for navigation + ToC
+  --color-background-hover: #e5d8c3; // for navigation-item hover
+  --color-background-hover--transparent: hsl(36 2% 92% / 20%);
+  --color-background-border: #ede2d0; // for UI borders
+  --color-background-item: #b7b0a4; // for "background" items (eg: copybutton)
 
   // Announcements
   --color-announcement-background: #000000dd;
@@ -38,14 +38,27 @@
   --color-api-pre-name: var(--color-problematic);
   --color-api-paren: var(--color-foreground-secondary);
   --color-api-keyword: var(--color-foreground-primary);
-  --color-highlight-on-target: #ffffcc;
+  --color-highlight-on-target: #e8dcc8;
 
   // Inline code background
   --color-inline-code-background: var(--color-background-secondary);
 
+  // Modal overlay background
+  --color-modal-overlay: #00000040;
+
   // Highlighted text (search)
-  --color-highlighted-background: #ddeeff;
+  --color-highlighted-background: #e5d8c3;
   --color-highlighted-text: var(--color-foreground-primary);
+
+  // Input field (search)
+  --color-input-background: #ffffffbb;
+  --color-input-background-focus: #ffffff;
+
+  // Search keyboard shortcut hint colors
+  --color-keyboard-1: #ffffff;
+  --color-keyboard-2: #00000025;
+  --color-keyboard-3: #00000035;
+  --color-keyboard-4: #00000060;
 
   // GUI Labels
   --color-guilabel-background: #ddeeff80;
@@ -129,17 +142,17 @@
   --color-problematic: #ee5151;
 
   // Base Colors
-  --color-foreground-primary: #FBEEDB; // for main text and headings
-  --color-foreground-secondary: #A9A9B2; // for secondary text
-  --color-foreground-muted: #81868d; // for muted text
-  --color-foreground-border: #666666; // for content borders
+  --color-foreground-primary: #fdfdfc; // for main text and headings
+  --color-foreground-secondary: #e1e1df; // for secondary text
+  --color-foreground-muted: #a6a4a1; // for muted text
+  --color-foreground-border: #5d5c5a; // for content borders
 
-  --color-background-primary: #1D1D20; // for content
-  --color-background-secondary: #1a1c1e; // for navigation + ToC
-  --color-background-hover: #1e2124ff; // for navigation-item hover
-  --color-background-hover--transparent: #1e212400;
-  --color-background-border: #303335; // for UI borders
-  --color-background-item: #444; // for "background" items (eg: copybutton)
+  --color-background-primary: #1a1a19; // for content
+  --color-background-secondary: #2b2b2a; // for navigation + ToC
+  --color-background-hover: #4d4d4c; // for navigation-item hover
+  --color-background-hover--transparent: hsl(36 2% 92% / 20%);
+  --color-background-border: #373736; // for UI borders
+  --color-background-item: #5d5c5a; // for "background" items (eg: copybutton)
 
   // Announcements
   --color-announcement-background: #000000dd;
@@ -149,9 +162,22 @@
   --color-brand-primary: #2b8cee;
   --color-brand-content: #368ce2;
 
-  // Highlighted text (search)
-  --color-highlighted-background: #083563;
+  // Modal overlay background
+  --color-modal-overlay: #ffffff40;
 
+  // Highlighted text (search)
+  --color-highlighted-background: #4d4d4c;
+
+  // Input field (search)
+  --color-input-background: #000000bb;
+  --color-input-background-focus: #000000;
+
+  // Search keyboard shortcut hint colors
+  --color-keyboard-1: #000000;
+  --color-keyboard-2: #ffffff25;
+  --color-keyboard-3: #ffffff35;
+  --color-keyboard-4: #ffffff60;
+  
   // GUI Labels
   --color-guilabel-background: #08356380;
   --color-guilabel-border: #13395f80;
